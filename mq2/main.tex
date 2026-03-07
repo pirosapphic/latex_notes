@@ -1,0 +1,71 @@
+\documentclass[a4paper,12pt]{article}
+% Package to make citations superscrit with brackets
+\usepackage[super,square]{natbib}
+% Package to change margin size
+\usepackage{anysize}
+\marginsize{2cm}{2cm}{1cm}{2cm}
+% Package to make headers
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt}
+% Package for highligths
+\usepackage{soul}
+% Colors for the references links
+\usepackage[dvipsnames]{xcolor}
+% Package to link references
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{physics}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[italian]{babel}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=CadetBlue,
+    filecolor=CadetBlue,      
+    urlcolor=CadetBlue,
+}
+% Package for lorem ipsum
+\usepackage{lipsum}
+% Package for multicolumn
+\usepackage{multicol}
+
+\usepackage{multicol,caption}
+% Package for removing paragraph identations
+\usepackage{parskip}
+\setlength\columnsep{18pt} 
+\setlocalecaption{italian}{figure}{Fig.}
+\setlocalecaption{italian}{table}{Tab.}
+\counterwithin{figure}{section} % comandi per numerazione interna di figure, tabelle ed equazioni
+\counterwithin{table}{section}
+\counterwithin{equation}{section}
+
+ 
+\begin{document}
+\begin{center}
+\Large{\textbf{Appunti di Meccanica Quantistica 2}}
+\vspace{0.4cm}
+\normalsize
+\\ Università degli Studi di Torino \\Prof.ssa Maria Luisa Frau, appunti di Paolo Rocchietti March\footnote{paolo.rocchiettimarc@edu.unito.it} \\
+
+\vspace{0.1cm}
+%\textit{Organization}
+\medskip
+\normalsize
+\end{center}
+\vspace{0.4cm}
+{\color{gray}\hrule}
+\medskip
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8\linewidth]{./airy.png}
+\end{figure}
+%non mi convince, magari la cambierò
+\newpage
+\tableofcontents
+\newpage
+\input{./lessons/lez1_260304.tex}
+\bibliographystyle{plain}
+%\bibliography{references}
+\end{document}
