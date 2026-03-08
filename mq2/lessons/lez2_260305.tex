@@ -1,0 +1,60 @@
+%lesson 2, 05/03/2026
+
+\subsection{Autovettori e autovalori}
+
+Dato un operatore autoaggiunto $ A $, si consideri ora l'equazione agli autovalori
+$$ A\ket{a} = a\ket{a} $$ 
+
+Prima di dare la definizione di valori regolari e autovalori di $ A $, si consideri la seguente
+quantità, sempre definita:
+$$ C := \inf\limits_{\ket{\psi}\in\mathcal{D}_A}\frac{||(A-a1)\ket{\psi}||}{||\ket{\psi}||}\geq 0$$ 
+\textbf{Def.} $a\in\mathbb{R}$ si dice punto regolare di $ A $ se $ C > 0 $.
+
+\textbf{Def.} $a\in\mathbb{R}$ si dice autovalore di $ A $ se $C=0$
+
+Poiché $ C $ è un estremo inferiore si distinguono due casi:
+\begin{itemize}
+    \item $ C $ è anche il minimo: in questo caso $ a $ è un \textbf{autovalore proprio} di $ A $
+	ed $ \exists \ket{a}\in\mathcal{D}_A $ tale che $ A\ket{a} = a\ket{a}$, detto
+	\textbf{autovettore proprio}.
+    \item $ C $ non è il minimo: in questo caso $ a $ è un \textbf{autovalore generalizzato} di 
+	$ A $ e l'autovettore corrispondente $ \ket{a}\notin\mathcal{D}_A $ è detto
+	\textbf{autovettore generalizzato} . 
+\end{itemize}
+
+L'insieme degli	autovalori propri è detto \textbf{spettro discreto di A} \textit{Spd}(A).
+
+L'insieme degli autovalori generalizzati è detto \textbf{spettro continuo di A} \textit{Spc}(A).
+
+L'importanza degli spettri di un operatore è evidenziata dal seguente risultato, detto appunto
+\textit{teorema spettrale}.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+    \textbf{Teorema spettrale}
+
+    Dato un operatore $ A $ autoaggiunto, le soluzioni dell'equazione $ A\ket{a} = a\ket{a} $ sono
+    un insieme \textbf{completo}.
+
+    $ \forall f \in S $ si definiscono 
+\begin{itemize}
+    \item I coefficienti $ f_i := \bra{a_i}\ket{f} $, con $ \ket{a_i} $ autovettori propri
+	corrispondenti agli autovalori
+
+	$ a_i \in$ \textit{Spd}(A);
+    \item La funzione $ f(a):=\bra{a}\ket{f} $, con $ \ket{a} $ autovettori generalizzati 
+	corrispondenti agli autovalori $ a\in $ \textit{Spc}(A).
+\end{itemize}
+
+Si può scrivere $ \forall f,g\in S $
+\begin{flalign*}
+ & \bra{f}\ket{g} = \sum_{i}^{}f^*_ig_i + \int_{Spd(A)}^{}daf^*(a)g(a)
+    := \sumint_{Sp(A)}daf^*(a)g(a)\text{ , prodotto scalare}&&\\
+& \ket{f} = \sumint_{Sp(A)}daf(a)\ket{a}\text{ , rappresentazione di $\ket{f}$}&&\\
+ & \sumint_{Sp(A)}\ket{a}\bra{a} = 1 \text{ , relazione di completezza dello spettro} &&
+\end{flalign*}
+
+
+    }%
+}
+

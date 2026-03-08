@@ -18,6 +18,7 @@
 \usepackage{physics}
 \usepackage{amsfonts}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage[italian]{babel}
 \hypersetup{
     colorlinks=true,
@@ -40,6 +41,17 @@
 \counterwithin{figure}{section} % comandi per numerazione interna di figure, tabelle ed equazioni
 \counterwithin{table}{section}
 \counterwithin{equation}{section}
+
+
+%sum over integral command
+
+\DeclareMathOperator*{\sumint}{%
+\mathchoice%
+  {\ooalign{$\displaystyle\sum$\cr\hidewidth$\displaystyle\int$\hidewidth\cr}}
+  {\ooalign{\raisebox{.14\height}{\scalebox{.7}{$\textstyle\sum$}}\cr\hidewidth$\textstyle\int$\hidewidth\cr}}
+  {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\int$\cr}}
+  {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\int$\cr}}
+}
 
  
 \begin{document}
@@ -66,6 +78,7 @@
 \tableofcontents
 \newpage
 \input{./lessons/lez1_260304.tex}
+\input{./lessons/lez2_260305.tex}
 \bibliographystyle{plain}
 %\bibliography{references}
 \end{document}

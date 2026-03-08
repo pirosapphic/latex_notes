@@ -1,5 +1,5 @@
 %lezione 1, 04/03/2026
-\section{I postulati della Meccanica Quantistica}
+\section{Postulati della Meccanica Quantistica}
 In questa prima parte del corso si formalizzano alcuni concetti già visti
 nel corso di Meccanica Quantistica I, partendo dai postulati fondamentali su cui si basa
 la teoria.
@@ -59,7 +59,7 @@ può dimostrare il seguente teorema
 \noindent\fbox{%
     \parbox{\textwidth}{%
 
-	{\large \textbf{Teorema:}} continuità del prodotto scalare
+	\textbf{Teorema}, continuità del prodotto scalare:
 	$$ \lim\limits_{n\to\infty} a_n = l \rightarrow \forall b\in E, \lim\limits_{n\to\infty} (b,a_n) = (b,l)$$
 	\textbf{Dimostrazione:} Preso $b\in E$, si consideri $(b,a_n) - (b,l) = (b, a_n - l) $:	per la disuguaglianza di Schwartz, $ || (b,a_n-l) ||^2 \leq(b,b)(a_n-l,a_n-l)$,
 	ma $\lim\limits_{n\to\infty} (a_n-l,a_n-l) = 0$,
@@ -154,7 +154,7 @@ diverge come un polinomio) definisce una distribuzione $ \bra{T} $ (detta
 
 L'esempio del contrario è la famosa $ \delta $ di Dirac: è infatti una distribuzione
 definita da $ \bra{\delta}\ket{f}:=f(0)$, $ \forall f\in S $; l'espressione
-$ \int_{-\infty}^{\infty}dx\delta f(x) = f(0) $ è un abuso di notazione, perché non 
+$ \int_{-\infty}^{\infty}dx\delta(x) f(x) = f(0) $ è un abuso di notazione, perché non 
 esiste alcuna funzione $ \delta(x) $.
 
 Come si è visto nel corso di Metodi I, si può però aggirare il problema delle
@@ -198,4 +198,44 @@ $ \mathcal{H} $ e $ S' $ spazio delle distribuzioni temperate su $ S$, si dice
     }%
 }
 
+Per comprendere questa definizione e formalizzarla è necessario definire alcuni concetti sugli
+operatori e sui loro autovettori.
 
+\subsection{Osservabili}
+
+Un operatore quantistico è una funzione $ A: \mathcal{D}_A\subset\mathcal{H}\to\mathcal{H} $
+continua, dove $ \mathcal{D}_A $ è il dominio dell'operatore $ A $.
+
+\textbf{Def.} L'operatore aggiunto di $ A $ è l'unico operatore $ A^{\dagger} $ tale che
+$ \forall \ket{v}\in\mathcal{D}_A,\; \forall \ket{u}\in\mathcal{D}_{A^{\dagger}}$ vale
+
+$$ \bra{u} \left( A\ket{v} \right) = \left[ \bra{v} \left( A^{\dagger}\ket{u} \right) \right]^* $$ 
+ 
+\textbf{Def.} Un operatore $ A $ si dice autoaggiunto se $ A = A^{\dagger} $ e
+$\mathcal{D}_A = \mathcal{D}_{A^{\dagger}}$
+
+\textbf{Oss.} È una definizione più stringente della hermiticità, come è chiaro dal seguente
+esempio:
+
+\textbf{Esempio} si consideri $ A = -i\dv{x} $ nello spazio $ \mathcal{H} = L^2(a,b) $: 
+questo operatore è sempre hermitiano, ma non è sempre autoaggiunto, infatti
+$$ \bra{f}A\ket{g} = \int_{a}^{b}dxf^*(x)\left(-i\dv{x}\right)g(x) =
+-i\eval{g(x)f(x)}_a^b + \int_{a}^{b}dx\left(i\dv{x}\right)f^*(x)g(x)$$
+è pari a $ \left[ \bra{g}A^{\dagger}\ket{f} \right]^* $ solo se sia $ f(x) $ sia $ g(x) $
+sono periodiche su $ (a,b) $.
+
+L'operatore è dunque autoaggiunto\footnote{Questo esempio non è precisissimo, per una trattazione
+perfetta si vedano le dispense del prof. Sciuto, pp. 156-157.} in
+$ \mathcal{D}_A = \left\{ f:(a,b)\to\mathbb{C} \text{ periodiche} \right\}$, per $ (a,b)$ finito.
+
+Il concetto di osservabile si può estendere anche alle distribuzioni temperate
+\footnote{NOTE TO SELF, la Frau ha detto che c'è di più sotto, forse ci tornerà}:
+
+\textbf{Def.} Dato $ A$ con $ \mathcal{D}_A\subset S $, si definisce l'azione di $ A $ su 
+$ \bra{T} \in S'$ come $ A: S'\to S' $ tale che
+$$ \left(\bra{T}A\right)\ket{g} := \bra{T}\left(A\ket{g}\right),\; \forall \ket{g}\in S \text{ t.c } A\ket{g}\in S$$
+\textbf{Oss.} Se si considera il caso in cui $ T$ è una funzione, la definizione è coerente con
+quella di prodotto scalare tra \textit{bra} e \textit{ket}.
+
+\textbf{Oss.} Da questa definizione si può anche definire l'espressione $\bra{g}A\ket{T}$
+nel modo seguente: $ \left[\bra{T}A^{\dagger}\ket{g}\right]^* := \bra{g}A\ket{T} $ 
