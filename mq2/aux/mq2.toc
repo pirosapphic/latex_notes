@@ -8,3 +8,5 @@
 \contentsline {section}{\numberline {3}Postulato 0.1 della Meccanica Quantistica}{6}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Osservabili}{6}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Autovettori e autovalori}{6}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Sistemi Completi di Osservabili Commutanti}{9}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Esempio noto: la buca di potenziale finita 1D}{9}{subsection.3.4}%
