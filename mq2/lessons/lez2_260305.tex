@@ -217,10 +217,25 @@ $$
  del sistema possono essere identificati dal \textit{ket} $ \ket{E,\pm} $, dove $ \pm $ indica
  la parità dell'autofunzione.
 
+ Questo risultato è generale, per il seguente teorema
+
+ \noindent\fbox{%
+     \parbox{\textwidth}{%
+	 \textbf{Teoremino}
+	 Dati due stati $\ket{\psi_1},\ket{\psi_2}$ tali che $H\ket{\psi_i} = E\ket{\psi_i}$, con
+	 $[H,\Pi]=0$, si possono sempre costruire autostati di $H$ simmetrici o antisimmetrici.
+
+	 \textbf{Dim.} Considero $\ket{\pm}:=\ket{\psi_i}\pm\Pi\ket{\psi_i}$:
+
+	 $\Pi\ket{\pm}= \Pi\ket{\psi_i}\pm\Pi^2\ket{\psi_i} = \Pi\ket{\psi_i}\pm\ket{\psi_i} =\pm\ket{\pm}$,
+	 cioè $\ket{\pm}$ è, rispettivamente, simmetrico o antisimmetrico; inoltre
+	 $H\ket{\pm}= H\ket{\psi_i}\pm H\Pi\ket{\psi_i} = E(\ket{\psi_i} \pm \Pi\ket{\psi_i}) = E\ket{\pm}$
+	 \textbf{QED}
+     }%
+ }
+ 
  Un altro modo comune di risolvere la degenerazione è indicare se la particella incida sulla buca
  da destra o da sinistra, ponendo, rispettivamente, $ A=0 $ o $ G=0 $.
-\item $\mathbf{0\leq E\leq V_0}$
-\item $\mathbf{E<V_0}$
-\end{itemize}
+ %itemize ends in next file
 
   
