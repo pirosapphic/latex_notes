@@ -134,3 +134,84 @@ sono gli asintoti di $\tan(x)$ e $\cot(x)$, cioè $\xi = n\pi$, la relazione $\x
 
 
 \subsection{Risultati generali sui potenziali}
+\subsubsection{Potenziale attrattivo}
+Si dice potenziale attrattivo un potenziale $V(\vec{x})$ tale che
+$$\lim\limits_{|\vec{x}|\to\infty}V(\vec{x}) = 0,\quad V(\vec{x})<0$$
+Per i potenziali di questo tipo valgono i seguenti risultati
+
+\begin{itemize}
+    \item $\mathbf{E<0} \to \psi\in L^2(\mathbb{R}^3)$, cioè 
+	$\psi(\vec{x}) \underset{|\vec{x}|\to\infty}\sim e^{-\beta |\vec{x}|}$.
+	
+	Infatti l'equazione di Schrödinger
+	$\frac{-\hbar^2}{2m}\laplacian\psi+V\psi=E\psi$ è asintoticamente equivalente
+	a $\laplacian\psi - \alpha^2\psi \sim 0$, che ha come soluzione proprio
+	$\psi(\vec{x}) \underset{|\vec{x}|\to\infty}\sim e^{-\beta |\vec{x}|}$;
+	essenod $\psi$ quadrato-sommabile, $E\in Spd(H)$
+    
+	Si ha inoltre che $\forall \epsilon>0, \exists V\subset\mathbb{R}^3$ t.c.
+	$\int_{V}^{}d^3x|\psi|^2 = 1-\epsilon$, come conseguenza della
+	quadrato-sommabilità di $\psi$.
+    \item $\mathbf{E>0} \to \psi$ di particella libera.
+
+	Infatti la soluzione asintotica dell'equazione di Schrödinger è
+	$\psi(\vec{x})\underset{|\vec{x}|\to\infty}\sim
+	\frac{1}{(2\pi)^{3/2}}e^{i\vec{k}\cdot\vec{x}}$, che non è normalizzabile,
+	dunque $E\in Spc(H)$
+\end{itemize}
+\subsubsection{Potenziali limitati inferiormente}
+Si consideri un'Hamiltoniana di un sistema di $N$ particelle 
+$$H = \sum_{i=1}^{N}\frac{p_i^2}{2m_i}+ V(\vec{x_1},...,\vec{x_N})$$
+
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+   \textbf{Teorema}
+
+Se il potenziale è limitato inferiormente, cioè $\exists V_0$ t.c
+$V>V_0\;\forall \vec{x_i}\in\mathbb{R}^{3N}$, allora lo spettro energetico è
+limitato inferiormente, $\exists E_{min}>V_0$.
+
+\textbf{Dimostrazione, Spd(H)}
+
+$\forall \ket{\psi}\in\mathcal{H},\;\bra{\psi}H\ket{\psi} =
+\bra{\psi}T\ket{\psi}+\bra{\psi}V\ket{\psi}.$
+
+Per $T$ vale: 
+$$\bra{\psi}T\ket{\psi} =
+\sum_{i=0}^{N}\frac{1}{2m_i}\bra{\psi}p_i^{\dagger}p_i\ket{\psi} = 
+\sum_{i=0}^{N}\frac{1}{2m_i}||p_i\ket{\psi}||^2>0$$ 
+
+Per $V$ vale:
+$$\bra{\psi}V\ket{\psi} = \int_{}^{}dxdy \bra{\psi}\ket{x}\bra{x}V\ket{y}\bra{y}
+\ket{\psi} = \int_{}^{}dx V(x)|\psi|^2 \geq V_0\bra{\psi}\ket{\psi} = V_0$$
+dove si è indicato con $x,y$ l'insieme di tutte le $3N$ coordinate.
+
+Si ha dunque che $\langle H \rangle > V_0$ \textbf{QED}
+
+
+\textbf{Dimostrazione, Spc(H)}
+
+Si consideri ora $\bra{\psi}(H-E)\ket{\psi}>V_0-E = C$ per il risultato precedente; 
+per assurdo, si assuma $E<V_0 \to C>0$.
+
+Allora $\bra{\psi}(H-E)\ket{\psi} = |\bra{\psi}(H-E)\ket{\psi}| \leq
+||\ket{\psi}||\,||(H-E)\ket{\psi}||$ e si ha
+$$
+||\ket{\psi}||\,||(H-E)\ket{\psi}||>C \to \frac{||(H-E)\ket{\psi}||}{||\ket{\psi}||}>
+\frac{C}{||\ket{\psi}||^2}=C>0
+$$
+Prendendo l'Inf di questa espressione si trova
+$$
+\inf\limits_{\ket{\psi}\in\mathcal{H}} \frac{||(H-E)\ket{\psi}||}{||\ket{\psi}||}>
+\bar{C}>0
+$$
+Cioè la definizione di $E$ punto regolare per $H$, si ha dunque che se $E<V_0$,
+allora $E\not\in Sp(H)$
+
+\textbf{QED}
+    }%
+}
+
+
+

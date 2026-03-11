@@ -12,3 +12,5 @@
 \contentsline {subsection}{\numberline {3.4}Esempio noto: la buca di potenziale finita 1D}{9}{subsection.3.4}%
 \contentsline {subsubsection}{\numberline {3.4.1}Casi limite}{12}{subsubsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.5}Risultati generali sui potenziali}{12}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Potenziale attrattivo}{12}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Potenziali limitati inferiormente}{13}{subsubsection.3.5.2}%
