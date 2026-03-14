@@ -40,7 +40,7 @@ $$
     \end{cases}
 $$
 Le condizioni di continuità di $\psi(x)$ e $\psi'(x)$ sono due sistemi lineari a due equazioni e due
-incognite: se il sistema non è singolare ($\det M_{coeff} \neq 0$), l'unica soluzione è $\psi(x)\equiv 0$,
+incognite: se il sistema non è singolare ($\det M_{\text{coeff}} \neq 0$), l'unica soluzione è $\psi(x)\equiv 0$,
 soluzione non ammissibile, mentre se è singolare le condizioni sui determinanti sono, rispettivamente per
 $\psi_P$ e $\psi_D$, $k\tan(ka)=\beta$ e $k\cot(ka)=\beta$.
 
@@ -119,12 +119,13 @@ sono gli asintoti di $\tan(x)$ e $\cot(x)$, cioè $\xi = n\pi$, la relazione $\x
 
     In questo limite, $r^2\to 0$ ed esiste un unico stato legato pari, con $\xi\to0$ e $\eta\to 0$:
 
-    $\eta = \xi\tan(\xi)\approx\xi^2$ e dunque $\eta^2+\eta = r^2 \to \eta\approx r^2$, ricordando le 
-    definizioni di queste quantità si trova $E = \frac{-2ma^2}{\hbar^2}V_0^2$\
+    $\eta = \xi\tan(\xi)\approx\xi^2$ e dunque $\eta^2+\eta = r^2 \to \eta\approx r^2$; ricordando le 
+    definizioni di queste quantità si trova $E = \frac{-2ma^2}{\hbar^2}V_0^2$
 \item $\mathbf{V(x)=-\delta(x)}$
 
     Per avere una delta di Dirac, non basta far tendere la profondità a $\infty$ e la larghezza a 0, ma
-    serve che l'area sia costante: definisco $V_0 =\frac{-A}{2a}$ e $\lim\limits_{a\to0}V(x) = -A\delta(x)$.
+    serve che l'area sia costante: si definisce $V_0 =\frac{-A}{2a}$ e
+    $\lim\limits_{a\to0}V(x) = -A\delta(x)$.
 
     $r^2 = \frac{-2m}{\hbar^2}a^2V_0^2=\frac{mA}{\hbar^2}a\to0$ per $a\to 0$: si possono utilizzare i limiti
     del caso precedente e trovare che c'è un solo stato legato con energia
@@ -147,7 +148,7 @@ Per i potenziali di questo tipo valgono i seguenti risultati
 	$\frac{-\hbar^2}{2m}\laplacian\psi+V\psi=E\psi$ è asintoticamente equivalente
 	a $\laplacian\psi - \alpha^2\psi \sim 0$, che ha come soluzione proprio
 	$\psi(\vec{x}) \underset{|\vec{x}|\to\infty}\sim e^{-\beta |\vec{x}|}$;
-	essenod $\psi$ quadrato-sommabile, $E\in Spd(H)$
+	essendo $\psi$ quadrato-sommabile, $E\in Spd(H)$
     
 	Si ha inoltre che $\forall \epsilon>0, \exists V\subset\mathbb{R}^3$ t.c.
 	$\int_{V}^{}d^3x|\psi|^2 = 1-\epsilon$, come conseguenza della
@@ -162,7 +163,6 @@ Per i potenziali di questo tipo valgono i seguenti risultati
 \subsubsection{Potenziali limitati inferiormente}
 Si consideri un'Hamiltoniana di un sistema di $N$ particelle 
 $$H = \sum_{i=1}^{N}\frac{p_i^2}{2m_i}+ V(\vec{x_1},...,\vec{x_N})$$
-
 
 \noindent\fbox{%
     \parbox{\textwidth}{%
@@ -181,7 +181,6 @@ Per $T$ vale:
 $$\bra{\psi}T\ket{\psi} =
 \sum_{i=0}^{N}\frac{1}{2m_i}\bra{\psi}p_i^{\dagger}p_i\ket{\psi} = 
 \sum_{i=0}^{N}\frac{1}{2m_i}||p_i\ket{\psi}||^2>0$$ 
-
 Per $V$ vale:
 $$\bra{\psi}V\ket{\psi} = \int_{}^{}dxdy \bra{\psi}\ket{x}\bra{x}V\ket{y}\bra{y}
 \ket{\psi} = \int_{}^{}dx V(x)|\psi|^2 \geq V_0\bra{\psi}\ket{\psi} = V_0$$
@@ -189,10 +188,9 @@ dove si è indicato con $x,y$ l'insieme di tutte le $3N$ coordinate.
 
 Si ha dunque che $\langle H \rangle > V_0$ \textbf{QED}
 
-
 \textbf{Dimostrazione, Spc(H)}
 
-Si consideri ora $\bra{\psi}(H-E)\ket{\psi}>V_0-E = C$ per il risultato precedente; 
+Si consideri ora $\bra{\psi}(H-E)\ket{\psi}>V_0-E := C$ per il risultato precedente; 
 per assurdo, si assuma $E<V_0 \to C>0$.
 
 Allora $\bra{\psi}(H-E)\ket{\psi} = |\bra{\psi}(H-E)\ket{\psi}| \leq
@@ -202,12 +200,13 @@ $$
 \frac{C}{||\ket{\psi}||^2}=C>0
 $$
 Prendendo l'Inf di questa espressione si trova
-$$
+$
 \inf\limits_{\ket{\psi}\in\mathcal{H}} \frac{||(H-E)\ket{\psi}||}{||\ket{\psi}||}>
 \bar{C}>0
-$$
+$
+
 Cioè la definizione di $E$ punto regolare per $H$, si ha dunque che se $E<V_0$,
-allora $E\not\in Sp(H)$
+allora $E\not\in Sp(H)$.
 
 \textbf{QED}
     }%

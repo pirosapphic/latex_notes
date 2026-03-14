@@ -1,4 +1,5 @@
 %lesson 2, 05/03/2026
+\newpage
 \subsection{Autovettori e autovalori}
 
 Dato un operatore autoaggiunto $ A $, si consideri ora l'equazione agli autovalori
@@ -6,7 +7,7 @@ $$ A\ket{a} = a\ket{a} $$
 
 Prima di dare la definizione di valori regolari e autovalori di $ A $, si consideri la seguente
 quantità, sempre definita:
-$$ C := \inf\limits_{\ket{\psi}\in\mathcal{D}_A}\frac{||(A-a1)\ket{\psi}||}{||\ket{\psi}||}\geq 0$$ 
+$$ C := \inf\limits_{\ket{\psi}\in\mathcal{D}_A}\frac{||(A-a\mathbb{I})\ket{\psi}||}{||\ket{\psi}||}\geq 0$$ 
 \textbf{Def.} $a\in\mathbb{R}$ si dice punto regolare di $ A $ se $ C > 0 $.
 
 \textbf{Def.} $a\in\mathbb{R}$ si dice autovalore di $ A $ se $C=0$
@@ -50,7 +51,7 @@ Si può scrivere $ \forall f,g\in S $
  & \bra{f}\ket{g} = \sum_{i}^{}f^*_ig_i + \int_{Spd(A)}^{}daf^*(a)g(a)
     := \sumint_{Sp(A)}daf^*(a)g(a)\text{ , prodotto scalare}&&\\
 & \ket{f} = \sumint_{Sp(A)}daf(a)\ket{a}\text{ , rappresentazione di $\ket{f}$}&&\\
- & \sumint_{Sp(A)}\ket{a}\bra{a} = 1 \text{ , relazione di completezza dello spettro} &&
+& \sumint_{Sp(A)}\ket{a}\bra{a} = \mathbb{I} \text{ , relazione di completezza dello spettro} &&
 \end{flalign*}
 
 
@@ -105,7 +106,7 @@ i prodotti scalari possono essere rappresentati come
 $ \bra{f}\ket{g} = \int_{-\infty}^{\infty}dx \bra{f}\ket{x}\bra{x}\ket{g} =
 \int_{-\infty}^{\infty}dxf^*(x)g(x)$ 
 
-\textbf{Esempio 2} L'operatore in 1D $ K $ 
+\textbf{Esempio 2} L'operatore numero d'onda in 1D $ K $ 
 
 L'operatore $ K $ è quell'operatore che ha come rappresentazione nello spazio delle coordinate
 $ \bra{x}K\ket{x'} = \delta(x'-x)\left( -i\dv{x} \right) $; la sua equazione agli autovalori è
@@ -142,9 +143,9 @@ del seguente teorema.
     \parbox{\textwidth}{%
     \textbf{Teorema}, gli autospazi simultanei del SCOC hanno dimensione 1.
 
-    \textbf{Dimostrazione} Si assuma, per assurdo, che $ \ket{v_1}, \ket{v_2} $ (base dell'
-    autospazio degenere) abbiano gli stessi autovalori $ \alpha_i $ per gli operatori $A_i$
-    e si definisca l'operatore $B$ indipendente dal SCOC t.c. $ B\ket{v_1} = \ket{v_2}$
+    \textbf{Dimostrazione} Si assuma, per assurdo, che $ \ket{v_1}, \ket{v_2} $
+    (base dell'autospazio degenere) abbiano gli stessi autovalori $ \alpha_i $ per gli operatori 
+    $A_i$ e si definisca l'operatore $B$ indipendente dal SCOC t.c. $ B\ket{v_1} = \ket{v_2}$
     e $B\ket{v_2} = \ket{v_1}$:
      allora $ A_iB\ket{v_1} = A_i\ket{v_2} = \alpha_i \ket{v_2}$ e
      $ BA_i\ket{v_1} = \alpha_i\ket{v_2} $ e similmente con $ \ket{v_2} $; questo significa
