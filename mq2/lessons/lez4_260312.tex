@@ -34,7 +34,7 @@ dell'indeterminazione che permettono questo equilibrio, cioè la stabilità dell
 
 \subsection{Lo stato fondamentale}
 Prese hamiltoniane con spettro limitato inferiormente, lo stato fondamentale (o vuoto), cioè quello con
-energia minima $E_0$ ha alcune importanti proprietà.
+energia $E_0 = \min \{Sp(H)\}$, ha alcune importanti proprietà.
 
 Si introducono prima due lemmi, utili per le dimostrazioni successive
 
@@ -94,7 +94,7 @@ Si enuncia ora un importante teorema:
     \textbf{Dimostrazione} per assurdo, suppongo che esistano $\psi_1,\psi_2$ autostati linearmente
   indipendenti di $H$ con autovalore $E_0$: fissato $x_0\in\mathbb{R}$, considero la combinazione lineare
 
-    $$ \psi(x) =N (\psi_1(x_0)\psi_2(x) - \psi_2(x_0)\psi_1(x))$$
+  $$ \psi(x) =N [\psi_1(x_0)\psi_2(x) - \psi_2(x_0)\psi_1(x)]$$
     che ha sempre energia $E_0$; o il punto $x_0$ è uno zero di $\psi(x)$, che è assurdo per il Lemma 2,
     o la funzione è identicamente nulla, che significa che $\psi_1\propto\psi_2$, che è assurdo perché 
     $\psi_1,\psi_2$ sono linearmente indipendenti. \textbf{QED}
@@ -124,8 +124,8 @@ eccitato deve avere almeno $n$ nodi.
 presenta le stesse simmetrie di $H$ che, in altre parole, significa che \textbf{in Meccanica Quantistica
 non esiste la rottura spontanea di simmetria}, quando i gradi di libertà sono finiti.
 
-Questo non è vero in meccanica classica, per esempio si prenda il cosiddetto potenziale a \textit{sombrero
-}, che è una funzione pari: i moti con energia minima sono banali (la particella rimane ferma o a destra
+Questo non è vero in meccanica classica, si prenda come esempio il cosiddetto potenziale a \textit{sombrero},
+che è una funzione pari: i moti con energia minima sono banali (la particella rimane ferma o a destra
 o a sinistra del picco centrale della funzione) e non presentano parità, in altre parole 
 \textbf{viene rotta la simmetria di parità del potenziale}.
 
@@ -138,7 +138,7 @@ o a sinistra del picco centrale della funzione) e non presentano parità, in alt
 In meccanica quantistica, invece, lo stato fondamentale di un potenziale del genere può fare
 \textit{tunneling} e, per il teorema precedente, \textbf{deve} essere pari.
 
-Un esempio manifesto di questo risultato è lo stato fondamentale dell'atomo di idrogeno: l'hamiltoniana
+Un altro esempio manifesto di questo risultato è lo stato fondamentale dell'atomo di idrogeno: l'hamiltoniana
 coulombiana è invariante per rotazioni attorno a un qualunque asse, infatti lo stato fondamentale
 $\psi_{100}(r,\theta,\varphi)$ ha simmetria sferica (poiché la ha l'armonica sferica
 $Y_0^0(\theta,\varphi)$)
