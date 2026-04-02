@@ -40,4 +40,38 @@ che è detta funzione d'onda vettoriale.
     $\mathbf{\mathcal{P}_{\psi}(f_i)}$ \textbf{dipendente dallo stato del sistema.}
     }%
 }
-Questo è detto, per ovvii motivi, postulato della misura
+
+Questo è detto, per ovvii motivi, postulato della misura.
+
+Per definire queste probablità bisogna distinguere 3 casi:
+
+\begin{itemize}
+    \item $\mathbf{f_i \in Spd(F)}$ \textbf{non degenere}
+    
+	Dato l'autostato (normalizzato) $\ket{f_i}$ e uno stato $\ket{\psi}$, si \textbf{definisce}	
+	$$\mathcal{P}_{\psi}(f_i):= \left| \bra{f_i}\ket{\psi} \right|^2 =
+	\bra{\psi}\ket{f_i}\bra{f_i}\ket{\psi} := \bra{\psi}P_{f_i}\ket{\psi}$$
+	dove $P_{f_i} := \ket{f_i}\bra{f_i}$ è il \textbf{proiettore} sullo stato $\ket{f_i}$
+
+    \item $\mathbf{f_i \in Spd(F)}$ \textbf{degenere}
+	Si supponga che l'autovalore $f_i$ abbia una degenerazione di grado $n_i$:
+	si può sempre costruire una base per l'autospazio degenere $\left\{\ket{f_i,\alpha_\mu}\right\}$,
+	con $\mu = 1,2...,n_i$;
+
+	Si \textbf{definisce} dunque
+	$$\mathcal{P}_\psi(f_i):=\sum_{\mu=1}^{n_i}\left|\bra{f_i,\alpha_\mu}\ket{\psi}\right|^2
+	= \bra{\psi}\left(\sum_{\mu=1}^{n_i}\ket{f_i,\alpha_\mu}\bra{f_i,\alpha_\mu} \right)\ket{\psi}:=
+	\bra{\psi}P_{f_i}\ket{\psi}$$
+	avendo opportunamente ridefinito il proiettore.
+    \item $\mathbf{f\in Spc(F)}$
+
+	Nel caso di spettro continuo, si definisce una \textbf{densità di probabilità} nel modo seguente:
+	$$\mathcal{P}_\psi(f,f+\Delta f) := \int_{f}^{f+\Delta f}df \bra{\psi}P_f\ket{\psi}$$
+	dove $P_f:=\ket{f}\bra{f}$ (nel caso non degenere).	
+\end{itemize}
+
+\subsection{Valor medio di un'osservabile}
+Data un'osservabile $F$ e uno stato normalizzato $\ket{\psi}$, il suo valor medio è il numero
+$$\bra{\psi}F\ket{\psi} := \sum_{i}^{}f_i\mathcal{P}_\psi(f_i) =
+\bra{\psi}\left(\sum_{i}^{}f_i\ket{f_i}\bra{f_i}\right)\ket{\psi}$$
+riscrivendo questa quantità 
