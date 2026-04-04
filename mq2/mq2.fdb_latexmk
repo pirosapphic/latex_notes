@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1775141620.97809 "mq2.tex" "mq2.pdf" "mq2" 1775141621.43603 0
+["pdflatex"] 1775124448.50113 "mq2.tex" "mq2.pdf" "mq2" 1775124448.91661 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1772820570 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1772820570 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1772820570 1536 06717a2b50de47d4087ac0e6cd759455 ""
@@ -127,22 +127,22 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1773083048 328286 c744b55c2e5ce0ede7e4a014bf227558 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1773083028 2329487 044fb2293111d110e821d0c5ae61883c ""
   "airy.png" 1773180017.89694 341621 6ea1ca58f7364a4d4c60c6dc9441030b ""
-  "aux/mq2.aux" 1775141621.39971 4345 bdc665514f5252ebfde88686a3bcf96a "pdflatex"
-  "aux/mq2.out" 1775141621.40025 5666 14a2eddeed20e2e1b29bb09fb73ceb8d "pdflatex"
-  "aux/mq2.toc" 1775141621.40025 2526 42ef950b3bbbc0d6fc450a5e36a603db "pdflatex"
   "even_well.png" 1773185090.50848 79358 ae561c1bac8f689c990edd91b1515f3f ""
   "lessons/lez1_260304.tex" 1775124414.65942 11476 795c2fc5153486c4145cdd961eccee5d ""
   "lessons/lez2_260305.tex" 1775124414.65942 11412 2c61a08cac6328c835042e5d504dbc5a ""
   "lessons/lez3_260309.tex" 1775124414.65942 7591 1c46223b46365ea20372dfb831d612cb ""
   "lessons/lez4_260312.tex" 1775124414.65942 13307 d58081fdffbf9d1e513c092f854dec8d ""
-  "lessons/lez5_260318.tex" 1775141605.74751 5688 c1f269ed7d11f2d7d7759c43b66e14f5 ""
+  "lessons/lez5_260318.tex" 1775124414.65942 3765 a014917c05ef29780952e21b550f187f ""
+  "mq2.aux" 1775124448.88 4056 1861990aa9f8e18d461632a10f362c3a "pdflatex"
+  "mq2.out" 1775124448.88072 5210 28e4710174a08f21f479fdaad6053d06 "pdflatex"
   "mq2.tex" 1775124414.66242 2477 67c163aada045489b0b5fe02c5ad4417 ""
+  "mq2.toc" 1775124448.88072 2319 71b9593f4e98cdb80cefd30e1b18bcf4 "pdflatex"
   "odd_well.png" 1773185073.4605 69459 656882464a792d129b3efa096e61f6b1 ""
   "sombrero.png" 1775124414.66242 13070 f56abcd2c63b406e5159269a5347047e ""
   (generated)
-  "aux/mq2.aux"
-  "aux/mq2.log"
-  "aux/mq2.out"
-  "aux/mq2.toc"
+  "mq2.aux"
+  "mq2.log"
+  "mq2.out"
   "mq2.pdf"
+  "mq2.toc"
   (rewritten before read)

@@ -72,6 +72,42 @@ Per definire queste probablità bisogna distinguere 3 casi:
 
 \subsection{Valor medio di un'osservabile}
 Data un'osservabile $F$ e uno stato normalizzato $\ket{\psi}$, il suo valor medio è il numero
-$$\bra{\psi}F\ket{\psi} := \sum_{i}^{}f_i\mathcal{P}_\psi(f_i) =
-\bra{\psi}\left(\sum_{i}^{}f_i\ket{f_i}\bra{f_i}\right)\ket{\psi}$$
-riscrivendo questa quantità 
+$$\langle F \rangle_\psi = \bra{\psi}F\ket{\psi} := \sum_{i}^{}f_i\mathcal{P}_\psi(f_i) =
+\sum_{i}^{}f_i\left| \bra{f_i}\ket{\psi} \right|^2$$
+un modo più generico di scrivere la stessa quantità, come sarà chiaro tra poco, è il seguente:
+
+$$\bra{\psi}F\ket{\psi} = \sum_{i}^{}\bra{\psi}\ket{i}\bra{i}F\ket{\psi} =
+\sum_{i}^{}\bra{i}F\ket{\psi}\bra{\psi}\ket{i} = Tr(FP_{\psi})$$
+con $\left\{\ket{i}\right\}$ base ONC qualunque, in quanto la traccia di un operatore è invariante per
+cambio di base.
+
+Similmente si può ricavare che $\mathcal{P}_{\psi}(f_i) = Tr(P_{f_i}P_{\psi})$.
+
+\subsection{Stati misti e matrice densità}
+Prima di procedere con la trattazione del postulato della misura, è necessario introdurre il concetto
+di \textbf{stato misto}.
+
+\textbf{Def.} uno stato misto è una miscela di stati quantistici puri $\ket{\psi_k}$ tale che la
+probabilità classica di trovare uno degli stati $\ket{\psi_k}$ sia $\omega_k$, con $\sum_{k=1}^{N}\omega_k=1$.
+
+Si consideri ora un'osservabile $F$: il valore medio di $F$ sarà la media classica dei valori medii:
+$$ \sum_{k=1}^{N} \omega_k \bra{\psi_k}F\ket{\psi_k} = \sum_{k=1}^{N}\omega_k Tr(FP_k) =
+Tr\left(F \sum_{k=1}^{N} \omega_k \ket{\psi_k}\bra{\psi_k}\right) := Tr(F\rho):=\langle F\rangle_\rho$$
+
+\textbf{Def.} l'operatore $\rho :=\sum_{k=1}^{N}\omega_k\ket{\psi_k}\bra{\psi_k}$ si dice \textbf{matrice
+densità}.
+
+\subsubsection{Proprietà della matrice densità}
+\begin{enumerate}
+    \item Hermiticità $\rho = \rho^{\dagger}$;
+    \item $Tr(\rho) = \sum_{k}^{}\omega_k Tr(P_k) =
+	\sum_{k}^{}\omega_k\sum_{i}^{}\bra{i}\ket{\psi_k}\bra{\psi_k}\ket{i} = \sum_{k}^{}\omega_k  = 1$;
+    \item Autovettori e autovalori $\rho\ket{\psi_l}
+	= \sum_{k}^{}\omega_k\bra{\psi_k}\ket{\psi_l}\ket{\psi_k} = \omega_l\ket{\psi_l}$, che è
+	ovvio, in quanto $\rho$ è diagonale nella base $\left\{\ket{\psi_k}\right\}$;
+    \item $\forall \ket{v}\in\mathcal{H}, \bra{v}\rho\ket{v}
+	= \sum_{k}^{} \omega_k \bra{v}\ket{\psi_k}\bra{\psi_k}\ket{v}
+	= \sum_{k}^{} \omega_k \left|\bra{v}\ket{\psi_k} \right|^2 \geq 0$;
+
+\end{enumerate}
+
