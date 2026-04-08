@@ -76,8 +76,10 @@ $$\langle F \rangle_\psi = \bra{\psi}F\ket{\psi} := \sum_{i}^{}f_i\mathcal{P}_\p
 \sum_{i}^{}f_i\left| \bra{f_i}\ket{\psi} \right|^2$$
 un modo più generico di scrivere la stessa quantità, come sarà chiaro tra poco, è il seguente:
 
-$$\bra{\psi}F\ket{\psi} = \sum_{i}^{}\bra{\psi}\ket{i}\bra{i}F\ket{\psi} =
-\sum_{i}^{}\bra{i}F\ket{\psi}\bra{\psi}\ket{i} = Tr(FP_{\psi})$$
+$$
+\bra{\psi}F\ket{\psi} = \sum_{i}^{}\bra{\psi}\ket{i}\bra{i}F\ket{\psi} =
+\sum_{i}^{}\bra{i}F\ket{\psi}\bra{\psi}\ket{i} = Tr(FP_{\psi})
+$$
 con $\left\{\ket{i}\right\}$ base ONC qualunque, in quanto la traccia di un operatore è invariante per
 cambio di base.
 
@@ -88,14 +90,19 @@ Prima di procedere con la trattazione del postulato della misura, è necessario 
 di \textbf{stato misto}.
 
 \textbf{Def.} uno stato misto è una miscela di stati quantistici puri $\ket{\psi_k}$ tale che la
-probabilità classica di trovare uno degli stati $\ket{\psi_k}$ sia $\omega_k$, con $\sum_{k=1}^{N}\omega_k=1$.
-
+probabilità classica di trovare uno degli stati $\ket{\psi_k}$ sia $\omega_k$, con
+$$
+\sum_{k=1}^{N}\omega_k=1.
+$$
 Si consideri ora un'osservabile $F$: il valore medio di $F$ sarà la media classica dei valori medii:
 $$ \sum_{k=1}^{N} \omega_k \bra{\psi_k}F\ket{\psi_k} = \sum_{k=1}^{N}\omega_k Tr(FP_k) =
 Tr\left(F \sum_{k=1}^{N} \omega_k \ket{\psi_k}\bra{\psi_k}\right) := Tr(F\rho):=\langle F\rangle_\rho$$
 
 \textbf{Def.} l'operatore $\rho :=\sum_{k=1}^{N}\omega_k\ket{\psi_k}\bra{\psi_k}$ si dice \textbf{matrice
-densità}.
+densità} e rappresenta lo stato misto.
+
+\textit{Oss.} La matrice densità di uno stato puro è il caso banale $\rho_\psi = \ket{\psi}\bra{\psi}$:
+questo rende più chiara la notazione $\langle F\rangle_\psi = Tr(FP_\psi) = Tr(F\rho_\psi)$
 
 \subsubsection{Proprietà della matrice densità}
 \begin{enumerate}
@@ -108,6 +115,56 @@ densità}.
     \item $\forall \ket{v}\in\mathcal{H}, \bra{v}\rho\ket{v}
 	= \sum_{k}^{} \omega_k \bra{v}\ket{\psi_k}\bra{\psi_k}\ket{v}
 	= \sum_{k}^{} \omega_k \left|\bra{v}\ket{\psi_k} \right|^2 \geq 0$;
-
+    \item Idempotenza $\rho^2 = \rho$, quindi $Tr(\rho^2) = Tr(\rho) = 1$
 \end{enumerate}
+
+I risultati della misura dell'osservabile $F$ sono sempre gli autovalori $f_i$, pesati con la probablità
+sia classica $\omega_k$ sia quantistica $\mathcal{P}_{\psi_k}(f_i)$:
+$$\mathcal{P}_\rho(f_i) := \langle P_{f_i}\rangle_\rho = Tr(P_{f_i}\rho) = 
+\sum_{k=1}^{N}\omega_k \mathcal{P}_{\psi_k}(f_i)\in\mathbb{R}$$
+\textbf{Esempio} Quale è la differenza tra uno stato puro e uno stato misto?
+
+Si consideri un operatore $A$ con spettro discreto $\left\{a_i\right\}$ e due stati quantistici
+$$\ket{\psi} = \sum_{i}^{}a_i\ket{a_i} \text{ e } \rho = \sum_{i}^{}\omega_i\ket{a_i}\bra{a_i}
+\text{, con } \omega_i = |c_i|^2
+$$
+Dalla misura di $A$ si trovano risultati identici:
+$$\mathcal{P}_\psi(a_i) = \bra{\psi}P_{a_i}\ket{\psi} = \left|\bra{a_i}\ket{\psi}\right|^2 =
+|c_i|^2 = \omega_i$$
+$$\mathcal{P}_\rho(a_i) = Tr(P_{a_i}\rho) =
+Tr\left( \sum_{j}^{}\omega_j \left( \ket{a_i}\bra{a_i}\right)\left(\ket{a_j}\bra{a_j}\right) \right) = 
+\sum_{j}^{}\omega_j \bra{a_j}\ket{a_i}\bra{a_i}\ket{a_j} = \omega_i
+$$
+Se però si considera un operatore $B$ tale che $\left[A,B\right] \neq0$, le probabilità di misurare un suo
+autovalore $b$ sono:
+$$\mathcal{P}_\rho(b) = Tr(P_b\rho) = Tr\left( \sum_{k}^{}\omega_k\ket{a_k}\bra{a_k}\ket{b}\bra{b}\right)=
+\sum_{k}^{}\omega_k\left|\bra{a_k}\ket{b}\right|^2
+$$
+mentre
+\begin{align*}
+    \mathcal{P}_\psi(b)&=\bra{\psi}P_b\ket{\psi}=
+    \sum_{i}^{}\sum_{j}c_i^*c_j\bra{a_i}\ket{b}\bra{b}\ket{a_j} =
+    \sum_{i=j}\left[...\right] +\sum_{i>j}\left[...\right]+\sum_{i<j}\left[...\right] = \\
+    &=\sum_{i}|c_i|^2\left|\bra{a_i}\ket{b}\right|^2 +
+    \sum_{i>j}c_i^*c_j\bra{a_i}\ket{b}\bra{b}\ket{a_j} + c_j^*c_i\bra{a_j}\ket{b}\bra{b}\ket{a_i}=\\
+    &=\sum_{i}\omega_i\left|\bra{a_i}\ket{b}\right|^2 +
+    2\Re\left( \sum_{i>j} c_i^*c_j\bra{a_i}\ket{b}\bra{b}\ket{a_j}\right) 
+\end{align*}
+
+La differenza tra queste probabilità può essere intesa nel seguente modo: la miscela di stati puri $\rho$
+non comprende le fasi dei coefficienti di probabilità $\arg(c_i)$, mentre lo stato puro $\psi$ sì; nella
+probabilità associata a $\rho$ c'è solo il prodotto tra la probabilità classica e quella quantistica, 
+in quella associata a $\psi$ c'è anche un termine dato dall'interferenza tra le fasi dei coefficienti
+$c_i$.
+
+Un altro modo per vedere questa differenza è considerare la matrice densità associata a $\psi$
+$\rho_\psi = \ket{\psi}\bra{\psi}$: essa non è diagonale nella base di autostati di $A$, infatti
+$$\rho_\psi = \ket{\psi}\bra{\psi} = \sum_{i}\sum_{j}^{}c_ic_j^*\ket{a_i}\bra{a_j}$$
+mentre la matrice $\rho = \sum_{k}\left|c_k\right|^2\ket{a_k}\bra{a_k}$ lo è, quindi in $\rho_\psi$ sono
+contenute più informazioni, cioè le fasi dei $c_i$.
+
+\textbf{Oss.} Gli elementi diagonali di una matrice densità $\rho$ si chiamano \textit{popolazioni}, 
+mentre quelli non diagonali si chiamano \textit{coerenze}, dunque $\rho$ si dice
+\textbf{sovrapposizione coerente} di stati, mentre $\rho_\psi$ si dice
+\textbf{sovrapposizione incoerente} di stati.
 

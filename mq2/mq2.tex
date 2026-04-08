@@ -45,7 +45,6 @@
 
 
 %sum over integral command
-
 \DeclareMathOperator*{\sumint}{%
 \mathchoice%
   {\ooalign{$\displaystyle\sum$\cr\hidewidth$\displaystyle\int$\hidewidth\cr}}
@@ -53,6 +52,17 @@
   {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\int$\cr}}
   {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\int$\cr}}
 }
+
+%Defining Chapter, a section bigger than \section
+\newcounter{Chapcounter}
+\newcommand\showmycounter{\addtocounter{Chapcounter}{1}\themycounter}
+\newcommand{\chapter}[1] 
+{ {\centering          
+  \addtocounter{Chapcounter}{1} \Huge \textbf{#1} } 
+
+  \addcontentsline{toc}{section}{#1}    
+}
+
 
  
 \begin{document}
@@ -83,6 +93,8 @@
 \input{./lessons/lez3_260309.tex}
 \input{./lessons/lez4_260312.tex}
 \input{./lessons/lez5_260318.tex}
+\input{./lessons/lez6_260320.tex}
+\input{./lessons/lez7_260323.tex}
 \bibliographystyle{plain}
 %\bibliography{references}
 \end{document}

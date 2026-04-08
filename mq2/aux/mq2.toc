@@ -1,7 +1,7 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
-\contentsline {section}{\numberline {1}Postulati della Meccanica Quantistica}{3}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Costruzione della meccanica classica}{3}{subsection.1.1}%
+\contentsline {section}{Postulati della Meccanica Quantistica}{3}{section*.2}%
+\contentsline {section}{\numberline {1}Introduzione e costruzione della meccanica classica}{3}{section.1}%
 \contentsline {section}{\numberline {2}Postulato 0 della Meccanica Quantistica}{3}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Spazi di Hilbert}{3}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Distribuzioni temperate e spazi di Hilbert}{5}{subsection.2.2}%
@@ -25,3 +25,7 @@
 \contentsline {subsection}{\numberline {5.1}Valor medio di un'osservabile}{20}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}Stati misti e matrice densità}{20}{subsection.5.2}%
 \contentsline {subsubsection}{\numberline {5.2.1}Proprietà della matrice densità}{21}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Esempio: la polarizzazione della luce}{22}{subsubsection.5.2.2}%
+\contentsline {section}{\numberline {6}Postulato 2 della Meccanica Quantistica}{23}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Il collasso della funzione d'onda}{23}{subsection.6.1}%
+\contentsline {section}{\numberline {7}Postulato 3 della Meccanica Quantistica}{25}{section.7}%
