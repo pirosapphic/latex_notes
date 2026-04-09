@@ -84,7 +84,7 @@ non sono elementi dello spazio di Hilbert del sistema, ma sono comunque basi gen
 se una misura di posizione in 1D restituisce $x=(4.0\pm0.1)fm$, lo stato del sistema è una sovrapposizione
 continua di autostati di $X$ ed è normalizzabile; viceversa, se la precisione fosse infinita, lo stato non
 sarebbe normalizzabile e non si potrebbe definire una distribuzione di probabilità.
-
+%\newpage%?
 \section{Postulato 3 della Meccanica Quantistica}
 Si enuncia infine il postulato dell'evoluzione temporale.
 
@@ -93,11 +93,73 @@ Si enuncia infine il postulato dell'evoluzione temporale.
 	\textbf{Dato un sistema fisico con Hamiltoniana H e un tempo iniziale $\mathbf{t_0}$,
 	l'operatore evoluzione temporale è l'unico operatore $\mathbf{U(t_0,t)}$ soluzione
 	dell'equazione differenziale di Scrödinger}
-	$$i\hbar\dv[]{}{t}U(t_0,t) = HU(t_0,t)$$
+	$$i\hbar\dv[]{}{t}U(t,t_0) = H(t)U(t,t_0)$$
 	\textbf{con condizione iniziale} $U(t_0,t_0) = \mathbb{I}$.\\
 	\textbf{Dato uno stato $\mathbf{\ket{\psi}}$ a $\mathbf{t=t_0}$, il valore medio di
 	un'osservabile F al tempo $\mathbf{t>t_0}$ è}
 	$$\langle F\rangle_\psi(t):=\bra{\psi}U^{\dagger}(t,t_0)FU(t,t_0)\ket{\psi}$$
     }%
 }
-	
+
+L'operatore $U(t,t_0)$ è quindi l'ultimo tassello del puzzle: come esplicitato nel postulato, permette
+di fare predizioni sul valore medio delle osservabili nel tempo.
+
+\textbf{Oss.} $U(t,t_0)$ è unitario: si considerino infatti l'equazione di Schrödinger e la sua hermitiana
+coniugata
+\begin{align*}
+    i\hbar\dv[]{U}{t} = HU &\rightarrow U^{\dagger}i\hbar\dv[]{U}{t} = U^{\dagger}HU\\
+    -i\hbar\dv[]{U^{\dagger}}{t} = U^{\dagger}H &\rightarrow -i\hbar\dv[]{U^{\dagger}}{t}U = U^{\dagger}HU
+\end{align*}
+Sottraendo membro a membro si ottiene
+$$ i\hbar\left(U^{\dagger}\dv[]{U}{t}+\dv[]{U^{\dagger}}{t}\right) = 0 \leftrightarrow
+\dv[]{}{t}\left(U^{\dagger}U\right) = 0 \leftrightarrow U^{\dagger}U=\text{cost.}$$
+Ricordando che $U(t_0,t_0) = \mathbb{I} = U^{\dagger}(t_0,t_0)$, si ha che
+$$ U(t,t_0)U^{\dagger}(t,t_0)=\mathbb{I}\mkern9mu \forall t$$
+Se $\pdv[]{H}{t}=0$, la forma esplicita di $U(t,t_0)$ è facile da ricavare:
+$$\dv[]{U}{t} = -\frac{i}{\hbar}HU \leftrightarrow \int_{U(t_0,t_0)}^{U(t_0,t)}\frac{dU}{U} =
+-\frac{i}{\hbar}H\int_{t_0}^{t}d\tau \leftrightarrow U(t,t_0)=\exp\left\{-\frac{i}{\hbar}H(t-t_0)\right\}$$
+Dove, dato un operatore $A$,
+$$e^A:=\sum_{n=0}^{\infty}\frac{1}{n!}A^n$$
+
+Ci sono due schemi interpretativi dell'evoluzione temporale del valor medio di un'osservabile che
+però \textbf{non} portano a conseguenze fisiche diverse, in quanto l'unica parte della teoria che ha
+significato fisico è la previsione dei valori medi.
+\subsection{Schema di Scrödinger}
+Nello schema di Schrödinger si utilizza il concetto di \textit{stato dipendente dal tempo}
+\begin{gather*}
+\ket{\psi(t)}:=U(t,t_0)\ket{\psi(t_0)}\\
+\rho(t)=\sum_{k}^{}\omega_k\ket{\psi_k(t)}\bra{\psi_k(t)} = U(t,t_0)\rho(t_0)U^{\dagger}(t,t_0)
+\end{gather*}
+Poiché $UU^{\dagger}=\mathbb{I}$, $\bra{\psi(t)}\ket{\psi(t)} = \bra{\psi(t_0)}\ket{\psi(t_0)}$.
+
+Gli autostati degli operatori \textit{non} evolvono nel tempo, ma i coefficienti di Fourier sì:
+$$A\ket{a_i}=a_i\ket{a_i},\quad\quad\ket{\psi(t)} = \sum_{i}\ket{a_i}\bra{a_i}\ket{\psi(t)} =
+\sum_{i}c_i(t)\ket{a_i}$$
+
+\subsection{Schema di Heisenberg}
+Nello schema di Heiseberg, invece, l'evoluzione temporale è associata alle osservabili
+$$A(t):=U^\dagger(t,t_0) A(t_0)U(t,t_0)$$
+
+Gli autostati al contrario di prima evolvono nel tempo
+$$A(t_0)\ket{a(t_0)}=a\ket{a(t_0)}\rightarrow
+U^\dagger A(t_0)UU^\dagger\ket{a(t_0)}=a U^\dagger\ket{a(t_0)}\rightarrow
+A(t)\ket{a(t)} = a\ket{a(t)}$$
+dove si è definito $\ket{a(t)}:=U^\dagger(t,t_0)\ket{a(t_0)}$.
+\subsection{Costanti del moto}
+Similmente alla meccanica Hamiltoniana, dove se $\pdv[]{H}{t}=0$,
+$$\left\{H,F\right\}_{PB}=0\leftrightarrow\dv[]{F}{t}=0$$
+anche in meccanica quantistica vale che, se $H$ è indipendente dal tempo,
+$$\bra{\psi}e^{\frac{i}{\hbar}H(t-t_0)} Fe^{-\frac{i}{\hbar}H(t-t_0)}\ket{\psi} = 
+\bra{\psi}FU^\dagger U\ket{\psi} = \bra{\psi}F\ket{\psi} \leftrightarrow
+\dv[]{}{t}\langle F\rangle_\psi(t)=0
+$$
+dove si è utilizzato il fatto che 
+\begin{gather*}
+[H,F]=0\leftrightarrow[U,F]=\sum_{n=0}^{\infty}\left(-\frac{i}{\hbar}(t-t_0)\right)^n\frac{1}{n!}[H^n,F]=\\
+=\sum_{n=0}^{\infty}\left(-\frac{i}{\hbar}(t-t_0)\right)^n\frac{1}{n!}
+\left(\sum_{k=1}^{n}H^{k-1}[H,F]H^{n-k}\right)=0
+\end{gather*}
+\textbf{Oss.} Gli autostati dell'energia conservano tutte le osservabili:\\
+se $H$ è indipendente dal tempo, per gli autostati dell'energia si ha
+$$H\ket{\psi}=E\ket{\psi} \rightarrow \ket{\psi(t)}=U(t,t_0)\ket{\psi} = e^{-\frac{i}{\hbar}E(t-t_0)}
+\ket{\psi} \rightarrow \bra{\psi}U^\dagger FU\ket{\psi} = \bra{\psi}F\ket{\psi}\mkern9mu\forall t,F$$
