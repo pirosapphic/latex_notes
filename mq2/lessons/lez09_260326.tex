@@ -1,4 +1,5 @@
 %lezione 9 del 26 marzo 2026
+%---------------------------------------------------------------------------------------------------------
 \newpage
 \section{Il propagatore di un'Hamiltoniana con potenziale}
 Si consideri ora un sistema fisico a $d$ gradi di libertà con Hamiltoniana $H$ del tipo
@@ -19,8 +20,8 @@ con $t_0=t<t_1<...<t_N=t'$, $q_0=q$, $q_N=q'$ e $t_{j+1}-t_{j}=\Delta t$.\\
 Se $\Delta t \to0$, si può linearizzare l'espressione di $U(t_{j+1},t_j)$ e procedere come
 per la particella libera:
 \begin{gather*}
-\bra{q_{j+1}}U(t_{j+1},t_j)\ket{q_j}\sim \bra{q_{j+1}}\mathbb{I}-\frac{i}{\hbar}\left(\frac{\hat p^2}{2m}+V(\hat q)
-\right)\Delta t\ket{q_j}=\\
+\bra{q_{j+1}}U(t_{j+1},t_j)\ket{q_j}\sim \bra{q_{j+1}}\mathbb{I}-\frac{i}{\hbar}\left(\frac{\hat p^2}{2m}
++V(\hat q)\right)\Delta t\ket{q_j}=\\
 =\int d^dp_j \bra{q_{j+1}}\ket{p_j}\bra{p_j}\mathbb{I}-\frac{i}{\hbar}\left(\frac{\hat p^2}{2m}+
 V(\hat q)\right)\Delta t\ket{q_j}=\\
 =\int d^dp_j \bra{q_{j+1}}\ket{p_j}\left[1-\frac{i}{\hbar}\Delta t\left(\frac{p_j^2}{2m}+V(q_j)
@@ -59,7 +60,8 @@ $$
 e la parte dipendente dai $p_i$ di (\ref{eq:K_discr}) diventa
 $$
 I=\int\prod_{k=0}^{N-1}\frac{d^d\bar p_k}{(2\pi\hbar)^d}\exp\left\{\sum_{i=0}^{N-1}\frac{-i}{2m\hbar}
-\bar p_i^2\Delta t\right\} = \left(\int_{-\infty}^{\infty}\frac{dp}{2\pi\hbar}\exp\left\{\frac{-i}{2m\hbar} p^2\Delta t\right\}\right)^{Nd}
+\bar p_i^2\Delta t\right\} = \left(\int_{-\infty}^{\infty}\frac{dp}{2\pi\hbar}\exp\left\{\frac{-i}{2m
+\hbar}p^2\Delta t\right\}\right)^{Nd}
 $$
 che è uno degli integrali calcolati per la particella libera e vale
 $$I = \left(\frac{m}{2\pi i\hbar\Delta t}\right)^{Nd/2} = \left(\frac{1}{\mathcal{N}}\right)^{Nd}$$
@@ -69,7 +71,7 @@ K=\frac{1}{\mathcal{N}^d}\int\prod_{i=1}^{N-1}\frac{d^dq_i}{\mathcal{N}^d}\exp\l
 \sum_{i=0}^{N-1}\Delta t\left(\frac{1}{2}m\dot q_i^2-V(q_i)\right)\right\}
 $$
 Passando al continuo e ignorando le normalizzazioni (che, come si vedrà, sarà facile fissare caso per
-caso), si trova
+caso), si trova l'espressione del propagatore nel formalismo dei \textit{path integral}
 \begin{equation}
 \boxed{K(q',t',q,t)=\int\mathcal{D}q\exp\left\{\frac{i}{\hbar}\int_{t}^{t'}dtL(q(t),\dot q(t))
 \right\}=\int\mathcal{D}q\exp\left\{\frac{i}{\hbar}S[q]\right\}}
@@ -79,4 +81,41 @@ caso), si trova
 \textbf{Oss.} Questa definizione di $K$ ne evidenzia esattamente il legame con l'azione e i cammini:
 il valore di $K$ è l'integrale su tutti i possibili cammini che uniscono $q'$ e $q$, pesati con
 \textit{il valore dell'azione sul cammino}.
+\newpage
 \subsection{Equivalenza con l'equazione di Schrödinger}
+La potenza di questa formalizzazione della meccanica quantistica è anche nel fatto che essa è
+equivalente all'equazione di Schrödinger ed è postulato alternativo a essa.
+
+Si consideri il propagatore tra due istanti di tempo distanti $\epsilon\to0$ tra loro: poiché non è
+necessario suddividere l'intervallo in parti infinitesime, esso vale
+$$K(x,\epsilon,y,0) = \sqrt{\frac{m}{2\pi\hbar\epsilon}}\exp\left\{\frac{i}{\hbar}\left(\frac{1}{2}m\dot
+y^2-V(y)\right)\right\}$$
+per $\epsilon\to0$, $V(y)\sim V(x)$ e $\dot y\sim \frac{x-y}{\epsilon}$, dunque si ha
+$$K = \sqrt{\frac{m}{2\pi\hbar\epsilon}}\exp\left\{\frac{i}{\hbar}\left(\frac{1}{2}m\frac{(x-y)^2}
+{\epsilon}-V(x)\epsilon\right)\right\}$$
+Dunque, applicando (\ref{eq:K_def})
+$$\psi(x,\epsilon) = \sqrt{\frac{m}{2\pi\hbar\epsilon}}e^{-\frac{i}{\hbar}V(x)\epsilon}
+\int_{-\infty}^{\infty}dy \exp\left\{\frac{im}{2\hbar}\frac{(x-y)^2}{\epsilon}\right\}\psi(y,0)
+$$
+ponendo $z=\sqrt{\frac{m}{\hbar}}(x-y)\to dz=-\sqrt{\frac{m}{\hbar}}dy$ e poi $\alpha = i\epsilon$
+(rotazione di Wick), si ottiene
+\begin{gather*}
+\psi(x,\epsilon) = \sqrt{\frac{1}{2\pi i\epsilon}}e^{-\frac{i}{\hbar}V(x)\epsilon}
+\int_{-\infty}^{\infty}dz e^{\frac{i}{2\epsilon}z^2}\psi\left(x-\sqrt{\frac{\hbar}{m}}z,0\right)=\\
+= \sqrt{\frac{1}{2\pi\alpha}}e^{-\frac{\alpha}{\hbar}V(x)}\int_{-\infty}^{\infty}dze^{-\frac{z^2}
+{2\alpha}}\left(\psi(x,0)+\frac{\hbar}{2m}z^2\psi''(x,0)+O(z^3)\right)
+\end{gather*}
+si noti che l'espansione in potenze di $z$ è dovuta al fatto che $z\to0$ se $\epsilon\to0$.
+
+Integrando esplicitamente e riscrivendo in termini di $\epsilon$ si ottiene
+$$\psi(x,\epsilon) = e^{-\frac{i}{\hbar}V(x)\epsilon}\left(\psi(x,0)+\frac{i\epsilon\hbar}{2m}
+\psi''(x,0)\right)$$
+Sviluppando sia il lato sinistro sia l'esponenziale a destra in potenze di $\epsilon$ si trova
+\begin{gather*}
+\psi(x,0)+\epsilon\eval{\pdv[]{\psi}{t}}_{t=0} = \left(1-\frac{i\epsilon}{\hbar}V(x)+O(\epsilon^2)
+\right)\left(\psi(x,0)+\frac{i\epsilon\hbar}{2m}\psi''(x,0)+O(\epsilon^2)\right)\\
+\psi(x,0)+\epsilon\eval{\pdv[]{\psi}{t}}_{t=0}=\psi(x,0)-\frac{i}{\hbar}\epsilon
+\left(V(x)\psi(x,0)-\frac{\hbar^2}{2m}\psi''(x,0)\right)+O(\epsilon^2)
+\end{gather*}
+eguagliando i termini di ordine $\epsilon$ si ottiene infine
+$$i\hbar\pdv[]{}{t}\psi(x,0)=\frac{-\hbar^2}{2m}\dv[2]{}{x}\psi(x,0)$$
