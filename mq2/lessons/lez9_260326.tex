@@ -1,0 +1,82 @@
+%lezione 9 del 26 marzo 2026
+\newpage
+\section{Il propagatore di un'Hamiltoniana con potenziale}
+Si consideri ora un sistema fisico a $d$ gradi di libertà con Hamiltoniana $H$ del tipo
+$$H = \sum_{\alpha=1}^{d}\frac{p^2_\alpha}{2m} + V(q_\alpha)$$
+Il propagatore tra $(q,t)$ e $(q',t')$ è
+$$K(q',t',q,t) = \bra{q'}U(t',t)\ket{q} = \bra{q'}\exp\left\{\frac{-i}{\hbar}H(t'-t)\right\}\ket{q}$$
+come per la particella libera, si tenta di aggiungere la relazione di completezza di $\ket{p}$
+$$K(q',t',q,t) = \int d^dp\bra{q'}\ket{p}\bra{p}\exp\left\{\frac{-i}{\hbar}H(t'-t)\right\}\ket{q}$$
+A questo punto però si presenta un problema non indifferente:
+l'elemento di matrice $\bra{p}U\ket{q}$ non è facilmente determinabile come si è fatto in precedenza,
+perché i termini non lineari dell'espansione dell'esponenziale non sono riordinabili
+(essendo infiniti).
+
+Bisogna dunque procedere diversamente, si divide l'intervallo di tempo $t'-t$ in $N$ intervalli di
+lunghezza $\Delta t$ e si sfrutta la proprietà (\ref{eq:K_iter}) per scrivere il propagatore
+$$K=\int \prod_{i=1}^{N-1} d^fq_i \prod_{j=0}^{N}\bra{q_{j+1}}U(t_{j+1},t_j)\ket{q_j}$$
+con $t_0=t<t_1<...<t_N=t'$, $q_0=q$, $q_N=q'$ e $t_{j+1}-t_{j}=\Delta t$.\\
+Se $\Delta t \to0$, si può linearizzare l'espressione di $U(t_{j+1},t_j)$ e procedere come
+per la particella libera:
+\begin{gather*}
+\bra{q_{j+1}}U(t_{j+1},t_j)\ket{q_j}\sim \bra{q_{j+1}}\mathbb{I}-\frac{i}{\hbar}\left(\frac{\hat p^2}{2m}+V(\hat q)
+\right)\Delta t\ket{q_j}=\\
+=\int d^dp_j \bra{q_{j+1}}\ket{p_j}\bra{p_j}\mathbb{I}-\frac{i}{\hbar}\left(\frac{\hat p^2}{2m}+
+V(\hat q)\right)\Delta t\ket{q_j}=\\
+=\int d^dp_j \bra{q_{j+1}}\ket{p_j}\left[1-\frac{i}{\hbar}\Delta t\left(\frac{p_j^2}{2m}+V(q_j)
+\right)\right]\bra{p_j}\ket{q_j}=\\
+=\int \frac{d^dp_j}{(2\pi\hbar)^d}\exp\left\{\frac{i}{\hbar}\Delta t\left(\frac{p_j(q_{j+1}-q_j)}
+{\Delta t} - H(p_j,q_j)\right)\right\}
+\end{gather*}
+dove si è ritornati alla forma esponenziale nell'ultimo passaggio.\\
+Reinserendo questa espressione nel calcolo del propagatore, si ottiene infine
+\begin{equation}
+\boxed{K(q',t',q,t) = \int\prod_{j=1}^{N-1}d^dq_j\prod_{k=0}^{N-1}\frac{d^dp_k}{(2\pi\hbar)^d}
+\exp\left\{\frac{i}{\hbar}\sum_{i=0}^{N-1}\Delta t \left(\frac{p_i(q_{i+1}-q_i)}{\Delta t}-H(p_i,q_i)
+\right)\right\}}
+\label{eq:K_discr}
+\end{equation}
+\textbf{Oss.} Questa espressione discretizzata per $K$ è un integrale su tutti i possibili punti
+intermedi tra lo stato inizale e finale nello \textit{spazio delle fasi} del sistema.
+
+Si denota ora $\dot q_i:=\frac{q_{i+1}-q_i}{\Delta t}$ e si considera il limite continuo
+$n\to\infty$: l'argomento dell'esponenziale è una somma alla Riemann, che diventa un integrale sul
+tempo, mentre l'integrale sui punti intermedi diventa l'integrale su tutti i possibili
+\textit{cammini} nello spazio delle fasi e la sua misura di integrazione si denota con
+$\mathcal{D}q\mathcal{D}p$
+$$K(q',t',q,t) = \int\mathcal{D}q\mathcal{D}p\exp\left\{\frac{i}{\hbar}\int_{t}^{t'}dt(p\dot q - H)
+\right\}$$
+Questa espressione può essere ulteriormente semplificata per Hamiltoniane della forma qui
+considerata: l'argomento della sommatoria nell'esponenziale in (\ref{eq:K_discr}) diventa
+$$
+p_i\dot q_i-\frac{p_i^2}{2m}-V(q_i)
+$$
+si completa il quadrato
+$$
+p_i\dot q_i-\frac{p_i^2}{2m}=-\frac{1}{2m}(p_i-m\dot q_i)^2 +\frac{m}{2}\dot q_i^2:=
+-\frac{\bar p_i^2}{2m}+\frac{m}{2}\dot q_i^2
+$$
+e la parte dipendente dai $p_i$ di (\ref{eq:K_discr}) diventa
+$$
+I=\int\prod_{k=0}^{N-1}\frac{d^d\bar p_k}{(2\pi\hbar)^d}\exp\left\{\sum_{i=0}^{N-1}\frac{-i}{2m\hbar}
+\bar p_i^2\Delta t\right\} = \left(\int_{-\infty}^{\infty}\frac{dp}{2\pi\hbar}\exp\left\{\frac{-i}{2m\hbar} p^2\Delta t\right\}\right)^{Nd}
+$$
+che è uno degli integrali calcolati per la particella libera e vale
+$$I = \left(\frac{m}{2\pi i\hbar\Delta t}\right)^{Nd/2} = \left(\frac{1}{\mathcal{N}}\right)^{Nd}$$
+Inserendo questo risultato nell'espressione di $K$ si trova
+$$
+K=\frac{1}{\mathcal{N}^d}\int\prod_{i=1}^{N-1}\frac{d^dq_i}{\mathcal{N}^d}\exp\left\{\frac{i}{\hbar}
+\sum_{i=0}^{N-1}\Delta t\left(\frac{1}{2}m\dot q_i^2-V(q_i)\right)\right\}
+$$
+Passando al continuo e ignorando le normalizzazioni (che, come si vedrà, sarà facile fissare caso per
+caso), si trova
+\begin{equation}
+\boxed{K(q',t',q,t)=\int\mathcal{D}q\exp\left\{\frac{i}{\hbar}\int_{t}^{t'}dtL(q(t),\dot q(t))
+\right\}=\int\mathcal{D}q\exp\left\{\frac{i}{\hbar}S[q]\right\}}
+\label{eq:K}
+\end{equation}
+
+\textbf{Oss.} Questa definizione di $K$ ne evidenzia esattamente il legame con l'azione e i cammini:
+il valore di $K$ è l'integrale su tutti i possibili cammini che uniscono $q'$ e $q$, pesati con
+\textit{il valore dell'azione sul cammino}.
+\subsection{Equivalenza con l'equazione di Schrödinger}
