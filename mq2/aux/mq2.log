@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.8)  12 APR 2026 00:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.8)  20 APR 2026 19:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -441,24 +441,24 @@ Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
  (aux/mq2.aux)
 \openout1 = `mq2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count338
@@ -478,13 +478,13 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring ON on input line 67.
+Package hyperref Info: Link coloring ON on input line 65.
  (aux/mq2.out) (aux/mq2.out)
 \@outlinefile=\write3
 \openout3 = `mq2.out'.
 
-LaTeX Info: Redefining \it@ocap on input line 67.
-LaTeX Info: Redefining \it@ccap on input line 67.
+LaTeX Info: Redefining \it@ocap on input line 65.
+LaTeX Info: Redefining \it@ccap on input line 65.
 
 
 File italian.ldf warning: 
@@ -492,22 +492,22 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting
-italian.ldf    on input line 67.
+italian.ldf    on input line 65.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 73.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 71.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 73.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 71.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 <./airy.png, id=140, 1433.355pt x 1333.98375pt>
 File: ./airy.png Graphic file (type png)
 <use ./airy.png>
-Package pdftex.def Info: ./airy.png  used on input line 85.
+Package pdftex.def Info: ./airy.png  used on input line 83.
 (pdftex.def)             Requested size: 386.95897pt x 360.11935pt.
  [1
 
@@ -617,7 +617,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 61--73
 [] 
  []
 
-[29] [30]) (./lessons/lez09_260326.tex [31] [32] [33]) (./lessons/lez10_260330.tex) [34] (aux/mq2.aux)
+[29] [30]) (./lessons/lez09_260326.tex [31] [32] [33]) (./lessons/lez10_260330.tex [34] [35] [36]) [37] (aux/mq2.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -626,10 +626,10 @@ Package rerunfilecheck Info: File `mq2.out' has not changed.
 (rerunfilecheck)             Checksum: CF17294258B30A227D2FDE4532B8D7C8;7640.
  ) 
 Here is how much of TeX's memory you used:
- 15431 strings out of 469504
- 244090 string characters out of 5470380
- 778775 words of memory out of 5000000
- 43745 multiletter control sequences out of 15000+600000
+ 15439 strings out of 469504
+ 244180 string characters out of 5470380
+ 779896 words of memory out of 5000000
+ 43747 multiletter control sequences out of 15000+600000
  639752 words of font info for 84 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  75i,19n,84p,522b,603s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -637,10 +637,10 @@ Here is how much of TeX's memory you used:
 pdfTeX warning (dest): name{https://web.archive.org/web/20200917091657/https://authors.library.caltech.edu/47756/1/FEYrmp48.pdf} has been referenced but does not exist, replaced by a fixed one
 
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on aux/mq2.pdf (34 pages, 952646 bytes).
+Output written on aux/mq2.pdf (37 pages, 965780 bytes).
 PDF statistics:
- 517 PDF objects out of 1000 (max. 8388607)
- 426 compressed objects within 5 object streams
- 105 named destinations out of 1000 (max. 500000)
+ 539 PDF objects out of 1000 (max. 8388607)
+ 445 compressed objects within 5 object streams
+ 111 named destinations out of 1000 (max. 500000)
  293 words of extra memory for PDF output out of 10000 (max. 10000000)
 

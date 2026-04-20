@@ -35,7 +35,7 @@ Reinserendo questa espressione nel calcolo del propagatore, si ottiene infine
 \boxed{K(q',t',q,t) = \int\prod_{j=1}^{N-1}d^dq_j\prod_{k=0}^{N-1}\frac{d^dp_k}{(2\pi\hbar)^d}
 \exp\left\{\frac{i}{\hbar}\sum_{i=0}^{N-1}\Delta t \left(\frac{p_i(q_{i+1}-q_i)}{\Delta t}-H(p_i,q_i)
 \right)\right\}}
-\label{eq:K_discr}
+\label{eq:K_discr_tot}
 \end{equation}
 \textbf{Oss.} Questa espressione discretizzata per $K$ è un integrale su tutti i possibili punti
 intermedi tra lo stato inizale e finale nello \textit{spazio delle fasi} del sistema.
@@ -66,10 +66,12 @@ $$
 che è uno degli integrali calcolati per la particella libera e vale
 $$I = \left(\frac{m}{2\pi i\hbar\Delta t}\right)^{Nd/2} = \left(\frac{1}{\mathcal{N}}\right)^{Nd}$$
 Inserendo questo risultato nell'espressione di $K$ si trova
-$$
-K=\frac{1}{\mathcal{N}^d}\int\prod_{i=1}^{N-1}\frac{d^dq_i}{\mathcal{N}^d}\exp\left\{\frac{i}{\hbar}
-\sum_{i=0}^{N-1}\Delta t\left(\frac{1}{2}m\dot q_i^2-V(q_i)\right)\right\}
-$$
+\begin{equation}
+    \boxed{K(q',t',q,t)=\frac{1}{\mathcal{N}^d}\int\prod_{i=1}^{N-1}\frac{d^dq_i}{\mathcal{N}^d}
+	\exp\left\{\frac{i}{\hbar}\sum_{i=0}^{N-1}\Delta t\left(\frac{1}{2}m\dot q_i^2-V(q_i)
+	\right)\right\}}
+	\label{eq:K_discr}
+\end{equation}
 Passando al continuo e ignorando le normalizzazioni (che, come si vedrà, sarà facile fissare caso per
 caso), si trova l'espressione del propagatore nel formalismo dei \textit{path integral}
 \begin{equation}
@@ -117,5 +119,5 @@ Sviluppando sia il lato sinistro sia l'esponenziale a destra in potenze di $\eps
 \psi(x,0)+\epsilon\eval{\pdv[]{\psi}{t}}_{t=0}=\psi(x,0)-\frac{i}{\hbar}\epsilon
 \left(V(x)\psi(x,0)-\frac{\hbar^2}{2m}\psi''(x,0)\right)+O(\epsilon^2)
 \end{gather*}
-eguagliando i termini di ordine $\epsilon$ si ottiene infine
+eguagliando i termini di prim'ordine in $\epsilon$ si ottiene infine
 $$i\hbar\pdv[]{}{t}\psi(x,0)=\frac{-\hbar^2}{2m}\dv[2]{}{x}\psi(x,0)$$

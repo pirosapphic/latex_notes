@@ -1,3 +1,103 @@
 %lezione 10 del 30 marzo 2026
 %-----------------------------------------------------------------------------------------------------
+\newpage
 \subsection{Limite semiclassico}
+Come si può conciliare il formalismo dei \textit{Path Integral}	con l'unicità del cammino classico?
+
+Se si considera il semplice caso 1D, il propagatore è un integrale su tutte le curve di moto che
+uniscono il punto iniziale e finale, pesate con una fase $\exp\left\{\frac{i}{\hbar}S[q]\right\}$:
+intuitivamente, nel limite classico $S[q]>>\hbar$, una deformazione a estremi fissi di una qualunque
+curva di moto $q(t)\rightarrow q'(t)=q(t)+\delta q(t)$ non cambia in maniera sostanziale
+l'azione, ma modifica parecchio la fase nel calcolo del propagatore
+$$S[q']\approx S[q],\;\text{ma }\frac{S[q']}{\hbar}>>\frac{S[q]}{\hbar}$$
+dunque la fase cambia violentemente al variare di $q(t)$ e, per il Lemma di Riemann, tutti i
+contributi da cammini "abbastanza lontani" da quello classico si cancellano tra di loro.
+
+Nel caso però si deformi il cammino classico, su cui vale $\delta S=0$, in un intorno di $q_{cl}(t)$
+i contributi non si annullano; precisamente si cerca l'ordine di grandezza di $\delta q$ tale che
+$$\frac{S[q_{cl}]}{\hbar}\approx\frac{S[q_{cl}+\delta q(t)]}{\hbar}$$
+sviluppando il secondo membro in potenze di $\delta q(t)$ si trova
+$$ \frac{S[q']}{\hbar} = \frac{S[q_{cl}] + \frac{1}{2}S''[q_{cl}]\delta^2q + O(\delta^3q)}{\hbar}$$
+che approssima bene il primo membro quando
+$$\frac{\delta^2q}{\hbar}<<1 \leftrightarrow \delta q\sim\sqrt{\hbar}$$
+si ha dunque che, al primo ordine di approssimazione, i cammini che danno un contributo non nullo
+sono in un "intorno di raggio $\sqrt{\hbar}$" rispetto a $q_{cl}$.
+
+Per formalizzare questa approssimazione, si considera lo sviluppo asintotico di (\ref{eq:K}) in
+potenze di $\hbar\rightarrow 0$.
+
+\textbf{Oss.} A rigor di precisione, non ha senso considerare il limite di una costante fisica: far
+tendere $\hbar$ a 0 è un modo formale di considerare azioni $S>>\hbar$.
+
+\subsubsection{Metodo discreto}
+Per sviluppare in potenze di $\hbar$ si considera dapprima l'espressione discretizzata
+(\ref{eq:K_discr}) per $K$ (per semplicità si considera anche $d=1$)
+$$
+K(q',t',q,t)=\frac{1}{\mathcal{N}}\int\prod_{i=1}^{N-1}\frac{dq_i}{\mathcal{N}}
+\exp\left\{\frac{i}{\hbar}\sum_{i=0}^{N-1}\Delta t \eval{L(q_i,q_{i+1})}_{t_i}\right\}
+$$
+e, posto $L=\frac{m}{2}\left(\frac{q_{i+1}-q_i}{\Delta t}\right)^2-V(q_i)$, si cerca la successione
+$\left\{q_i\right\}$ che rende stazionaria l'azione:
+\begin{gather*}
+\pdv[]{S}{q_i} = \pdv[]{}{q_i}\left(\frac{m}{2}\left(\frac{q_{i+1}-q_i}{\Delta t}\right)^2-V(q_i)
+\right) + \pdv[]{}{q_i}\left(\frac{m}{2}\left(\frac{q_i-q_{i-1}}{\Delta t}\right)^2\right) = \\
+=m\left(-\frac{q_{i+1}-q_i}{\Delta t^2}+\frac{q_i-q_{i-1}}{\Delta t^2}\right)-\pdv[]{V}{q_i}= 0
+= \frac{m}{\Delta t}\left(-\dot q_i + \dot q_{i-1}\right)
+\end{gather*}
+Si identificano le derivate discrete
+$$\frac{q_{i+1}-q_i}{\Delta t} = \dot q_i\quad \frac{\dot q_{i}-\dot q_{i-1}}{\Delta t} = \ddot q_i$$
+e si trova
+$$\pdv[]{S}{q_i} =0 \leftrightarrow m\ddot q_i + \pdv[]{V}{q_i} = 0$$
+che ha la forma dell'equazione di Newton della meccanica classica.\\
+È sistema di $N$ O.D.E. con soluzione $q_{0,i}$, che è la successione di $\left\{q_i\right\}$
+corrispondente al cammino classico: se ne considerino ora le deformazioni $\omega_i$ tali che
+$$q_i = q_{0,i} + \omega_i\text{, con }\omega_0 = \omega_N = 0$$
+l'azione sul cammino deformato vale
+\begin{gather*}
+S[q_i] = S[q_{i,0}+\omega_i] = S[q_{i,0}] + \eval{\pdv[]{S}{q_k}}_{q_{0,i}}\omega_i + \frac{1}{2}
+\eval{\pdv{S}{q_l}{q_m}}_{q_{0,i}}\omega_l\omega_m + O(\omega^3) = \\
+= S_{cl} + 0 +X_{lm}\omega_l\omega_m + O(\omega^3) = S_{cl} + S_2 +S_{\geq3}
+\end{gather*}
+dove si è indicata con $X_{lm}$ la forma quadratica associata all'Hessiana di $S$ valutata sul
+cammino classico e con $S_2$ il risultato di tale forma applicata alla deformazione.
+
+Risostituendo nell'integrale con il cambio di variabile
+$q_i=q_{0,1}+\omega_i\rightarrow dq_i=d\omega_i$ si ha 
+$$K = \frac{1}{\mathcal{N}}\int \prod_{k=1}^{N-1}\frac{d\omega_k}{\mathcal{N}}
+e^{\frac{i}{\hbar}S_{cl}} e^{\frac{i}{\hbar}S_2}e^{\frac{i}{\hbar}S_{\geq3}}=
+\frac{1}{\mathcal{N}}e^{\frac{i}{\hbar}S_{cl}}\int \prod_{k=1}^{N-1}\frac{d\omega_k}{\mathcal{N}}
+\exp\left\{\frac{i}{\hbar}\omega_iX_{ij}\omega_j\right\}\left(1+\frac{i}{\hbar}S_{\geq3}\right)$$
+\textbf{Oss.} Per il teorema di Schwarz la forma $X_{ij}$ è simmetrica e dunque esiste una matrice
+unitaria $P$ tale che $X = PDP^{T}$ con $D$ diagonale: si può dunque scrivere che 
+$\omega_iX_{ij}\omega_j = \omega^{T}PDP^T\omega := x^TDx = \lambda_ix_i^2$ con il cambio di variabile
+$P^Tx = \omega$ (come vettori), che però non produce cambiamenti nella misura di integrazione, in
+quanto $\left|\det(J)\right| = \left|\det(P^{T})\right| = 1$; si ha inoltre che $\det(X) = \det(D)$.
+
+L'osservazione precedente ci permette di considerare solo i casi in cui $S_2 = X_k\omega_k^2$, senza
+perdere di generalità: in questo particolare caso l'integrale è fattorizzabile come il prodotto di
+$N$ integrali
+$$K = \frac{1}{\mathcal{N}}\prod_{k=1}^{N-1}\frac{A_k}{\mathcal{N}},\; A_k =
+\int_{-\infty}^{\infty}d\omega_k\exp\left\{\frac{i}{\hbar}X_k\omega^2_k\right\}\left(1+\frac{i}{\hbar}S_{\geq3}\right)$$
+Su ciascuno degli $A_k$ si applica il metodo della fase stazionaria per ottenerne lo sviluppo
+asintotico in potenze di $\hbar$: il termine dominante si trova trascurando
+$\frac{i}{\hbar}S_{\geq3}$ e con il cambio di variabile $\omega_k = \rho_ke^{i\frac{\pi}{4}}$
+$$A_k \underset{\hbar\to0}\sim \int_{-\infty}^{\infty}d\omega_k \exp{\frac{i}{\hbar}X_k\omega_k^2} = 
+e^{i\frac{\pi}{4}}\int_{-\infty}^{\infty}d\rho_k \exp{-\rho^2_k\frac{X_k}{\hbar}} =
+\sqrt{\frac{i\hbar\pi}{X_k}}$$
+da cui si trova l'espressione per $K$
+$$K = \frac{\left(i\pi\hbar\right)^{\frac{N-1}{2}}}{\mathcal{N}^N}e^{\frac{i}{\hbar}S_{cl}}
+\prod_{k=1}^{N-1}\sqrt{\frac{1}{X_k}}$$
+poiché $X$ è diagonale, $\prod X_k = \det(X)$ e poiché, come già detto, il determinante è invariante
+per cambio di coordinate unitario, questo risultato è generale
+\begin{equation}
+    \boxed{K(q',t',q,t) \underset{\hbar\to0}\sim \mathcal{M}e^{\frac{i}{\hbar}S_{cl}}\left(\det(X)\right)^{-\frac{1}{2}}\left(1+O(\hbar)\right)}
+    \label{eq:K_det}
+\end{equation}
+\textbf{Oss.1} Nel caso di Lagrangiane del tipo $L=T-V$, i termini di $S_{\geq3}$ dipendono
+solamente dal potenziale $V$.
+
+\textbf{Oss.2} Per continuare l'approssimazione a ordini superiori di $\hbar$ basta procedere nel
+calcolo di $A_k$ considerando l'ordine $\omega^3$; tali ordini, come è noto dalla teoria degli
+sviluppi asintotici, producono termini del tipo
+$A_k \underset{\hbar\to0}\sim\sqrt{\frac{i\hbar\pi}{X_k}}(1+O(\hbar))$ 
+

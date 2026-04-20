@@ -39,4 +39,5 @@
 \contentsline {subsection}{\numberline {8.3}Il propagatore della particella libera 1D}{30}{subsection.8.3}%
 \contentsline {section}{\numberline {9}Il propagatore di un'Hamiltoniana con potenziale}{32}{section.9}%
 \contentsline {subsection}{\numberline {9.1}Equivalenza con l'equazione di Schrödinger}{34}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Limite semiclassico}{34}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.2}Limite semiclassico}{35}{subsection.9.2}%
+\contentsline {subsubsection}{\numberline {9.2.1}Metodo discreto}{35}{subsubsection.9.2.1}%
