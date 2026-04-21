@@ -214,6 +214,7 @@ INPUT aux/mq2.toc
 INPUT aux/mq2.toc
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
 OUTPUT aux/mq2.toc
 INPUT ./lessons/lez01_260304.tex
 INPUT ./lessons/lez01_260304.tex
@@ -224,7 +225,6 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
@@ -274,6 +274,10 @@ INPUT ./lessons/lez09_260326.tex
 INPUT ./lessons/lez10_260330.tex
 INPUT ./lessons/lez10_260330.tex
 INPUT ./lessons/lez10_260330.tex
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
+INPUT ./lessons/lez11_260401.tex
+INPUT ./lessons/lez11_260401.tex
+INPUT ./lessons/lez11_260401.tex
 INPUT aux/mq2.aux
 INPUT aux/mq2.out
 INPUT aux/mq2.out

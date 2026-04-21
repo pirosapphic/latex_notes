@@ -1,7 +1,7 @@
 %lezione 10 del 30 marzo 2026
 %-----------------------------------------------------------------------------------------------------
 \newpage
-\subsection{Limite semiclassico}
+\section{Limite semiclassico}
 Come si può conciliare il formalismo dei \textit{Path Integral}	con l'unicità del cammino classico?
 
 Se si considera il semplice caso 1D, il propagatore è un integrale su tutte le curve di moto che
@@ -10,11 +10,12 @@ intuitivamente, nel limite classico $S[q]>>\hbar$, una deformazione a estremi fi
 curva di moto $q(t)\rightarrow q'(t)=q(t)+\delta q(t)$ non cambia in maniera sostanziale
 l'azione, ma modifica parecchio la fase nel calcolo del propagatore
 $$S[q']\approx S[q],\;\text{ma }\frac{S[q']}{\hbar}>>\frac{S[q]}{\hbar}$$
-dunque la fase cambia violentemente al variare di $q(t)$ e, per il Lemma di Riemann, tutti i
+dunque la fase cambia violentemente al variare di $q(t)$ e, per il lemma di Riemann, tutti i
 contributi da cammini "abbastanza lontani" da quello classico si cancellano tra di loro.
 
-Nel caso però si deformi il cammino classico, su cui vale $\delta S=0$, in un intorno di $q_{cl}(t)$
-i contributi non si annullano; precisamente si cerca l'ordine di grandezza di $\delta q$ tale che
+Nel caso in cui però si deformi il cammino classico $q_{cl}(t)$, su cui vale $\delta S=0$,
+esiste un suo intorno in cui i contributi non si annullano;
+precisamente si cerca l'ordine di grandezza di $\delta q$ tale che
 $$\frac{S[q_{cl}]}{\hbar}\approx\frac{S[q_{cl}+\delta q(t)]}{\hbar}$$
 sviluppando il secondo membro in potenze di $\delta q(t)$ si trova
 $$ \frac{S[q']}{\hbar} = \frac{S[q_{cl}] + \frac{1}{2}S''[q_{cl}]\delta^2q + O(\delta^3q)}{\hbar}$$
@@ -29,7 +30,7 @@ potenze di $\hbar\rightarrow 0$.
 \textbf{Oss.} A rigor di precisione, non ha senso considerare il limite di una costante fisica: far
 tendere $\hbar$ a 0 è un modo formale di considerare azioni $S>>\hbar$.
 
-\subsubsection{Metodo discreto}
+\subsection{Metodo discreto}
 Per sviluppare in potenze di $\hbar$ si considera dapprima l'espressione discretizzata
 (\ref{eq:K_discr}) per $K$ (per semplicità si considera anche $d=1$)
 $$
@@ -50,7 +51,7 @@ e si trova
 $$\pdv[]{S}{q_i} =0 \leftrightarrow m\ddot q_i + \pdv[]{V}{q_i} = 0$$
 che ha la forma dell'equazione di Newton della meccanica classica.\\
 È sistema di $N$ O.D.E. con soluzione $q_{0,i}$, che è la successione di $\left\{q_i\right\}$
-corrispondente al cammino classico: se ne considerino ora le deformazioni $\omega_i$ tali che
+corrispondente al cammino classico: si considerino ora le deformazioni $\omega_i$ tali che
 $$q_i = q_{0,i} + \omega_i\text{, con }\omega_0 = \omega_N = 0$$
 l'azione sul cammino deformato vale
 \begin{gather*}
@@ -70,7 +71,7 @@ e^{\frac{i}{\hbar}S_{cl}} e^{\frac{i}{\hbar}S_2}e^{\frac{i}{\hbar}S_{\geq3}}=
 \textbf{Oss.} Per il teorema di Schwarz la forma $X_{ij}$ è simmetrica e dunque esiste una matrice
 unitaria $P$ tale che $X = PDP^{T}$ con $D$ diagonale: si può dunque scrivere che 
 $\omega_iX_{ij}\omega_j = \omega^{T}PDP^T\omega := x^TDx = \lambda_ix_i^2$ con il cambio di variabile
-$P^Tx = \omega$ (come vettori), che però non produce cambiamenti nella misura di integrazione, in
+$P^Tx = \omega$ (come vettori), che non produce cambiamenti nella misura di integrazione, in
 quanto $\left|\det(J)\right| = \left|\det(P^{T})\right| = 1$; si ha inoltre che $\det(X) = \det(D)$.
 
 L'osservazione precedente ci permette di considerare solo i casi in cui $S_2 = X_k\omega_k^2$, senza
@@ -90,14 +91,51 @@ $$K = \frac{\left(i\pi\hbar\right)^{\frac{N-1}{2}}}{\mathcal{N}^N}e^{\frac{i}{\h
 poiché $X$ è diagonale, $\prod X_k = \det(X)$ e poiché, come già detto, il determinante è invariante
 per cambio di coordinate unitario, questo risultato è generale
 \begin{equation}
-    \boxed{K(q',t',q,t) \underset{\hbar\to0}\sim \mathcal{M}e^{\frac{i}{\hbar}S_{cl}}\left(\det(X)\right)^{-\frac{1}{2}}\left(1+O(\hbar)\right)}
+    \boxed{K(q',t',q,t) \underset{\hbar\to0}\sim \mathcal{M}e^{\frac{i}{\hbar}S_{cl}}\left(\det(X)
+    \right)^{-\frac{1}{2}}\left(1+O(\hbar)\right)}
     \label{eq:K_det}
 \end{equation}
+Dove $\mathcal{M}$ è una costante di normalizzazione.
+
 \textbf{Oss.1} Nel caso di Lagrangiane del tipo $L=T-V$, i termini di $S_{\geq3}$ dipendono
 solamente dal potenziale $V$.
 
 \textbf{Oss.2} Per continuare l'approssimazione a ordini superiori di $\hbar$ basta procedere nel
 calcolo di $A_k$ considerando l'ordine $\omega^3$; tali ordini, come è noto dalla teoria degli
 sviluppi asintotici, producono termini del tipo
-$A_k \underset{\hbar\to0}\sim\sqrt{\frac{i\hbar\pi}{X_k}}(1+O(\hbar))$ 
+$A_k \underset{\hbar\to0}\sim\sqrt{\frac{i\hbar\pi}{X_k}}(1+\alpha\hbar + O(\hbar^2))$ 
+\subsection{Metodo del \textit{Path Integral}}
+Si mostra ora come sia possibile giungere allo stesso risultato utilizzando il formalismo degli
+integrali di cammino, cioè partendo da (\ref{eq:K}): si ricavano le curve di moto classiche dal
+principio di minima azione
+\begin{align*}
+S[q] &= \int_{t_a}^{t_b}dtL(q,\dot q),\;\delta S = 0 \leftrightarrow
+\int_{t_a}^{t_b}\pdv[]{L}{\dot q}\delta\dot q + \pdv[]{L}{q}\delta q =\\
+&=\eval{\pdv[]{L}{q}\delta q}_{t_a}^{t_b}-\int_{t_a}^{t_b}dt\left(\dv[]{}{t}\pdv[]{L}{\dot q}-
+\pdv[]{L}{q}\right)\delta q = 0 \leftrightarrow \dv[]{}{t}\pdv[]{L}{\dot q}-\pdv[]{L}{q}=0
+\end{align*}
+che sono le equazioni di Eulero-Lagrange, con soluzione $q_0(t)$. Si introduce ora una perturbazione
+a estremi fissi $\omega(t)$ e si calcola l'azione su $q(t) = q_0(t)+\omega(t)$ espandendo la
+lagrangiana in potenze di $\omega$:
+$$L(q,\dot q) = L(q_0,\dot q_0) + \frac{1}{2}\pdv[2]{L}{\dot q}\dot\omega^2+\pdv{L}{q}{\dot q}\omega
+\dot\omega + \frac{1}{2}\pdv[2]{L}{q}\omega^2 + O(\omega^3)$$
+da cui si trova che
+\begin{gather*}
+S[q] = S[q_0]+\frac{1}{2}\int_{t_a}^{t_b}dt\left(\pdv[2]{L}{\dot q}\dot\omega^2+2\pdv{L}{q}{\dot q}
+\omega\dot\omega +\pdv[2]{L}{q}\omega^2\right)+ S_{\geq3}=\\
+=S_{cl}+\frac{1}{2}\int_{t_a}^{t_b}dt\left(\dot\omega A\dot\omega+2\omega B\dot\omega+\omega C\omega
+\right)+S_{\geq3}
+\end{gather*}
+usando l'identità $\dot\omega A\dot\omega=\dv[]{}{t}\left(\omega A\dot\omega\right)-
+\omega\dot A\dot\omega-\omega A\ddot\omega$ e integrando per parti si ottiene
+$$S[q]=S_{cl}+\frac{1}{2}\int_{t_a}^{t_b}dt\omega D\omega +S_{\geq3} := S_{cl}+S_2[\omega]+S_{\geq3}$$
+dove l'operatore $D$ è pari a $D=-\dot A \dv[]{}{t}-\omega A \dv[2]{}{t}+2B\dv[]{}{t}+C$.
 
+Sostituendo infine in (\ref{eq:K}), si trova
+$$K(q_b,t_b,q_a,t_a) = \int_{}^{}\mathcal{D}q \exp\left\{\frac{i}{\hbar}S[q]\right\} = 
+e^{\frac{i}{\hbar}S_{cl}}\int_{}^{}\mathcal{D}\omega \exp\left\{\frac{i}{\hbar}\int_{t_a}^{t_b}dt
+\omega D\omega\right\}
+\left(1+\frac{i}{\hbar}S_{\geq3}\right)$$
+Trascurando i termini di ordine superiore si trova, come in precedenza
+$$\boxed{K(q_b,t_b,q_a,t_a)\underset{\hbar\to0}\sim e^{\frac{i}{\hbar}S_{cl}}
+(\det(D))^{-\frac{1}{2}}}$$
