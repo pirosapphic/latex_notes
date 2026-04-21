@@ -42,4 +42,4 @@
 \contentsline {section}{\numberline {10}Limite semiclassico}{35}{section.10}%
 \contentsline {subsection}{\numberline {10.1}Metodo discreto}{35}{subsection.10.1}%
 \contentsline {subsection}{\numberline {10.2}Metodo del \textit {Path Integral}}{37}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}Esempio: l'effeto Bohm-Aharonov}{38}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.3}Esempio: l'effetto Bohm-Aharonov}{38}{subsection.10.3}%

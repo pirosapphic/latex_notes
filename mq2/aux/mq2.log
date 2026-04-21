@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.8)  21 APR 2026 11:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.8)  22 APR 2026 01:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -297,10 +297,13 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \mathdisplay@stack=\toks31
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
-)) (/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+)) (/usr/share/texmf-dist/tex/latex/esint/esint.sty
+Package: esint 
+\symlargesymbolsA=\mathgroup4
+) (/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\symAMSa=\mathgroup4
-\symAMSb=\mathgroup5
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
@@ -338,7 +341,7 @@ Language: italian 2026/01/13 v.1.5.02 Italian support for the babel system
 \it@doublequoteactive=\count319
 \it@ISOcompliance=\count320
 ))
-Package hyperref Info: Option `colorlinks' set `true' on input line 30.
+Package hyperref Info: Option `colorlinks' set `true' on input line 31.
  (/usr/share/texmf-dist/tex/latex/lipsum/lipsum.sty (/usr/share/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2025-10-09 LaTeX2e option processing using LaTeX3 keys
 )
@@ -441,24 +444,24 @@ Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
  (aux/mq2.aux)
 \openout1 = `mq2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count338
@@ -478,13 +481,13 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring ON on input line 65.
+Package hyperref Info: Link coloring ON on input line 66.
  (aux/mq2.out) (aux/mq2.out)
 \@outlinefile=\write3
 \openout3 = `mq2.out'.
 
-LaTeX Info: Redefining \it@ocap on input line 65.
-LaTeX Info: Redefining \it@ccap on input line 65.
+LaTeX Info: Redefining \it@ocap on input line 66.
+LaTeX Info: Redefining \it@ccap on input line 66.
 
 
 File italian.ldf warning: 
@@ -492,22 +495,26 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting
-italian.ldf    on input line 65.
+italian.ldf    on input line 66.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 71.
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+LaTeX Font Info:    Trying to load font information for U+esint on input line 72.
+(/usr/share/texmf-dist/tex/latex/esint/uesint.fd
+File: uesint.fd 
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 72.
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 71.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 72.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 <./airy.png, id=152, 1433.355pt x 1333.98375pt>
 File: ./airy.png Graphic file (type png)
 <use ./airy.png>
-Package pdftex.def Info: ./airy.png  used on input line 83.
+Package pdftex.def Info: ./airy.png  used on input line 84.
 (pdftex.def)             Requested size: 386.95897pt x 360.11935pt.
  [1
 
@@ -556,12 +563,12 @@ Overfull \hbox (18.5485pt too wide) in paragraph at lines 222--236
  []
 
 ) (./lessons/lez03_260309.tex [10]
-<./even_well.png, id=269, 361.35pt x 363.23203pt>
+<./even_well.png, id=270, 361.35pt x 363.23203pt>
 File: ./even_well.png Graphic file (type png)
 <use ./even_well.png>
 Package pdftex.def Info: ./even_well.png  used on input line 72.
 (pdftex.def)             Requested size: 226.97418pt x 228.15565pt.
-<./odd_well.png, id=270, 361.35pt x 363.23203pt>
+<./odd_well.png, id=271, 361.35pt x 363.23203pt>
 File: ./odd_well.png Graphic file (type png)
 <use ./odd_well.png>
 Package pdftex.def Info: ./odd_well.png  used on input line 77.
@@ -592,7 +599,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 110--122
  []
 
 [15]
-<./sombrero.png, id=298, 853.1875pt x 526.96875pt>
+<./sombrero.png, id=299, 853.1875pt x 526.96875pt>
 File: ./sombrero.png Graphic file (type png)
 <use ./sombrero.png>
 Package pdftex.def Info: ./sombrero.png  used on input line 134.
@@ -617,30 +624,36 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 61--73
 [] 
  []
 
-[29] [30]) (./lessons/lez09_260326.tex [31] [32] [33]) (./lessons/lez10_260330.tex [34] [35] [36]) (./lessons/lez11_260401.tex) [37] [38] (aux/mq2.aux)
+[29] [30]) (./lessons/lez09_260326.tex [31] [32] [33]) (./lessons/lez10_260330.tex [34] [35] [36]) (./lessons/lez11_260401.tex [37]
+<./bohm_a.png, id=435, 1012.78375pt x 1013.7875pt>
+File: ./bohm_a.png Graphic file (type png)
+<use ./bohm_a.png>
+Package pdftex.def Info: ./bohm_a.png  used on input line 7.
+(pdftex.def)             Requested size: 162.99318pt x 163.15292pt.
+ [38 <./bohm_a.png (PNG copy)>]) [39] (aux/mq2.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `mq2.out' has not changed.
-(rerunfilecheck)             Checksum: B47B82D7A09A05699F4991657F99239A;8175.
+(rerunfilecheck)             Checksum: A2D1AC4EFCDC471B9B6C289B76B4D9B7;8180.
  ) 
 Here is how much of TeX's memory you used:
- 15452 strings out of 469504
- 244442 string characters out of 5470380
- 780902 words of memory out of 5000000
- 43754 multiletter control sequences out of 15000+600000
- 640111 words of font info for 85 fonts, out of 8000000 for 9000
+ 15542 strings out of 469504
+ 245867 string characters out of 5470380
+ 782088 words of memory out of 5000000
+ 43834 multiletter control sequences out of 15000+600000
+ 640513 words of font info for 91 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  75i,19n,84p,522b,603s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{https://web.archive.org/web/20200917091657/https://authors.library.caltech.edu/47756/1/FEYrmp48.pdf} has been referenced but does not exist, replaced by a fixed one
 
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on aux/mq2.pdf (38 pages, 969857 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on aux/mq2.pdf (39 pages, 1041141 bytes).
 PDF statistics:
- 559 PDF objects out of 1000 (max. 8388607)
- 464 compressed objects within 5 object streams
- 114 named destinations out of 1000 (max. 500000)
- 317 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 572 PDF objects out of 1000 (max. 8388607)
+ 473 compressed objects within 5 object streams
+ 116 named destinations out of 1000 (max. 500000)
+ 322 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -119,6 +119,8 @@ INPUT /usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
 INPUT /usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
 INPUT /usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
 INPUT /usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT /usr/share/texmf-dist/tex/latex/esint/esint.sty
+INPUT /usr/share/texmf-dist/tex/latex/esint/esint.sty
 INPUT /usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 INPUT /usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 INPUT /usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
@@ -183,6 +185,12 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/share/texmf-dist/tex/latex/esint/uesint.fd
+INPUT /usr/share/texmf-dist/tex/latex/esint/uesint.fd
+INPUT /usr/share/texmf-dist/tex/latex/esint/uesint.fd
+INPUT /usr/share/texmf-dist/fonts/tfm/public/esint/esint10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/esint/esint10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/esint/esint10.tfm
 INPUT /usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 INPUT /usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 INPUT /usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -197,6 +205,9 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/esint/esint10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/esint/esint10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/esint/esint10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
@@ -278,6 +289,11 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
 INPUT ./lessons/lez11_260401.tex
 INPUT ./lessons/lez11_260401.tex
 INPUT ./lessons/lez11_260401.tex
+INPUT ./bohm_a.png
+INPUT ./bohm_a.png
+INPUT ./bohm_a.png
+INPUT ./bohm_a.png
+INPUT ./bohm_a.png
 INPUT aux/mq2.aux
 INPUT aux/mq2.out
 INPUT aux/mq2.out
@@ -299,6 +315,7 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb
