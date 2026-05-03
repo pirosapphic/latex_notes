@@ -1,0 +1,53 @@
+%lezione 12 del 10 aprile 2026
+%-----------------------------------------------------------------------------------------------------
+% vd lez 11 per vero inizio di questa lezione, appena prima dela "diagonalizzazione" di X (line 133).
+\subsection{Determinanti funzionali}
+Come visto dalla relazione (\ref{eq:K_det}), un altro modo di stimare l'approssimazione semiclassica
+di propagatori quantistici è trovare il determinante della forma quadratica $X$ associata a $S_2[z]$.
+
+Si prende sempre come esempio l'oscillatore armonico, con
+$$X = \dv[2]{}{t}+\omega^2$$
+Per evitare difficoltà con la fase, si effettua una rotazione di Wick $t=-i\tau$, che manda
+$$X\to X_e = - \dv[2]{}{\tau} + \omega^2$$
+Dunque l'integrale della sezione precedente diventa
+$$I = \int_{}^{}\mathcal{D}z \exp\left\{-\frac{m}{2\hbar}\int_{0}^{T_e}d\tau z
+\left(-\dv[2]{}{\tau}+\omega^2\right)z\right\}$$
+Come detto in precedenza, $\det(X_e) = \prod_{}^{}\lambda(X_e)$ e per $X_e$ vale che
+$$X_e \sin\frac{\pi n\tau}{T_e}=\left(\frac{\pi^2n^2}{T_e^2} +\omega^2\right) \sin\frac{\pi n\tau}{T_e}$$
+Il determinante è dunque
+$$\det(X_e) = \prod_{n=1}^{\infty}\left(\frac{\pi^2n^2}{T_e^2} + \omega^2\right) =
+\prod_{n=1}^{\infty}\left(\frac{T^2_e}{\pi^2n^2}\right)\prod_{n=1}^{\infty}
+\left(1+\frac{\omega^2T_e^2}{\pi^2n^2}\right)$$
+\textit{Oss.} Con questa visione è chiaro che $\det(-\dv[2]{}{\tau}) = \prod_{n=1}^{\infty}\left(
+\frac{T^2_e}{\pi^2n^2}\right)$: questo è il determinante funzionale della forma quadratica associata
+alla particella libera.
+
+Tornando dalla rotazione, $T_e = iT$ e il calcolo delle produttorie è il medesimo della sezione
+precedente.
+\subsubsection{Regolarizzazione con funzione zeta}
+In questo e molti altri problemi di fisica teorica, ci si imbatte in oggetti matematici non convergenti
+e, per trovare un significato al loro risultato, è necessario regolarizzarli.\\
+Si prenda come esempio l'appena citato determinante funzionale per la particella libera
+$$\det(X) = \prod_{n=1}^{\infty}\left(\frac{T^2}{\pi^2n^2}\right)$$
+questa produttoria è divergente, ma, sfruttando la continuazione analitica della $\zeta$ di Riemann,
+è possibile associare a essa un risultato finito.\\
+Detti $\lambda_n$ gli autovalori di $X$ si consideri la funzione
+$$\zeta_X(s):=\sum_{n=1}^{\infty}\frac{1}{\lambda^s_{n}}$$
+La sua derivata è
+$$\zeta_X'(s) = \dv[]{}{s}\left(\sum_{n=1}^{\infty}e^{-s\ln(\lambda_n)}\right)=
+\sum_{n=1}^{\infty}-\frac{1}{\lambda_n^2}\ln(\lambda_n) \rightarrow \zeta_X'(0) =
+-\sum_{n=1}^{\infty}\ln(\lambda_n)$$
+e dunque $\det(X) = e^{-\zeta_X'(0)}$
+
+Sosituendo gli autovalori $\lambda_n=\frac{T^2}{\pi^2n^2}$ si trova
+$$\zeta_X(s) = \left(\frac{T}{\pi}\right)^{2s}\sum_{n=1}^{\infty}\frac{1}{n^{2s}} =
+\left(\frac{T}{\pi}\right)^{2s}\zeta(2s)$$
+La sua derivata in zero vale
+$$\zeta_X'(0) =\eval{ \left(\frac{T}{\pi}\right)^{2s}\left[2\ln\left(\frac{T}{\pi}\right)\zeta(2s)+2\zeta'(2s)
+\right]}_{s=0} = 2\ln\left(\frac{T}{\pi}\right)\zeta(0) + 2\zeta'(0)$$
+ricordando che, per continuazione analitica, $\zeta(0) = -\frac{1}{2}$ e $\zeta'(0) = \ln(2\pi)\zeta(0)$,
+si trova infine
+$$\zeta_X'(0) = -\ln(2T)\rightarrow\det(X) = 2T$$
+che è il risultato atteso a meno di costanti di normalizzazione.
+\section{Rotazione di Wick e meccanica statistica}
+

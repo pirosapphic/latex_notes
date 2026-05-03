@@ -1,8 +1,8 @@
 %lezione 8 del 25 marzo 2026
 %FINALMENTE LA PARTE BELLA
 \newpage
+\addtocontents{toc}{\protect\newpage}
 \chapter{Formalismo dei \textit{Path Integral}}
-
 \section{Introduzione e prime definizioni}
 Questa seconda parte del corso è dedicata al formalismo dei \textit{path integral} di Feynman:
 si tratta di un framework equivalente a quello considerato finora, ma che ha i vantaggi di essere 
@@ -153,11 +153,11 @@ K = \frac{1}{2\pi\hbar}\sqrt{\frac{2m}{\Delta\tau}}\exp\left\{-\frac{1}{\hbar}\f
 $$
 Riconvertendo dal tempo euclideo a quello ordinario si ottiene che
 \begin{equation}
-K(q',t',q,t) = \sqrt{\frac{m}{2\pi i(t'-t)}}\exp\left\{\frac{i}{\hbar}\frac{m}{2}
+K(q',t',q,t) = \sqrt{\frac{m}{2\pi i\hbar(t'-t)}}\exp\left\{\frac{i}{\hbar}\frac{m}{2}
 \frac{(q'-q)^2}{t'-t}\right\} = \frac{1}{\mathcal{N}}e^{\frac{i}{\hbar}S_{cl}[q]}
 \label{eq:K_free}
 \end{equation}
-denotando con $\mathcal{N} = \sqrt{\frac{2\pi i (t'-t)}{m}}$ e con $S_{cl}[q]$ il valore dell'azione
+denotando con $\mathcal{N} = \sqrt{\frac{2\pi i\hbar (t'-t)}{m}}$ e con $S_{cl}[q]$ il valore dell'azione
 sulla "curva di moto" che congiunge $q$ e $q'$.
 
 È ora chiaro il legame con l'azione classica (\ref{eq:S_cl_free}) e la funzione d'onda evoluta è

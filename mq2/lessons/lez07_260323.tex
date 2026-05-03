@@ -155,13 +155,15 @@ $$\bra{\psi}e^{\frac{i}{\hbar}H(t-t_0)} Fe^{-\frac{i}{\hbar}H(t-t_0)}\ket{\psi} 
 $$
 dove si è utilizzato il fatto che 
 \begin{gather*}
-[H,F]=0\leftrightarrow[U,F]=\sum_{n=0}^{\infty}\left(-\frac{i}{\hbar}(t-t_0)\right)^n\frac{1}{n!}[H^n,F]=\\
-=\sum_{n=0}^{\infty}\left(-\frac{i}{\hbar}(t-t_0)\right)^n\frac{1}{n!}
-\left(\sum_{k=1}^{n}H^{k-1}[H,F]H^{n-k}\right)=0
+[U,F]=\sum_{n=0}^{\infty}\left(-\frac{i}{\hbar}(t-t_0)\right)^n\frac{1}{n!}[H^n,F]
+=\sum_{n=0}^{\infty}\left[\left(-\frac{i}{\hbar}(t-t_0)\right)^n\frac{1}{n!}
+\left(\sum_{k=1}^{n-1}a_{k,n}H^{n-k-1}[H,F]H^{k}\right)\right]=0
 \end{gather*}
-{\large DA DIMOSTRARE RIVEDI RIVEDI}
-$$[A^n,B] = \sum_{k=0}^{n-1}\binom{n-1}{k}A^{n-1-k}[A,B]A^k$$
-\textbf{Oss.} Gli autostati dell'energia conservano tutte le osservabili:\\
+se e solo se $[H,F] = 0$.
+
+%{\large DA DIMOSTRARE RIVEDI RIVEDI}
+%$$[A^n,B] = \sum_{k=0}^{n-1}\binom{n-1}{k}A^{n-1-k}[A,B]A^k$$
+\textbf{Oss.} Gli autostati dell'energia conservano tutte le osservabili:
 se $H$ è indipendente dal tempo, per gli autostati dell'energia si ha
 $$H\ket{\psi}=E\ket{\psi} \rightarrow \ket{\psi(t)}=U(t,t_0)\ket{\psi} = e^{-\frac{i}{\hbar}E(t-t_0)}
 \ket{\psi} \rightarrow \bra{\psi}U^\dagger FU\ket{\psi} = \bra{\psi}F\ket{\psi}\mkern9mu\forall t,F$$

@@ -1,45 +1,52 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
-\contentsline {section}{Postulati della Meccanica Quantistica}{3}{section*.2}%
-\contentsline {section}{\numberline {1}Introduzione e costruzione della meccanica classica}{3}{section.1}%
-\contentsline {section}{\numberline {2}Postulato 0 della Meccanica Quantistica}{3}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Spazi di Hilbert}{3}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Distribuzioni temperate e spazi di Hilbert}{5}{subsection.2.2}%
-\contentsline {section}{\numberline {3}Postulato 0.1 della Meccanica Quantistica}{6}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Osservabili}{6}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Autovettori e autovalori}{7}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Sistemi Completi di Osservabili Commutanti}{9}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Esempio noto: la buca di potenziale finita 1D}{9}{subsection.3.4}%
-\contentsline {subsubsection}{\numberline {3.4.1}Casi limite}{12}{subsubsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.5}Risultati generali sui potenziali}{12}{subsection.3.5}%
-\contentsline {subsubsection}{\numberline {3.5.1}Potenziale attrattivo}{12}{subsubsection.3.5.1}%
-\contentsline {subsubsection}{\numberline {3.5.2}Potenziali limitati inferiormente}{13}{subsubsection.3.5.2}%
-\contentsline {subsubsection}{\numberline {3.5.3}Spettri energetici limitati inferiormente}{14}{subsubsection.3.5.3}%
-\contentsline {subsection}{\numberline {3.6}Lo stato fondamentale}{14}{subsection.3.6}%
-\contentsline {section}{\numberline {4}Prodotto diretto tra Spazi di Hilbert}{17}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Costruzione dello spazio prodotto}{17}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Base dello spazio prodotto}{17}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Operatori sullo spazio prodotto}{18}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Esempio: lo spin di una particella in 3 dimensioni}{19}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Postulato 1 della Meccanica Quantistica}{19}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Valor medio di un'osservabile}{20}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Stati misti e matrice densità}{20}{subsection.5.2}%
-\contentsline {subsubsection}{\numberline {5.2.1}Proprietà della matrice densità}{21}{subsubsection.5.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.2}Esempio: la polarizzazione della luce}{22}{subsubsection.5.2.2}%
-\contentsline {section}{\numberline {6}Postulato 2 della Meccanica Quantistica}{23}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Il collasso della funzione d'onda}{23}{subsection.6.1}%
-\contentsline {section}{\numberline {7}Postulato 3 della Meccanica Quantistica}{25}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Schema di Scrödinger}{26}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Schema di Heisenberg}{26}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Costanti del moto}{27}{subsection.7.3}%
-\contentsline {section}{Formalismo dei \textit {Path Integral}}{28}{subsection.7.3}%
-\contentsline {section}{\numberline {8}Introduzione e prime definizioni}{28}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Il propagatore}{28}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Primo legame con l'azione}{30}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Il propagatore della particella libera 1D}{30}{subsection.8.3}%
-\contentsline {section}{\numberline {9}Il propagatore di un'Hamiltoniana con potenziale}{32}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Equivalenza con l'equazione di Schrödinger}{34}{subsection.9.1}%
-\contentsline {section}{\numberline {10}Limite semiclassico}{35}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Metodo discreto}{35}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Metodo del \textit {Path Integral}}{37}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}Esempio: l'effetto Bohm-Aharonov}{38}{subsection.10.3}%
+\contentsline {section}{Postulati della Meccanica Quantistica}{4}{section*.2}%
+\contentsline {section}{\numberline {1}Introduzione e costruzione della meccanica classica}{4}{section.1}%
+\contentsline {section}{\numberline {2}Postulato 0 della Meccanica Quantistica}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Spazi di Hilbert}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Distribuzioni temperate e spazi di Hilbert}{6}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Postulato 0.1 della Meccanica Quantistica}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Osservabili}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Autovettori e autovalori}{8}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Sistemi Completi di Osservabili Commutanti}{10}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Esempio noto: la buca di potenziale finita 1D}{10}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Casi limite}{13}{subsubsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.5}Risultati generali sui potenziali}{13}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Potenziale attrattivo}{13}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Potenziali limitati inferiormente}{14}{subsubsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.3}Spettri energetici limitati inferiormente}{15}{subsubsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.6}Lo stato fondamentale}{15}{subsection.3.6}%
+\contentsline {section}{\numberline {4}Prodotto diretto tra Spazi di Hilbert}{18}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Costruzione dello spazio prodotto}{18}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Base dello spazio prodotto}{18}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Operatori sullo spazio prodotto}{19}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Esempio: lo spin di una particella in 3 dimensioni}{20}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Postulato 1 della Meccanica Quantistica}{20}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Valor medio di un'osservabile}{21}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Stati misti e matrice densità}{21}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Proprietà della matrice densità}{22}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Esempio: la polarizzazione della luce}{23}{subsubsection.5.2.2}%
+\contentsline {section}{\numberline {6}Postulato 2 della Meccanica Quantistica}{24}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Il collasso della funzione d'onda}{24}{subsection.6.1}%
+\contentsline {section}{\numberline {7}Postulato 3 della Meccanica Quantistica}{26}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Schema di Scrödinger}{27}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Schema di Heisenberg}{27}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Costanti del moto}{28}{subsection.7.3}%
+\newpage 
+\contentsline {section}{Formalismo dei \textit {Path Integral}}{29}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Introduzione e prime definizioni}{29}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Il propagatore}{29}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Primo legame con l'azione}{31}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Il propagatore della particella libera 1D}{31}{subsection.8.3}%
+\contentsline {section}{\numberline {9}Il propagatore di un'Hamiltoniana con potenziale}{33}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Equivalenza con l'equazione di Schrödinger}{35}{subsection.9.1}%
+\contentsline {section}{\numberline {10}Limite semiclassico}{36}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Metodo discreto}{36}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Metodo del \textit {Path Integral}}{38}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Esempio: l'effetto Bohm-Aharonov}{39}{subsection.10.3}%
+\contentsline {section}{\numberline {11}Calcolo di propagatori}{40}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Ancora sulla particella libera}{40}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}L'oscillatore armonico}{41}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Determinanti funzionali}{43}{subsection.11.3}%
+\contentsline {subsubsection}{\numberline {11.3.1}Regolarizzazione con funzione zeta}{44}{subsubsection.11.3.1}%
+\contentsline {section}{\numberline {12}Rotazione di Wick e meccanica statistica}{45}{section.12}%

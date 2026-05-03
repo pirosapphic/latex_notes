@@ -70,5 +70,128 @@ con una (trascurabile) fase globale, mentre ciò che produce effetti osservabili
 
 \textbf{Oss.} I valori per cui il campo magnetico non cambia la figura di interferenza sono quelli tali
 che $\frac{q}{\hbar c}\Phi_B = 2n\pi \leftrightarrow \Phi_B = n\frac{2\pi\hbar c}{q}$, cioè i multipli
-interi del magnetone di Bohr $\mu_B$.
+interi del magnetone di Bohr $\mu_B$\footnote{O almeno così afferma Sciuto: peccato
+che $\mu_B = \frac{e\hbar}{2m_e}$, da chiarire.}.
+\section{Calcolo di propagatori}
+In questa sezione si calcolano i propagatori della particella libera e dell'oscillatore armonico
+quantistico.
+\subsection{Ancora sulla particella libera}
+Poiché la particella libera non ha termini quadratici nella sua azione, la risoluzione in
+approssimazione semiclassica è quella esatta 
+$$K(x_b,t_b,x_a,t_a) = \frac{1}{\mathcal{N}}e^{\frac{i}{\hbar}S_{cl}}=
+\frac{1}{\mathcal{N}}\exp\left\{\frac{i}{\hbar}\frac{m}{2}\frac{(x_b-x_a)^2}
+{t_b-t_a}\right\}$$
+Un modo per ricavare la normalizzazione $\mathcal{N}$ è il seguente: sapendo che l'azione lungo una
+curva costante $x_a=0\to x_b=0$ è nulla e che il fattore di normalizzazione $\mathcal{N}$ è funzione
+solo di $t_b-t_a$, si ha
+$$K(0,t_b,0,t_a) = \frac{1}{\mathcal{N}(t_b-t_a)}$$
+per le proprietà del propagatore, questo è pari a
+\begin{align*}
+    &K(0,t_b,0,t_a) =\int_{}^{}dx_cK(0,t_b,x_c,t_c)K(x_c,t_c,0,t_a) 
+    =\int_{}^{}dx_c\frac{\exp\left\{\frac{im}{2\hbar}\frac{x_c^2}{t_b-t_c}\right\}}
+    {\mathcal{N}(t_b-t_c)} \frac{\exp\left\{\frac{im}{2\hbar}\frac{x_c^2}{t_c-t_a}\right\}}
+    {\mathcal{N}(t_c-t_a)}=\\
+    &=\frac{1}{\mathcal{N}(t_b-t_c)\mathcal{N}(t_c-t_a)}\int_{-\infty}^{\infty}dx_ce^{i\alpha x_c^2}=
+    \frac{1}{\mathcal{N}(t_b-t_c)\mathcal{N}(t_c-t_a)}\sqrt{\frac{\pi}{-i\alpha}}
+\end{align*}
+dove $\alpha = \frac{m}{2\hbar}\left(\frac{1}{t_b-t_c}+\frac{1}{t_c-t_a}\right)= 
+\frac{m}{2\hbar}\frac{t_b-t_a}{(t_b-t_c)(t_c-t_a)}$
+e dunque
+$$\frac{\mathcal{N}(t_b-t_c)\mathcal{N}(t_c-t_a)}{\mathcal{N}(t_b-t_a)} = \sqrt{\frac{2\pi i\hbar}{m}}
+\sqrt{\frac{(t_b-t_c)(t_c-t_a)}{(t_b-t_a)}} \leftrightarrow \mathcal{N}(\Delta t) =
+\sqrt{\frac{2\pi i\hbar\Delta t}{m}}$$
+\textit{Oss.} Il calcolo di questa costante tornerà utile per fissare quelle dei problemi non liberi.
+\subsection{L'oscillatore armonico}
+Si ricava ora il propagatore dell'oscillatore armonico quantistico, con lagrangiana
+$$L = \frac{1}{2}m\dot x^2 - \frac{1}{2}m\omega^2x^2$$
+con estremi $(x_a,t_a=0)$ e $(x_b,t_b=T)$, con $T\geq0$ generico; si calcola per
+prima cosa l'azione sul cammino classico:
+l'equazione del moto è $x(t) = Ae^{i\omega t}+Be^{-i\omega t}$ e si impongono le condizioni al contorno
+$x(0) = x(T)$, che impongono
+$$
+\begin{cases}
+    A= \frac{x_b-x_ae^{-i\omega T}}{e^{i\omega T} - e^{-i\omega T}}\\ \\
+    B=\frac{x_ae^{i\omega T}-x_b}{e^{i\omega T} - e^{-i\omega T}}
+\end{cases}
+$$
+Sostituendo $x(t)$ e $\dot x(t)$ nell'espressione di $L$ si trova
+$$L(t) = \frac{m}{2}\left(\dot x^2(t) - \omega^2x^2(t)\right) =
+-m\omega^2\left(A^2e^{i2\omega t} + B^2e^{-i2\omega t}\right)$$
+l'azione classica è dunque
 
+$$S_{cl} = \int_{0}^{T}dt L(t) = -m\omega^2A^2\int_{0}^{T}dte^{i2\omega t} -
+m\omega^2B^2\int_{0}^{T}dte^{-i2\omega t} =
+\frac{im\omega}{2}\left[A^2(e^{i2\omega t} -1) - B^2(e^{-2i\omega t} -1)\right]$$
+Sostituendo le condizioni su $A,B$ si trova
+$$S_{cl}=\frac{m\omega}{2}\frac{1}{\sin(\omega T)}\left[(x_a^2+x_b^2)^2\cos(\omega T) - 2x_ax_b\right]$$
+Si considerano ora le perturbazioni $z$ sul cammino classico fino al secondo ordine
+$$S[x(t)+z] = S_{cl} + S_2[z]$$
+con
+$$S_2[z] = \frac{m}{2}\int_{0}^{T}dt(\dot z^2-\omega^2z^2)$$
+\textit{Oss.} La lagrangiana è quadratica sia in $x$, sia in $\dot x$, quindi non sono presenti
+termini $S_{\geq3}$.
+
+Si trova dunque
+$$K(x_b,T,x_a,0) = \mathcal{M}e^{\frac{i}{\hbar}S_{cl}} \int\mathcal{D}z
+\exp\left\{\frac{im}{2\hbar}\int_{0}^{T}dt (\dot z^2-\omega^2z^2)\right\} :=
+\mathcal{M}e^{\frac{i}{\hbar}S_{cl}}I$$
+%\newpage
+%VERO INIZIO LEZIONE 12, per continuità continuo qui
+Come visto nel caso generico, si deve ora scrivere la forma quadratica associata a $S_2[z]$ integrando
+per parti:
+$$\int_{0}^{T}dt \dot z^2 = \eval{z\dot z}_0^T - \int_{0}^{T}dtz\ddot z
+\to S_2[z] = -\frac{m}{2}\int_{0}^{T}dt zXz$$
+con $X = \dv[2]{}{t} + \omega^2$.
+
+Per calcolare $S_2[z]$ si può usare un trucco analitico (usato anche da Feynman):
+poiché $z(t)$ è integrata su $[0,T]$, si può assumere che essa sia una funzione di periodo $T$, e,
+con l'aggiunta della condizione $z(0)=z(T)=0$, essa si può espandere in serie di Fourier come
+$$z(t)=\sum_{n=1}^{\infty}a_n\sin\frac{n\pi t}{T}$$
+\textit{Oss.} La funzione $\sin\frac{n\pi t}{T}$ è autofunzione di $X$ di autovalore
+$\lambda_n = \frac{-n^2\pi^2}{T^2} + \omega^2$\\
+Dunque
+$$\int_{0}^{T}dtzXz = \sum_{m,n=1}^{\infty}a_na_m\left(-\frac{\pi^2n^2}{T^2}+\omega^2\right)
+\int_{0}^{T}dt\sin\frac{m\pi t}{T}\sin\frac{n\pi t}{T} =
+-\frac{T}{2}\sum_{n=1}^{\infty}a_n^2\left(\frac{\pi^2n^2}{T^2}-\omega^2\right)$$
+dove si è utilizzato che l'insieme $\left\{\frac{2}{T}\sin\frac{\pi nt}{T}\right\}_n$ è un sistema ONC
+per $L^2(0,T)$.
+
+\textit{Oss.} La misura dell'integrale $I$ è $\mathcal{D}z$, ma la scelta di un $z(t)$ è del tutto
+equivalente alla scelta della successione dei suoi coefficienti di Fourier $a_n$, dunque, per qualche
+$M$, si può scrivere
+$$\mathcal{D}z = M\prod_{n=1}^{\infty}da_n$$
+Alla luce di ciò, la correzione semiclassica del propagatore vale
+$$I = M\int_{}^{}\prod_{n=0}^{\infty}da_n\exp
+\left\{\frac{-imT}{4\hbar}\sum_{n=1}^{\infty}\left(\frac{\pi^2n^2}{T^2}-\omega^2\right)\right\} = 
+M\prod_{n=1}^{\infty}I_n$$	
+dove gli integrali $I_n$ si possono valutare con il metodo della fase stazionaria effettuando il cambio
+di variabile $\rho_n = e^{i\frac{\pi}{4}}a_n$
+$$I_n = e^{i\frac{\pi}{4}}\int_{-\infty}^{\infty}d\rho_n \exp\left\{\frac{-mT}{4\hbar}
+\left(\frac{\pi^2n^2}{T^2}-\omega^2\right)\rho_n^2\right\} =
+\sqrt{\pi}\left(\frac{4i\hbar}{mT}\right)^{\frac{1}{2}}\left(\frac{\pi^2n^2}{T^2}-\omega^2\right)
+^{-\frac{1}{2}}$$
+Assorbendo le costanti in $M$, si trova che
+$$I = M\left[\prod_{n=1}^{\infty}\frac{\pi^2n^2}{T^2}-\omega^2\right]^{-\frac{1}{2}} = 
+M\left[\prod_{n=1}^{\infty}\left(\frac{\pi^2n^2}{T^2}\right)\prod_{n=1}^{\infty}\left(1-
+\frac{\omega^2T^2}{\pi^2n^2}\right)\right]^{-\frac{1}{2}}$$
+\textit{Oss.} Se si pone $\omega=0$, ciò che rimane è $M\prod\left(\frac{\pi^2n^2}{T^2}\right)$, ma
+in tal caso la lagrangiana degenera in quella di una particella libera: da questo confronto
+è chiaro che $M\prod_{}^{}\left(\frac{\pi^2n^2}{T^2}\right) = \sqrt{\frac{m}{2\pi i\hbar T}}$
+
+Si calcola ora
+$$P(\omega T)=\prod_{n=1}^{\infty}\left(1-\frac{\omega^2T^2}{\pi^2n^2}\right)$$
+Si osserva che la funzione $P$ ha zeri in
+$\omega T=\pi,2\pi,...$ ed è analitica su $\mathbb{C}$: l'unica funzione con queste caratteristiche è
+$$P(\omega T) = \frac{\sin(\omega T)}{\omega T}$$
+Un altro modo per stimare questo prodotto è considerare la rappresentazione
+$$\frac{1}{z\Gamma(z)}=e^{\gamma z}\prod_{n=1}^{\infty}\left(1+\frac{z}{n}\right)e^{-\frac{z}{n}} = 
+\frac{1}{\Gamma(z+1)}$$
+e utilizzarla per scrivere
+$$\frac{1}{\Gamma(1+z)\Gamma(1-z)} = \prod_{n=1}^{\infty}\left(1-\frac{z^2}{n^2}\right)$$
+da cui si ottiene il risultato cercato ricordando che
+$$\frac{1}{\Gamma(1+z)\Gamma(1-z)} =\frac{1}{z}\frac{1}{\Gamma(z)\Gamma(1-z)} = \frac{1}{z}
+\frac{\sin(\pi z)}{\pi}$$
+Si ha dunque che
+$$I = \sqrt{\frac{m\omega}{2\pi i\hbar\sin(\omega T)}}$$
+e infine che 
+$$\boxed{K(x_b,T,x_a,0) = e^{\frac{i}{\hbar}S_{cl}}\sqrt{\frac{m\omega}{2\pi i\hbar\sin(\omega T)}}}$$
