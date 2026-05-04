@@ -45,8 +45,10 @@
 \contentsline {subsection}{\numberline {10.2}Metodo del \textit {Path Integral}}{38}{subsection.10.2}%
 \contentsline {subsection}{\numberline {10.3}Esempio: l'effetto Bohm-Aharonov}{39}{subsection.10.3}%
 \contentsline {section}{\numberline {11}Calcolo di propagatori}{40}{section.11}%
-\contentsline {subsection}{\numberline {11.1}Ancora sulla particella libera}{40}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.1}Particella libera}{40}{subsection.11.1}%
 \contentsline {subsection}{\numberline {11.2}L'oscillatore armonico}{41}{subsection.11.2}%
 \contentsline {subsection}{\numberline {11.3}Determinanti funzionali}{43}{subsection.11.3}%
 \contentsline {subsubsection}{\numberline {11.3.1}Regolarizzazione con funzione zeta}{44}{subsubsection.11.3.1}%
 \contentsline {section}{\numberline {12}Rotazione di Wick e meccanica statistica}{45}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Esempio: potenziale armonico}{46}{subsection.12.1}%
+\contentsline {section}{Metodo WKB}{47}{subsection.12.1}%

@@ -50,4 +50,34 @@ si trova infine
 $$\zeta_X'(0) = -\ln(2T)\rightarrow\det(X) = 2T$$
 che è il risultato atteso a meno di costanti di normalizzazione.
 \section{Rotazione di Wick e meccanica statistica}
+La rotazione di Wick, introdotta in precedenza come un trucco matematico per risolvere integrali,
+ha un'altra importante applicazione che mette in relazione il propagatore quantistico con la funzione
+di partizione di un problema statistico.
 
+Si consideri un'hamiltoniata indipendente dal tempo: l'operatore evoluzione temporale è
+$$U(t,0) = e^{-\frac{i}{\hbar}Ht}$$
+Si effettua ora una rotazione di Wick $t=-i\tau$ e si considera la traccia di $U$
+$$\Tr(U(\tau,0)) = \int_{}^{}dq\bra{q}e^{-\frac{\tau}{\hbar}H}\ket{q} := \int_{}^{}dqK(q,-i\tau,q,0)$$	
+La funzione di partizione per un sistema statistico in equilibrio con hamiltoniana $H$ è invece
+$$Z = \Tr(e^{\beta H})$$
+Si può dunque identificare il fattore $\beta$ con
+$$\beta := \frac{1}{k_bT} = \frac{\tau}{\hbar}\rightarrow T =\frac{\hbar}{k_b\tau}$$
+[CONSIDERAZIONI SUL LIMITE CLASSICO CHIEDI A MLF]
+
+Questa corrispondenza è particolarmente utile perché il limite classico della meccanica statistica
+quantistica può essere trovato sia per $\hbar\to0$ sia per $T\to\infty$ [???????????]:
+$$Z = \int_{}^{}dpdq\bra{q}\ket{p}\bra{p}e^{-\frac{1}{\hbar}H\tau}\ket{q}\xrightarrow{\hbar\to0}
+\int_{}^{}dqdpe^{-\beta H} = Z_{cl}$$
+Per calcolarne le approssimazioni semiclassiche in potenze di $\hbar$ si possono utilizzare quelle del
+propagatore già discusse, utilizzando però la versione euclidea dell'azione:
+$$\frac{i}{\hbar}S = \frac{i}{\hbar}\int_{0}^{t}dt\left[\frac{1}{2}m\left(\dv[]{q}{t}\right)^2-V(q)
+\right] \underset{t=-i\tau}= -\frac{1}{\hbar}\int_{0}^{\tau}d\tau\left[\frac{1}{2}m\left(\dv[]{q}{\tau}
+\right)^2+V(q)\right]:=\frac{-1}{\hbar}S_e$$
+che non è altro che l'azione calcolata con il tempo euclideo $\tau$.
+
+Dunque si ha, considerando cammini $q(\tau)$ tali che $q(0)=q(\hbar\beta)$,
+$$Z = \int_{}^{}dq\int_{}^{}\mathcal{D}qe^{-\frac{1}{\hbar}S_e[q]}$$
+la cui approssimazione semiclassica è
+
+$$Z = \int_{}^{}dqe^{-\frac{1}{\hbar}S_{e,cl}}\int_{}^{}\mathcal{D}x\exp\left\{-\frac{1}{\hbar}S_{e,2}[x]
+\right\}$$

@@ -1,0 +1,46 @@
+%lezione 13 del 14 aprile 2026
+%-----------------------------------------------------------------------------------------------------
+\subsection{Esempio: potenziale armonico}
+Come sempre, si considera il potenziale armonico come esempio: la sua azione euclidea classica tra
+$(q,0)$ e $(q,t)$
+è
+$$S_{e,cl} = -iS_{cl} = -im\omega q^2\frac{\cos(\omega t)-1}{\sin(\omega t)}
+=im\omega q^2\tan\left(\frac{\omega t}{2}\right)\underset{t=-i\tau}
+=m\omega q^2\tanh\left(\frac{\omega\tau}{2}\right)$$
+Poiché il \textit{path integral} delle deformazioni quadratiche è indipendente da $q$ si calcola
+$$\int_{-\infty}^{\infty}dq e^{-\frac{1}{\hbar}S_{e,cl}}
+=\int_{-\infty}^{\infty}dq \exp\left\{\frac{-m\omega}{\hbar}\tanh\left(\frac{\omega\tau}{2}\right)
+q^2\right\} = \sqrt{\frac{\pi\hbar}{m\omega\tanh\left(\frac{\omega\tau}{2}\right)}}$$
+e, separatamente, la correzione quadratica
+$$S_{e,2} = \frac{m}{2}\int_{0}^{\tau}d\tau\left(\dv[2]{x}{\tau}+\omega^2x^2\right) = 
+\frac{m}{2}\int_{0}^{\tau}d\tau xX_ex$$
+con $X_e = -\dv[2]{}{\tau}+\omega^2$.\\
+Il \textit{path integral} è, a meno di normalizzazioni, pari a $(\det(X_e))^{-\frac{1}{2}}$:
+$$\det(X_e) = \prod_{n=1}^{\infty}\left(\frac{\pi^2n^2}{\tau^2}+\omega^2\right) = 
+\frac{1}{\mathcal{N}_e}\prod_{n=1}^{\infty}\left(1+\frac{\omega^2\tau^2}{\pi^2n^2}\right)$$
+dove $\mathcal{N}_e$ è la solita normalizzazione della particella libera scritta con il tempo euclideo.
+
+Come in precedenza, il risultato della produttoria si deduce dal fatto che essa, come funzione di
+$\omega \tau$, non ha poli e ha zeri in $\omega\tau = \pm i\pi,\pm 2i\pi...$: l'unica funzione
+con queste caratteristiche è
+$$\prod_{n=1}^{\infty}\left(1+\frac{\omega^2\tau^2}{\pi^2n^2}\right) =
+\frac{\sinh(\omega\tau)}{\omega\tau}$$
+Si trova dunque che
+$$Z = \sqrt{\frac{\pi\hbar}{m\omega\tanh\left(\frac{\omega\tau}{2}\right)}}
+\sqrt{\frac{m}{2\pi\hbar\tau}}\sqrt{\frac{\omega\tau}{\sinh(\omega\tau)}} =
+\frac{1}{2\sinh\left(\frac{\omega\hbar\beta}{2}\right)}$$
+che, come per il propagatore, è il risultato esatto del problema (non essendoci termini dipendenti dalla
+terza potenza delle deformazioni). Un altro modo per giungere a questo risultato è calcolare direttamente
+la traccia, sfruttando gli autostati di $H$:
+$$\Tr(e^{-\beta H}) = \sum_{n=0}^{\infty}\bra{n}e^{-\beta H}\ket{n} =
+\sum_{n=0}^{\infty}e^{-\beta\hbar\omega(n+\frac{1}{2})} =
+e^{-\frac{\omega\hbar\beta}{2}}\sum_{n=0}^{\infty} e^{-\omega\hbar\beta n} =
+\frac{e^{-\frac{\omega\hbar\beta}{2}}}{1-e^{-\omega\hbar\beta}} =
+\frac{1}{2\sinh\left(\frac{\omega\hbar\beta}{2}\right)}$$
+\textit{Oss.} In questo caso è stato possibile utilizzare un modo diretto per risolvere il problema, ma
+nella maggioranza dei casi non sono noti gli autovalori in energia di $H$ e questo metodo non è
+applicabile.
+\newpage
+\chapter{Metodo WKB}
+
+blabla ancora semiclassici
