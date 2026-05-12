@@ -167,10 +167,10 @@ $\sumint d\alpha_1...d\alpha_n \ket{\alpha_1,...,\alpha_n}\bra{\alpha_1,...,\alp
 Come riepilogo delle nozioni formali appena fornite, si considera ora il noto esempio della
 buca rettangolare finita, definita dal potenziale
 $$
-V(x) = \begin{cases}
+V(x) = \begin{dcases}
  0   & \text{se } |x| > a \\
  V_0   & \text{se } |x| < a
-\end{cases}
+\end{dcases}
 $$
 con $ a>0 $ e $ V_0 < 0 $. Poiché $ V(x) $ è indipendente dal tempo, considero l'equazione
 di Schrödinger stazionaria
@@ -188,19 +188,19 @@ Definiti $ k_I^2 = \frac{2mE}{\hbar^2} $ e $ k_{II}^2 = \frac{2m(E-V_0)}{\hbar^2
 che l'equazione differenziale è
 
 $$
-\begin{cases}
+\begin{dcases}
     \psi'' + k_I^2\psi = 0 &|x| >a \\
     \psi'' + k_{II}^2\psi = 0 & |x|<a
-\end{cases}
+\end{dcases}
 $$
  che porta alla soluzione
 
  $$ 
-\psi(x) = \begin{cases}
+\psi(x) = \begin{dcases}
     Ae^{ik_Ix} + Be^{-ik_Ix} &x<-a\\
     Ce^{ik_{II}x} + De^{-ik_{II}x} &x\in[-a,a]\\
     Fe^{ik_Ix} + Ge^{-ik_Ix} &x>a
-\end{cases}
+\end{dcases}
  $$
  con $ A,B,C,D,F,G\in\mathbb{C} $ costanti. Imponendo la continuità di $ \psi $ e $ \psi' $ in
  $ -a $ e $ a $, si trovano 4 equazioni lineari con 6 incognite: il sistema è sempre

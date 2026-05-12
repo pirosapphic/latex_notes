@@ -2,5 +2,194 @@
 %-----------------------------------------------------------------------------------------------------
 \section{Potenziali con un punto di inversione}
 Si considera ora la soluzione al primo ordine WKB di problemi con potenziali lentamente variabili e
-strettamente monotoni.
+strettamente monotoni: il problema da risolvere nell'intorno dei punti di inversione classici è che
+nella regione limitrofa a essi \textit{non} vale l'approssimazione WKB, in quanto $p\approx0$.\\
+Per risolvere questo limite del metodo WKB si cercano delle soluzioni nell'intorno dei punti
+di inversione tali da poter essere promosse a continuazioni analitiche delle soluzioni WKB, definite
+"lontano" dai punti di inversione.
 \subsection{Potenziali crescenti}
+Si consideri un potenziale $V(x)$ strettamente crescente e si supponga che il sistema abbia energia
+$E$: esisterà un unico punto $a$ tale che $V(a)=E$, con $V'(a)>0$.
+
+Come accennato, si cerca ora la soluzione dell'equazione di Schrödinger nell'intorno di $a$:
+$$V(x)=V(a) + V'(a)(x-a) + O((x-a)^2) \underset{x\to a}\sim E + V'(a)(x-a)$$
+Nella regione $x<a$, si ha che $E>V(x)$ e l'EDS diventa
+$$\dv[2]{\psi}{x} + \frac{2m}{\hbar^2}(E-V(x))\psi(x) =
+\dv[2]{\psi}{x}-\frac{2mV'(a)}{\hbar^2}(x-a)\psi(x)$$
+utilizzando la variabile adimensionale $z=\left(\frac{2mV'(a)}{\hbar^2}\right)^{\frac{1}{3}}(x-a)$,
+essa diventa
+$$\dv[2]{\psi}{z}-z\psi(z) = 0$$
+che è \textit{l'equazione di Airy}; imponendo l'\textit{ansatz}
+$$\psi(z)=\int_{\gamma}^{}dte^{zt}U(t)$$
+con $\gamma$ curva arbitraria, l'equazione si riduce a
+$$\int_{\gamma}^{}dt(t^2-z)e^{zt}U(t)=0$$
+Integrando per parti l'addendo dipendente da z si trova
+$$-\int_{\gamma}^{}dtze^{zt} = \eval{-e^{zt}U(t)}_{\partial\gamma} + \int_{\gamma}^{}dte^{zt}U'(t)$$
+Si suppone ora che $U(t)$ e $\gamma$ siano tali che il termine di bordo si annulli: in questo caso
+l'equazione di Airy si riduce a una ODE del primo ordine a variabili separabili
+$$\int_{\gamma}^{}dte^{zt}(t^2U(t)+U'(t)) = 0 \leftrightarrow t^2U(t) = -\dv[]{U}{t}$$
+che ha soluzione
+$$U(t) = K_0 e^{-\frac{1}{3}t^3}\rightarrow \psi(z)=\int_{\gamma}^{}dt
+\exp\left\{zt-\frac{1}{3}t^3\right\}$$
+Affinchè il termine di bordo si annulli $\forall z$ deve valere che
+$$e^{-\frac{1}{3}t^3}\to0\leftrightarrow\Re\left(\frac{1}{3}t^3\right)\to\infty\leftrightarrow
+|t|\to+\infty \land \cos(3\arg(t))>0
+$$
+La condizione sulla fase di $t$ è soddisfatta nelle zone evidenziate in rosso in
+figura \ref{fig:airy}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8\linewidth]{./airy_def.png}
+    \caption{\small Rappresentazione del piano $t$ per la soluzione dell'equazione di Airy: in rosso,
+    la curva corrispondente a $Ai(z)$}
+    \label{fig:airy}
+\end{figure}
+\newpage
+Poiché le zone "permesse" sono 3, esistono due soluzioni linearmente indipendenti, le cui $\gamma$
+sono indipendenti: la soluzione cercata è quella corrispondente alla $\gamma$ rappresentata in rosso,
+detta $Ai(z)$.\\
+Parametrizzando $\gamma(\tau) = i\tau-\epsilon$, si ha
+$$\psi(z)=\int_{-\infty}^{+\infty}d\tau e^{iz\tau+\frac{i}{3}\tau^3} =
+2i\int_{0}^{+\infty}d\tau\cos\left(z\tau+\frac{i}{3}\tau^3\right):=2\pi iAi(z)$$
+Questa è dunque la soluzione intorno a $z=0\to x=a$: per utilizzare la continuazione analitica, si
+usano gli sviluppi asintotici di $Ai(z)$ per $z\to\pm\infty$, che si possono ricavare con il metodo
+della fase stazionaria:
+\begin{gather}
+    \psi(z)\underset{z\to+\infty}\sim
+    i\sqrt{\pi}z^{-\frac{1}{4}}\exp\left\{-\frac{2}{3}z^{\frac{3}{2}}\right\}\notag\\
+    \psi(z)\underset{z\to-\infty}\sim
+    2i\sqrt{\pi}|z|^{-\frac{1}{4}}\sin\left(\frac{2}{3}|z|^{\frac{3}{2}}
+    +\frac{\pi}{4}\right)	
+    \label{eq:airy_asymp}
+\end{gather}
+%\newpage
+Si riscrivono ora le (\ref{eq:airy_asymp}) in funzione di $x$:
+\begin{itemize}[leftmargin=*]
+    \item $z\to\infty,\phantom{x}x\to\infty$\\
+Ridefinito $V'(a):=V'$, un'altra espressione per $z$ è la seguente
+$$z = \frac{2mV'}{\hbar^2}(x-a)\left(\frac{2mV'}{\hbar}\right)^{-\frac{2}{3}}=
+\frac{2m}{\hbar}(V(x)-E)\left(\frac{2mV'}{\hbar^2}\right)^{-\frac{2}{3}}
+=\beta^2(x)\left(\frac{2mV'}{\hbar^2}\right)^{-\frac{2}{3}}$$
+Da cui è comodo scrivere
+$$\frac{2}{3}z^{\frac{3}{2}} = \int_{0}^{z}dz'z'^{\frac{1}{2}} = 
+\int_{a}^{x}\left(\frac{2mV'}{\hbar^2}\right)^{\frac{1}{3}}dx'\cdot
+\left(\frac{2mV'}{\hbar^2}\right)^{-\frac{1}{3}}\beta(x') =\int_{a}^{x}dx'\beta^2(x')
+$$
+dove si è utilizzata la definizione di $z$ per il cambio di variabile e la relazione
+appena ricavata per l'integrando.
+
+Sostituendo l'ultima relazione tra $z$ e $x$ anche in $z^{-\frac{1}{4}}$, la prima
+delle (\ref{eq:airy_asymp}) in funzione di $x$ è dunque
+$$\psi(x)\underset{x\to+\infty}\sim
+i\sqrt{\pi}\left(\frac{2mV'}{\hbar^2}\right)^{\frac{1}{6}}\frac{1}{\sqrt{\beta(x)}}
+\exp\left\{-\int_{a}^{x}dx'\beta(x')\right\}$$
+\item $z\to-\infty,\phantom{x}x\to-\infty$\\
+Utilizzando i risultati precendenti e ricordando che $-\beta^2(x)=k^2(x)$, è facile
+mostrare che la seconda delle (\ref{eq:airy_asymp}) in funzione di $x$ è
+$$\psi(x)\underset{x\to-\infty}\sim
+2i\sqrt{\pi}\left(\frac{2mV'}{\hbar^2}\right)^{\frac{1}{6}}\frac{1}{\sqrt{k(x)}}
+\sin\left(\int_{x}^{a}dx'k(x') +\frac{\pi}{4}\right)
+$$
+\end{itemize}
+Ricapitolando, dalla soluzione intorno a $x=a$ si è trovato che
+\begin{gather*}
+\psi(x)\underset{x\to+\infty}\sim
+i\sqrt{\pi}\left(\frac{2mV'}{\hbar^2}\right)^{\frac{1}{6}}\frac{1}{\sqrt{\beta(x)}}
+\exp\left\{-\int_{a}^{x}dx'\beta(x')\right\}\\
+\psi(x)\underset{x\to-\infty}\sim
+2i\sqrt{\pi}\left(\frac{2mV'}{\hbar^2}\right)^{\frac{1}{6}}\frac{1}{\sqrt{k(x)}}
+\sin\left(\int_{x}^{a}dx'k(x') +\frac{\pi}{4}\right)
+\end{gather*}
+Mentre dall'approssimazione WKB si è trovato che
+\begin{gather*}
+    \psi_\text{WKB}(x) = \frac{D}{\sqrt{\beta(x)}}\exp\left\{-\int_{x_0}^{x}dx'\beta(x')\right\},\phantom{x}x>>a\\
+    \psi_\text{WKB}(x)=\frac{A}{\sqrt{k(x)}} \sin\left(\int_{x_0}^{x}dx'k(x')+\delta\right),\phantom{x}x<<a
+\end{gather*}
+che sono la (\ref{eq:wkb_free_sin}) e la (\ref{eq:wkb_constr}), dove si è posto $c=0$
+per la normalizzabilità.
+
+\textit{Osservazione 1} Prima di confrontare queste soluzioni tra loro, bisogna verificare che il
+dominio in cui $V(x)$ è circa lineare intersechi quello in cui vale l'approssimazione WKB:
+$V(x)$ è circa lineare per gli $x$ tali che
+$$\frac{V''(a)|x-a|^2}{V'(a)|x-a|} = \frac{V''(a)|x-a|}{V'(a)}<<1 \leftrightarrow
+\frac{V'(a)}{V''(a)}>>|x-a|$$
+Se per questi $x$ vale anche l'approssimazione WKB, non ci sono problemi.
+
+\textit{Osservazione 2} Per effettuare la continuazione analitica bisogna invece
+verificare per quali $z$ gli sviluppi asintotici approssimano bene la funzione
+$Ai(z)$: come è evidente dalla figura \ref{fig:airy_asymp}, per $|z|>1$ esse approssimano quasi
+perfettamente la funzione originaria.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8\linewidth]{./airy_asymp.png}
+    \caption{\small Grafico di $\Re(Ai(z))$ (in blu) e dei due andamenti asintotici
+    (in rosa)}
+    \label{fig:airy_asymp}
+\end{figure}
+Si noti infine che
+$$|z|>1\to
+\left|\frac{2mV'(a)}{\hbar^2}\right|^{-\frac{2}{3}}\frac{2m}{\hbar}|E-V(x)|>1\to
+\left|\frac{\hbar^2}{2mV'(a)}\right|^{\frac{2}{3}}\frac{p^2}{\hbar^2}>1\leftrightarrow
+\left|\frac{2mV'(a)}{p^3}\right|<1
+$$
+che è compatibile con il regime WKB: ciò significa che c'è un'intersezione tra il
+dominio di validità dello sviluppo asintotico e quello delle soluzioni WKB, il che
+garantisce la possibilità di utilizzare la continuazione analitica.
+
+Se queste due condizioni sono soddisfatte, si possono confrontare i coefficienti nelle espressioni di
+sopra a due a due, trovando le condizioni di raccordo con le $Ai(z)$
+$$
+\begin{dcases}
+    D = i\sqrt{\pi}\left(\frac{2mV'}{\hbar^2}\right)^{\frac{1}{6}}\\
+    \delta = \frac{\pi}{4}\\
+    A = 2D\\
+    x_0=a
+\end{dcases}
+$$
+La soluzione del problema è infine
+$$\boxed{
+    \psi_\text{WKB}(x)=
+    \begin{dcases}
+	\frac{2D}{\sqrt{k(x)}} \sin\left(\int_{x}^{a}dx'k(x')+\frac{\pi}{4}\right) &x<a\\
+	\frac{D}{\sqrt{\beta(x)}} \exp\left\{-\int_{a}^{x}dx'\beta(x')\right\} &x>a
+    \end{dcases}
+}$$
+\subsection{Potenziali decrescenti}
+Si consideri ora un potenziale $V(x)$ strettamente decrescente e si supponga che il sistema abbia
+energia $E$: esisterà un unico punto $b$ tale che $V(b)=E$, con $V'(b):=V'<0$.
+
+Come in precedenza, si linearizza $V(x)$ e si cerca la soluzione dell'equazione di Schrödinger:
+$$V(x)\underset{x\to b}\sim E+V'\cdot(x-b) \to V(x)-E = |V'|(b-x)$$
+Si definisce la variabile adimensionale $z=\left|\frac{2mV'}{\hbar^2}\right|^{\frac{1}{3}}(b-x)$ e,
+similmente a prima, si trova
+$$z = \left|\frac{2mV'}{\hbar^2}\right|^{-\frac{2}{3}}\beta^2(x) =
+-\left|\frac{2mV'}{\hbar^2}\right|^{-\frac{2}{3}}k^2(x) $$
+L'equazione di Schrödinger si riduce nuovamente a quella di Airy e le soluzioni sono le medesime, con
+gli stessi sviluppi asintotici (\ref{eq:airy_asymp}).
+
+Le soluzioni WKB sono invece
+\begin{gather*}
+    \psi_\text{WKB}(x)=\frac{A}{\sqrt{k(x)}} \sin\left(\int_{x_0}^{x}dx'k(x')+\delta\right),\phantom{x}x>>b\\
+    \psi_\text{WKB}(x) = \frac{C}{\sqrt{\beta(x)}}\exp\left\{-\int_{x_0}^{x}dx'\beta(x')\right\},\phantom{x}x<<b
+\end{gather*}
+e in questo caso si è posto $d=0$ per garantire la normalizzabilità.\\
+Per riscrivere le (\ref{eq:airy_asymp}) si utilizza lo stesso ragionamento del caso precedente, ma
+ricordando che in questo caso $z\to\pm\infty$ implica $x\to\mp\infty$.
+
+Le soluzioni nell'intorno di $b$ sono dunque
+\begin{gather*}
+\psi(x)\underset{x\to-\infty}\sim
+i\sqrt{\pi}\left|\frac{2mV'}{\hbar^2}\right|^{\frac{1}{6}}\frac{1}{\sqrt{\beta(x)}}
+\exp\left\{-\int_{x}^{b}dx'\beta(x')\right\}\\
+\psi(x)\underset{x\to+\infty}\sim
+2i\sqrt{\pi}\left|\frac{2mV'}{\hbar^2}\right|^{\frac{1}{6}}\frac{1}{\sqrt{k(x)}}
+\sin\left(\int_{b}^{x}dx'k(x') +\frac{\pi}{4}\right)
+\end{gather*}
+Dal confronto, come in precedenza, si trova che $A=2C$ e la soluzione generale del problema è
+$$\boxed{
+    \psi_\text{WKB}(x)=
+    \begin{dcases}
+	\frac{C}{\sqrt{\beta(x)}} \exp\left\{-\int_{x}^{b}dx'\beta(x')\right\} &x<b\\
+	\frac{2C}{\sqrt{k(x)}} \sin\left(\int_{b}^{x}dx'k(x')+\frac{\pi}{4}\right) &x>b
+    \end{dcases}
+}$$

@@ -56,3 +56,5 @@
 \contentsline {subsection}{\numberline {13.1}Soluzione perturbativa al primo ordine}{48}{subsection.13.1}%
 \contentsline {section}{\numberline {14}Potenziali con un punto di inversione}{49}{section.14}%
 \contentsline {subsection}{\numberline {14.1}Potenziali crescenti}{49}{subsection.14.1}%
+\contentsline {subsection}{\numberline {14.2}Potenziali decrescenti}{53}{subsection.14.2}%
+\contentsline {section}{\numberline {15}Potenziali con due punti di inversione}{54}{section.15}%

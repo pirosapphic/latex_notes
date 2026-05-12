@@ -3,10 +3,10 @@
    Classicamente le zone $I$ e $III$ sono proibite, ma, come è noto, non lo sono quantisticamente:
    l'equazione differenziale diventa
    $$
-   \begin{cases}
+   \begin{dcases}
        \psi'' - \beta^2\psi = 0 & |x| >a\\
        \psi'' + k^2\psi = 0 & |x| <a
-   \end{cases}
+   \end{dcases}
    $$
    con $\beta^2 = \frac{-2mE}{\hbar^2}>0$ e $k^2=\frac{2m(E-V_0)}{\hbar^2}>0$.
 
@@ -17,27 +17,27 @@
 
    $$
     \psi(x) =
-    \begin{cases}
+    \begin{dcases}
 	Ae^{\beta x} & x< -a \\
 	Ce^{ikx}+De^{-ikx} & -a<x<a \\
 	Ge^{-\beta x} & x>a
-    \end{cases}
+    \end{dcases}
    $$
 Che può essere riscritta in termini di funzioni pari o dispari, come specificato prima:
 $$
 \psi_P(x) =
-    \begin{cases}
+    \begin{dcases}
 	Ae^{\beta x} \\
 	B\cos(kx) \\
 	Ae^{-\beta x}
-    \end{cases}
+    \end{dcases}
     \quad
 \psi_D(x) = 
-    \begin{cases}
+    \begin{dcases}
 	Ce^{\beta x} &x< -a\\
 	D\sin(kx) &-a<x<a\\
 	-Ce^{-\beta x}&x>a
-    \end{cases}
+    \end{dcases}
 $$
 Le condizioni di continuità di $\psi(x)$ e $\psi'(x)$ sono due sistemi lineari a due equazioni e due
 incognite: se il sistema non è singolare ($\det M_{\text{coeff}} \neq 0$), l'unica soluzione è $\psi(x)\equiv 0$,
@@ -52,15 +52,15 @@ Queste condizioni sono facilmente risolubili numericamente definendo le quantit�
 \end{align*}
 e diventano
 $$
-\begin{cases}
+\begin{dcases}
 \xi\tan(\eta) = \eta\\
 \xi^2 + \eta^2 = r^2
-\end{cases}
+\end{dcases}
 \quad
-\begin{cases}
+\begin{dcases}
 \xi\cot(\eta) = \eta\\
 \xi^2 + \eta^2 = r^2
-\end{cases}
+\end{dcases}
 $$
 
 Nelle figure 3.1 e 3.2 sono rappresentate le soluzioni dei sistemi.
@@ -85,17 +85,16 @@ Questi sistemi hanno un insieme discreto e finito di soluzioni e questo quantizz
 valore di $r$, cioè di $V_0$. Queste caratteristiche sono generali, come si vedrà in seguito.
 \newpage
 \item $\mathbf{E<V_0}$
-
 Classicamente questo caso è completamente proibito; quantisticamente la soluzione è fatta da soli
 esponenziali reali
 
 $$
  \psi(x) =
-    \begin{cases}
+    \begin{dcases}
 	Ae^{\beta_I x} & x< -a \\
 	Be^{\beta_{II} x}+De^{-\beta_{II} x} & -a<x<a \\
 	Ge^{-\beta_I x} & x>a
-    \end{cases}
+    \end{dcases}
 $$
 A differenza del caso precedente, il sistema imposto dalle condizioni di continuità non può mai essere
 singolare, quindi questo caso \textbf{non è possibile} nemmeno nella meccanica quantistica.

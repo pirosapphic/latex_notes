@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.8)  6 MAY 2026 23:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.8)  12 MAY 2026 22:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -307,19 +307,47 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+) (/usr/share/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
+ (/usr/share/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count314
+\calc@Bcount=\count315
+\calc@Adimen=\dimen177
+\calc@Bdimen=\dimen178
+\calc@Askip=\skip72
+\calc@Bskip=\skip73
+LaTeX Info: Redefining \setlength on input line 86.
+LaTeX Info: Redefining \addtolength on input line 87.
+\calc@Ccount=\count316
+\calc@Cskip=\skip74
+) (/usr/share/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+\g_MT_multlinerow_int=\count317
+\l_MT_multwidth_dim=\dimen179
+\origjot=\skip75
+\l_MT_shortvdotswithinadjustabove_dim=\dimen180
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen181
+\l_MT_above_intertext_sep=\dimen182
+\l_MT_below_intertext_sep=\dimen183
+\l_MT_above_shortintertext_sep=\dimen184
+\l_MT_below_shortintertext_sep=\dimen185
+\xmathstrut@box=\box57
+\xmathstrut@dim=\dimen186
 ) (/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 ) (/usr/share/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
-\labelindent=\skip72
-\enit@outerparindent=\dimen177
+\labelindent=\skip76
+\enit@outerparindent=\dimen187
 \enit@toks=\toks32
-\enit@inbox=\box57
-\enit@count@id=\count314
-\enitdp@description=\count315
+\enit@inbox=\box58
+\enit@count@id=\count318
+\enitdp@description=\count319
 ) (/usr/share/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2026/02/14 v26.3 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
-\babel@savecnt=\count316
+\babel@savecnt=\count320
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2078.
 LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2080.
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2082.
@@ -327,53 +355,52 @@ LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line
 LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2084.
 LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2086.
 LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2111.
-\U@D=\dimen178
+\U@D=\dimen188
 \l@unhyphenated=\language4
  (/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
-\bbl@dirlevel=\count317
+\bbl@dirlevel=\count321
  (/usr/share/texmf-dist/tex/generic/babel/locale/it/babel-italian.tex)
 Package babel Info: Importing font and identification data for italian
 (babel)             from babel-it.ini. Reported on input line 4330.
  (/usr/share/texmf-dist/tex/generic/babel-italian/italian.ldf
 Language: italian 2026/01/13 v.1.5.02 Italian support for the babel system
-\it@lettering=\count318
-\it@doublequoteactive=\count319
-\it@ISOcompliance=\count320
+\it@lettering=\count322
+\it@doublequoteactive=\count323
+\it@ISOcompliance=\count324
 ))
-Package hyperref Info: Option `colorlinks' set `true' on input line 31.
+Package hyperref Info: Option `colorlinks' set `true' on input line 32.
  (/usr/share/texmf-dist/tex/latex/lipsum/lipsum.sty (/usr/share/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2025-10-09 LaTeX2e option processing using LaTeX3 keys
 )
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count321
-\l__lipsum_a_int=\count322
-\l__lipsum_b_int=\count323
+\g__lipsum_par_int=\count325
+\l__lipsum_a_int=\count326
+\l__lipsum_b_int=\count327
  (/usr/share/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (/usr/share/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
-\c@tracingmulticols=\count324
-\mult@box=\box58
-\multicol@leftmargin=\dimen179
-\c@unbalance=\count325
-\c@collectmore=\count326
-\doublecol@number=\count327
-\multicoltolerance=\count328
-\multicolpretolerance=\count329
-\full@width=\dimen180
-\page@free=\dimen181
-\premulticols=\dimen182
-\postmulticols=\dimen183
-\multicolsep=\skip73
-\multicolbaselineskip=\skip74
-\partial@page=\box59
-\last@line=\box60
-\mc@boxedresult=\box61
-\maxbalancingoverflow=\dimen184
-\mult@rightbox=\box62
-\mult@grightbox=\box63
-\mult@firstbox=\box64
-\mult@gfirstbox=\box65
-\@tempa=\box66
+\c@tracingmulticols=\count328
+\mult@box=\box59
+\multicol@leftmargin=\dimen189
+\c@unbalance=\count329
+\c@collectmore=\count330
+\doublecol@number=\count331
+\multicoltolerance=\count332
+\multicolpretolerance=\count333
+\full@width=\dimen190
+\page@free=\dimen191
+\premulticols=\dimen192
+\postmulticols=\dimen193
+\multicolsep=\skip77
+\multicolbaselineskip=\skip78
+\partial@page=\box60
+\last@line=\box61
+\mc@boxedresult=\box62
+\maxbalancingoverflow=\dimen194
+\mult@rightbox=\box63
+\mult@grightbox=\box64
+\mult@firstbox=\box65
+\mult@gfirstbox=\box66
 \@tempa=\box67
 \@tempa=\box68
 \@tempa=\box69
@@ -409,71 +436,72 @@ Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
 \@tempa=\box99
 \@tempa=\box100
 \@tempa=\box101
-\c@minrows=\count330
-\c@columnbadness=\count331
-\c@finalcolumnbadness=\count332
-\last@try=\dimen185
-\multicolovershoot=\dimen186
-\multicolundershoot=\dimen187
-\mult@nat@firstbox=\box102
-\colbreak@box=\box103
-\mc@col@check@num=\count333
-\g__mc_curr_col_int=\count334
+\@tempa=\box102
+\c@minrows=\count334
+\c@columnbadness=\count335
+\c@finalcolumnbadness=\count336
+\last@try=\dimen195
+\multicolovershoot=\dimen196
+\multicolundershoot=\dimen197
+\mult@nat@firstbox=\box103
+\colbreak@box=\box104
+\mc@col@check@num=\count337
+\g__mc_curr_col_int=\count338
 ) (/usr/share/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
  (/usr/share/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen188
-\captionmargin=\dimen189
-\caption@leftmargin=\dimen190
-\caption@rightmargin=\dimen191
-\caption@width=\dimen192
-\caption@indent=\dimen193
-\caption@parindent=\dimen194
-\caption@hangindent=\dimen195
+\caption@tempdima=\dimen198
+\captionmargin=\dimen199
+\caption@leftmargin=\dimen256
+\caption@rightmargin=\dimen257
+\caption@width=\dimen258
+\caption@indent=\dimen259
+\caption@parindent=\dimen260
+\caption@hangindent=\dimen261
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count335
-\c@continuedfloat=\count336
+\c@caption@flags=\count339
+\c@continuedfloat=\count340
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 ) (/usr/share/texmf-dist/tex/latex/parskip/parskip.sty
 Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
 )
-\c@Chapcounter=\count337
+\c@Chapcounter=\count341
  (aux/mq2.aux)
 \openout1 = `mq2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count338
-\scratchdimen=\dimen196
-\scratchbox=\box104
-\nofMPsegments=\count339
-\nofMParguments=\count340
+\scratchcounter=\count342
+\scratchdimen=\dimen262
+\scratchbox=\box105
+\nofMPsegments=\count343
+\nofMParguments=\count344
 \everyMPshowfont=\toks33
-\MPscratchCnt=\count341
-\MPscratchDim=\dimen197
-\MPnumerator=\count342
-\makeMPintoPDFobject=\count343
+\MPscratchCnt=\count345
+\MPscratchDim=\dimen263
+\MPnumerator=\count346
+\makeMPintoPDFobject=\count347
 \everyMPtoPDFconversion=\toks34
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -481,13 +509,13 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring ON on input line 66.
+Package hyperref Info: Link coloring ON on input line 67.
  (aux/mq2.out) (aux/mq2.out)
 \@outlinefile=\write3
 \openout3 = `mq2.out'.
 
-LaTeX Info: Redefining \it@ocap on input line 66.
-LaTeX Info: Redefining \it@ccap on input line 66.
+LaTeX Info: Redefining \it@ocap on input line 67.
+LaTeX Info: Redefining \it@ccap on input line 67.
 
 
 File italian.ldf warning: 
@@ -495,26 +523,26 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting
-italian.ldf    on input line 66.
+italian.ldf    on input line 67.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+esint on input line 72.
+LaTeX Font Info:    Trying to load font information for U+esint on input line 73.
 (/usr/share/texmf-dist/tex/latex/esint/uesint.fd
 File: uesint.fd 
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 72.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 73.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 72.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 73.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<./airy.png, id=195, 1433.355pt x 1333.98375pt>
+<./airy.png, id=204, 1433.355pt x 1333.98375pt>
 File: ./airy.png Graphic file (type png)
 <use ./airy.png>
-Package pdftex.def Info: ./airy.png  used on input line 84.
+Package pdftex.def Info: ./airy.png  used on input line 85.
 (pdftex.def)             Requested size: 386.95897pt x 360.11935pt.
  [1
 
@@ -563,18 +591,18 @@ Overfull \hbox (18.5485pt too wide) in paragraph at lines 222--236
  []
 
 ) (./lessons/lez03_260309.tex [11]
-<./even_well.png, id=329, 361.35pt x 363.23203pt>
+<./even_well.png, id=339, 361.35pt x 363.23203pt>
 File: ./even_well.png Graphic file (type png)
 <use ./even_well.png>
 Package pdftex.def Info: ./even_well.png  used on input line 72.
 (pdftex.def)             Requested size: 226.97418pt x 228.15565pt.
-<./odd_well.png, id=330, 361.35pt x 363.23203pt>
+<./odd_well.png, id=340, 361.35pt x 363.23203pt>
 File: ./odd_well.png Graphic file (type png)
 <use ./odd_well.png>
 Package pdftex.def Info: ./odd_well.png  used on input line 77.
 (pdftex.def)             Requested size: 226.97418pt x 228.15565pt.
  [12 <./even_well.png (PNG copy)> <./odd_well.png (PNG copy)>] [13]
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 167--214
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 166--213
 [] 
  []
 
@@ -599,7 +627,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 110--122
  []
 
 [16]
-<./sombrero.png, id=358, 853.1875pt x 526.96875pt>
+<./sombrero.png, id=368, 853.1875pt x 526.96875pt>
 File: ./sombrero.png Graphic file (type png)
 <use ./sombrero.png>
 Package pdftex.def Info: ./sombrero.png  used on input line 134.
@@ -630,7 +658,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 61--73
  []
 
 [30] [31]) (./lessons/lez09_260326.tex [32] [33] [34]) (./lessons/lez10_260330.tex [35] [36] [37]) (./lessons/lez11_260401.tex [38]
-<./bohm_a.png, id=493, 1012.78375pt x 1013.7875pt>
+<./bohm_a.png, id=503, 1012.78375pt x 1013.7875pt>
 File: ./bohm_a.png Graphic file (type png)
 <use ./bohm_a.png>
 Package pdftex.def Info: ./bohm_a.png  used on input line 7.
@@ -645,30 +673,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 95--98
 
  []
 
-[48]) (./lessons/lez14_260416.tex) [49] (aux/mq2.aux)
+[48]) (./lessons/lez14_260416.tex [49]
+<./airy_def.png, id=563, 1776.6375pt x 1003.75pt>
+File: ./airy_def.png Graphic file (type png)
+<use ./airy_def.png>
+Package pdftex.def Info: ./airy_def.png  used on input line 42.
+(pdftex.def)             Requested size: 386.95897pt x 218.62018pt.
+ [50 <./airy_def.png>] [51]
+<./airy_asymp.png, id=581, 602.25pt x 401.5pt>
+File: ./airy_asymp.png Graphic file (type png)
+<use ./airy_asymp.png>
+Package pdftex.def Info: ./airy_asymp.png  used on input line 124.
+(pdftex.def)             Requested size: 386.95897pt x 257.98222pt.
+ [52 <./airy_asymp.png>] [53]) (./lessons/lez15_260420.tex) [54] (aux/mq2.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `mq2.out' has not changed.
-(rerunfilecheck)             Checksum: 690E4CED954DACB57611C58460CCAC02;10222.
+(rerunfilecheck)             Checksum: 6F075823A1E7C889BDAF62FEDB3B1D27;10645.
  ) 
 Here is how much of TeX's memory you used:
- 15610 strings out of 469504
- 246962 string characters out of 5470380
- 782307 words of memory out of 5000000
- 43862 multiletter control sequences out of 15000+600000
- 642354 words of font info for 97 fonts, out of 8000000 for 9000
+ 16286 strings out of 469504
+ 259309 string characters out of 5470380
+ 796359 words of memory out of 5000000
+ 44515 multiletter control sequences out of 15000+600000
+ 643977 words of font info for 104 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,19n,84p,522b,603s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,19n,84p,522b,623s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{https://web.archive.org/web/20200917091657/https://authors.library.caltech.edu/47756/1/FEYrmp48.pdf} has been referenced but does not exist, replaced by a fixed one
 
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on aux/mq2.pdf (49 pages, 1097834 bytes).
+Output written on aux/mq2.pdf (54 pages, 1193421 bytes).
 PDF statistics:
- 690 PDF objects out of 1000 (max. 8388607)
- 576 compressed objects within 6 object streams
- 141 named destinations out of 1000 (max. 500000)
- 410 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 740 PDF objects out of 1000 (max. 8388607)
+ 616 compressed objects within 7 object streams
+ 151 named destinations out of 1000 (max. 500000)
+ 436 words of extra memory for PDF output out of 10000 (max. 10000000)
 
