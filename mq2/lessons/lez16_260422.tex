@@ -1,0 +1,59 @@
+%lezione 16 del 22 aprile 2026 pag 35 appunti
+%-----------------------------------------------------------------------------------------------------
+I coefficienti $A,C\in\mathbb{C}$, mentre i $\sin$ sono reali, dunque
+$$|A|e^{i\varphi_A}\sin(\alpha)=|C|e^{i\varphi_C}\sin(\gamma) \rightarrow \varphi_A = \varphi_C
+\phantom{x}\lor\phantom{x}\varphi_A = \varphi_C+\pi$$
+inoltre, il modulo del LHS è un numero nell'intervallo $[-|C|,|C|]$, mentre quello del RHS in
+$[-|A|,|A|]$, dunque $|A|=|C|$ e si trova
+$$A,C\in\mathbb{R},\phantom{x}A=C\phantom{x}\lor\phantom{x}A=-C$$
+I due casi, ricordando che $\alpha\not=\gamma$, implicano che
+$$
+\begin{dcases}
+    A=C\\
+    A=-C
+\end{dcases}
+\rightarrow
+\begin{dcases}
+\sin(\alpha)=\sin(\gamma) \\
+\sin(\alpha)=-\sin(\gamma)
+\end{dcases}
+\rightarrow
+\begin{dcases}
+    \gamma=-\alpha+(2n+1)\pi&\rightarrow\alpha+\gamma=(2n+1)\pi\\ 
+    \gamma=-\alpha+2n\pi&\rightarrow\alpha+\gamma = 2n\pi
+\end{dcases}
+$$
+Si ha dunque $\alpha+\gamma=(n+1)\pi$ con $n=0,1,...$, esplicitando $\alpha$ e $\gamma$ si trova infine
+\begin{gather*}
+\alpha+\gamma = \int_{b}^{x}dx'k(x') + \int_{x}^{a}dx'k(x') +\frac{\pi}{2} = (n+1)\pi \rightarrow\\
+\rightarrow\boxed{\int_{b}^{a}dx'k(x') = \frac{\pi}{2}+n\pi,\phantom{x}n=0,1,...}
+\end{gather*}
+che è una condizione di quantizzazione, come ci si aspetta da un problema legato.
+
+Classicamente, $(b,a)$ è la metà di un periodo di oscillazione del sistema, quindi
+$$\int_{b}^{a}dx'k(x') = \frac{2\pi}{2}\oint dx'\frac{p}{h} = \frac{\pi}{2}+n\pi \rightarrow
+\oint pdx' = \left(n+\frac{1}{2}\right)\pi
+$$
+che è la condizione di quantizzazione di Sommerfield.
+
+\textit{Osservazione} L'approssimazione WKB vale per $p$ grandi, quindi per $\lambda$ di De Broglie
+piccole: in questo caso deve valere $\lambda<<b-a$, che vuol dire $n$ grande, perché esso è il numero
+di oscillazioni che la $\psi$ compie nella zone classicamente permessa $(b,a)$.
+
+In questo modo, si può anche utilizzare $\int_{b}^{a}dx'k(x')$ come discriminante tra potenziali per
+cui vale l'approssimazione WKB.
+
+\textbf{Esempio} L'oscillatore armonico
+
+$V(x)=\frac{1}{2}m\omega^2x^2$, con energia $E=\frac{1}{2}m\omega^2a^2$ e punti di inversione classici
+$\pm a$:
+$$k(x) = \frac{1}{\hbar}\sqrt{2m\frac{1}{2}m\omega^2(a^2-x^2)} = \frac{m\omega}{\hbar}\sqrt{a^2-x^2}$$
+la condizione di quantizzazione è
+$$\int_{-a}^{a}dxk(x)=\frac{m\omega}{\hbar}dx\sqrt{a^2-x^2} = \frac{m\omega a^2}{\hbar}
+\int_{-\frac{\pi}{2}}^{\frac{pi}{2}}d\theta\cos^2(\theta) = \frac{m\omega a^2\pi}{2\hbar} =
+\left(n+\frac{1}{2}\right)\pi
+$$
+Riconoscendo $E=\frac{1}{2}m\omega^2a^2$ si ha
+$$\frac{E}{\hbar\omega} = n+\frac{1}{2} \rightarrow E = \left(n+\frac{1}{2}\right)\hbar\omega$$
+che è lo spettro energetico completo e non un'approssimazione perché l'oscillatore armonico è
+quadratico.
