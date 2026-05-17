@@ -42,7 +42,7 @@ di oscillazioni che la $\psi$ compie nella zone classicamente permessa $(b,a)$.
 
 In questo modo, si può anche utilizzare $\int_{b}^{a}dx'k(x')$ come discriminante tra potenziali per
 cui vale l'approssimazione WKB.
-
+\newpage
 \textbf{Esempio} L'oscillatore armonico
 
 $V(x)=\frac{1}{2}m\omega^2x^2$, con energia $E=\frac{1}{2}m\omega^2a^2$ e punti di inversione classici
@@ -57,3 +57,106 @@ Riconoscendo $E=\frac{1}{2}m\omega^2a^2$ si ha
 $$\frac{E}{\hbar\omega} = n+\frac{1}{2} \rightarrow E = \left(n+\frac{1}{2}\right)\hbar\omega$$
 che è lo spettro energetico completo e non un'approssimazione perché l'oscillatore armonico è
 quadratico.
+
+\subsubsection{Buca di potenziale con parete infinita}
+Un caso particolare di buca è quello in cui si ha una parete infinita in $x=0$, caso equivalente a
+un'equazione radiale ridotta per problemi centrali:
+$$\begin{dcases}
+    V(x)=\infty &\text{se }x<0\\
+    V(x)\to\infty&\text{se }x\to\infty
+\end{dcases}$$
+Si supponga inoltre che per $x>0$ $V(x)$ sia strettamente crescente e che l'energia del sistema $E$ sia tale
+che $V(a)=E$.
+
+La barriera garantisce che $\psi_I(x)=0$, quindi, secondo la tabella \ref{tab:wkb}, la forma della
+soluzione è
+$$\begin{dcases}
+    \psi_I(x) = 0 &x<0\\
+    \psi_{II}(x) = \frac{A}{\sqrt{k(x)}}\sin\left(\int_{x}^{a}dx'k(x')+\frac{\pi}{4}\right) &0<<x<<a\\
+    \psi_{III}(x) = \frac{A}{\sqrt{\beta(x)}}\exp\left\{-\int_{a}^{x}dx'\beta(x')\right\} &x>>a
+\end{dcases}$$
+Bisogna dunque imporre che $\lim\limits_{x\to0}\psi_{II}(x)=0$, cioè che
+$$\sin\left(\int_{x}^{a}dx'k(x')+\frac{\pi}{4}\right)\to0\leftrightarrow\int_{0}^{a}dx'k(x')
+=\left(n-\frac{1}{4}\right)\pi,\phantom{x}n=1,2...$$
+che è di nuovo una condizione di quantizzazione.
+\subsection{Barriere di potenziale}
+Si consideri un sistema definito da un potenziale lentamente variabile e da un valore di $E$ come
+rappresentato in figura \ref{fig:barriera}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.7\linewidth]{./barriera.png}
+    \caption{\small Barriera di potenziale di forma qualunque.}
+    \label{fig:barriera}
+\end{figure}
+In questo caso, come anticipato, non è possibile scartare alcuna forma di soluzione imponendo la
+normalizzabilità dello stato, quindi la soluzione $\psi(x)$ sarà, in generale, una sovvrapposizione
+delle due soluzioni linearmente indipendenti:
+\begin{align*}
+&\psi_I(x) = \frac{A}{\sqrt{k(x)}}\sin\left(\int_{x}^{a}dx'k(x') + \frac{\pi}{4}\right)+
+\frac{A'}{\sqrt{k(x)}}\sin\left(\int_{x}^{a}dx'k(x') - \frac{\pi}{4}\right)&x<<a\\
+&\psi_{II}^{(I)}(x) = \frac{B}{\sqrt{\beta(x)}}\exp\left\{-\int_{a}^{x}dx'\beta(x')\right\}+
+\frac{B'}{\sqrt{\beta(x)}}\exp\left\{\int_{a}^{x}dx'\beta(x')\right\}&a<<x<<b\\
+&\psi_{II}^{(III)}(x) = \frac{C}{\sqrt{\beta(x)}}\exp\left\{-\int_{x}^{b}dx'\beta(x')\right\}+
+\frac{C'}{\sqrt{\beta(x)}}\exp\left\{\int_{x}^{b}dx'\beta(x')\right\}&a<<x<<b\\
+&\psi_{III}(x) = \frac{D}{\sqrt{k(x)}}\sin\left(\int_{b}^{x}dx'k(x') + \frac{\pi}{4}\right)+
+\frac{D'}{\sqrt{k(x)}}\sin\left(\int_{b}^{x}dx'k(x') - \frac{\pi}{4}\right)&x>>b\\
+\end{align*}
+Come in precedenza, $\psi^{(I)}_{II}$ e $\psi^{(III)}_{II}$ devono essere la stessa funzione, dunque,
+confrontando gli integrali con segni opposti, si trova
+\begin{gather*}
+B'\exp\left\{\int_{a}^{x}dx'\beta(x')\right\} =B'\exp\left\{\left(\int_{a}^{b}-\int_{x}^{b}\right)
+dx'\beta(x')\right\} = C'\exp\left\{\int_{x}^{b}dx'\beta(x')\right\}\leftrightarrow\\
+\leftrightarrow B'=C'\exp\left\{\int_{a}^{b}dx'\beta(x')\right\} :=C'e^L
+\end{gather*}
+e similmente $B=Ce^{-L}$.
+
+Sfruttando la tabella \ref{tab:wkb}, che riassume le condizioni di raccordo trovate con la funzione di
+Airy, si associano le parti delle varie funzioni tra loro
+$$\begin{dcases}
+    B\to A\implies A=2B \\
+    C'\to D\implies D=2C'\\
+    A'\to B'\implies A'=-B'\\
+    C\to D'\implies C=-D'\\
+\end{dcases}$$
+e, con un po' di semplice algebra, si trovano le condizioni sui coefficienti
+$$\begin{dcases}
+C=-D'\\
+B=-e^LD'\\
+A=-2e^LD'\\
+C'=\frac12 D\\
+B'=\frac{1}{2}e^{-L}D\\
+A'=-\frac{1}{2}e^{-L}D
+\end{dcases}$$
+Come atteso, ci sono due coefficienti liberi, $D,D'$: come spesso accade per problemi di questo tipo,
+uno dei due si può fissare imponendo che la particella incida da $\pm\infty$, per farlo si riscrive
+
+$$\psi_{III}(x)=\frac{1}{\sqrt{k(x)}}\left[D\sin(\alpha)+D'\sin\left(\alpha-\frac{\pi}{2}\right)
+\right]=\frac{1}{\sqrt{k(x)}}\left[-\frac{1}{2}e^{i\alpha}(D'+iD)+\frac12 e^{-i\alpha}(D'-iD)\right]$$
+E si trova che la condizione è $D'=\mp iD$.
+
+Nel caso in cui l'onda incida da $-\infty$, la soluzione è
+$$\boxed{
+\psi(x) =
+\begin{dcases}
+  \frac{D}{\sqrt{k(x)}}\left[-2ie^L\sin\left(\int_{x}^{a}dx'k(x')+\frac{\pi}{4}\right) - 
+  \frac12 e^{-L}\sin\left(\int_{x}^{a}dx'k(x') -\frac{\pi}{4}\right)\right]&x<a\\
+  \frac{D}{\sqrt{\beta(x)}} \left[-i\exp\left\{-\int_{x}^{b}dx'\beta(x')\right\}+
+\frac12 \exp\left\{\int_{x}^{b}dx'\beta(x')\right\}\right]&a<x<b\\
+\frac{-iD}{\sqrt{k(x)}} \exp\left\{i\left(\int_{b}^{x}dx'k(x')+\frac{\pi}{4}\right)\right\}&x>b
+\end{dcases}}$$
+Per calcolare i coefficienti di trasmissione e riflessione, si riscrive $\psi_I$ in forma
+esponenziale:
+$$\psi_I(x) = \frac{D}{\sqrt{k(x)}}\left[e^{i\alpha}\left(-e^L+\frac{1}{4}e^{-L}\right)+
+e^{-i\alpha}\left(e^L+\frac{1}{4}e^{-L}\right)\right]$$
+L'onda progressiva è $e^{-i\alpha}$ (perché $x<a$), quindi i coefficienti sono
+\begin{gather*}
+R=\left|\frac{\frac{e^{-L}}{4}-e^L}{\frac{e^{-L}}{4}+e^L}\right|^2\underset{L\to\infty}\sim
+1-e^{-2L}\\
+T=\left|\frac{1}{e^L+\frac{e^{-L}}{4}}\right|^2\underset{L\to+\infty}\sim e^{-2L}
+\end{gather*}
+\textit{Osservazione} Il limite $L\to+\infty$ è equivalente ai grandi valori di $n$ della sezione
+precedente ed è un limite semiclassico, infatti per la barriera rettangolare di potenziale il
+coefficiente di trasmissione è $T=e^{-2\beta l}$, con $\beta = \frac{1}{\hbar}\sqrt{-2mE}$ e $l$
+lunghezza della barriera: $L=\int_{a}^{b}dx'\beta(x')$ è una media (integale) della lunghezza, pesata
+sul valore di $\beta(x)$ e può essere dunque interpretata come una "lunghezza equivalente"; si ha
+dunque che l'approssimazione WKB vale per barriere con "lunghezza equivalente" $L$ grande.
