@@ -88,36 +88,36 @@ il valore di $K$ è l'integrale su tutti i possibili cammini che uniscono $q'$ e
 La potenza di questa formalizzazione della meccanica quantistica è anche nel fatto che essa è
 equivalente all'equazione di Schrödinger ed è postulato alternativo a essa.
 
-Si consideri il propagatore tra due istanti di tempo distanti $\epsilon\to0$ tra loro: poiché non è
+Si consideri il propagatore tra due istanti di tempo distanti $\varepsilon\to0$ tra loro: poiché non è
 necessario suddividere l'intervallo in parti infinitesime, esso vale
-$$K(x,\epsilon,y,0) = \sqrt{\frac{m}{2\pi\hbar\epsilon}}\exp\left\{\frac{i}{\hbar}\left(\frac{1}{2}m\dot
+$$K(x,\varepsilon,y,0) = \sqrt{\frac{m}{2\pi\hbar\varepsilon}}\exp\left\{\frac{i}{\hbar}\left(\frac{1}{2}m\dot
 y^2-V(y)\right)\right\}$$
-per $\epsilon\to0$, $V(y)\sim V(x)$ e $\dot y\sim \frac{x-y}{\epsilon}$, dunque si ha
-$$K = \sqrt{\frac{m}{2\pi\hbar\epsilon}}\exp\left\{\frac{i}{\hbar}\left(\frac{1}{2}m\frac{(x-y)^2}
-{\epsilon}-V(x)\epsilon\right)\right\}$$
+per $\varepsilon\to0$, $V(y)\sim V(x)$ e $\dot y\sim \frac{x-y}{\varepsilon}$, dunque si ha
+$$K = \sqrt{\frac{m}{2\pi\hbar\varepsilon}}\exp\left\{\frac{i}{\hbar}\left(\frac{1}{2}m\frac{(x-y)^2}
+{\varepsilon}-V(x)\varepsilon\right)\right\}$$
 Dunque, applicando (\ref{eq:K_def})
-$$\psi(x,\epsilon) = \sqrt{\frac{m}{2\pi\hbar\epsilon}}e^{-\frac{i}{\hbar}V(x)\epsilon}
-\int_{-\infty}^{\infty}dy \exp\left\{\frac{im}{2\hbar}\frac{(x-y)^2}{\epsilon}\right\}\psi(y,0)
+$$\psi(x,\varepsilon) = \sqrt{\frac{m}{2\pi\hbar\varepsilon}}e^{-\frac{i}{\hbar}V(x)\varepsilon}
+\int_{-\infty}^{\infty}dy \exp\left\{\frac{im}{2\hbar}\frac{(x-y)^2}{\varepsilon}\right\}\psi(y,0)
 $$
-ponendo $z=\sqrt{\frac{m}{\hbar}}(x-y)\to dz=-\sqrt{\frac{m}{\hbar}}dy$ e poi $\alpha = i\epsilon$
+ponendo $z=\sqrt{\frac{m}{\hbar}}(x-y)\to dz=-\sqrt{\frac{m}{\hbar}}dy$ e poi $\alpha = i\varepsilon$
 (rotazione di Wick), si ottiene
 \begin{gather*}
-\psi(x,\epsilon) = \sqrt{\frac{1}{2\pi i\epsilon}}e^{-\frac{i}{\hbar}V(x)\epsilon}
-\int_{-\infty}^{\infty}dz e^{\frac{i}{2\epsilon}z^2}\psi\left(x-\sqrt{\frac{\hbar}{m}}z,0\right)=\\
+\psi(x,\varepsilon) = \sqrt{\frac{1}{2\pi i\varepsilon}}e^{-\frac{i}{\hbar}V(x)\varepsilon}
+\int_{-\infty}^{\infty}dz e^{\frac{i}{2\varepsilon}z^2}\psi\left(x-\sqrt{\frac{\hbar}{m}}z,0\right)=\\
 = \sqrt{\frac{1}{2\pi\alpha}}e^{-\frac{\alpha}{\hbar}V(x)}\int_{-\infty}^{\infty}dze^{-\frac{z^2}
 {2\alpha}}\left(\psi(x,0)+\frac{\hbar}{2m}z^2\psi''(x,0)+O(z^3)\right)
 \end{gather*}
-si noti che l'espansione in potenze di $z$ è dovuta al fatto che $z\to0$ se $\epsilon\to0$.
+si noti che l'espansione in potenze di $z$ è dovuta al fatto che $z\to0$ se $\varepsilon\to0$.
 
-Integrando esplicitamente e riscrivendo in termini di $\epsilon$ si ottiene
-$$\psi(x,\epsilon) = e^{-\frac{i}{\hbar}V(x)\epsilon}\left(\psi(x,0)+\frac{i\epsilon\hbar}{2m}
+Integrando esplicitamente e riscrivendo in termini di $\varepsilon$ si ottiene
+$$\psi(x,\varepsilon) = e^{-\frac{i}{\hbar}V(x)\varepsilon}\left(\psi(x,0)+\frac{i\varepsilon\hbar}{2m}
 \psi''(x,0)\right)$$
-Sviluppando sia il lato sinistro sia l'esponenziale a destra in potenze di $\epsilon$ si trova
+Sviluppando sia il lato sinistro sia l'esponenziale a destra in potenze di $\varepsilon$ si trova
 \begin{gather*}
-\psi(x,0)+\epsilon\eval{\pdv[]{\psi}{t}}_{t=0} = \left(1-\frac{i\epsilon}{\hbar}V(x)+O(\epsilon^2)
-\right)\left(\psi(x,0)+\frac{i\epsilon\hbar}{2m}\psi''(x,0)+O(\epsilon^2)\right)\\
-\psi(x,0)+\epsilon\eval{\pdv[]{\psi}{t}}_{t=0}=\psi(x,0)-\frac{i}{\hbar}\epsilon
-\left(V(x)\psi(x,0)-\frac{\hbar^2}{2m}\psi''(x,0)\right)+O(\epsilon^2)
+\psi(x,0)+\varepsilon\eval{\pdv[]{\psi}{t}}_{t=0} = \left(1-\frac{i\varepsilon}{\hbar}V(x)+O(\varepsilon^2)
+\right)\left(\psi(x,0)+\frac{i\varepsilon\hbar}{2m}\psi''(x,0)+O(\varepsilon^2)\right)\\
+\psi(x,0)+\varepsilon\eval{\pdv[]{\psi}{t}}_{t=0}=\psi(x,0)-\frac{i}{\hbar}\varepsilon
+\left(V(x)\psi(x,0)-\frac{\hbar^2}{2m}\psi''(x,0)\right)+O(\varepsilon^2)
 \end{gather*}
-eguagliando i termini di prim'ordine in $\epsilon$ si ottiene infine
+eguagliando i termini di prim'ordine in $\varepsilon$ si ottiene infine
 $$i\hbar\pdv[]{}{t}\psi(x,0)=\frac{-\hbar^2}{2m}\dv[2]{}{x}\psi(x,0)$$
