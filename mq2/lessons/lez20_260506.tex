@@ -19,7 +19,7 @@ $$V(r)=A\frac{e^{-\mu r}}{r}$$
 con $A\in\mathbb{R},\phantom{x}\mu\in\mathbb{R}^+$ costanti: il termine esponenziale negativo
 garantisce che il potenziale svanisca molto rapidamente lontano da $r=0$.
 
-Per alte energie, si può dunque applicare l'approssimazione di Born, calcolando l'ampiezza
+Per alte energie si può dunque applicare l'approssimazione di Born, calcolando l'ampiezza
 differenziale come
 $$f_k(\vartheta) = -\frac{m\sqrt{2\pi}}{\hbar}\tilde V(\mathbf{q}),\phantom{x}\mathbf{q}=
 \mathbf{k'}-\mathbf{k}$$
@@ -39,7 +39,7 @@ $$f_k(\vartheta) = -\frac{2mA}{\hbar^2}\frac{1}{4k^2\sin^2\left(\frac{\vartheta}
 \frac{1}{\left(4k^2\sin^2\left(\frac{\vartheta}{2}\right)+\mu^2\right)^2}}$$
 \textit{Osservazione} Per $\mu\to0$ e $A=zZe^2$ il potenziale si riduce a quello Coulombiano
 e la sezione d'urto si riduce a quella di Rutherford: questo è dovuto al fatto che $A$ è la
-\textit{costante di accopiamento} del potenziale e $\mu$ dipende dalla \textit{massa del mediatore},
+\textit{costante di accopiamento} dell'interazione e $\mu$ dipende dalla \textit{massa del mediatore},
 che, nel caso dell'interazione elettromagnetica, è un fotone con massa $m_\gamma=0$.
 \newpage
 \section{Diffusione in onde parziali}
@@ -50,8 +50,8 @@ descrivere il sistema.
 
 Si noti che ogni funzione d'onda di particella libera con $k$ fissato può essere scritta
 nella forma
-$$\psi_k(r,\vartheta,\varphi)=\sum_{l,m}X_{k,l,m}\varphi_{k,l,m}(r,\vartheta,\varphi)$$
-dove $\varphi_{k,l,m}(r,\vartheta,\varphi)$ sono le autofunzioni simultanee del SCOC 
+$$\psi_k(r,\vartheta,\varphi)=\sum_{l,m}X_{klm}\varphi^0_{klm}(r,\vartheta,\varphi)$$
+dove $\varphi^0_{klm}(r,\vartheta,\varphi)$ sono le autofunzioni simultanee del SCOC 
 $\left\{L^2,L_z,H_0\right\}$, dette
 \textit{onde sferiche}.
 
@@ -64,11 +64,12 @@ $$\hbar\sqrt{l(l+1)}\approx\hbar l<pA \leftrightarrow l<kA$$
 l'approssimazione quindi, a spanne, converrà solo quando $k$ è piccolo, perché ci saranno meno termini
 nella serie.
 \subsection{Particella libera}
-L'equazione di Schrödinger della particella libera con energia $E=\frac{k^2\hbar^2}{2m}$ è
+L'equazione di Schrödinger della particella libera con energia $E=\frac{\hbar^2k^2}{2m}$ è
 $$H\psi = E\psi\rightarrow \laplacian\psi - k^2\psi = 0$$
 in coordinate sferiche si ha che $\laplacian = \frac{1}{r^2}\pdv[]{}{r}\left(r^2\pdv[]{}{r}\right)-
 \frac{L^2}{\hbar^2r^2}$ e la soluzione è fattorizzabile come
-$$\psi(r,\vartheta,\varphi) = \varphi^0_{kl}(r)Y^{lm}(\vartheta,\varphi)$$
+$$\psi(r,\vartheta,\varphi) = \varphi^0_{kl}(r)Y^{lm}(\vartheta,\varphi):=
+\varphi^0_{klm}(r,\vartheta,\varphi)$$
 dove $Y^{lm}$ sono le note armoniche sferiche, autofunzioni simultanee di $L^2$ e $L_z$, e la funzione
 radiale $\varphi^0_{kl}(r)$ è tale che la sua funzione ridotta $\chi^0_{kl}:=\frac{\varphi^0_{kl}}{r}$
 segua \textit{l'equazione radiale ridotta}
@@ -91,7 +92,7 @@ per $l\not\in\mathbb{Z}$ la soluzione generale è
 $$u(z) = AJ^l+BJ^{-l},\text{ con } J^l(z) = \sum_{n=1}^{\infty}\frac{(-1)^n}{\Gamma(n+l+1)n!}
 \left(\frac{z}{2}\right)^{2n+l}
 $$
-dove $J^l(z)$ è detta \textit{funzioone di Bessel di I specie}. È chiaro che per $l\in\mathbb{Z}$
+dove $J^l(z)$ è detta \textit{funzione di Bessel di I specie}. È chiaro che per $l\in\mathbb{Z}$
 le due soluzioni non sono indipendenti, cioè $J^l\propto J^{-l}$: in questo caso si usa un'altra
 soluzione dell'ODE, la \textit{funzione di Neumann} $Y_l(z)$.
 
@@ -144,12 +145,12 @@ $\varphi^0_{kl}\sim\frac{e^{\pm ikr}}{r}$.
 composta dalla somma di un'onda sferica entrante e una uscente l'origine, sfasate di $l\pi$: l'onda
 sferica entrante viene riflessa dal centro diffusore, mantenendo il numero d'onda $k$ ma sfasandola.
 
-La soluzione del problema 3D è dunque
-$$\varphi^0_{kl}(r,\vartheta,\varphi) = \sqrt{\frac{2k^2}{\pi}}j_l(kr)Y^{lm}(\vartheta,\varphi)$$
+La soluzione del problema 3D libero è dunque
+$$\varphi^0_{klm}(r,\vartheta,\varphi) = \sqrt{\frac{2k^2}{\pi}}j_l(kr)Y^{lm}(\vartheta,\varphi)$$
 \textit{Osservazione} Si consideri la densità di probablilità radiale associata a $\varphi^0_{kl}$:
 $$p(r)\propto\rho^2|j_l(\rho)|^2\underset{\rho\to0}\sim\rho^{2l+2}$$
 allora si può affermare che, approssimativamente
 $$p(r)\approx 0\phantom{x} \forall\rho=kr\leq\sqrt{l(l+1)}$$
 cioè che l'onda sferica si "ferma" tanto più lontano dal centro diffusore quanto $l$ è grande:
 dunque, per avere contributi da pochi termini, occorre che la maggioranza dei valori di $l$ sia
-tale che l'onda sferica si fermi prima della zona di influenza del potenziale
+tale che l'onda sferica si fermi prima della zona di influenza del potenziale.
