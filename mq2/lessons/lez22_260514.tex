@@ -3,4 +3,145 @@
 %"E quindi uscimmo a riveder le stelle." If. XXXIV, 139
 \chapter{Entanglement}\\
 
-[daje sono le ultime 5]
+\section{Introduzione e definizioni}
+Una delle conseguenze meno intuitive e spesso malintese della Meccanica Quantistica è il concetto di
+entanglement ("intreccio") di stati quantistici: in questa parte del corso si cerca di fare chiarezza
+su quali conseguenze abbia questo concetto e quali no.
+
+Si considerino due spazi di Hilbert $\mathcal{H}_a$, $\mathcal{H}_b$ che abbiano lo stesso SCOC e
+siano
+\begin{gather*}
+    \left\{\ket{i_a}\right\}_{i=1}^\infty\subset\mathcal{H}_a,\phantom{x}
+    \left\{\ket{j_b}\right\}_{j=1}^\infty\subset\mathcal{H}_b
+\end{gather*}
+le rispettive basi: il generico elemento di $\mathcal{H}_{ab}:=\mathcal{H}_a\otimes\mathcal{H}_b$
+si può esprimere come
+$$\ket{\psi_{ab}} = \sum_{i,j}^{\infty}c_{ij}\ket{i_a}\otimes\ket{j_b}$$
+\textbf{Def.} Uno stato $\ket{\psi_{ab}}\in\mathcal{H}_{ab}$ si dice \textit{fattorizzabile} se,
+per qualche $\ket{\varphi_a}\in\mathcal{H}_a$ e $\ket{\chi_b}\in\mathcal{H}_b$,
+$$\ket{\psi_{ab}} = \ket{\varphi_a}\otimes\ket{\chi_b}$$
+\textbf{Def.} Uno stato $\ket{\psi_{ab}}\in\mathcal{H}_{ab}$ si dice \textbf{entangled} se
+\textit{non} è fattorizzabile.
+
+\textbf{Esempio} $\text{dim}(\mathcal{H}_a)=\text{dim}(\mathcal{H}_b)=2$
+
+Le basi sono $\left\{\ket{1_a},\ket{2_a}\right\}$ e $\left\{\ket{1_b},\ket{2_b}\right\}$:
+il generico stato dello spazio prodotto è
+$$\ket{\psi_{ab}} = A_{11}\ket{1_a}\otimes\ket{1_b} + A_{12}\ket{1_a}\otimes\ket{2_b} + A_{21}
+\ket{2_a}\otimes\ket{1_b} + A_{22}\ket{2_a}\otimes\ket{2_b}$$
+uno stato fattorizzabile ha la forma
+$$\ket{\psi_{ab}} = (\alpha_1\ket{1_a}+\alpha_2\ket{2_a})\otimes(\beta_1\ket{1_b}+\beta_2\ket{2_b})$$
+si ha dunque $A_{ij}=\alpha_i\cdot\beta_j$, che implica $\det(A)=0$: questa condizione garantisce la
+fattorizzabilità dello stato.\\
+Le implicazioni più interessanti dell'entanglement si vedono nel momento della misura: si consideri
+uno stato entangled
+$$\ket{\psi_{ab}}=\alpha\ket{1_a}\otimes\ket{1_b} + \beta\ket{2_a}\otimes\ket{2_b}:=
+\alpha\ket{1,1}+\beta\ket{2,2}$$
+e l'osservabile del sistema totale
+$$O_a = M_a\otimes\mathbb{I}_b$$
+allora, ricordando che $\rho_{ab}=\ket{\psi_{ab}}\bra{\psi_{ab}}$, il suo valor medio è
+\begin{gather*}
+\langle O_a\rangle_\psi = \Tr(O_a\rho_{ab})=
+\sum_{i,j=1}^{2}\bra{i,j}(M_a\otimes\mathbb{I}_b)(\alpha\ket{1,1}+\beta\ket{2,2})
+(\alpha^*\bra{1,1}+\beta^*\bra{2,2})\ket{i,j}=\\
+=\sum_{i=1}^{2}\bra{i_a}M_a\left(|\alpha|^2\ket{1_a}\bra{1_a} \sum_{j=1}^{2}\bra{j_b}
+\ket{1_b}\bra{1_b}\ket{j_b} + [\text{simili}]\right)\ket{i_a}=\\
+=\sum_{i=1}^{2}\bra{i_a}M_a\left(|\alpha|^2\ket{1_a}\bra{1_a}+|\beta|^2\ket{2_a}\bra{2_a}\right):=
+\Tr_a(M_a\rho_a)
+\end{gather*}
+dove si è supposto che la base di $\mathcal{H}_b$ sia ON e si è indicato
+$\rho_a = \Tr_b(\rho_{ab})$: si può mostrare che
+$$\rho_a^2 = |\alpha|^4\ket{1_a}\bra{1_a}+
+|\beta|^4\ket{2_a}\bra{2_a} +|\alpha|^2|\beta|^2\ket{1_a}\bra{1_a}\ket{2_a}\bra{2_a}
++|\alpha|^2|\beta|^2\ket{2_a}\bra{2_a}\ket{1_a}\bra{1_a}$$
+e dunque che
+\begin{gather*}
+\Tr(\rho_a^2) = \sum_{i=1}^{2}\bra{i_a}\left(|\alpha|^4\ket{1_a}\bra{1_a}+
+|\beta|^4\ket{2_a}\bra{2_a} + |\alpha|^2|\beta|^2 \left(\ket{1_a}\bra{2_a}\bra{1_a}\ket{2_a} + 
+\ket{2_a}\bra{1_a}\bra{2_a}\ket{1_a}
+\right) \right)\ket{i_a}=\\
+=|\alpha|^4+|\beta|^4 + 2|\alpha|^2|\beta|^2\left|\bra{1_a}\ket{2_a}\right|^2\leq(|\alpha|^2+
+|\beta|^2)^2 = 1
+\end{gather*}
+Questo evidenzia il fatto che, se lo stato è entangled, allora la matrice $\rho_a$ rappresenta uno
+\textit{stato misto}.
+Più esplicitamente, siano $\left\{\ket{+_a},\ket{-_a}\right\}$ e $\left\{\ket{+_b}\ket{-_b}\right\}$
+le basi dei due spazi di Hilbert e sia
+$$\ket{\psi_{ab}}=\frac{1}{\sqrt{2}}(\ket{+,-}-\ket{-,+})$$
+lo stato entangled: la sua matrice densità nelle basi utilizzate finora sarà
+$$\rho_{ab} = \frac{1}{\sqrt{2}}\begin{pmatrix}
+    0&0&0&0\\
+    0&1&-1&0\\
+    0&-1&1&0\\
+    0&0&0&0
+\end{pmatrix}
+$$
+mentre la matrice $\rho_a$ sarà
+$$\rho_a = \Tr_b(\rho_{ab}) = \bra{+_b}\ket{\psi_{ab}}\bra{\psi_{ab}}\ket{+_b} +
+\bra{-_b}\ket{\psi_{ab}}\bra{\psi_{ab}}\ket{-_b}=
+\frac{1}{2}\ket{-_a}\bra{-_a}+\frac{1}{2}\ket{+_a}\bra{+_a}$$
+che è appunto uno stato misto.
+
+Per vedere quali sono le conseguenze della misura di un'osservabile su uno stato entangled, è
+necessario formalizzare le idee.
+\subsection{Decomposizione di Schmidt}
+Si riparta ora dal generico spazio prodotto $\mathcal{H}_{ab}=\mathcal{H}_a\otimes\mathcal{H}_b$, con
+base $\left\{\ket{i,l}:=\ket{i_a}\otimes\ket{l_b}\right\}$; siano inoltre $\text{dim}(\mathcal{H}_a)=
+p$ e $\text{dim}(\mathcal{H}_b)=q$.
+
+Il generico stato dello spazio prodotto è
+$$\ket{\psi_{ab}} = \sum_{i,l}^{p,q}c_{il}\ket{i_a}\otimes\ket{l_b}$$
+se lo stato è fattorizzabile, $c_{il}=x_i\cdot y_l$, ma in ogni caso esso si può esprimere come
+$$\ket{\psi_{ab}} = \sum_{i=1}^{p}\ket{i_a}\otimes\ket{\tilde i_b}\text{ con }\ket{\tilde i_b} = 
+\sum_{l=1}^{q}c_{il}\ket{l_b}$$
+supponendo, senza perdere di generalità, che la base di $\mathcal{H}_a$ sia quella che diagonalizza
+$\rho_a$, si può scrivere
+$$\Tr_b(\rho_{ab})=\rho_a=\sum_{i=1}^{p}p_i\ket{i_a}\bra{i_a}$$
+con $\sum_{i=1}^{p}p_i = 1$; d'altra parte, dalla definizione di $\rho_a$, si può scrivere
+$$\rho_a = \Tr_b(\rho_{ab}) =
+\sum_{k=1}^{q}\bra{k_b}\left[\sum_{i,j}^{p}\ket{i_a,\tilde i_b}\bra{j_a,\tilde j_b}\right]\ket{k_b}=
+\sum_{k,i,j}^{}\bra{k_b}\ket{\tilde i_b}\ket{i_a}\bra{j_a}\bra{\tilde j_b}\ket{k_b} =
+\sum_{i,j}^{}\bra{\tilde j_b}\ket{\tilde i_b}\ket{i_a}\bra{j_a}$$
+confrontando le due forme di $\rho_a$, si trova che
+$$\bra{\tilde j_b}\ket{\tilde i_b} = \delta_{ij}p_i$$
+e quindi che si può costruire un insieme ON di vettori in $\mathcal{H}_b$
+$$\ket{i'_b} = \frac{1}{\sqrt{p_i}}\ket{\tilde i_b}$$
+\textit{Osservazione} Questa non è, in generale, una base, in quanto questi vettori sono $p$, mentre
+dim$(\mathcal{H}_b)=q$.
+
+Si può dunque scrivere lo stato come
+$$\ket{\psi_{ab}}=\sum_{i=1}^{p}\sqrt{p_i}\ket{i_a}\otimes\ket{i'_b}$$
+che è detta \textbf{decomposizione di Schmidt} (o bi-ortogonale) dello stato.
+Considerando infatti la matrice $\rho_b=\Tr_a(\rho_{ab})$ si trova
+$$\rho_b = \sum_{k,i,j}^{}\sqrt{p_ip_j}\bra{k_a}\ket{i_a}\ket{i'_b}\bra{j'_b}\bra{j_a}\ket{k_a}=
+\sum_{i,j}^{}\sqrt{p_ip_j}\bra{j_a}\ket{i_a}\ket{i'_b}\bra{j'_b} =
+\sum_{i=1}^{p}p_i\ket{i'_b}\bra{i'_b}$$
+lo stato è dunque scritto come combinazione lineare degli autostati delle matrici densità
+$\rho_a$ e $\rho_b$, che hanno dunque gli stessi autovalori non nulli $p_i$ (mentre il numero di
+autovalori nulli è diverso, in quanto $p\not=q$).
+
+Questa decomposizione è utile perché, essendo i vettori ${\ket{i_a}\otimes\ket{i'_b}}$ ortonormali,
+lo stato $\ket{\psi_{ab}}$ è puro se e solo se c'è un solo autovalore $p_i$ non nullo: viceversa,
+dal conto dei termini nelle matrici $\rho_a$, $\rho_b$ si capisce se esse rappresentano stati misti
+e dunque se lo stato di partenza è entangled.
+
+\textbf{Esempio} Particelle con spin $\frac{1}{2}$.
+
+Si considerino due particelle a spin $\frac12$ e il solito spazio prodotto di due spazi bidimensionali:
+si consideri lo stato
+$$\ket{\psi} = \frac{1}{\sqrt{2}}\ket{+,+}+\frac{1}{2}\ket{-,+}-\frac{1}{\sqrt{2}}\ket{-,-}$$
+si ha
+$$\rho_a = \Tr_b(\ket{\psi}\bra{\psi})=\bra{+_b}\ket{\psi}\bra{\psi}\ket{+_b}+
+\bra{-_b}\ket{\psi}\bra{\psi}\ket{-_b}= \frac{1}{2}\ket{+}\bra{+}+\frac{1}{2\sqrt{2}}\ket{+}\bra{-}
++\frac{1}{2\sqrt{2}}\ket{-}\bra{+}+\frac{1}{2}\ket{-}\bra{-}
+$$
+in forma matriciale essa è
+\begin{gather*}
+\rho_a = \frac{1}{2}\begin{pmatrix}
+    1&\flatfrac{1}{\sqrt{2}}\\
+    \flatfrac{1}{\sqrt{2}}&1
+\end{pmatrix} \underset{\text{autovalori}}\longrightarrow p_{1,2}=\frac{1}{2}\pm\frac{1}{2\sqrt{2}}
+\end{gather*}
+poiché $\rho_a$ ha due autovalori non nulli essa rappresenta uno stato misto, dunque lo stato
+$\ket{\psi}$ è entangled.
+
