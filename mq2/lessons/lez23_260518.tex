@@ -1,3 +1,98 @@
 %lezione 23 del 18 maggio 2026 pag 54 appunti
 %-----------------------------------------------------------------------------------------------------
 \subsection{Misure su stati entangled: lo spin}
+Si considerino gli stessi spazi dell'esempio precedente e lo stato di singoletto di spin
+$$\ket{\psi_{ab}}=\frac{1}{\sqrt{2}}\left(\ket{+-}-\ket{-+}\right)$$
+Si effettuano ora misure sugli spin delle due particelle, in particolare su $\mathcal{H}_a$ si misura
+lo spin nella direzione identificata dall'angolo azimutale $\vartheta_a$, mentre su $\mathcal{H}_b$
+quello in direzione $\vartheta_b$, con $\vartheta_a\not=\vartheta_b$: l'operatore spin in direzione
+$\vartheta_i$ nello spazio $\mathcal{H}_i$ è
+\begin{gather*}
+S_{\vartheta_i}=\mathbf{S_i}\cdot\mathbf{\hat\vartheta_i}=
+\mathbf{S_i}\cdot(\sin\vartheta_i\mathbf{\hat x}+\cos\vartheta_i\mathbf{\hat z})=
+S_x\sin\vartheta_i+S_z\cos\vartheta_i=\\=
+\frac{\hbar}{2}\left(\sin\vartheta_i\hat\sigma_1+\cos\vartheta_i\hat\sigma_3\right)=
+\frac{\hbar}{2}\begin{pmatrix}
+    \cos\vartheta_i&\sin\vartheta_i\\
+    \sin\vartheta_i&-\cos\vartheta_i
+\end{pmatrix}
+\end{gather*}
+dove $\hat\sigma_i$ denota le matrici di Pauli, cioé i generatori di SU(2).
+
+Gli autovalori di tale operatore sono, come è noto, $\pm\frac{\hbar}{2}$ e si può ricavare che
+gli autostati sono
+$$\begin{dcases}
+      \ket{+_{\vartheta_i}} = \cos\frac{\vartheta_i}{2}\ket{+_i} +\sin\frac{\vartheta_i}{2}\ket{-_i}\\
+      \ket{-_{\vartheta_i}}=-\sin\frac{\vartheta_i}{2}\ket{+_i}+\cos\frac{\vartheta_i}{2}\ket{-_i}
+\end{dcases}$$
+Si consideri la probabilità di trovare sia lo spin della particella $a$, sia quello della particella
+$b$ paralleli al rispettivo angolo:
+\begin{gather*}
+\mathcal{P}_{++} = \left|\bra{+_{\vartheta_a}+_{\vartheta_b}}\ket{\psi_{ab}}\right|^2=
+\frac{1}{2}\left|\cos\frac{\vartheta_a}{2}\sin\frac{\vartheta_b}{2}\bra{+-}\ket{+-}-
+\sin\frac{\vartheta_a}{2}\cos\frac{\vartheta_b}{2}\bra{-+}\ket{-+}\right|^2=\frac{1}{2}\sin^2\left(
+\frac{\vartheta_b-\vartheta_a}{2}\right)
+\end{gather*}
+Similmente si possono anche ricavare
+\begin{align*}
+&\mathcal{P}_{--}=\mathcal{P}_{++}=\frac{1}{2}\sin^2\left(\frac{\vartheta_b-\vartheta_a}{2}\right)\\
+&\mathcal{P}_{+-}=\mathcal{P}_{-+}=\frac{1}{2}\cos^2\left(\frac{\vartheta_b-\vartheta_a}{2}\right)
+\end{align*}
+Due eventi si dicono \textit{scorrelati} se la probabilità che avvengano entrambi è
+il prodotto delle probabiltà che avvengano singolarmente: se questo fosse il caso per queste misure,
+si avrebbe
+$$\mathcal{P}_{+-}=\mathcal{P}_-\mathcal{P}_+\rightarrow
+\frac{\mathcal{P}_{++}}{\mathcal{P}_{+-}}=\frac{\mathcal{P_{-+}}}{\mathcal{P}_{--}}$$
+per queste misure di spin è chiaro che questo sia \textbf{falso}, le misure sono quindi
+\textbf{correlate}: questo è il tipico comportamento degli stati entangled.
+
+\textbf{Oss.} Se $\vartheta_a=\vartheta_b$, cioè se si effettuano misure di spin lungo la stessa
+direzione, le probabilità diventano
+\begin{align*}
+&\mathcal{P}_{--}=\mathcal{P}_{++}=0\\
+&\mathcal{P}_{+-}=\mathcal{P}_{-+}=\frac{1}{2}
+\end{align*}
+e si ha che la misura di spin "up" di $a$ implica la misura di spin "down" di $b$ e viceversa:
+questo può portare alla paradossale affermazione che avvenga un un trasferimento istantaneo
+(o comunque a velocità superluminari) di informazione, cosa che violerebbe il principio di causalità;
+come si vedrà in seguito, non è questo il caso.
+\section{Proprietà dell'entanglement}
+Definito l'entanglement quantistico e visti questi esempi iniziali, in questa sezione si trattano 
+alcuni fenomeni legati a esso.
+\subsection{No-communication theorem}
+Una delle convinzioni più comuni sull'entanglement quantistico è che esso permetta di trasferire
+informazione istantaneamente. Per esempio, il decadimento $\pi^0\rightarrow e^-+e^+$ produce una
+coppia elettrone-positrone in singoletto di spin (il $\pi^0$ ha $S=0$): se essi viaggiano fino ai
+confini opposti dell'universo, la misura dello spin lungo l'asse $z$ di uno dei due predice
+esattamente quella dell'altro (come appena visto) e questo sembrerebbe uno scambio di informazione 
+istantaneo tra i due sperimentatori ai capi opposti dell'universo.
+
+Si consideri un sistema con spazio di Hilbert $\mathcal{H}_{ab}=\mathcal{H}_a\otimes\mathcal{H}_b$ e
+uno stato entangled descritto dalla matrice densità
+$$\rho_{ab}=\sum_{k}^{}O_{a,k}\otimes O_{b,k}$$
+dove $O_{i,k}$ sono operatori autoaggiunti su $\mathcal{H}_i$; si consideri inoltre un'osservabile
+$\Lambda_a$ su $\mathcal{H}_a$ tale che
+$$\Lambda_a\ket{i_a} = \lambda_{i_a}\ket{i_a}$$
+Se si effettua una misura di $\Lambda_a$ su ogni stato della miscela e si considera lo stato misto
+formato dai risultati della misura, si trova
+$$\rho_{ab}\to\tilde\rho_{ab}=\sum_{i}^{}(P_{A_i}\otimes\mathbb{I}_b)\rho_{ab}
+(P_{A_i}\otimes\mathbb{I}_b)$$
+dove si è denotato $P_{A_i}=\ket{i_a}\bra{i_a}$.
+Dal punto di vista di $\mathcal{H}_b$ questo stato risulta essere
+$$\tilde\rho_b=\Tr_a(\tilde\rho_{ab}) = \Tr_a\left(\sum_{i}^{}\sum_{k}^{}
+    (P_{A_i}\otimes\mathbb{I}_b)O_{a,k}\otimes O_{b,k}(P_{A_i}\otimes\mathbb{I}_b)\right)=
+    \sum_{k}^{}\sum_{i}^{}\Tr_a\left(P_{A_i}O_{a,k}P_{A_i}\right)O_{b,k}
+$$
+Per la ciclicità della traccia $\Tr_a(P_{A_i}O_{a,k}P_{A_i})=\Tr_a(P_{A_i}P_{A_i}O_{a,k})$ e 
+ricordando l'idempotenza del proiettore $P_{A_i}$, si trova che
+$$\tilde\rho_b=\sum_{k}^{}\Tr_a\left(\sum_{i}^{}P_{A_i}O_{a,k}\right)O_{b,k}=
+\sum_{k}^{}\Tr_a(O_{a,k})O_{b,k}=\Tr_a\left(\sum_{k}^{}O_{a,k}\otimes O_{b,k}\right)=\Tr_a(\rho_{ab})=
+\rho_b$$
+Questo risultato significa che una misura su $\mathcal{H}_a$ \textbf{non influenza} lo spazio
+$\mathcal{H}_b$, cioè, in altre parole, la misura di una qualunque osservabile su una delle due
+particelle entangled non influenza l'altra.
+\subsection{Teletrasporto e clonazione di stati}
+Il teletrasporto di uno stato quantistico è un trasferimento di informazione \textit{a velocità
+subluminare} che, come da nome, distrugge l'informazione iniziale e la trasporta in un altro punto;
+la clonazione, d'altra parte, consiste nel trasferimento di informazione \textit{senza} distruggere
+quella iniziale: come si vedrà in questa sezione, il primo è possibile, mentre la seconda no.

@@ -36,7 +36,16 @@ mentre quella di uno stato entangled vale
 \ket{\gamma,\delta}\bra{\gamma,\delta}+\ket{\gamma,\delta}\bra{\alpha,\beta}+
 \ket{\alpha,\beta}\bra{\gamma,\delta}\text{, stato misto di $\mathcal{H}_{ab}$}
 \end{gather*}
-
+\textbf{Oss.} Se uno stato è fattorizzabile, le tracce della sua matrice densità $\rho_{ab}$
+rappresentano gli stati da cui esso è composto:
+$$\Tr_a(\rho_{ab})=\sum_{i}^{}\bra{i_a}(\ket{\varphi_a}\otimes\ket{\chi_b})(\bra{\varphi_a}\otimes
+\bra{\chi_b})\ket{i_a}=\sum_{i}^{}|\bra{i_a}\ket{\varphi_a}|^2\ket{\chi_b}\bra{\chi_b}=
+\ket{\chi_b}\bra{\chi_b}:=\rho_b$$
+e similmente
+$$\Tr_b(\rho_{ab})=\ket{\varphi_a}\bra{\varphi_a}:=\rho_a$$
+Si noti che essi sono stati puri, viceversa, se lo stato è entangled, queste tracce restituiscono
+stati misti: queste tracce sono dunque interpretabili come il "punto di vista" di sperimentatori
+che osservano solo una delle due parti dello spazio prodotto $\mathcal{H}_{ab}$.
 
 \textbf{Esempio} $\text{dim}(\mathcal{H}_a)=\text{dim}(\mathcal{H}_b)=2$
 
@@ -82,7 +91,7 @@ Come già detto, se lo stato è entangled allora la matrice $\rho_a$ rappresenta
 
 Più esplicitamente, siano $\left\{\ket{+_a},\ket{-_a}\right\}$ e $\left\{\ket{+_b}\ket{-_b}\right\}$
 le basi dei due spazi di Hilbert e sia
-$$\ket{\psi_{ab}}=\frac{1}{\sqrt{2}}(\ket{+,-}-\ket{-,+})$$
+$$\ket{\psi_{ab}}=\frac{1}{\sqrt{2}}(\ket{+-}-\ket{-+})$$
 lo stato entangled: la sua matrice densità nelle basi utilizzate finora sarà
 $$\rho_{ab} = \frac{1}{\sqrt{2}}\begin{pmatrix}
     0&0&0&0\\
@@ -158,5 +167,5 @@ in forma matriciale essa è
 \end{pmatrix} \underset{\text{autovalori}}\longrightarrow p_{1,2}=\frac{1}{2}\pm\frac{1}{2\sqrt{2}}
 \end{gather*}
 poiché $\rho_a$ ha due autovalori non nulli essa rappresenta uno stato misto, dunque lo stato
-$\ket{\psi}$ è entangled. [c'è ancora un conticino, vedo se serve metterlo]
+$\ket{\psi}$ è entangled.
 
