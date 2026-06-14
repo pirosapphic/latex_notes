@@ -32,8 +32,9 @@ $$(G,Of) = \lim\limits_{\varepsilon\to0}
 \lim\limits_{\varepsilon\to0}\int_{\partial S_\varepsilon}^{}d\Sigma\mathbf{A}\cdot\mathbf{\hat n}
 $$
 dove $\mathbf{\hat n}$ è il versore diretto verso l'origine (normale esterna al dominio)\footnote{
-Si è trascurato il contributo del bordo a $\infty$ perché $f$ è una funzione di prova.}. Espandendo
-$\mathbf{A}$ si trova
+Si è trascurato il contributo del bordo a $\infty$ perché $f$ è una funzione di prova.}.
+
+Espandendo $\mathbf{A}$ si trova
 \begin{gather*}
 (G,Of) = \lim\limits_{\varepsilon\to0}\int_{\partial S_\varepsilon}^{}d\Sigma
 \left[A\frac{e^{\pm ikr}}{r}\gradient f\cdot\mathbf{\hat n}-\gradient\left(A\frac{e^{\pm ikr}}{r}
@@ -93,11 +94,11 @@ Utilizzando la funzione di Green appena determinata, si trova una nuova equazion
 questa volta integrale, per $\psi$:
 $$\psi(\mathbf{x})= \psi_\text{hom}(\mathbf{x})+\int_{}^{}d^3\mathbf{y}
 G(\mathbf{x}-\mathbf{y})U(\mathbf{y})\psi(\mathbf{y})$$
-\textit{Osservazione} La scelta del segno in $G$ impone delle condizioni al contorno: $G_+$ impone
+\textbf{Oss.} La scelta del segno in $G$ impone delle condizioni al contorno: $G_+$ impone
 una onda sferica \textit{uscente} dall'origine, mentre $G_-$ un'onda \textit{entrante}; per la
 soluzione cercata serve scegliere $G_+$.
 
-\textit{Osservazione} Il dominio della variabile di integrazione $\mathbf{y}$ può essere ristretto a
+\textbf{Oss.} Il dominio della variabile di integrazione $\mathbf{y}$ può essere ristretto a
 $|\mathbf{y}|<A$: questo implica che, per valori di $\mathbf{x}$ molto lontani dall'origine, come
 in questo caso, vale $|\mathbf{x}-\mathbf{y}|\sim|\mathbf{x}|$.
 
@@ -117,11 +118,11 @@ $$\psi(\mathbf{x}) = e^{i\mathbf{k}\cdot\mathbf{x}} - \frac{e^{ikr}}{r}\frac{1}{
 \int_{|\mathbf{y}|<A}^{}d^3\mathbf{y}e^{-ik\mathbf{\hat x}\cdot\mathbf{y}}U(\mathbf{y})
 \psi(\mathbf{y}):=e^{i\mathbf{k}\cdot\mathbf{x}}+\frac{e^{-ikr}}{r}f_k(\vartheta,\varphi)
 $$
-\textit{Osservazione 1} La funzione d'onda per $r\to+\infty$ è la sovrapposizione dell'onda piana
+\textbf{Oss. 1} La funzione d'onda per $r\to+\infty$ è la sovrapposizione dell'onda piana
 entrante $\psi_\text{hom}(\mathbf{x})$ e di un'onda sferica, la cui ampiezza $f_k(\vartheta,\varphi)$
 è detta \textit{ampiezza differenziale} e dipende da $\psi$ stessa.
 
-\textit{Osservazione 2} In $f_k$ il termine $k\mathbf{\hat x}:=\mathbf{k'}$ significa che
+\textbf{Oss. 2} In $f_k$ il termine $k\mathbf{\hat x}:=\mathbf{k'}$ significa che
 l'interazione non modifica il modulo dell'impulso della particella, ma solo la sua direzione.
 \section{Ampiezza differenziale e sezione d'urto}
 Esiste una relazione ben precisa tra l'ampiezza differenziale $f_k(\vartheta,\varphi)$ e la sezione
@@ -172,7 +173,7 @@ Si calcola dunque
     if_k(\vartheta,\varphi)e^{ikr(1-\cos\vartheta)}
 \right)
 \end{gather*}
-\textit{Osservazione} Fino a ora si è considerata la particella incidente come un'onda piana, per
+\textbf{Oss.} Fino a ora si è considerata la particella incidente come un'onda piana, per
 la linearità dell'equazione di Schrödinger, ma conviene qui far notare che questo è solo un modo per
 semplificare i conti, perché di fatto gli stati fisici sono pacchetti di onde piane, integrati sul
 continuo dei valori di $k$: questa nozione rende chiaro che il termine di interferenza della

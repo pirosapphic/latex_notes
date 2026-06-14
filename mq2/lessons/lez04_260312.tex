@@ -84,7 +84,7 @@ $$\bra{\varphi}H\ket{\varphi} = E_0$$
 Queste affermazioni sono in contraddizione, quindi $\nexists x_0$ \textbf{QED}.
 }%
 }
-
+\newpage
 Si enuncia ora un importante teorema:
 
 \noindent\fbox{%
@@ -119,7 +119,7 @@ eccitato deve avere almeno $n$ nodi.
     \textbf{QED}
     }%
 }
-\newpage
+
 \textbf{Oss.} questo è un risultato molto importante, perché asserisce che lo stato fondamentale di $H$
 presenta le stesse simmetrie di $H$ che, in altre parole, significa che \textbf{in Meccanica Quantistica
 non esiste la rottura spontanea di simmetria}, quando i gradi di libertà sono finiti.
@@ -131,7 +131,7 @@ o a sinistra del picco centrale della funzione) e non presentano parità, in alt
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width = \linewidth]{./sombrero.png}
+    \includegraphics[width = 0.6\linewidth]{./sombrero.png}
     \caption{Potenziale $V(x) = x^4 - x^2$, un esempio di potenziale a \textit{sombrero}}
 \end{figure}
 
@@ -147,7 +147,6 @@ $Y_0^0(\theta,\varphi)$)
 La rottura spontanea di simmetria è possibile invece in teorie quantistiche a \textit{infiniti} gradi
 di libertà, cioè nelle teorie di campo quantistiche.
 
-\newpage
 \section{Prodotto diretto tra Spazi di Hilbert}
 Nel corso di Meccanica Quantistica 1 si sono incontrati degli stati dipendenti da 
 più numeri quantici, legati agli autovalori di un SCOC: in particolare ci sono due 
@@ -208,7 +207,6 @@ scrivere come
 $$\ket{v}=\sum_{k}^{\infty} \Lambda_k\ket{a_k}_1\otimes\ket{b_k}_2$$
 con $\Lambda_k$ coefficienti complessi; scelte delle basi per $\mathcal{H}_1
 ,\mathcal{H}_2$, si può scrivere
-
 $$\ket{a_k}_1 = \sum_{i}^{}c_{ki}\ket{i}_1 \text{ e }
 \ket{b_k}_2 = \sum_{j}^{}d_{kj}\ket{j}_2$$ 
 e allora si ha
@@ -220,14 +218,13 @@ con $\lambda_{ij}:=\sum_{k}^{\infty}\Lambda_k c_{ki} d_{kj}$
 
 La base è dunque $\ket{i}_1\otimes\ket{j}_2$ ed è ortonormale e completa per costruzione,
 infatti 
-$$\{\bra{i}\otimes\bra{j}\}\{\ket{k}\otimes\ket{l}\} = \delta_{ik}\delta_{jl}$$
+$$\left(\bra{i}\otimes\bra{j}\right)\left(\ket{k}\otimes\ket{l}\right) = \delta_{ik}\delta_{jl}$$
 \subsection{Operatori sullo spazio prodotto}
 Un operatore su $\mathcal{H}_1\otimes\mathcal{H}_2 = \mathcal{H}$ è definito come su un qualunque
 spazio di Hilbert, ma può essere "ridotto" a un operatore su uno dei due spazi iniziali;
 
 Denotando con $\ket{il}:=\ket{i}_1\otimes\ket{l}_2$ la base di $\mathcal{H}$, la rappresentazione
-di un operatore $F$ su $\mathcal{H}$ rispetto alla base è
-
+di un operatore $F$ su $\mathcal{H}$ nella base è
 $$
 F = F\mathbb{I} = \sum_{i,j,l,m}^{\infty} \ket{il}\bra{il}F\ket{jm}\bra{jm} :=
 \sum_{i,j,l,m}^{\infty} \ket{il}F_{il,jm}\bra{jm}
@@ -243,7 +240,7 @@ _1\bra{\alpha}F\ket{\beta}_1 = \sum_{i,l,j,m}^{\infty} ({}_1\bra{\alpha}\ket{i}_
 $$
 che è un operatore su $\mathcal{H}_2$, dove
 $\hat{F}_{lm} := \sum_{i,j}^{\infty} ({}_1\bra{\alpha}\ket{i}_1) F_{il,jm} ({}_1\bra{j}\ket{\beta}_1) $
-è la rappresentazione dell'operatore rispetto alla base di $\mathcal{H}_2$
+è la rappresentazione dell'operatore rispetto alla base di $\mathcal{H}_2$.
 
 \textbf{Esempio} La traccia di un operatore su $\mathcal{H}_1$ è 
 $$Tr_1(F) := \sum_{k}^{\infty} {}_1\bra{k}F\ket{k}_1 =

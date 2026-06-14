@@ -37,9 +37,9 @@ $$\Tr(e^{-\beta H}) = \sum_{n=0}^{\infty}\bra{n}e^{-\beta H}\ket{n} =
 e^{-\frac{\omega\hbar\beta}{2}}\sum_{n=0}^{\infty} e^{-\omega\hbar\beta n} =
 \frac{e^{-\frac{\omega\hbar\beta}{2}}}{1-e^{-\omega\hbar\beta}} =
 \frac{1}{2\sinh\left(\frac{\omega\hbar\beta}{2}\right)}$$
-\textit{Oss.} In questo caso è stato possibile utilizzare un modo diretto per risolvere il problema, ma
-nella maggioranza dei casi non sono noti gli autovalori in energia di $H$ e questo metodo non è
-applicabile.
+\textbf{Oss.} In questo caso è stato possibile utilizzare un modo diretto per risolvere il
+problema, ma nella maggioranza dei casi non sono noti gli autovalori in energia di $H$ e questo metodo
+non è applicabile.
 \newpage
 \chapter{Approssimazione WKB}\\
 
@@ -66,7 +66,7 @@ $$\frac{\left|\hbar\divergence \mathbf{p}\right|}{\left|\mathbf{p}\right|^2}<<1$
 che vuol dire
 \begin{itemize}
     \item $\left|\div \mathbf{p}\right|$ piccolo, cioè \textbf{impulso lentamente variabile};
-    \item $\left|\mathbf{p}\right|^2$ piccolo, cioè \textbf{impulso piccolo}.
+    \item $\left|\mathbf{p}\right|^2$ grande, cioè \textbf{impulso grande}.
 \end{itemize}
 Se si considera ora il caso di $H$ unidimensionale e indipendente dal tempo e si pone\\
 $S(x,t) = -Et+W(x)$
@@ -82,7 +82,7 @@ $$(W'(x))^2 = 2m\left[E-V(x)\right]:=p^2(x)\rightarrow p' = \frac{-m}{\sqrt{2m(E
 \frac{-m}{\pm p}\pdv[]{V}{x}$$
 e il limite classico diventa
 $$\left|\frac{\hbar p'}{p^2}\right| = \left|\frac{\hbar m\pdv[]{V}{x}}{p^3}\right|<<1$$
-che significa \textbf{potenziale lentamente variabile} e \textbf{impulso piccolo}.
+che significa \textbf{potenziale lentamente variabile} e \textbf{impulso grande}.
 \subsection{Soluzione perturbativa al primo ordine}
 Per trovare soluzioni semiclassiche, si risolve perturbativamente, espandendo $W(x)$ in potenze di
 $\hbar$:
@@ -93,7 +93,7 @@ $$\frac{1}{2m}(W_0')^2 +V(x)-E=0$$
 con soluzione $W_0' :=p(x)\in\mathbb{R}$, mentre al primo ordine si trova
 $$\frac{1}{2m}\left(2W_1'W_0'\right)-\frac{i}{2m}W_0'' = 0 \leftrightarrow
 W_1'(x) = \frac{iW_0''}{2W_0'}$$
-\textit{Oss.} In tutti gli ordini, si trova un'equazione differenziale lineare rispetto alla funzione
+\textbf{Oss.} In tutti gli ordini, si trova un'equazione differenziale lineare rispetto alla funzione
 da trovare, con coefficienti dipendenti dagli ordini precedenti (noti), che è sempre risolubile.\\
 
 In questo corso si tratterà solamente dell'approssimazione al primo ordine: la soluzione dell'ordine
@@ -109,7 +109,7 @@ $$\psi(x) = \exp\left\{\pm i\int_{x_0}^{x}dx'\frac{p(x')}{\hbar}\right\}\cdot
 \exp\left\{-\ln\sqrt{\frac{p(x)}{p_0}}\right\}$$
 infine, ridefinendo $k(x):=\frac{p(x)}{\hbar}$
 $$\psi(x) = \frac{C}{\sqrt{k(x)}}\exp\left\{\pm i\int_{x_0}^{x}dx'k(x')\right\}$$
-\textit{Oss.} La densità di proabilità associata a $\psi(x,t)$ è proporzionale a quella classica:
+\textbf{Oss.} La densità di proabilità associata a $\psi(x,t)$ è proporzionale a quella classica:
 $$\left|\psi(x,t)\right|^2dx=\frac{dx}{k(x)} = \hbar\frac{dx}{p(x)}=m\hbar\frac{dx}{v(x)}=
 m\hbar dt\rightarrow|\psi(x,t)|^2\propto \dv[]{t}{x}$$
 La soluzione generale dell'equazione di Schrödinger stazionaria è una combinazione lineare delle due

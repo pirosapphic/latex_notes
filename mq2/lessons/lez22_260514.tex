@@ -23,6 +23,21 @@ $$\ket{\psi_{ab}} = \ket{\varphi_a}\otimes\ket{\chi_b}$$
 \textbf{Def.} Uno stato $\ket{\psi_{ab}}\in\mathcal{H}_{ab}$ si dice \textbf{entangled} se
 \textit{non} è fattorizzabile.
 
+\textbf{Oss.} Gli stati entangled sono rappresentati da \textbf{stati misti} dello
+spazio di Hilbert complessivo, infatti la matrice densità di uno stato fattorizzabile è
+\begin{gather*}
+\ket{\psi_{ab}}=\ket{\varphi_a}\otimes\ket{\chi_b}\rightarrow\rho_{ab}=\ket{\varphi,\chi}
+\bra{\varphi,\chi}\text{, stato puro di $\mathcal{H}_{ab}$}
+\end{gather*}
+mentre quella di uno stato entangled vale
+\begin{gather*}
+\ket{\psi_{ab}}=\ket{\alpha_a}\otimes\ket{\beta_b}+\ket{\gamma_a}\otimes\ket{\delta_b}\rightarrow\\
+\rightarrow \rho_{ab}=\ket{\psi_{ab}}\bra{\psi_{ab}}=\ket{\alpha,\beta}\bra{\alpha,\beta}+
+\ket{\gamma,\delta}\bra{\gamma,\delta}+\ket{\gamma,\delta}\bra{\alpha,\beta}+
+\ket{\alpha,\beta}\bra{\gamma,\delta}\text{, stato misto di $\mathcal{H}_{ab}$}
+\end{gather*}
+
+
 \textbf{Esempio} $\text{dim}(\mathcal{H}_a)=\text{dim}(\mathcal{H}_b)=2$
 
 Le basi sono $\left\{\ket{1_a},\ket{2_a}\right\}$ e $\left\{\ket{1_b},\ket{2_b}\right\}$:
@@ -63,8 +78,8 @@ e dunque che
 =|\alpha|^4+|\beta|^4 + 2|\alpha|^2|\beta|^2\left|\bra{1_a}\ket{2_a}\right|^2\leq(|\alpha|^2+
 |\beta|^2)^2 = 1
 \end{gather*}
-Questo evidenzia il fatto che, se lo stato è entangled, allora la matrice $\rho_a$ rappresenta uno
-\textit{stato misto}.
+Come già detto, se lo stato è entangled allora la matrice $\rho_a$ rappresenta uno stato misto.
+
 Più esplicitamente, siano $\left\{\ket{+_a},\ket{-_a}\right\}$ e $\left\{\ket{+_b}\ket{-_b}\right\}$
 le basi dei due spazi di Hilbert e sia
 $$\ket{\psi_{ab}}=\frac{1}{\sqrt{2}}(\ket{+,-}-\ket{-,+})$$
@@ -106,7 +121,7 @@ confrontando le due forme di $\rho_a$, si trova che
 $$\bra{\tilde j_b}\ket{\tilde i_b} = \delta_{ij}p_i$$
 e quindi che si può costruire un insieme ON di vettori in $\mathcal{H}_b$
 $$\ket{i'_b} = \frac{1}{\sqrt{p_i}}\ket{\tilde i_b}$$
-\textit{Osservazione} Questa non è, in generale, una base, in quanto questi vettori sono $p$, mentre
+\textbf{Oss.} Questa non è, in generale, una base, in quanto questi vettori sono $p$, mentre
 dim$(\mathcal{H}_b)=q$.
 
 Si può dunque scrivere lo stato come
@@ -143,5 +158,5 @@ in forma matriciale essa è
 \end{pmatrix} \underset{\text{autovalori}}\longrightarrow p_{1,2}=\frac{1}{2}\pm\frac{1}{2\sqrt{2}}
 \end{gather*}
 poiché $\rho_a$ ha due autovalori non nulli essa rappresenta uno stato misto, dunque lo stato
-$\ket{\psi}$ è entangled.
+$\ket{\psi}$ è entangled. [c'è ancora un conticino, vedo se serve metterlo]
 
