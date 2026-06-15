@@ -91,8 +91,60 @@ $$\tilde\rho_b=\sum_{k}^{}\Tr_a\left(\sum_{i}^{}P_{A_i}O_{a,k}\right)O_{b,k}=
 Questo risultato significa che una misura su $\mathcal{H}_a$ \textbf{non influenza} lo spazio
 $\mathcal{H}_b$, cioè, in altre parole, la misura di una qualunque osservabile su una delle due
 particelle entangled non influenza l'altra.
-\subsection{Teletrasporto e clonazione di stati}
+\subsection{Teletrasporto di stati}
 Il teletrasporto di uno stato quantistico è un trasferimento di informazione \textit{a velocità
-subluminare} che, come da nome, distrugge l'informazione iniziale e la trasporta in un altro punto;
-la clonazione, d'altra parte, consiste nel trasferimento di informazione \textit{senza} distruggere
-quella iniziale: come si vedrà in questa sezione, il primo è possibile, mentre la seconda no.
+subluminare} che, come da nome, distrugge l'informazione iniziale e la trasporta in un altro punto:
+l'idea di fondo è di fornire a due diversi sperimentatori due particelle entangled e di utilizzare
+la "connessione" tra esse.
+
+Si consideri lo spinore di una particella a spin $\flatfrac12$
+$$\ket{\psi_c}=\alpha\ket{+_c}+\beta\ket{-_c}$$
+e si supponga che un osservatore A voglia trasferire questo stato, cioè i coefficienti
+$\alpha,\beta$, da uno spazio $\mathcal{H}_c$ a un altro $\mathcal{H}_b$, in cui B può osservarlo:
+per farlo, si utlizza una coppia di particelle a spin $\flatfrac12$ nello spazio $\mathcal{H}_{ab}$;
+per lo spinore complessivo di due fermioni esiste una base formata da 4 stati entangled
+(a differenza di quella nota, formata dal tripletto e dal singoletto di spin), detta
+\textit{base di Bell} così formata
+$$
+\begin{dcases}
+\ket{\Phi_0}=\frac{1}{\sqrt{2}}(\ket{+-}+\ket{-+})\\
+\ket{\Phi_1}=\frac{1}{\sqrt{2}}(\ket{++}+\ket{--})=\frac{1}{\sqrt{2}}(\mathbb{I}\otimes\hat\sigma_1)
+\ket{\Phi_0}\\
+\ket{\Phi_2}=\frac{-i}{\sqrt{2}}(\ket{++}-\ket{--})=\frac{1}{\sqrt{2}}(\mathbb{I}\otimes\hat\sigma_2)
+\ket{\Phi_0}\\
+\ket{\Phi_3}=\frac{1}{\sqrt{2}}(\ket{+-}-\ket{-+})=\frac{1}{\sqrt{2}}(\mathbb{I}\otimes\hat\sigma_3)
+\ket{\Phi_0}
+\end{dcases}\leftrightarrow
+\begin{dcases}
+\ket{++}=\frac{1}{\sqrt{2}}(\ket{\Phi_1}+i\ket{\Phi_2})\\
+\ket{--}=\frac{1}{\sqrt{2}}(\ket{\Phi_1}-i\ket{\Phi_2})\\
+\ket{+-}=\frac{1}{\sqrt{2}}(\ket{\Phi_0}-\ket{\Phi_3})\\
+\ket{-+}=\frac{1}{\sqrt{2}}(\ket{\Phi_0}+\ket{\Phi_3})
+\end{dcases}
+$$
+Si forniscono ora una coppia di elettroni ai due osservatori A e B nello stato $\ket{\Phi_0}$: lo
+stato complessivo del sistema è
+$$\ket{X_0}=\ket{\Phi_{0,ab}}\otimes\ket{\psi_c}=\frac{1}{\sqrt{2}}(\ket{+-}+\ket{-+})\otimes
+(\alpha\ket{+_c}+\beta\ket{-_c})
+$$
+raccogliendo $\ket{+_b},\ket{-_b}$ e con qualche calcolo si trova che questo stato è
+\begin{gather*}
+\ket{X_0}=\frac{1}{2}\ket{\Phi_{0,ac}}\otimes(\alpha\ket{+_b}+\beta\ket{-_b})+\frac{1}{2}
+\ket{\Phi_{1,ac}}\otimes(\alpha\ket{-_b}+\beta\ket{+_b})+\\+\frac{1}{2}\ket{\Phi_{2,ac}}\otimes
+(i\alpha\ket{-_b}-i\beta\ket{+_b})+\frac{1}{2}\ket{\Phi_{3,ac}}\otimes(\alpha\ket{+_b}-
+\beta\ket{-_b})=\\=
+\frac{1}{2}\ket{\Phi_{0,ac}}\otimes\ket{\psi_b}+\frac{1}{2}\ket{\Phi_{1,ac}}\hat\sigma_1\ket{\psi_b}+
+\frac{1}{2}\ket{\Phi_{2,ac}}\otimes\hat\sigma_2\ket{\psi_b}+\frac{1}{2}\ket{\Phi_{3,ac}}\otimes\hat
+\sigma_3\ket{\psi_b}
+\end{gather*}
+da questa forma si può vedere che, se A effettua una misura dell'osservabile $\Lambda$ tale che
+$$\Lambda\ket{\Phi_i}=\lambda_i\ket{\Phi_i}$$
+e trova l'autovalore $\lambda_i$, lo stato collassa in
+$$\ket{X_0}\to\ket{\Phi_{i,ac}}\otimes\hat\sigma_i\ket{\psi_b}$$
+dunque, se A comunica a B \textbf{tramite un messaggio classico} quale autovalore $\lambda_i$ ha
+trovato, B sa che l'elettrone in $\mathcal{H}_b$ si trova nello stato $\hat\sigma_i\ket{\psi_b}$ e,
+effettuando una misura dell'osservabile $\hat\sigma_i$, che non è altro che una misura di spin, lo
+stato di $\mathcal{H}_b$ collassa in $\ket{\psi_b}=\alpha\ket{+_b}+\beta\ket{-_b}$.
+
+\textbf{Oss.} Con questo processo si è spostato l'entanglement sullo spazio $\mathcal{H}_a\otimes
+\mathcal{H}_c$
