@@ -71,7 +71,7 @@ $$\psi(r,\vartheta,\varphi) = \varphi^0_{kl}(r)Y^{lm}(\vartheta,\varphi):=
 \varphi^0_{klm}(r,\vartheta,\varphi)$$
 dove $Y^{lm}$ sono le note armoniche sferiche, autofunzioni simultanee di $L^2$ e $L_z$, e la funzione
 radiale $\varphi^0_{kl}(r)$ è tale che la sua funzione ridotta $\chi^0_{kl}:=\frac{\varphi^0_{kl}}{r}$
-segua \textit{l'equazione radiale ridotta}
+soddisfi \textit{l'equazione radiale ridotta}
 $$(\chi^{0}_{kl})'' + \left(k^2-\frac{l(l+1)}{r^2}\right)\chi^0_{kl} = 0$$
 L'andamento di queste funzioni per $r\to\infty$ è
 \begin{align*}
@@ -93,14 +93,14 @@ $$u(z) = AJ^l+BJ^{-l},\text{ con } J^l(z) = \sum_{n=1}^{\infty}\frac{(-1)^n}{\Ga
 $$
 dove $J^l(z)$ è detta \textit{funzione di Bessel di I specie}. È chiaro che per $l\in\mathbb{Z}$
 le due soluzioni non sono indipendenti, cioè $J^l\propto J^{-l}$: in questo caso si usa un'altra
-soluzione dell'ODE, la \textit{funzione di Neumann} $Y_l(z)$.
+soluzione dell'ODE, la \textit{funzione di Von Neumann} $Y_l(z)$.
 
 L'equazione di Bessel sferica ha una forma leggermente diversa
 $$z^2u'' + 2zu' +(z^2-l(l+1))u=0$$
 ma le sue soluzioni sono legate a $J^l$ e $Y_l$ nel modo seguente:
 \begin{align*}
 &\text{Funzione di Bessel sferica} \rightarrow j_l(z) =\sqrt{\frac{\pi}{2z}}J^{l+\frac{1}{2}}(z)\\
-&\text{Funzione di Neumann sferica} \rightarrow \eta_l(z) =\sqrt{\frac{\pi}{2z}}Y_{l+\frac{1}{2}}(z)=
+&\text{Funzione di Von Neumann sferica} \rightarrow \eta_l(z) =\sqrt{\frac{\pi}{2z}}Y_{l+\frac{1}{2}}(z)=
 (-1)^{l+1}\sqrt{\frac{\pi}{2z}}J^{-l-\frac12}(z)
 \end{align*}
 Partendo dalla loro definizione in funzione della $J^l$, si possono ricavare gli sviluppi asintotici
@@ -118,7 +118,7 @@ per $z\to0,\infty$:
     -\frac{1}{z}\cos\left(z-\frac{l\pi}{2}\right),&z\to\infty
 \end{dcases}
 \end{align*}
-Le funzioni di Bessel sferiche sono esprimibili come derivate di funzioni elementari nel modo
+Le funzioni sferiche, per $l\in\mathbb{N}$, sono esprimibili come derivate di funzioni elementari nel modo
 seguente:
 \begin{align*}
 \begin{dcases}
@@ -132,7 +132,7 @@ j_l(z) = (-1)^lz^l\left(\frac{1}{z}\dv[]{}{z}\right)^lj_0(z)\\
 \end{align*}
 
 Tornando al problema della particella libera, la soluzione dell'equazione è dunque
-$$\varphi^0_{kl}(\rho) = Aj_l(\rho)+B\eta_(\rho)$$
+$$\varphi^0_{kl}(\rho) = Aj_l(\rho)+B\eta_l(\rho)$$
 La $\eta_l$ diverge in 0 ($l+1>0$), quindi $B=0$; in $r\to\infty$ la soluzione diventa
 $$\varphi^0_{kl}(kr) \underset{r\to\infty}\sim\frac{1}{kr}\frac{1}{2i}
 \left(e^{-i\frac{l\pi}{2}}e^{ikr}-e^{i\frac{l\pi}{2}}e^{-ikr}\right) =

@@ -4,3 +4,119 @@
 \subsection{Clonazione di stati}
 La clonazione di uno stato quantistico è simile al teletrasporto, ma non distrugge lo stato di
 partenza: in questa sezione si vedrà che questo \textit{non} è, in generale, possibile.
+
+Si consideri uno spazio vettoriale complesso $W=V\otimes V$ e uno stato
+$\ket{\psi}\otimes\ket{b}\in W$: la clonazione di stati è possibile se esiste un operatore
+unitario $U$ su $W$ tale che
+$$U\ket{\psi}\otimes\ket{b}=e^{i\varphi}\ket{\psi}\otimes\ket{\psi},\phantom{x}
+\forall\ket{\psi}\in V$$
+Si tenta ora di costruire l'operatore $U$; si consideri una base $\left\{\ket{\alpha_i}:=\ket{e_i}
+\otimes\ket{f_i}\right\}$ di $W$, con $\ket{e_i},\ket{f_i}$ elementi della base di $V$, e uno stato
+$\ket{\psi_1}\in V$:
+una possibile scelta per $\ket{\alpha_1}$ è
+$\ket{\alpha_1}=\ket{\psi_1}\otimes\ket{\psi_1}$.\\
+Similmente si può costruire un'altra base di $W$, $\left\{\ket{\beta_i}\right\}$, tale che
+$\ket{\beta_1}=\ket{\psi_1}\otimes\ket{b}$.
+
+Allora l'operatore
+$$U_1:=\ket{\alpha_1}\bra{\beta_1}$$
+è unitario ed è tale che $U_1\ket{\psi_1}\otimes\ket{b}=\ket{\psi_1}\otimes\ket{\psi_1}$, cioè clona
+lo stato $\ket{\psi_1}$.
+
+Si consideri un altro stato $\ket{\psi_2}\in V$: si possono costruire
+\begin{gather*}
+\ket{\alpha_2}=\ket{\psi_2}\otimes\ket{\psi_2}\\
+\ket{\beta_2}=\ket{\psi_2}\otimes\ket{b}
+\end{gather*}
+e considerare l'operatore
+$$U_2:=\ket{\alpha_1}\bra{\beta_1}+\ket{\alpha_2}\bra{\beta_2}$$
+questo operatore clona sia $\ket{\psi_1}$, sia $\ket{\psi_2}$, a patto che
+$\bra{\psi_1}\ket{\psi_2}=0$.
+
+Questo processo può essere iterato $\dim(V)=n$ volte, costruendo l'operatore
+$$U:=\sum_{i=1}^{n}\ket{\alpha_i}\bra{\beta_i}$$
+che può clonare almeno $n$ stati ortogonali $\ket{\psi_i}\in V$: si dimostra ora, per assurdo, che
+$U$ \textbf{non} può clonare due stati non ortogonali tra loro.
+
+Si considerino due stati $\ket{\varphi_1},\ket{\varphi_2}\in V$ tali che
+$\bra{\varphi_1}\ket{\varphi_2}\not=0$ e si ponga, per assurdo, che
+$$\begin{dcases*}
+      U\ket{\varphi_1}\otimes\ket{b}=e^{i\delta_1}\ket{\varphi_1}\otimes\ket{\varphi_1}\\
+      U\ket{\varphi_2}\otimes\ket{b}=e^{i\delta_2}\ket{\varphi_2}\otimes\ket{\varphi_2}
+\end{dcases*}$$
+Si può scrivere
+$$(\bra{\varphi_2}\otimes\bra{b})(\ket{\varphi_1}\otimes\ket{b})=
+\bra{\varphi_2}\ket{\varphi_1}\bra{b}\ket{b}=\bra{\varphi_2}\ket{\varphi_1}
+$$
+ma anche
+$$(\bra{\varphi_2}\otimes\bra{b})(\ket{\varphi_1}\otimes\ket{b})=
+(\bra{\varphi_2}\otimes\bra{b}U^\dagger)(U\ket{\varphi_1}\otimes\ket{b})=
+e^{i(\delta_1-\delta_2)}|\bra{\varphi_2}\ket{\varphi_1}|^2
+$$
+eguagliando queste espressioni si ha
+$$e^{i(\delta_1-\delta_2)}|\bra{\varphi_2}\ket{\varphi_1}|^2=\bra{\varphi_2}\ket{\varphi_1}
+\xleftrightarrow{\bra{\varphi_2}\ket{\varphi_1}\not=0}\bra{\varphi_2}\ket{\varphi_1}=
+e^{-i(\delta_1-\delta_2)}\leftrightarrow|\bra{\varphi_2}\ket{\varphi_1}|^2=1\leq
+\bra{\varphi_2}\ket{\varphi_2}\bra{\varphi_1}\ket{\varphi_1}=1
+$$
+Poiché la disuguaglianza di Schwartz è un'uguaglianza se e solo se $\ket{\varphi_1}=\ket{\varphi_2}$,
+la tesi è dimostrata: $U$ non può clonare contemporaneamente due stati non ortogonali tra loro.
+
+L'unione di questi due fatti dimostra che la clonazione di stati è possibile solo per $\dim(V)=n$
+stati tra loro ortogonali, e non $\forall\ket{\psi}\in V$.
+
+\subsection{Entanglement swapping}
+Dato un sistema con più coppie di stati entangled, si possono cambiare le corrispondenze:
+si considerino due sorgenti $S_{ab}$ e $S_{cd}$ che emettono coppie di elettroni in singoletto
+\begin{gather*}
+    \ket{\Phi_{0,ab}}=\frac{1}{\sqrt{2}}(\ket{+-}_{ab}-\ket{-+}_{ab})\\
+    \ket{\Phi_{0,cd}}=\frac{1}{\sqrt{2}}(\ket{+-}_{cd}-\ket{-+}_{cd})
+\end{gather*}
+lo stato totale del sistema è $\ket{\psi}\in\mathcal{H}_{a}\otimes\mathcal{H}_b\otimes\mathcal{H}_c
+\otimes\mathcal{H}_d$ e vale
+$$\ket{\psi}=\ket{\Phi_{0,ab}}\otimes\ket{\Phi_{0,cd}}$$
+sviluppando e mettendo in evidenza gli stati di Bell di $\mathcal{H}_{ad}$ e $\mathcal{H}_{bc}$ si
+trova
+$$\ket{\psi}=\frac{1}{2}(\ket{\Phi_{0,ad}}\otimes\ket{\Phi_{0,bc}}+
+\ket{\Phi_{1,ad}}\otimes\ket{\Phi_{1,bc}}+\ket{\Phi_{2,ad}}\otimes\ket{\Phi_{2,bc}}-
+\ket{\Phi_{3,ad}}\otimes\ket{\Phi_{3,bc}})$$	
+da questa forma è evidente che, se si misura lo spin di B e C, lo stato collassa in
+$\ket{\Phi_{i,ad}}\otimes\ket{\Phi_{i,bc}}$, spostando l'entanglement sulle coppie AD e BC.
+\subsection{Entropia di Von Neumann}
+L'entropia di Von Neumann è un modo di quantificare l'entanglement di un sistema:
+data una matrice densità $\rho$, essa è definita come
+$$S=-k_b\Tr(\rho\ln(\rho))$$
+Si consideri la base $\left\{\ket{k}\right\}\subset\mathcal{H}$ in cui $\rho$ è diagonale:
+$$\rho=\sum_{k}^{}n_k\ket{k}\bra{k}$$
+l'argomento della traccia vale allora
+$$\rho\ln(\rho)=\rho\ln(\mathbb{I}-(\mathbb{I}-\rho))=\rho\sum_{l=1}^{\infty}\frac{(-1)^{l-1}}{l}
+(\mathbb{I}-\rho)^l$$
+ricordando che $\rho\ket{k}=n_k\ket{k}$, l'entropia vale
+$$S=-k_b\Tr(\rho\ln(\rho))=\sum_{k}^{}\bra{k}\rho\sum_{l=1}^{\infty}\frac{(-1)^{l-1}}{l}(\mathbb{I}
+-\rho)^l\ket{k}=\sum_{k}^{}n_k\ln(n_k)$$
+\textbf{Osservazione 1} Poiché $n_k\in[0,1]$, $\ln(n_k)\leq0$ e $S\geq0$.
+
+\textbf{Osservazione 2} $S=0$ se e solo se $n_{\bar k}=1$ e $n_{k\not=\bar k}=0$, dunque l'entropia
+è nulla se e solo se $\rho$ rappresenta uno stato puro del sistema.
+
+Per quali $n_k$ è massima l'entropia? Similmente alla meccanica statistica classica, si pone
+$$\delta S -k\lambda\delta \left(\sum_{k}^{}n_k-1\right)=0\leftrightarrow
+-k\sum_{k}^{}\delta n_k\left(\ln(n_k)+1+\lambda\right)=0 \leftrightarrow n_k=e^{-1-\lambda}$$
+cioè l'entropia è massima per $n_k=\text{cost}$, come per l'entropia classica di Gibbs.
+
+Se $\mathcal{H}=\mathcal{H}_a\otimes\mathcal{H}_b$ e $\rho_{ab}$ è uno \textit{stato puro},
+$S_{ab}=0$ e si può capire se esso è entangled o meno:
+\begin{itemize}
+    \item Se lo stato è entangled, le matrici $\rho_a$, $\rho_b$ rappresentano stati misti con
+	stessi autovalori non nulli, dunque $S_a=S_b>0$ e $S_a+S_b>S_{ab}$.
+    \item Se lo stato \textbf{non} è entangled, le matrici $\rho_a$ e $\rho_b$ rappresentano stati
+	puri, dunque $S_a=S_b=0$ e $S_a+S_b=S_{ab}=0$
+\end{itemize}
+Se invece $\rho_{ab}$ è uno stato misto si avrà $S_{ab}>0$ e si può dimostrare la
+\textit{sub-additività} di $S$, cioè che, in generale
+$$S_a+S_b>S_{ab}$$
+che si interpreta come una perdita di informazioni nel particolare\footnote{
+non chiaro se si intende "perdo particolari guardando il tutto" o "perdo particolari guardando pezzo
+per pezzo"
+}.
+\subsection{Monogamia dell'entanglement}

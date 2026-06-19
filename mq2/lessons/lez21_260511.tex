@@ -74,15 +74,15 @@ centrale), ci si aspetta una funzione d'onda e un'ampiezza differenziale indipen
 \label{eq:sol_pot}
 \end{equation}
 
-Come prima, si scompone la funzione d'onda in parte radiale e angolare e, per questa simmetria, la
-parte angolare sarà indipendente da $\varphi$:
+Come prima, si scompone la funzione d'onda in parte radiale e angolare e, per simmetria del
+potenziale, la parte angolare sarà indipendente da $\varphi$:
 \begin{equation*}
 \psi_k(r,\vartheta) = \sum_{l=0}^{\infty}i^l(2l+1)\varphi_l(kr)P_l(\cos\vartheta)
 \end{equation*}
 
-\textbf{Oss.} La forma della soluzione è la medesima di quella della particella libera, con la
-differenza che $\varphi_l(kr)$ non è semplicemente la $j_l(kr)$, ma è la soluzione dell'equazione
-radiale con il potenziale.
+\textbf{Oss.} L'\textit{ansatz} della forma della soluzione è la medesima di quella della particella
+libera, con la differenza che $\varphi_l(kr)$ non è semplicemente la $j_l(kr)$, ma è la soluzione
+dell'equazione radiale con il potenziale.
 
 L'equazione radiale è
 $$\varphi''_l(\rho) + \frac{2}{\rho}\varphi'_l(\rho) + \left(1-\frac{l(l+1)}{\rho^2}+U(\rho)\right)
@@ -90,6 +90,8 @@ $$\varphi''_l(\rho) + \frac{2}{\rho}\varphi'_l(\rho) + \left(1-\frac{l(l+1)}{\rh
 Per ipotesi $U(\rho) = 0\phantom{x}\forall \rho>kA$, dunque per $r>A$
 l'equazione si riduce alla Bessel sferica, con soluzione
 $$\varphi_l(\rho)\underset{r>A}=\alpha_lj_l(\rho)+\beta_l\eta_l(\rho)$$
+dove non si è posto $\beta_l=0$ perché per $r\not=0$ essa non dà problemi con la normalizzabilità.
+
 Poiché $U(\rho)\in\mathbb{R}$, se $\varphi_l$ è soluzione, lo è anche $\varphi_l^*$, ma le
 $j_l,\eta_l$ sono funzioni reali, dunque $\varphi^*_l$ non è una soluzione linearmente indipendente:
 $$\varphi_l=A\varphi^*_l \leftrightarrow
@@ -105,6 +107,10 @@ $$\varphi_l(kr) \underset{r>A}= \alpha_l\left(j_l(kr)+\tan(\delta_l)\eta_l(kr)\r
 A_l(\cos(\delta_l)j_l(kr)+\sin(\delta_l)\eta_l(kr))
 $$
 con $A_l:=\flatfrac{\alpha_l}{\cos\delta_l}$
+
+\textbf{Oss.} Da questa espressione è evidente che le informazioni sull'interazione saranno
+contenute in $\tan(\delta_l)$, cioè in $\delta_l$, in quanto questa è l'unica differenza con la
+soluzione libera.
 
 Si consideri ora l'andamento di quest'ultima espressione per $r\to\infty$:
 \begin{gather*}
@@ -145,17 +151,17 @@ e quelli di $\flatfrac{e^{ikr}}{r}$
 \frac{e^{ikr}}{r}\left[\frac{1}{2ik}\sum_{l=0}^{\infty}i^l(2l+1)e^{-i\frac{l\pi}{2}}
 e^{i\delta_l}P_l\right] \leftrightarrow \\
 \boxed{
-f(\vartheta)=\frac{1}{2ik}\sum_{l=0}^{\infty}(2l+1)e^{i\delta_l}\sin(\delta_l)P_l(\cos\vartheta)
+f_k(\vartheta)=\frac{1}{2ik}\sum_{l=0}^{\infty}(2l+1)e^{i\delta_l}\sin(\delta_l)P_l(\cos\vartheta)
 }\end{gather*}
 Da questa espressione si calcolano infine la sezione d'urto differenziale
 $$\dv[]{\sigma}{\Omega}(\vartheta) = |f_k(\vartheta)|^2 = \frac{1}{k^2}
-\sum_{l=0}^{\infty}\sum_{l'=0}^{\infty}(2l+1)(2l'+1)e^{i(\delta_l-\delta_{l'}}\sin(\delta_l)
+\sum_{l=0}^{\infty}\sum_{l'=0}^{\infty}(2l+1)(2l'+1)e^{i(\delta_l-\delta_{l'})}\sin(\delta_l)
 \sin(\delta_{l'})P_l(\cos\vartheta)P_{l'}(\cos\vartheta)
 $$
 e quella totale
 $$\sigma_\text{tot} = \int_{}^{}d\Omega\dv[]{\sigma}{\Omega} = 2\pi\int_{-1}^{1}d\cos\vartheta \frac{1}
-{k^2} \sum_{l,l'=0}^{\infty}[...]P_l(\cos\vartheta)P_{l'}(\cos\vartheta) = \frac{4\pi}{k^2}(2l+1)\sin^2
-(\delta_l)$$
+{k^2} \sum_{l,l'=0}^{\infty}[...]P_l(\cos\vartheta)P_{l'}(\cos\vartheta) =
+\sum_{l=0}^{\infty}\frac{4\pi}{k^2}(2l+1)\sin^2(\delta_l)$$
 \textbf{Oss. 1} La sezione d'urto differenziale presenta dei termini di "interferenza" tra le
 onde parziali in cui si è scomposto il problema, mentre quella totale no: questo è dovuto al fatto che
 le $\varphi_l$ hanno una dipendenza da $\vartheta$ e dunque interferiscono a $\vartheta$ fissato,
