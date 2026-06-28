@@ -120,3 +120,63 @@ non chiaro se si intende "perdo particolari guardando il tutto" o "perdo partico
 per pezzo"
 }.
 \subsection{Monogamia dell'entanglement}
+L'entanglement ha inoltre la proprietà di essere "monogamo": ciò significa che se due particelle $A$
+e $B$ sono in uno stato entangled, nessuna delle due può esserlo contemporaneamente con una terza $C$.
+
+Si consideri lo spazio $\mathcal{H}_{abc}$ dello spin di 3 particelle: per $A$ e $B$ si consideri
+la proiezione dello spin lungo l'asse $z$, mentre per $C$ si consideri quella lungo la generica
+direzione $\vartheta_i$; si consideri inolte lo stato
+$$\ket{\Phi}=\frac{1}{\sqrt{2}}\left(\ket{+-1}+e^{i\xi}\ket{-+2}\right)$$
+dove si è denotato $\ket{\vartheta_i}_c=\ket{i}_c$.\\
+Esso non è fattorizzabile, in quanto la sua matrice densità non è diagonale.
+
+Un osservatore che veda solo $A$ e $B$ vede la matrice denistà dello stato come
+$$\rho_{ab}:=\Tr_c(\ket{\Phi}\bra{\Phi})=\frac12\left(\bra{1}\ket{1}\ket{+-}\bra{+-}
++\bra{2}\ket{1}e^{-i\xi}\ket{+-}\bra{-+}+\bra{1}\ket{2}
+e^{i\xi}\ket{-+}\bra{+-}+\bra{2}\ket{2}\ket{-+}\bra{-+}\right)$$
+Se $\vartheta_1=\vartheta_2:=\vartheta$, lo stato $\ket{\Phi}$ è fattorizzabile in
+$$\ket{\Phi}=\frac{1}{\sqrt{2}}\left(\ket{+-}+e^{i\xi}\ket{-+}\right)\otimes\ket{\vartheta}_c$$
+e l'entanglement è solo tra $A$ e $B$.
+
+Se invece $\bra{1}\ket{2}=0$, la matrice è
+$$\rho_{ab}=\frac{1}{2}\left(\ket{+-}\bra{+-}+\ket{-+}\bra{-+}\right)$$
+Si può dimostrare\footnote{Si veda il Cohen, p.2020} che questa è una sovrapposizione classica
+di stati quantistici in cui la \textbf{correlazione tra le misure è classica ma non quantistica}.
+\section{Paradosso di Einstein-Podolski-Rosen}
+Nel 1935 Einstein, Podolski e Rosen scrivono un articolo dal titolo
+\textit{"Can Quantum-Mechanical Description of Physical Reality be Considered Complete?"}, in cui
+argomentano la seguente tesi:
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+    Se le predizioni della Meccanica Quantistica sono corrette anche per sistemi a distanza (i.e. 
+    entangled) e se la realtà fisica è locale, allora \textbf{la Meccanica Quantistica è una teoria
+    incompleta} ed esistono degli "elementi di realtà" da essa non considerati.
+    }%
+}
+
+L'unione delle due ipotesi è detta \textit{realismo locale} e introduce delle variabili nascoste per
+spiegare i risultati fisici (mai messi in dubbio da EPR) di misure su sistemi entangled.
+\subsection{L'esperimento mentale}
+Si consideri una sorgente di stati entangled, un decadimento $\pi_0\to e^- + e^+$ che
+emette un singoletto di spin, e due osservatori $A$, $B$ che misurano rispettivamente la componente
+dello spin della particella che ricevono nella direzione $\vartheta_a$, $\vartheta_b$: le probabilità
+di misura sono state calcolate nella sezione \ref{sec:conti_spin} e sono
+\begin{gather*}
+\mathcal{P}_{--}=\mathcal{P}_{++}=\frac{1}{2}\sin^2\left(\frac{\vartheta_a-\vartheta_b}{2}\right)\\
+\mathcal{P}_{+-}=\mathcal{P}_{-+}=\frac{1}{2}\cos^2\left(\frac{\vartheta_a-\vartheta_b}{2}\right)
+\end{gather*}
+Se $\vartheta_a=\vartheta_b$, la misura di $\ket{+}_a$ implica quella di $\ket{-}_b$: EPR non
+negano la predizione, ma \textbf{rifiutano il fatto che lo stato del sistema sia una sovrapposizione
+di due diversi stati}, il che vuol dire che lo stato $\ket{+}_a$ contiene in sé il risultato
+della misura di $S_b$, cioè un \textit{elemento di realtà}; secondo loro, dunque, la sorgente
+emette il $50\%$ delle volte lo stato complessivo $\ket{+-}$ e il $50\%$ $\ket{-+}$.
+
+Applicando questo ragionamento si può anche spiegare la probabilità di misura di spin in due diverse
+direzioni ($x$ e $z$): la Meccanica Quantistica predice che, per ciascuna direzione, ci sia
+$\mathcal{P}=\frac{1}{2}$ di trovare lo spin parallelo o antiparallelo a essa ed EPR affermano che
+ciò sia dato dal fatto che la sorgente emetta il $25\%$ delle volte lo stato
+$\ket{S_z=+,S_x=+}_a\otimes\ket{S_z=-,S_x=-}_b$ e così via.
+
+Questa visione è ancora in linea con i dati sperimentali, ma, se si considerano 3 misure, il
+ragionamento crolla.
