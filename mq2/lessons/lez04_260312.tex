@@ -131,7 +131,7 @@ o a sinistra del picco centrale della funzione) e non presentano parità, in alt
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width = 0.6\linewidth]{./sombrero.png}
+    \includegraphics[width = 0.6\linewidth]{./figures/sombrero.png}
     \caption{Potenziale $V(x) = x^4 - x^2$, un esempio di potenziale a \textit{sombrero}}
 \end{figure}
 
@@ -163,34 +163,34 @@ autovettori appartengono a spazi di Hilbert \textit{diversi}.
 In seguito è presentata la trattazione formale di questo concetto.
 \subsection{Costruzione dello spazio prodotto}
 \textbf{Def.} Dati due vettori in spazi di Hilbert
-$\ket{a}_1\in\mathcal{H}_1,\ket{b}_2\in\mathcal{H}_2$, il \textit{prodotto diretto}
-(o tensoriale) $\ket{a}_1\otimes\ket{b}_2 := \ket{c}_{\otimes}$ è un'applicazione
+$\ket{a_1}\in\mathcal{H}_1,\ket{b_2}\in\mathcal{H}_2$, il \textit{prodotto diretto}
+(o tensoriale) $\ket{a}_1\otimes\ket{b}_2 := \ket{c}_\otimes$ è un'applicazione
 lineare e continua dell'insieme di omomorfsmi 
 $\text{Hom}(\mathcal{H}_1^*,\mathcal{H}_2) \sim \text{Hom}(\mathcal{H}_2^*,\mathcal{H}_1)$.
 
 Questo significa che il prodotto tensoriale è, contemporaneamente
 \begin{itemize}
-    \item $\ket{c}_\otimes: \mathcal{H}_1^*\to\mathcal{H}_2$, cioè tale che
-	$_1\bra{d}\ket{c}_\otimes := ({}_1\bra{d}\ket{a}_1)\ket{b}_2\in\mathcal{H}_2$;
-    \item $\ket{c}_\otimes: \mathcal{H}_2^*\to\mathcal{H}_1$, cioè tale che
-	$_2\bra{e}\ket{c}_\otimes := (_2\bra{e}\ket{b}_2)\ket{a}_1\in\mathcal{H}_1$.
+\item $\ket{c}_\otimes: \mathcal{H}_1^*\to\mathcal{H}_2$, cioè tale che
+    $\bra{d_1}\ket{c}_\otimes := \bra{d_1}\ket{a_2}\ket{b_2}\in\mathcal{H}_2$;
+\item $\ket{c}_\otimes: \mathcal{H}_2^*\to\mathcal{H}_1$, cioè tale che
+$\bra{e_2}\ket{c}_\otimes := \bra{e_2}\ket{b_2}\ket{a_1}\in\mathcal{H}_1$.
 \end{itemize}
 
 Bisogna inoltre richiedere che $\otimes$ sia associativo rispetto alle strutture
-lineari di $\mathcal{H}_1$ e di $\mathcal{H}_2$:
-$(\lambda\ket{a}_1 + \mu\ket{b}_1)\otimes\ket{c}_2 =
-\lambda\ket{a}_1\otimes\ket{c}_2 + \mu\ket{b}_1\otimes\ket{c}_2$ e viceversa.
-
+lineari di $\mathcal{H}_1$ e di $\mathcal{H}_2$:\\
+$$(\lambda\ket{a_1} + \mu\ket{b_1})\otimes\ket{c_2} =
+\lambda\ket{a_1}\otimes\ket{c_2} + \mu\ket{b_1}\otimes\ket{c_2} \text{e viceversa.}$$
 Si noti però che ${\ket{c}_\otimes}$ non è uno spazio vettoriale, poiché non è detto
-che esistano due vettori $\ket{\alpha}_1,\ket{\beta}_2$ tali che
-$\ket{a}_1\otimes\ket{b}_2 + \ket{c}_1\otimes\ket{d}_2 =
-\ket{\alpha}_1\otimes\ket{\beta}_2$: il fine è di costruire un nuovo spazio di
+che esistano due vettori $\ket{\alpha_1},\ket{\beta_2}$ tali che
+$\ket{a_1}\otimes\ket{b_2} + \ket{c_1}\otimes\ket{d_2} =
+\ket{\alpha_1}\otimes\ket{\beta_2}$: il fine è di costruire un nuovo spazio di
 Hilbert, dunque le combinazioni lineari di prodotti tensoriali dovranno essere 
 aggiunte "a forza" nello spazio che si vuole creare.
 
-Lo spazio prodotto è unitario rispetto al prodotto scalare
+Dati $\ket{c_1}_\otimes=\ket{a_1}\otimes\ket{b_2}$ e $\ket{c_2}_\otimes=\ket{\alpha_1}\otimes\ket{\beta_2}$,
+lo spazio prodotto è unitario rispetto al prodotto scalare
 $_\otimes\bra{c_1}\ket{c_2}_\otimes :=
-(_1\bra{a_1}\ket{a_2}_1) (_2\bra{b_1}\ket{b_2}_2)$, che gli conferisce una struttura
+\bra{a_1}\ket{\alpha_1}\bra{b_2}\ket{\beta_2}$, che gli conferisce una struttura
 metrica e topologica, come già discusso.
 
 L'ultimo requisito da soddisfare è la completezza: come per la struttura vettoriale,
@@ -204,19 +204,19 @@ Si scrive $\mathcal{H}=\mathcal{H}_1\otimes\mathcal{H}_2$ ed è uno spazio di Hi
 \subsection{Base dello spazio prodotto}
 Il generico elemento di $\mathcal{H}$, per la completezza dello spazio, si può
 scrivere come
-$$\ket{v}=\sum_{k}^{\infty} \Lambda_k\ket{a_k}_1\otimes\ket{b_k}_2$$
+$$\ket{v}=\sum_{k}^{\infty} \Lambda_k\ket{a_{k,1}}\otimes\ket{b_{k,2}}$$
 con $\Lambda_k$ coefficienti complessi; scelte delle basi per $\mathcal{H}_1
 ,\mathcal{H}_2$, si può scrivere
-$$\ket{a_k}_1 = \sum_{i}^{}c_{ki}\ket{i}_1 \text{ e }
-\ket{b_k}_2 = \sum_{j}^{}d_{kj}\ket{j}_2$$ 
+$$\ket{a_{k,1}} = \sum_{i}^{}c_{ki}\ket{i_1} \text{ e }
+\ket{b_{k,2}} = \sum_{j}^{}d_{kj}\ket{j_2}$$ 
 e allora si ha
 $$
-\ket{v} = \sum_{k,i,j}^{\infty} \Lambda_k c_{ki}d_{kj}\ket{i}_1\otimes\ket{j}_2 :=
-\sum_{i,j}^{\infty} \lambda_{ij}\ket{i}_1\otimes\ket{j}_2
+\ket{v} = \sum_{k,i,j}^{\infty} \Lambda_k c_{ki}d_{kj}\ket{i_1}\otimes\ket{j_2} :=
+\sum_{i,j}^{\infty} \lambda_{ij}\ket{i_1}\otimes\ket{j_2}
 $$
 con $\lambda_{ij}:=\sum_{k}^{\infty}\Lambda_k c_{ki} d_{kj}$
 
-La base è dunque $\ket{i}_1\otimes\ket{j}_2$ ed è ortonormale e completa per costruzione,
+La base è dunque $\ket{i_1}\otimes\ket{j_2}$ ed è ortonormale e completa per costruzione,
 infatti 
 $$\left(\bra{i}\otimes\bra{j}\right)\left(\ket{k}\otimes\ket{l}\right) = \delta_{ik}\delta_{jl}$$
 \subsection{Operatori sullo spazio prodotto}
@@ -231,20 +231,20 @@ F = F\mathbb{I} = \sum_{i,j,l,m}^{\infty} \ket{il}\bra{il}F\ket{jm}\bra{jm} :=
 $$
 dove $F_{il,jm}\in\mathbb{C}$ sono i coefficienti che definiscono l'operatore rispetto alla base.
 
-Dato l'operatore $F$ e due vettori $\ket{\alpha}_1,\ket{\beta}_1\in\mathcal{H}_1$, si definisce un
+Dato l'operatore $F$ e due vettori $\ket{\alpha_1},\ket{\beta_1}\in\mathcal{H}_1$, si definisce un
 operatore su $\mathcal{H}_2$ nel seguente modo:
 $$
-_1\bra{\alpha}F\ket{\beta}_1 = \sum_{i,l,j,m}^{\infty} ({}_1\bra{\alpha}\ket{i}_1)\ket{l}_2 F_{il,jm}
-\;\bra{m}_2\; ({}_1\bra{j}\ket{\beta}_1) := 
-\sum_{l,m}^{\infty} \ket{l}_2 \hat{F}_{lm}\bra{m}_2
+\bra{\alpha_1}F\ket{\beta_1} = \sum_{i,l,j,m}^{\infty} \bra{\alpha_1}\ket{i_1}\ket{l_2} F_{il,jm}
+\;\bra{m_2}\; \bra{j_1}\ket{\beta_1} := 
+\sum_{l,m}^{\infty} \ket{l_2} \hat{F}_{lm}\bra{m_2}
 $$
 che è un operatore su $\mathcal{H}_2$, dove
-$\hat{F}_{lm} := \sum_{i,j}^{\infty} ({}_1\bra{\alpha}\ket{i}_1) F_{il,jm} ({}_1\bra{j}\ket{\beta}_1) $
+$\hat{F}_{lm} := \sum_{i,j}^{\infty} \bra{\alpha_1}\ket{i_1} F_{il,jm} \bra{j_1}\ket{\beta_1} $
 è la rappresentazione dell'operatore rispetto alla base di $\mathcal{H}_2$.
 
 \textbf{Esempio} La traccia di un operatore su $\mathcal{H}_1$ è 
-$$\Tr_1(F) := \sum_{k}^{\infty} {}_1\bra{k}F\ket{k}_1 =
-\sum_{l,m}^{\infty} \ket{l}_2 \left(\sum_{k}^{\infty} F_{kl,km} \right)\bra{m}_2$$
+$$\Tr_1(F) := \sum_{k}^{\infty} \bra{k_1}F\ket{k_1} =
+\sum_{l,m}^{\infty} \ket{l_2} \left(\sum_{k}^{\infty} F_{kl,km} \right)\bra{m_2}$$
 ed è un operatore su $\mathcal{H}_2$
 
 
@@ -257,7 +257,6 @@ $$
 B(\ket{a}_1\otimes\ket{b}_2) := A_1\ket{a}_1\otimes A_2\ket{b}_2
 $$
 
-
 \textbf{Oss.} Per definire operatori che agiscono solo su uno dei due spazi, basta moltiplicarli
-per l'identità: $B=\mathbb{I}\otimes{A_2} \to B(\ket{a}_1\otimes\ket{b}_2) =
-\ket{a}_1\otimes A_2\ket{b}_2$
+per l'identità:
+$$B=\mathbb{I}\otimes{A_2} \to B(\ket{a_1}\otimes\ket{b_2}) = \ket{a_1}\otimes A_2\ket{b_2}$$

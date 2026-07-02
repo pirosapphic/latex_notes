@@ -22,9 +22,9 @@ Poiché $ C $ è un estremo inferiore si distinguono due casi:
 	\textbf{autovettore generalizzato} . 
 \end{itemize}
 
-L'insieme degli	autovalori propri è detto \textbf{spettro discreto di A} \textit{Spd}(A).
+L'insieme degli	autovalori propri è detto \textbf{spettro discreto di A}: \textbf{Spd}(A).
 
-L'insieme degli autovalori generalizzati è detto \textbf{spettro continuo di A} \textit{Spc}(A).
+L'insieme degli autovalori generalizzati è detto \textbf{spettro continuo di A}: \textbf{Spc}(A).
 
 L'importanza degli spettri di un operatore è evidenziata dal seguente risultato, detto appunto
 \textit{teorema spettrale}.
@@ -39,9 +39,7 @@ L'importanza degli spettri di un operatore è evidenziata dal seguente risultato
     $ \forall f \in S $ si definiscono 
 \begin{itemize}
     \item I coefficienti $ f_i := \bra{a_i}\ket{f} $, con $ \ket{a_i} $ autovettori propri
-	corrispondenti agli autovalori
-
-	$ a_i \in$ \textit{Spd}(A);
+	corrispondenti agli autovalori $ a_i \in$ \textit{Spd}(A);
     \item La funzione $ f(a):=\bra{a}\ket{f} $, con $ \ket{a} $ autovettori generalizzati 
 	corrispondenti agli autovalori $ a\in $ \textit{Spc}(A).
 \end{itemize}
@@ -126,13 +124,13 @@ $$ f(x)=\bra{x}\ket{f} = \int_{-\infty}^{\infty}dk\bra{x}\ket{k}\bra{k}\ket{f} =
 
 \subsection{Sistemi Completi di Osservabili Commutanti}
 Uno dei concetti più importanti per risolvere problemi di meccanica quantistica è
-quello di Sistema Completo di Osservabili Commutanti (SCOC), cioè un insieme di operatori
-$ \{ A_1,...,A_n \} $ tutti commutanti tra di loro e tali che
-$\forall B\text{ t.c. } [B,A_i] = 0,\: B =f(A_i,A_2,...,A_n)$: il massimo
-numero di operatori commutanti $ n $  è il numero di gradi di libertà del sistema quantistico.
+quello di Sistema Completo di Osservabili Commutanti (SCOC), cioè un insieme di osservabili
+$ \{ A_1,...,A_n \} $ tutte commutanti tra di loro e tali che, data un'osservabile $B$,
+$[B,A_i] = 0\leftrightarrow B =f(A_i,A_2,...,A_n)$: il massimo
+numero di osservabili commutanti $ n $ è il numero di gradi di libertà del sistema quantistico.
 
-Detti $ A_i $ gli operatori del SCOC di un sistema quantistico,$\exists\left\{\ket{\alpha}\right\}$ 
-set di autostati comuni a tutti gli $ A_i$:
+Dette $ A_i $ le osservabili del SCOC di un sistema quantistico, $\exists\left\{\ket{\alpha}\right\}$ 
+insieme di autostati comuni a tutte le $ A_i$:
 ciascun vettore $ \ket{\alpha} $ può essere univocamente identificato dai suoi $ n $
 autovalori $ \alpha_i $, con $ A_i\ket{\alpha} = \alpha_i\ket{\alpha} $, come conseguenza
 del seguente teorema.
@@ -142,8 +140,8 @@ del seguente teorema.
     \textbf{Teorema}, gli autospazi simultanei del SCOC hanno dimensione 1.
 
     \textbf{Dimostrazione} Si assuma, per assurdo, che $ \ket{v_1}, \ket{v_2} $
-    (base dell'autospazio degenere) abbiano gli stessi autovalori $ \alpha_i $ per gli operatori 
-    $A_i$ e si definisca l'operatore $B$ indipendente dal SCOC t.c. $ B\ket{v_1} = \ket{v_2}$
+    (base dell'autospazio degenere) abbiano gli stessi autovalori $ \alpha_i $ per le osservabili 
+    $A_i$ e si definisca l'osservabile $B$ indipendente dal SCOC t.c. $ B\ket{v_1} = \ket{v_2}$
     e $B\ket{v_2} = \ket{v_1}$:
      allora $ A_iB\ket{v_1} = A_i\ket{v_2} = \alpha_i \ket{v_2}$ e
      $ BA_i\ket{v_1} = \alpha_i\ket{v_2} $ e similmente con $ \ket{v_2} $; questo significa
