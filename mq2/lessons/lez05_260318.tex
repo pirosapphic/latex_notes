@@ -89,8 +89,9 @@ Similmente si può ricavare che $\mathcal{P}_{\psi}(f_i) = \Tr(P_{f_i}P_{\psi})$
 Prima di procedere con la trattazione del postulato della misura, è necessario introdurre il concetto
 di \textbf{stato misto}.
 
-\textbf{Def.} Uno stato misto è una miscela di stati quantistici puri $\ket{\psi_k}$ tale che la
-probabilità classica di trovare uno degli stati $\ket{\psi_k}$ sia $\omega_k$, con
+\textbf{Def.} Uno stato misto è una \textbf{sovrapposizione classica} di stati quantistici puri
+$\ket{\psi_k}$ tale che la probabilità classica di trovare uno degli stati $\ket{\psi_k}$ sia $\omega_k$,
+con
 $$
 \sum_{k=1}^{N}\omega_k=1.
 $$
@@ -133,7 +134,7 @@ $$\mathcal{P}_\psi(a_i) = \bra{\psi}P_{a_i}\ket{\psi} = \left|\bra{a_i}\ket{\psi
 |c_i|^2 = \omega_i$$
 $$\mathcal{P}_\rho(a_i) = \Tr(P_{a_i}\rho) =
 \Tr\left( \sum_{j}^{}\omega_j \left( \ket{a_i}\bra{a_i}\right)\left(\ket{a_j}\bra{a_j}\right) \right) = 
-\sum_{j}^{}\omega_j \bra{a_j}\ket{a_i}\bra{a_i}\ket{a_j} = \omega_i
+\sum_{j,k}^{}\bra{a_k}\ket{a_i}\bra{a_i}\ket{a_j}\bra{a_j}\ket{a_k}\omega_j=\omega_i
 $$
 Se però si considera un operatore $B$ tale che $\left[A,B\right] \neq0$, le probabilità di misurare un suo
 autovalore $b$ sono:
@@ -152,12 +153,12 @@ mentre
 \end{align*}
 
 La differenza tra queste probabilità può essere intesa nel seguente modo: la miscela di stati puri $\rho$
-non comprende le fasi dei coefficienti di probabilità $\arg(c_i)$, mentre lo stato puro $\psi$ sì; nella
-probabilità associata a $\rho$ c'è solo il prodotto tra la probabilità classica e quella quantistica, 
-in quella associata a $\psi$ c'è anche un termine dato dall'interferenza tra le fasi dei coefficienti
+non comprende le fasi dei coefficienti di probabilità $\arg(c_i)$, mentre lo stato puro $\ket{\psi}$ sì;
+nella probabilità associata a $\rho$ c'è solo il prodotto tra la probabilità classica e quella quantistica, 
+in quella associata a $\ket{\psi}$ c'è anche un termine dato dall'interferenza tra le fasi dei coefficienti
 $c_i$.
 
-Un altro modo per vedere questa differenza è considerare la matrice densità associata a $\psi$
+Un altro modo per vedere questa differenza è considerare la matrice densità associata a $\ket{\psi}$,
 $\rho_\psi = \ket{\psi}\bra{\psi}$: essa non è diagonale nella base di autostati di $A$, infatti
 $$\rho_\psi = \ket{\psi}\bra{\psi} = \sum_{i}\sum_{j}^{}c_ic_j^*\ket{a_i}\bra{a_j}$$
 mentre la matrice $\rho = \sum_{k}\left|c_k\right|^2\ket{a_k}\bra{a_k}$ lo è, quindi in $\rho_\psi$ sono

@@ -45,7 +45,7 @@ cioè l'elemento di matrice di $U(t_b,t_a)$ corrispondente alle posizioni $q_a$ 
 \textbf{Oss.} Il valore di $\psi(q_b,t_b)$ dipende dal valore di $\psi(q,t_a)$ in \textit{tutto} lo spazio
 fisico: il fronte d'onda a un tempo $t_b>t_a$ dipende da tutto il fronte d'onda precedente, convoluto con
 una funzione che ne descrive l'evoluzione temporale; questo è molto simile al principio di Huygens-Fresnel
-per la descrizione della propagazione delle onde nel tempo.
+per la descrizione della propagazione delle onde d'alambertiane nel tempo.
 
 \textbf{Oss.} Il propagatore $K(b,a)$ soddisfa l'equazione di Schrödinger, infatti
 $$S_bU=0\leftrightarrow i\hbar\pdv[]{}{t_b}\bra{q_b}U\ket{q_a}-\bra{q_b}H_bU\ket{q_a}=0$$
@@ -96,7 +96,7 @@ che significa che il propagatore dipende, equivalentemente a prima, da tutti i p
 tutti i possibili punti intermedi tra $q_a$ e $q_b$.
 
 \subsection{Primo legame con l'azione}
-Prima di ricavare esplicitamente il propagatore di una particella lbera, è comodo fare due piccoli conti.\\
+Prima di ricavare esplicitamente il propagatore di una particella libera, è comodo fare due piccoli conti.\\
 Si supponga, senza perdere di generalità, che il propagatore associato a una hamiltoniana della forma
 $H = T + V$ sia della forma
 $$K(x,t,q,0) = e^{\frac{i}{\hbar}S(x,t,q,0)}$$
@@ -157,12 +157,12 @@ K(q',t',q,t) = \sqrt{\frac{m}{2\pi i\hbar(t'-t)}}\exp\left\{\frac{i}{\hbar}\frac
 \label{eq:K_free}
 \end{equation}
 denotando con $\mathcal{N} = \sqrt{\frac{2\pi i\hbar (t'-t)}{m}}$ e con $S_{cl}[q]$ il valore dell'azione
-sulla "curva di moto" che congiunge $q$ e $q'$.
+sulla curva di moto classica che congiunge $q$ e $q'$.
 
 È ora chiaro il legame con l'azione classica (\ref{eq:S_cl_free}) e la funzione d'onda evoluta è
 data da (\ref{eq:K_def}):
 $$\psi(q',t') = \frac{1}{\mathcal{N}}\int dq \exp\left\{\frac{i}{\hbar}S_{cl}[q]\right\}\psi(q,t)$$
-cioè un integrale che somma i valori della funzione d'onda inizale su tutto lo spazio pesati con
+cioè un integrale che somma i valori della funzione d'onda iniziale su tutti i $q$ dello spazio, pesati con
 il valore dell'azione classica calcolata sul cammino che congiunge $q$ a $q'$.
 
 Nella sezione successiva si vedrà che si può applicare un ragionamento simile per Hamiltoniane con

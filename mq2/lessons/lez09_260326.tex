@@ -29,7 +29,8 @@ V(\hat q)\right)\Delta t\ket{q_j}=\\
 =\int \frac{d^dp_j}{(2\pi\hbar)^d}\exp\left\{\frac{i}{\hbar}\Delta t\left(\frac{p_j(q_{j+1}-q_j)}
 {\Delta t} - H(p_j,q_j)\right)\right\}
 \end{gather*}
-dove si è ritornati alla forma esponenziale nell'ultimo passaggio.\\
+dove si è utilizzato il fatto che $\bra{p_j}\hat H\ket{q_j}=H(q_j,p_j)\bra{p_j}\ket{q_j}$, si è ritornati
+alla forma esponenziale e infine si sono esplicitate le autofunzioni dell'operatore momento.\\
 Reinserendo questa espressione nel calcolo del propagatore, si ottiene infine
 \begin{equation}
 \boxed{K(q',t',q,t) = \int\prod_{j=1}^{N-1}d^dq_j\prod_{k=0}^{N-1}\frac{d^dp_k}{(2\pi\hbar)^d}
