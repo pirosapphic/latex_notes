@@ -29,7 +29,7 @@ V(\hat q)\right)\Delta t\ket{q_j}=\\
 =\int \frac{d^dp_j}{(2\pi\hbar)^d}\exp\left\{\frac{i}{\hbar}\Delta t\left(\frac{p_j(q_{j+1}-q_j)}
 {\Delta t} - H(p_j,q_j)\right)\right\}
 \end{gather*}
-dove si è utilizzato il fatto che $\bra{p_j}\hat H\ket{q_j}=H(q_j,p_j)\bra{p_j}\ket{q_j}$, si è ritornati
+dove si è utilizzato il fatto che, per $\hat H=\hat T+V(\hat q)$, $\bra{p_j}\hat H\ket{q_j}=H(q_j,p_j)\bra{p_j}\ket{q_j}$, si è ritornati
 alla forma esponenziale e infine si sono esplicitate le autofunzioni dell'operatore momento.\\
 Reinserendo questa espressione nel calcolo del propagatore, si ottiene infine
 \begin{equation}
@@ -39,17 +39,17 @@ Reinserendo questa espressione nel calcolo del propagatore, si ottiene infine
 \label{eq:K_discr_tot}
 \end{equation}
 \textbf{Oss.} Questa espressione discretizzata per $K$ è un integrale su tutti i possibili punti
-intermedi tra lo stato inizale e finale nello \textit{spazio delle fasi} del sistema.
+intermedi tra lo stato iniziale e finale nello \textit{spazio delle fasi} del sistema.
 
 Si denota ora $\dot q_i:=\frac{q_{i+1}-q_i}{\Delta t}$ e si considera il limite continuo
-$n\to\infty$: l'argomento dell'esponenziale è una somma alla Riemann, che diventa un integrale sul
+$N\to\infty$: l'argomento dell'esponenziale è una somma alla Riemann, che diventa un integrale sul
 tempo, mentre l'integrale sui punti intermedi diventa l'integrale su tutti i possibili
-\textit{cammini} nello spazio delle fasi e la sua misura di integrazione si denota con
-$\mathcal{D}q\mathcal{D}p$
+\textit{cammini} nello spazio delle fasi; la sua misura si denota con
+$\mathcal{D}q\mathcal{D}p$:
 $$K(q',t',q,t) = \int\mathcal{D}q\mathcal{D}p\exp\left\{\frac{i}{\hbar}\int_{t}^{t'}dt(p\dot q - H)
 \right\}$$
 Questa espressione può essere ulteriormente semplificata per Hamiltoniane della forma qui
-considerata: l'argomento della sommatoria nell'esponenziale in (\ref{eq:K_discr}) diventa
+considerata: l'argomento della sommatoria nell'esponenziale in (\ref{eq:K_discr_tot}) diventa
 $$
 p_i\dot q_i-\frac{p_i^2}{2m}-V(q_i)
 $$
@@ -120,5 +120,5 @@ Sviluppando sia il lato sinistro sia l'esponenziale a destra in potenze di $\var
 \psi(x,0)+\varepsilon\eval{\pdv[]{\psi}{t}}_{t=0}=\psi(x,0)-\frac{i}{\hbar}\varepsilon
 \left(V(x)\psi(x,0)-\frac{\hbar^2}{2m}\psi''(x,0)\right)+O(\varepsilon^2)
 \end{gather*}
-eguagliando i termini di prim'ordine in $\varepsilon$ si ottiene infine
+eguagliando i termini di prim'ordine in $\varepsilon$ si ottiene infine l'equazione di Schrödinger
 $$i\hbar\pdv[]{}{t}\psi(x,0)=\frac{-\hbar^2}{2m}\dv[2]{}{x}\psi(x,0)$$

@@ -24,7 +24,7 @@ $$\frac{\delta^2q}{\hbar}<<1 \leftrightarrow \delta q\sim\sqrt{\hbar}$$
 si ha dunque che, al primo ordine di approssimazione, i cammini che danno un contributo non nullo
 sono in un "intorno di raggio $\sqrt{\hbar}$" rispetto a $q_{cl}$.
 
-Per formalizzare questa approssimazione, si considera lo sviluppo asintotico di (\ref{eq:K}) in
+Per formalizzare questa approssimazione, si deve considerare lo sviluppo asintotico di (\ref{eq:K}) in
 potenze di $\hbar\rightarrow 0$.
 
 \textbf{Oss.} A rigor di precisione, non ha senso considerare il limite di una costante fisica: far
@@ -32,7 +32,7 @@ tendere $\hbar$ a 0 è un modo formale di considerare azioni $S>>\hbar$.
 
 \subsection{Metodo discreto}
 Per sviluppare in potenze di $\hbar$ si considera dapprima l'espressione discretizzata
-(\ref{eq:K_discr}) per $K$ (per semplicità si considera anche $d=1$)
+(\ref{eq:K_discr}) per $K$ (per semplicità si pone $d=1$)
 $$
 K(q',t',q,t)=\frac{1}{\mathcal{N}}\int\prod_{i=1}^{N-1}\frac{dq_i}{\mathcal{N}}
 \exp\left\{\frac{i}{\hbar}\sum_{i=0}^{N-1}\Delta t \eval{L(q_i,q_{i+1})}_{t_i}\right\}
@@ -42,15 +42,15 @@ $\left\{q_i\right\}$ che rende stazionaria l'azione:
 \begin{gather*}
 \pdv[]{S}{q_i} = \pdv[]{}{q_i}\left(\frac{m}{2}\left(\frac{q_{i+1}-q_i}{\Delta t}\right)^2-V(q_i)
 \right) + \pdv[]{}{q_i}\left(\frac{m}{2}\left(\frac{q_i-q_{i-1}}{\Delta t}\right)^2\right) = \\
-=m\left(-\frac{q_{i+1}-q_i}{\Delta t^2}+\frac{q_i-q_{i-1}}{\Delta t^2}\right)-\pdv[]{V}{q_i}= 0
-= \frac{m}{\Delta t}\left(-\dot q_i + \dot q_{i-1}\right)
+=m\left(-\frac{q_{i+1}-q_i}{\Delta t^2}+\frac{q_i-q_{i-1}}{\Delta t^2}\right)-\pdv[]{V}{q_i}
+= \frac{m}{\Delta t}\left(-\dot q_i + \dot q_{i-1}\right) - \pdv{V}{q_i}=0
 \end{gather*}
 Si identificano le derivate discrete
 $$\frac{q_{i+1}-q_i}{\Delta t} = \dot q_i\quad \frac{\dot q_{i}-\dot q_{i-1}}{\Delta t} = \ddot q_i$$
 e si trova
 $$\pdv[]{S}{q_i} =0 \leftrightarrow m\ddot q_i + \pdv[]{V}{q_i} = 0$$
 che ha la forma dell'equazione di Newton della meccanica classica.\\
-È sistema di $N$ O.D.E. con soluzione $q_{0,i}$, che è la successione di $\left\{q_i\right\}$
+È un sistema di $N$ ODE con soluzione $q_{0,i}$, che è la successione di $\left\{q_i\right\}$
 corrispondente al cammino classico: si considerino ora le deformazioni $\omega_i$ tali che
 $$q_i = q_{0,i} + \omega_i\text{, con }\omega_0 = \omega_N = 0$$
 l'azione sul cammino deformato vale
@@ -67,7 +67,8 @@ $q_i=q_{0,1}+\omega_i\rightarrow dq_i=d\omega_i$ si ha
 $$K = \frac{1}{\mathcal{N}}\int \prod_{k=1}^{N-1}\frac{d\omega_k}{\mathcal{N}}
 e^{\frac{i}{\hbar}S_{cl}} e^{\frac{i}{\hbar}S_2}e^{\frac{i}{\hbar}S_{\geq3}}=
 \frac{1}{\mathcal{N}}e^{\frac{i}{\hbar}S_{cl}}\int \prod_{k=1}^{N-1}\frac{d\omega_k}{\mathcal{N}}
-\exp\left\{\frac{i}{\hbar}\omega_iX_{ij}\omega_j\right\}\left(1+\frac{i}{\hbar}S_{\geq3}\right)$$
+\exp\left\{\frac{i}{\hbar}\omega_iX_{ij}\omega_j\right\}\left(1+\frac{i}{\hbar}S_{\geq3}+
+O\left(\frac{1}{\hbar^2}\right)\right)$$
 \textbf{Oss.} Per il teorema di Schwarz la forma $X_{ij}$ è simmetrica e dunque esiste una matrice
 unitaria $P$ tale che $X = PDP^{T}$ con $D$ diagonale: si può dunque scrivere che 
 $\omega_iX_{ij}\omega_j = \omega^{T}PDP^T\omega := x^TDx = \lambda_ix_i^2$ con il cambio di variabile
@@ -78,10 +79,12 @@ L'osservazione precedente ci permette di considerare solo i casi in cui $S_2 = X
 perdere di generalità: in questo particolare caso l'integrale è fattorizzabile come il prodotto di
 $N$ integrali
 $$K = \frac{1}{\mathcal{N}}\prod_{k=1}^{N-1}\frac{A_k}{\mathcal{N}},\; A_k =
-\int_{-\infty}^{\infty}d\omega_k\exp\left\{\frac{i}{\hbar}X_k\omega^2_k\right\}\left(1+\frac{i}{\hbar}S_{\geq3}\right)$$
+\int_{-\infty}^{\infty}d\omega_k\exp\left\{\frac{i}{\hbar}X_k\omega^2_k\right\}\left(
+1+\frac{i}{\hbar}S_{\geq3}+O\left(\frac{1}{\hbar^2}\right)\right)$$
 Su ciascuno degli $A_k$ si applica il metodo della fase stazionaria per ottenerne lo sviluppo
 asintotico in potenze di $\hbar$: il termine dominante si trova trascurando
-$\frac{i}{\hbar}S_{\geq3}$ e con il cambio di variabile $\omega_k = \rho_ke^{i\frac{\pi}{4}}$
+$\frac{i}{\hbar}S_{\geq3}+O\left(\frac{1}{\hbar^2}\right)$ e con il cambio di variabile
+$\omega_k = \rho_ke^{i\frac{\pi}{4}}$
 $$A_k \underset{\hbar\to0}\sim \int_{-\infty}^{\infty}d\omega_k \exp{\frac{i}{\hbar}X_k\omega_k^2} = 
 e^{i\frac{\pi}{4}}\int_{-\infty}^{\infty}d\rho_k \exp{-\rho^2_k\frac{X_k}{\hbar}} =
 \sqrt{\frac{i\hbar\pi}{X_k}}$$
@@ -135,7 +138,7 @@ Sostituendo infine in (\ref{eq:K}), si trova
 $$K(q_b,t_b,q_a,t_a) = \int_{}^{}\mathcal{D}q \exp\left\{\frac{i}{\hbar}S[q]\right\} = 
 e^{\frac{i}{\hbar}S_{cl}}\int_{}^{}\mathcal{D}\omega \exp\left\{\frac{i}{\hbar}\int_{t_a}^{t_b}dt
 \omega D\omega\right\}
-\left(1+\frac{i}{\hbar}S_{\geq3}\right)$$
+\left(1+\frac{i}{\hbar}S_{\geq3}+O\left(\frac{1}{\hbar^2}\right)\right)$$
 Trascurando i termini di ordine superiore si trova, come in precedenza
 $$\boxed{K(q_b,t_b,q_a,t_a)\underset{\hbar\to0}\sim e^{\frac{i}{\hbar}S_{cl}}
 (\det(D))^{-\frac{1}{2}}(1+O(\hbar))}$$
