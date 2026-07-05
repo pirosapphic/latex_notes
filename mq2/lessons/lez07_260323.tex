@@ -157,7 +157,7 @@ dove si è utilizzato il fatto che
 \begin{gather*}
 [U,F]=\sum_{n=0}^{\infty}\left(-\frac{i}{\hbar}(t-t_0)\right)^n\frac{1}{n!}[H^n,F]
 =\sum_{n=0}^{\infty}\left[\left(-\frac{i}{\hbar}(t-t_0)\right)^n\frac{1}{n!}
-\left(\sum_{k=1}^{n-1}a_{k,n}H^{n-k-1}[H,F]H^{k}\right)\right]=0
+\left(\sum_{k=0}^{n-1}{n-1\choose k}H^{n-k-1}[H,F]H^{k}\right)\right]=0
 \end{gather*}
 se e solo se $[H,F] = 0$.
 

@@ -35,7 +35,7 @@ $$\bra{q_b}\ket{\psi(t_b)}:=\psi(q_b,t_b) = \bra{q_b}U(t_b,t_a)\ket{\psi(t_a)}$$
 sfruttando la completezza delle posizioni $\ket{q}$ si ottiene
 \begin{equation}
 \psi(q_b,t_b) = \int d^fq\bra{q_b}U(t_b,t_a)\ket{q}\bra{q}\ket{\psi(t_a)} = 
-\int d^fq\bra{q_b}U(t_b,t_a)\ket{q}\psi(q_a,t_a)
+\int d^fq\bra{q_b}U(t_b,t_a)\ket{q}\psi(q,t_a)
 \label{eq:K_def}
 \end{equation}
 \textbf{Def.} Il propagatore di Schrödinger tra $(q_a,t_a)$ e $(q_b,t_b)$ è
@@ -85,15 +85,15 @@ $$\psi(x,t) = \int d^f\bar q K(x,t,\bar q,0)\delta^f(\bar q-q) = K(x,t,q,0) $$
 \\Il propagatore di un hamiltoniana indipendente dal tempo tra due posizioni $q_a$, $q_b$ può essere
 scritto in termini di quelli tra $q_a$, $q_1$ e $q_1$, $q_b$, tali che $t_a<t_1<t_b$:
 $$K(b,a) = \bra{q_b}\exp\left\{\frac{-i}{\hbar}H(t_b-t_1+t_1-t_a)\right\}\ket{q_a} = 
-\int dq^f_c\bra{q_b}U(t_b,t_1)\ket{q_1}\bra{q_1}U(t_1,t_a)\ket{q_a}
+\int dq^f_1\bra{q_b}U(t_b,t_1)\ket{q_1}\bra{q_1}U(t_1,t_a)\ket{q_a}
 $$
 Iterando per $N$ istanti di tempo $t_i$ tali che $t_a=t_0<t_1<...<t_N=t_b$ si ottiene che
 \begin{equation}
-    K(b,a)=\int \prod_{i=1}^{N-1} d^fq_i \prod_{j=0}^{N}\bra{q_{j+1}}U(t_{j+1},t_j)\ket{q_j}
+    K(b,a)=\int \prod_{i=1}^{N-1} d^fq_i \prod_{j=0}^{N-1}\bra{q_{j+1}}U(t_{j+1},t_j)\ket{q_j}
     \label{eq:K_iter}
 \end{equation}
-che significa che il propagatore dipende, equivalentemente a prima, da tutti i possibili cammini tra
-tutti i possibili punti intermedi tra $q_a$ e $q_b$.
+che significa che il propagatore dipende da \textit{tutti i possibili cammini tra
+tutti i possibili punti intermedi} tra $q_a$ e $q_b$.
 
 \subsection{Primo legame con l'azione}
 Prima di ricavare esplicitamente il propagatore di una particella libera, è comodo fare due piccoli conti.\\
@@ -101,12 +101,15 @@ Si supponga, senza perdere di generalità, che il propagatore associato a una ha
 $H = T + V$ sia della forma
 $$K(x,t,q,0) = e^{\frac{i}{\hbar}S(x,t,q,0)}$$
 con $S$ funzione complessa: si impone l'equazione di Schrödinger per $K$
-\begin{gather*}
+$$
+i\hbar\pdv{K}{t}=-\frac{\hbar^2}{2m}\pdv[2]{K}{x}+VK \to
+\begin{dcases}
 i\hbar\pdv[]{K}{t}=-\pdv[]{S}{t}e^{\frac{i}{\hbar}S}\\
--\frac{\hbar^2}{2m}\pdv[2]{K}{x}+VK=e^{\frac{i}{\hbar}S}\left[-\frac{1}{\hbar^2}\left(\pdv[]{S}{x}\right)^2 +
-\frac{i}{\hbar}\pdv[2]{S}{t}+V\right]
-\end{gather*}
-e si ottiene
+-\frac{\hbar^2}{2m}\pdv[2]{K}{x}+VK=e^{\frac{i}{\hbar}S}\left[-\frac{\hbar^2}{2m}\left(-\frac{1}{\hbar^2}
+\left(\pdv[]{S}{x}\right)^2 + \frac{i}{\hbar}\pdv[2]{S}{x}\right)+V\right]
+\end{dcases}
+$$
+e si ottiene per $S$
 $$\frac{1}{2m}\left(\pdv[]{S}{x}\right)^2-\frac{i\hbar}{2m}\pdv[2]{S}{x}+V(x) = -\pdv[]{S}{t}$$
 che, per $\hbar\rightarrow0$, è \textbf{l'equazione di Hamilton-Jacobi} per l'azione classica $S$.\\
 Questa relazione inizia a far intuire che esiste un legame profondo tra l'azione $S$ e il propagatore.
@@ -124,7 +127,7 @@ dove $q_i = q(t_i)$ e ovviamente $v=\frac{q_2-q_1}{t_2-t_1}$.
 
 \subsection{Il propagatore della particella libera 1D}
 L'hamiltoniana del problema è $\hat H=\frac{\hat p^2}{2m}$: gli autostati di $\hat p$ sono anche autostati
-di $H$, dunque si ha
+di $\hat H$, dunque si ha
 $$\hat H \ket{p}=\frac{p^2}{2m}\ket{p}$$
 Si consideri ora il propagatore tra le posizioni $q',q$ e i tempi $t'>t$:
 \begin{gather*}

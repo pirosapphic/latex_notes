@@ -15,7 +15,7 @@ perché i termini non lineari dell'espansione dell'esponenziale non sono riordin
 
 Bisogna dunque procedere diversamente, si divide l'intervallo di tempo $t'-t$ in $N$ intervalli di
 lunghezza $\Delta t$ e si sfrutta la proprietà (\ref{eq:K_iter}) per scrivere il propagatore
-$$K=\int \prod_{i=1}^{N-1} d^fq_i \prod_{j=0}^{N}\bra{q_{j+1}}U(t_{j+1},t_j)\ket{q_j}$$
+$$K=\int \prod_{i=1}^{N-1} d^fq_i \prod_{j=0}^{N-1}\bra{q_{j+1}}U(t_{j+1},t_j)\ket{q_j}$$
 con $t_0=t<t_1<...<t_N=t'$, $q_0=q$, $q_N=q'$ e $t_{j+1}-t_{j}=\Delta t$.\\
 Se $\Delta t \to0$, si può linearizzare l'espressione di $U(t_{j+1},t_j)$ e procedere come
 per la particella libera:
@@ -58,7 +58,7 @@ $$
 p_i\dot q_i-\frac{p_i^2}{2m}=-\frac{1}{2m}(p_i-m\dot q_i)^2 +\frac{m}{2}\dot q_i^2:=
 -\frac{\bar p_i^2}{2m}+\frac{m}{2}\dot q_i^2
 $$
-e la parte dipendente dai $p_i$ di (\ref{eq:K_discr}) diventa
+e la parte dipendente dai $p_i$ di (\ref{eq:K_discr_tot}) diventa
 $$
 I=\int\prod_{k=0}^{N-1}\frac{d^d\bar p_k}{(2\pi\hbar)^d}\exp\left\{\sum_{i=0}^{N-1}\frac{-i}{2m\hbar}
 \bar p_i^2\Delta t\right\} = \left(\int_{-\infty}^{\infty}\frac{dp}{2\pi\hbar}\exp\left\{\frac{-i}{2m
