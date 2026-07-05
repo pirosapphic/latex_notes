@@ -15,7 +15,7 @@ perché i termini non lineari dell'espansione dell'esponenziale non sono riordin
 
 Bisogna dunque procedere diversamente, si divide l'intervallo di tempo $t'-t$ in $N$ intervalli di
 lunghezza $\Delta t$ e si sfrutta la proprietà (\ref{eq:K_iter}) per scrivere il propagatore
-$$K=\int \prod_{i=1}^{N-1} d^fq_i \prod_{j=0}^{N-1}\bra{q_{j+1}}U(t_{j+1},t_j)\ket{q_j}$$
+$$K=\int \prod_{i=1}^{N-1} d^dq_i \prod_{j=0}^{N-1}\bra{q_{j+1}}U(t_{j+1},t_j)\ket{q_j}$$
 con $t_0=t<t_1<...<t_N=t'$, $q_0=q$, $q_N=q'$ e $t_{j+1}-t_{j}=\Delta t$.\\
 Se $\Delta t \to0$, si può linearizzare l'espressione di $U(t_{j+1},t_j)$ e procedere come
 per la particella libera:
@@ -91,13 +91,13 @@ equivalente all'equazione di Schrödinger ed è postulato alternativo a essa.
 
 Si consideri il propagatore tra due istanti di tempo distanti $\varepsilon\to0$ tra loro: poiché non è
 necessario suddividere l'intervallo in parti infinitesime, esso vale
-$$K(x,\varepsilon,y,0) = \sqrt{\frac{m}{2\pi\hbar\varepsilon}}\exp\left\{\frac{i}{\hbar}\left(\frac{1}{2}m\dot
-y^2-V(y)\right)\right\}$$
+$$K(x,\varepsilon,y,0) = \sqrt{\frac{m}{2\pi i\hbar\varepsilon}}\exp\left\{\frac{i}{\hbar}\left(\frac{1}{2}m\dot
+y^2-V(y)\right)\varepsilon\right\}$$
 per $\varepsilon\to0$, $V(y)\sim V(x)$ e $\dot y\sim \frac{x-y}{\varepsilon}$, dunque si ha
-$$K = \sqrt{\frac{m}{2\pi\hbar\varepsilon}}\exp\left\{\frac{i}{\hbar}\left(\frac{1}{2}m\frac{(x-y)^2}
+$$K = \sqrt{\frac{m}{2\pi i\hbar\varepsilon}}\exp\left\{\frac{i}{\hbar}\left(\frac{1}{2}m\frac{(x-y)^2}
 {\varepsilon}-V(x)\varepsilon\right)\right\}$$
 Dunque, applicando (\ref{eq:K_def})
-$$\psi(x,\varepsilon) = \sqrt{\frac{m}{2\pi\hbar\varepsilon}}e^{-\frac{i}{\hbar}V(x)\varepsilon}
+$$\psi(x,\varepsilon) = \sqrt{\frac{m}{2\pi\hbar i\varepsilon}}e^{-\frac{i}{\hbar}V(x)\varepsilon}
 \int_{-\infty}^{\infty}dy \exp\left\{\frac{im}{2\hbar}\frac{(x-y)^2}{\varepsilon}\right\}\psi(y,0)
 $$
 ponendo $z=\sqrt{\frac{m}{\hbar}}(x-y)\to dz=-\sqrt{\frac{m}{\hbar}}dy$ e poi $\alpha = i\varepsilon$

@@ -40,10 +40,11 @@ $$
 e, posto $L=\frac{m}{2}\left(\frac{q_{i+1}-q_i}{\Delta t}\right)^2-V(q_i)$, si cerca la successione
 $\left\{q_i\right\}$ che rende stazionaria l'azione:
 \begin{gather*}
-\pdv[]{S}{q_i} = \pdv[]{}{q_i}\left(\frac{m}{2}\left(\frac{q_{i+1}-q_i}{\Delta t}\right)^2-V(q_i)
-\right) + \pdv[]{}{q_i}\left(\frac{m}{2}\left(\frac{q_i-q_{i-1}}{\Delta t}\right)^2\right) = \\
-=m\left(-\frac{q_{i+1}-q_i}{\Delta t^2}+\frac{q_i-q_{i-1}}{\Delta t^2}\right)-\pdv[]{V}{q_i}
-= \frac{m}{\Delta t}\left(-\dot q_i + \dot q_{i-1}\right) - \pdv{V}{q_i}=0
+\pdv[]{S}{q_i} = \Delta t\pdv[]{}{q_i}\left(\frac{m}{2}\left(\frac{q_{i+1}-q_i}{\Delta t}\right)^2-V(q_i)
+\right) + \Delta t\pdv[]{}{q_i}\left(\frac{m}{2}\left(\frac{q_i-q_{i-1}}{\Delta t}\right)^2\right) = \\
+=\Delta t\left( m\left(-\frac{q_{i+1}-q_i}{\Delta t^2}+\frac{q_i-q_{i-1}}{\Delta t^2}\right)-
+\pdv[]{V}{q_i}\right) = \Delta t\left(\frac{m}{\Delta t}\left(-\dot q_i + \dot q_{i-1}\right)-
+\pdv{V}{q_i}\right)=0
 \end{gather*}
 Si identificano le derivate discrete
 $$\frac{q_{i+1}-q_i}{\Delta t} = \dot q_i\quad \frac{\dot q_{i}-\dot q_{i-1}}{\Delta t} = \ddot q_i$$
