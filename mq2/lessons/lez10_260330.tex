@@ -115,7 +115,7 @@ principio di minima azione
 \begin{align*}
 S[q] &= \int_{t_a}^{t_b}dtL(q,\dot q),\;\delta S = 0 \leftrightarrow
 \int_{t_a}^{t_b}\pdv[]{L}{\dot q}\delta\dot q + \pdv[]{L}{q}\delta q =\\
-&=\eval{\pdv[]{L}{q}\delta q}_{t_a}^{t_b}-\int_{t_a}^{t_b}dt\left(\dv[]{}{t}\pdv[]{L}{\dot q}-
+&=\eval{\pdv[]{L}{\dot q}\delta q}_{t_a}^{t_b}-\int_{t_a}^{t_b}dt\left(\dv[]{}{t}\pdv[]{L}{\dot q}-
 \pdv[]{L}{q}\right)\delta q = 0 \leftrightarrow \dv[]{}{t}\pdv[]{L}{\dot q}-\pdv[]{L}{q}=0
 \end{align*}
 che sono le equazioni di Eulero-Lagrange, con soluzione $q_0(t)$. Si introduce ora una perturbazione
@@ -132,8 +132,8 @@ S[q] = S[q_0]+\frac{1}{2}\int_{t_a}^{t_b}dt\left(\pdv[2]{L}{\dot q}\dot\omega^2+
 \end{gather*}
 usando l'identità $\dot\omega A\dot\omega=\dv[]{}{t}\left(\omega A\dot\omega\right)-
 \omega\dot A\dot\omega-\omega A\ddot\omega$ e integrando per parti si ottiene
-$$S[q]=S_{cl}+\frac{1}{2}\int_{t_a}^{t_b}dt\omega D\omega +S_{\geq3} := S_{cl}+S_2[\omega]+S_{\geq3}$$
-dove l'operatore $D$ è pari a $D=-\dot A \dv[]{}{t}-\omega A \dv[2]{}{t}+2B\dv[]{}{t}+C$.
+$$S[q]=S_{cl}+\int_{t_a}^{t_b}dt\omega D\omega +S_{\geq3} := S_{cl}+S_2[\omega]+S_{\geq3}$$
+dove l'operatore $D$ è pari a $D=\frac12\left(-\dot A \dv[]{}{t}-\omega A \dv[2]{}{t}+2B\dv[]{}{t}+C\right)$.
 
 Sostituendo infine in (\ref{eq:K}), si trova
 $$K(q_b,t_b,q_a,t_a) = \int_{}^{}\mathcal{D}q \exp\left\{\frac{i}{\hbar}S[q]\right\} = 

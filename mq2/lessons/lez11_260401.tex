@@ -32,7 +32,7 @@ $$L(x,\dot x,A) = \frac{1}{2}m\dot x^2 + \frac{q}{c}\mathbf{\dot x}\cdot \mathbf
 dove $L_0$ è la lagrangiana della particella libera.
 
 L'azione corrispondente è (ponendo $\frac{q}{c}=1$)
-$$S = S_0 + \frac{q}{c}\int_{t_a}^{t_b}\mathbf{\dot x}\cdot \mathbf{A} = S_0+\int_{\gamma}d\mathbf{x}
+$$S = S_0 + \frac{q}{c}\int_{t_a}^{t_b}dt\mathbf{\dot x}\cdot \mathbf{A} = S_0+\int_{\gamma}d\mathbf{x}
 \cdot \mathbf{A}$$
 
 A differenza della trattazione precedente, in questo caso ci sono due cammini classici possibili:
@@ -124,7 +124,7 @@ $$S_{cl} = \int_{0}^{T}dt L(t) = -m\omega^2A^2\int_{0}^{T}dte^{i2\omega t} -
 m\omega^2B^2\int_{0}^{T}dte^{-i2\omega t} =
 \frac{im\omega}{2}\left[A^2(e^{i2\omega t} -1) - B^2(e^{-2i\omega t} -1)\right]$$
 Sostituendo le condizioni su $A,B$ si trova
-$$S_{cl}=\frac{m\omega}{2}\frac{1}{\sin(\omega T)}\left[(x_a^2+x_b^2)^2\cos(\omega T) - 2x_ax_b\right]$$
+$$S_{cl}=\frac{m\omega}{2}\frac{1}{\sin(\omega T)}\left[(x_a^2+x_b^2)\cos(\omega T) - 2x_ax_b\right]$$
 Si considerano ora le perturbazioni $z$ sul cammino classico fino al secondo ordine
 $$S[x(t)+z] = S_{cl} + S_2[z]$$
 con
@@ -163,7 +163,7 @@ $M$, si può scrivere
 $$\mathcal{D}z = M\prod_{n=1}^{\infty}da_n$$
 Alla luce di ciò, la correzione semiclassica del propagatore vale
 $$I = M\int_{}^{}\prod_{n=0}^{\infty}da_n\exp
-\left\{\frac{-imT}{4\hbar}\sum_{n=1}^{\infty}\left(\frac{\pi^2n^2}{T^2}-\omega^2\right)\right\} = 
+\left\{\frac{-imT}{4\hbar}\sum_{n=1}^{\infty}a_n^2\left(\frac{\pi^2n^2}{T^2}-\omega^2\right)\right\} = 
 M\prod_{n=1}^{\infty}I_n$$	
 dove gli integrali $I_n$ si possono valutare con il metodo della fase stazionaria effettuando il cambio
 di variabile $\rho_n = e^{i\frac{\pi}{4}}a_n$
@@ -177,7 +177,7 @@ M\left[\prod_{n=1}^{\infty}\left(\frac{\pi^2n^2}{T^2}\right)\prod_{n=1}^{\infty}
 \frac{\omega^2T^2}{\pi^2n^2}\right)\right]^{-\frac{1}{2}}$$
 \textbf{Oss.} Se si pone $\omega=0$, ciò che rimane è $M\prod\left(\frac{\pi^2n^2}{T^2}\right)$, ma
 in tal caso la lagrangiana degenera in quella di una particella libera: da questo confronto
-è chiaro che $M\prod_{}^{}\left(\frac{\pi^2n^2}{T^2}\right) = \sqrt{\frac{m}{2\pi i\hbar T}}$
+è chiaro che $M\left(\prod_{}^{}\left(\frac{\pi^2n^2}{T^2}\right)\right)^{-\frac{1}{2}} = \sqrt{\frac{m}{2\pi i\hbar T}}=\frac{1}{\mathcal{N}}$
 
 Si calcola ora
 $$P(\omega T)=\prod_{n=1}^{\infty}\left(1-\frac{\omega^2T^2}{\pi^2n^2}\right)$$
@@ -196,4 +196,4 @@ $$\frac{1}{\Gamma(1+z)\Gamma(1-z)} =\frac{1}{z}\frac{1}{\Gamma(z)\Gamma(1-z)} = 
 Si ha dunque che
 $$I = \sqrt{\frac{m\omega}{2\pi i\hbar\sin(\omega T)}}$$
 e infine che 
-$$\boxed{K(x_b,T,x_a,0) = e^{\frac{i}{\hbar}S_{cl}}\sqrt{\frac{m\omega}{2\pi i\hbar\sin(\omega T)}}}$$
+$$\boxed{K(x_b,T,x_a,0) =\frac{1}{\mathcal{N}}e^{\frac{i}{\hbar}S_{cl}}\sqrt{\frac{m\omega}{2\pi i\hbar\sin(\omega T)}}}$$
