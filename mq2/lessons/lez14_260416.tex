@@ -15,7 +15,7 @@ Come accennato, si cerca ora la soluzione dell'equazione di Schrödinger nell'in
 $$V(x)=V(a) + V'(a)(x-a) + O((x-a)^2) \underset{x\to a}\sim E + V'(a)(x-a)$$
 Nella regione $x<a$, si ha che $E>V(x)$ e l'EDS diventa
 $$\dv[2]{\psi}{x} + \frac{2m}{\hbar^2}(E-V(x))\psi(x) =
-\dv[2]{\psi}{x}-\frac{2mV'(a)}{\hbar^2}(x-a)\psi(x)$$
+\dv[2]{\psi}{x}-\frac{2mV'(a)}{\hbar^2}(x-a)\psi(x)=0$$
 utilizzando la variabile adimensionale $z=\left(\frac{2mV'(a)}{\hbar^2}\right)^{\frac{1}{3}}(x-a)$,
 essa diventa
 $$\dv[2]{\psi}{z}-z\psi(z) = 0$$
@@ -50,7 +50,7 @@ sono indipendenti: la soluzione cercata è quella corrispondente alla $\gamma$ r
 detta $Ai(z)$.\\
 Parametrizzando $\gamma(\tau) = i\tau-\varepsilon$, si ha
 $$\psi(z)=\int_{-\infty}^{+\infty}d\tau e^{iz\tau+\frac{i}{3}\tau^3} =
-2i\int_{0}^{+\infty}d\tau\cos\left(z\tau+\frac{i}{3}\tau^3\right):=2\pi iAi(z)$$
+2i\int_{0}^{+\infty}d\tau\cos\left(z\tau+\frac{1}{3}\tau^3\right):=2\pi iAi(z)$$
 Questa è dunque la soluzione intorno a $z=0\to x=a$: per utilizzare la continuazione analitica, si
 usano gli sviluppi asintotici di $Ai(z)$ per $z\to\pm\infty$, che si possono ricavare con il metodo
 della fase stazionaria:
@@ -93,17 +93,17 @@ $$
 \end{itemize}
 Ricapitolando, dalla soluzione intorno a $x=a$ si è trovato che
 \begin{gather*}
-\psi(x)\underset{x\to+\infty}\sim
-i\sqrt{\pi}\left(\frac{2mV'}{\hbar^2}\right)^{\frac{1}{6}}\frac{1}{\sqrt{\beta(x)}}
-\exp\left\{-\int_{a}^{x}dx'\beta(x')\right\}\\
 \psi(x)\underset{x\to-\infty}\sim
 2i\sqrt{\pi}\left(\frac{2mV'}{\hbar^2}\right)^{\frac{1}{6}}\frac{1}{\sqrt{k(x)}}
-\sin\left(\int_{x}^{a}dx'k(x') +\frac{\pi}{4}\right)
+\sin\left(\int_{x}^{a}dx'k(x') +\frac{\pi}{4}\right)\\
+\psi(x)\underset{x\to+\infty}\sim
+i\sqrt{\pi}\left(\frac{2mV'}{\hbar^2}\right)^{\frac{1}{6}}\frac{1}{\sqrt{\beta(x)}}
+\exp\left\{-\int_{a}^{x}dx'\beta(x')\right\}
 \end{gather*}
 Mentre dall'approssimazione WKB si è trovato che
 \begin{gather*}
-    \psi_\text{WKB}(x) = \frac{D}{\sqrt{\beta(x)}}\exp\left\{-\int_{x_0}^{x}dx'\beta(x')\right\},\phantom{x}x>>a\\
-    \psi_\text{WKB}(x)=\frac{A}{\sqrt{k(x)}} \sin\left(\int_{x_0}^{x}dx'k(x')+\delta\right),\phantom{x}x<<a
+    \psi_\text{WKB}(x)=\frac{A}{\sqrt{k(x)}} \sin\left(\int_{x_0}^{x}dx'k(x')+\delta\right),\phantom{x}x<<a\\
+    \psi_\text{WKB}(x) = \frac{D}{\sqrt{\beta(x)}}\exp\left\{-\int_{x_0}^{x}dx'\beta(x')\right\},\phantom{x}x>>a
 \end{gather*}
 che sono la (\ref{eq:wkb_free_sin}) e la (\ref{eq:wkb_constr}), dove si è posto $c=0$
 per la normalizzabilità.
@@ -130,7 +130,7 @@ Si noti infine che
 $$|z|>1\to
 \left|\frac{2mV'(a)}{\hbar^2}\right|^{-\frac{2}{3}}\frac{2m}{\hbar}|E-V(x)|>1\to
 \left|\frac{\hbar^2}{2mV'(a)}\right|^{\frac{2}{3}}\frac{p^2}{\hbar^2}>1\leftrightarrow
-\left|\frac{2mV'(a)}{p^3}\right|<1
+\left|\frac{2m\hbar V'(a)}{p^3}\right|<1
 $$
 che è compatibile con il regime WKB: ciò significa che c'è un'intersezione tra il
 dominio di validità dello sviluppo asintotico e quello delle soluzioni WKB, il che

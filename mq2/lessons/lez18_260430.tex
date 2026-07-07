@@ -31,10 +31,12 @@ $$(G,Of) = \lim\limits_{\varepsilon\to0}
 \int_{V_\varepsilon}^{}d^3\mathbf{r}\divergence \mathbf{A} = 
 \lim\limits_{\varepsilon\to0}\int_{\partial S_\varepsilon}^{}d\Sigma\mathbf{A}\cdot\mathbf{\hat n}
 $$
-dove $\mathbf{\hat n}$ è il versore diretto verso l'origine (normale esterna al dominio)\footnote{
+dove $\mathbf{\hat n}$ è il versore diretto verso l'origine $-\mathbf{\hat u_r}$
+(normale esterna al dominio)\footnote{
 Si è trascurato il contributo del bordo a $\infty$ perché $f$ è una funzione di prova.}.
 
-Espandendo $\mathbf{A}$ si trova
+Espandendo $\mathbf{A}$ e ricordando che $\gradient\cdot\mathbf{\hat n}=-\gradient\cdot\mathbf{\hat u_r}=-\pdv{}{r}$
+si trova
 \begin{gather*}
 (G,Of) = \lim\limits_{\varepsilon\to0}\int_{\partial S_\varepsilon}^{}d\Sigma
 \left[A\frac{e^{\pm ikr}}{r}\gradient f\cdot\mathbf{\hat n}-\gradient\left(A\frac{e^{\pm ikr}}{r}

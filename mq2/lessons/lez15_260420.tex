@@ -10,14 +10,14 @@ Si consideri un potenziale lentamente variabile tale che, fissata $E$, esistono 
 cui $V(a)=V(b)=E$ tali che $V(x)>E\phantom{x}\forall x\in(a,b)$ e che $V'(a)>0$ e $V'(b)<0$: questa
 è una barriera di potenziale non quadrata.
 
-Definiti $I,II,III$ gli intervalli $(-\infty,a),\phantom{,}(a,b),\phantom{,}(b,\infty)$, si supponga
-di trovare in $I$ la soluzione
+Definiti I, II, III gli intervalli $(-\infty,a),\phantom{,}(a,b),\phantom{,}(b,\infty)$, si supponga
+di trovare in I la soluzione
 $$\psi_{1,I}(x)=\frac{2A}{\sqrt{k(x)}}\sin\left(\int_{x}^{a}dx'k(x')+\frac{\pi}{4}\right)$$
-questo implica, per la continuazione analitica considerata in precedenza, che in $II$ ci sia
+questo implica, per la continuazione analitica considerata in precedenza, che in II ci sia
 $$\psi_{1,II}(x) = \frac{A}{\sqrt{\beta(x)}}\exp\left\{-\int_{a}^{x}dx'\beta(x')\right\}$$
-Se in $I$ si trova anche un'altra soluzione linearmente indipendente da $\psi_{1,I}(x)$, come
+Se in I si trova anche un'altra soluzione linearmente indipendente da $\psi_{1,I}(x)$, come
 $$\psi_{2,I}(x)=\frac{B'}{\sqrt{k(x)}}\sin\left(\int_{x}^{a}dx'k(x')+\delta\right)$$
-con $\delta\not= \frac{\pi}{4}$, in $II$ si troverà una soluzione linearmente indipendente da
+con $\delta\not= \frac{\pi}{4}$, in II si troverà una soluzione linearmente indipendente da
 $\psi_{1,II}$, cioè
 $$\psi_{2,II}(x) = \frac{A'}{\sqrt{\beta(x)}}\exp\left\{\int_{a}^{x}dx'\beta(x')\right\}$$
 che, come accennato prima, non può essere scartata per normalizzabilità come in precedenza.
@@ -55,7 +55,7 @@ in cui $A$ è noto e si cerca di determinare $\delta$, $A'$ e $B'$.
 In $x<<a$, definendo $\alpha=\int_{x}^{a}dx'k(x')+\delta$ e
 $\gamma=\int_{x}^{a}dx'k(x')+\frac{\pi}{4}$, si ha che
 \begin{gather*}
-W(x)= \frac{2AB'}{k(x)}\left[\sin(\gamma)\cos(\alpha)(-k(x))-\cos(\beta)(-k(x))\sin(\alpha)\right]=\\
+W(x)= \frac{2AB'}{k(x)}\left[\sin(\gamma)\cos(\alpha)(-k(x))-\cos(\gamma)(-k(x))\sin(\alpha)\right]=\\
 =2AB'\sin(\alpha-\gamma)=2AB'\sin\left(\delta-\frac{\pi}{4}\right)
 \end{gather*}
 In $x>>a$, prima di calcolare $W(x)$, si consideri
@@ -80,25 +80,26 @@ $$
 La trattazione intorno al punto $b$ è la medesima.
 
 \textbf{Oss.} C'è un rapporto di implicazioni tra le soluzioni, dovuto al fatto che si
-considera lo sviluppo asintotico di $Ai(x)$: la soluzione esponenziale negativa in $II$, implica
-la soluzione con il $\sin\left(...+\frac{\pi}{4}\right)$ in $I$ e $III$, mentre è la soluzione con
-$\sin\left(...-\frac{\pi}{4}\right)$ a implicare quella esponenziale positiva in $II$.
+considera lo sviluppo asintotico di $Ai(x)$: la soluzione esponenziale negativa in II, implica
+la soluzione con il $\sin\left(...+\frac{\pi}{4}\right)$ in I e III, mentre è la soluzione con
+$\sin\left(...-\frac{\pi}{4}\right)$ a implicare quella esponenziale positiva in II.
 
 Questo "gioco" di implicazioni è dovuto al fatto che lo sviluppo asintotico di un esponenziale con
-argomento reale negativo è nullo, mentre quello di un esponenziale positivo no.
+argomento reale negativo è nullo, mentre quello di un esponenziale reale positivo no.
 
-Le implicazioni tra soluzioni sono riassunte nelle tabelle seguente
+Le implicazioni tra soluzioni sono riassunte nelle tabelle seguenti
 
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|ccc|}
     \hline
     & $x<<a$ & &$x>>a$\\ \hline
-    $\psi_1(x)$&$\frac{2A}{\sqrt{k}}\sin\left(\int_{x}^{a}dx'k(x')+\frac{\pi}{4}\right)$&
-    $\leftarrow$ & $\frac{A}{\sqrt{\beta}}\exp\left\{-\int_{a}^{x}dx'\beta(x')\right\}$ \\
+    $\psi_1(x)$&$\displaystyle\frac{2A}{\sqrt{k}}\sin\left(\int_{x}^{a}dx'k(x')+\frac{\pi}{4}\right)$&
+    $\leftarrow$ & $\displaystyle\frac{A}{\sqrt{\beta}}\exp\left\{-\int_{a}^{x}dx'\beta(x')\right\}$ \\
+    &&& \\
 
-    $\psi_2(x)$&$\frac{B}{\sqrt{k}}\sin\left(\int_{x}^{a}dx'k(x')-\frac{\pi}{4}\right)$&
-    $\rightarrow$ & $-\frac{B}{\sqrt{\beta}}\exp\left\{\int_{a}^{x}dx'\beta(x')\right\}$ \\ \hline
+    $\psi_2(x)$&$\displaystyle\frac{B}{\sqrt{k}}\sin\left(\int_{x}^{a}dx'k(x')-\frac{\pi}{4}\right)$&
+    $\rightarrow$ & $\displaystyle-\frac{B}{\sqrt{\beta}}\exp\left\{\int_{a}^{x}dx'\beta(x')\right\}$ \\ \hline
 \end{tabular}
 \end{table}
 \begin{table}[H]
@@ -106,11 +107,12 @@ Le implicazioni tra soluzioni sono riassunte nelle tabelle seguente
 \begin{tabular}{|c|ccc|}
     \hline
     & $x<<b$ & &$x>>b$\\ \hline
-    $\psi_3(x)$&$\frac{C}{\sqrt{\beta}}\exp\left\{-\int_{x}^{b}dx'\beta(x')\right\}$&
-    $\rightarrow$ & $\frac{2C}{\sqrt{k}}\sin\left(\int_{b}^{x}dx'k(x')+\frac{\pi}{4}\right)$\\
+    $\psi_3(x)$&$\displaystyle\frac{C}{\sqrt{\beta}}\exp\left\{-\int_{x}^{b}dx'\beta(x')\right\}$&
+    $\rightarrow$ & $\displaystyle\frac{2C}{\sqrt{k}}\sin\left(\int_{b}^{x}dx'k(x')+\frac{\pi}{4}\right)$\\ \phantom{x}&&& \\
+    &&& \\
 
-    $\psi_4(x)$&$\frac{D}{\sqrt{\beta}}\exp\left\{\int_{x}^{b}dx'\beta(x')\right\}$&
-    $\leftarrow$ &$-\frac{D}{\sqrt{k}}\sin\left(\int_{b}^{x}dx'k(x')-\frac{\pi}{4}\right)$ \\ \hline
+    $\psi_4(x)$&$\displaystyle\frac{D}{\sqrt{\beta}}\exp\left\{\int_{x}^{b}dx'\beta(x')\right\}$&
+    $\leftarrow$ &$\displaystyle-\frac{D}{\sqrt{k}}\sin\left(\int_{b}^{x}dx'k(x')-\frac{\pi}{4}\right)$ \\ \hline
 \end{tabular}
 \caption{\small Tabelle riassuntive dei rapporti di implicazione tra le soluzioni}
 \label{tab:wkb}
@@ -127,20 +129,20 @@ rappresentato in figura \ref{fig:buca}.
     \label{fig:buca}
 \end{figure}
 Affinchè lo stato sia normalizzabile, si devono scartare le soluzioni che divergono nelle zone
-classicamente proibite $I$ e $III$ e si ha:
+classicamente proibite I e III e si ha:
 \begin{gather*}
 \psi_I(x) = \frac{C}{\sqrt{\beta(x)}}\exp\left\{-\int_{x}^{b}dx'\beta(x')\right\}, x<<b\\
-\psi_{III}(x) = \frac{A}{\sqrt{\beta(x)}}\exp\left\{-\int_{a}^{x}dx'\beta(x')\right\},x>>a
+\psi_\text{III}(x) = \frac{A}{\sqrt{\beta(x)}}\exp\left\{-\int_{a}^{x}dx'\beta(x')\right\},x>>a
 \end{gather*}
 Dalle considerazioni riassunte nella tabella \ref{tab:wkb}, si continuano analiticamente queste
-soluzioni in $II$:
+soluzioni in II:
 \begin{gather*}
-\psi_{II}^{(I)}(x) = \frac{2C}{\sqrt{k(x)}}\sin\left(\int_{b}^{x}dx'k(x')+\frac{\pi}{4}\right), b<<x<a\\
-\psi_{II}^{(III)}(x) = \frac{2A}{\sqrt{k(x)}}\sin\left(\int_{x}^{a}dx'k(x')+\frac{\pi}{4}\right), b<x<<a
+\psi_\text{II}^{(I)}(x) = \frac{2C}{\sqrt{k(x)}}\sin\left(\int_{b}^{x}dx'k(x')+\frac{\pi}{4}\right), b<<x<a\\
+\psi_\text{II}^{(III)}(x) = \frac{2A}{\sqrt{k(x)}}\sin\left(\int_{x}^{a}dx'k(x')+\frac{\pi}{4}\right), b<x<<a
 \end{gather*}
 dove $\psi_i^{(j)}$ è la funzione d'onda in $j$ continuata in $i$; queste due espressioni di
-$\psi_{II}(x)$ devono coincidere, e questo avviene se e solo se
+$\psi_\text{II}(x)$ devono coincidere, e questo avviene se e solo se
 $$C\sin\left(\int_{b}^{x}dx'k(x')+\frac{\pi}{4}\right) = A\sin\left(\int_{x}^{a}dx'k(x')+\frac{\pi}{4}
 \right) \leftrightarrow C\sin(\alpha) = A\sin(\gamma)$$
-con $\alpha = \int_{b}^{x}dx'k(x') + \frac{\pi}{4}$ e $\gamma=\int_{x}^{a}dx'k(x')+\frac{\pi}{4}$.
+con $\displaystyle\alpha = \int_{b}^{x}dx'k(x') + \frac{\pi}{4}$ e $\displaystyle\gamma=\int_{x}^{a}dx'k(x')+\frac{\pi}{4}$.
 %continua nella prossima 

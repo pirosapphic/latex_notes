@@ -37,8 +37,8 @@ $$S = S_0 + \frac{q}{c}\int_{t_a}^{t_b}dt\mathbf{\dot x}\cdot \mathbf{A} = S_0+\
 
 A differenza della trattazione precedente, in questo caso ci sono due cammini classici possibili:
 il propagatore totale, nell'approssimazione semiclassica, è la somma del propagatore relativo al 
-cammino $\gamma_I$ e di quello relativo al cammino $\gamma_{II}$:
-$$K(x_b,t_b,x_a,t_a) = K_I + K_{II}$$
+cammino $\gamma_I$ e di quello relativo al cammino $\gamma_\text{II}$:
+$$K(x_b,t_b,x_a,t_a) = K_I + K_\text{II}$$
 L'approssimazione semiclassica implica che 
 $$K_i = e^{\frac{i}{\hbar}S_{cl,i}}\int_{}^{}\mathcal{D}\omega\exp\left\{\frac{i}{\hbar}S_{2,i}[\omega]
 \right\}$$
@@ -51,14 +51,14 @@ dove $K_{0,i}$ è il propagatore della particella libera sul cammino $\gamma_i$.
 Si trova dunque che il propagatore per questo sistema fisico è
 $$K(x_b,t_b,x_a,t_a) = \psi(x_b,t_b) =
 \exp\left\{\frac{i}{\hbar}\int_{\gamma_I}d\mathbf{x}\cdot\mathbf{A}\right\}\psi_{0,I}(x_b,t_b) +
-\exp\left\{\frac{i}{\hbar}\int_{\gamma_{II}}d\mathbf{x}\cdot\mathbf{A}\right\}\psi_{0,II}(x_b,t_b)$$
+\exp\left\{\frac{i}{\hbar}\int_{\gamma_\text{II}}d\mathbf{x}\cdot\mathbf{A}\right\}\psi_{0,II}(x_b,t_b)$$
 raccogliendo una fase globale $\vartheta=\frac{1}{\hbar}\int_{\gamma_I}^{}d\mathbf{x}\cdot\mathbf{A}$,
 si trova che
 $$\psi(x_b,t_b) = e^{i\vartheta}\left(\psi_{0,I}(x_b,t_b) +
-\exp\left\{\frac{i}{\hbar}\oint_{\gamma_{II}-\gamma_I} d\mathbf{x}\cdot\mathbf{A}\right\}
+\exp\left\{\frac{i}{\hbar}\oint_{\gamma_\text{II}-\gamma_I} d\mathbf{x}\cdot\mathbf{A}\right\}
 \psi_{0,II}(x_b,t_b)\right)$$
 e si riconosce immediatamente la circuitazione di \textbf{A} che, per il teorema di Stokes, è pari 
-al flusso del campo magnetico $\Phi_B$ attraverso la superficie con bordo $\gamma_{II}-\gamma_I$.\\
+al flusso del campo magnetico $\Phi_B$ attraverso la superficie con bordo $\gamma_\text{II}-\gamma_I$.\\
 Reinserendo $\frac{q}{c}$, si trova infine che
 $$\boxed{\psi(x_b,t_b)=e^{i\frac{q}{c}\vartheta}\left(\psi_{0,I}(x_b,t_b)+\exp\left\{\frac{iq}{\hbar c}
 \Phi_B\right\}\psi_{0,II}(x_b,t_b)\right)}$$
@@ -157,7 +157,7 @@ $$\int_{0}^{T}dtzXz = \sum_{m,n=1}^{\infty}a_na_m\left(-\frac{\pi^2n^2}{T^2}+\om
 dove si è utilizzato che l'insieme $\left\{\frac{2}{T}\sin\frac{\pi nt}{T}\right\}_n$ è un sistema ONC
 per $L^2(0,T)$.
 
-\textbf{Oss.} La misura dell'integrale $I$ è $\mathcal{D}z$, ma la scelta di un $z(t)$ è del tutto
+\textbf{Oss.} La misura dell'integrale I è $\mathcal{D}z$, ma la scelta di un $z(t)$ è del tutto
 equivalente alla scelta della successione dei suoi coefficienti di Fourier $a_n$, dunque, per qualche
 $M$, si può scrivere
 $$\mathcal{D}z = M\prod_{n=1}^{\infty}da_n$$

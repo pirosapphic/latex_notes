@@ -67,7 +67,7 @@ Un'altra nozione utile è quella di \textit{limite in media quadratica}
 \textbf{Def.} Limite in media quadratica di una successione di funzioni di prova
 definita su $ I\subset\mathbb{R} $:
 $$ \lim\limits_{n\to\infty}^{m.q.} \psi_n(x) = \psi(x) \leftrightarrow 
-\lim\limits_{n\to\infty} \int_{I}^{}dx \left| \psi_n(x)-\psi(x)\right|^2 = 0$$
+\lim\limits_{n\to\infty} \int_\text{I}^{}dx \left| \psi_n(x)-\psi(x)\right|^2 = 0$$
 \textbf{Oss.} L'integrale è alla Lebesgue ed è quindi definito a meno di funzioni
 quasi ovunque nulle: questo non dà però ambiguità, in quanto i prodotti scalari non
 variano al variare del rappresentante della classe di equivalenza ed essi sono l'unica
@@ -181,13 +181,13 @@ La risoluzione dell'equazione differenziale si divide in 3 casi, a seconda del v
 \begin{itemize}[leftmargin=*]
 \item $ \mathbf{E>0}$
 
-Definiti $ k_I^2 = \frac{2mE}{\hbar^2} $ e $ k_{II}^2 = \frac{2m(E-V_0)}{\hbar^2} $, si ha
+Definiti $ k_I^2 = \frac{2mE}{\hbar^2} $ e $ k_\text{II}^2 = \frac{2m(E-V_0)}{\hbar^2} $, si ha
 che l'equazione differenziale è
 
 $$
 \begin{dcases}
     \psi'' + k_I^2\psi = 0 &|x| >a \\
-    \psi'' + k_{II}^2\psi = 0 & |x|<a
+    \psi'' + k_\text{II}^2\psi = 0 & |x|<a
 \end{dcases}
 $$
  che porta alla soluzione
@@ -195,7 +195,7 @@ $$
  $$ 
 \psi(x) = \begin{dcases}
     Ae^{ik_Ix} + Be^{-ik_Ix} &x<-a\\
-    Ce^{ik_{II}x} + De^{-ik_{II}x} &x\in[-a,a]\\
+    Ce^{ik_\text{II}x} + De^{-ik_\text{II}x} &x\in[-a,a]\\
     Fe^{ik_Ix} + Ge^{-ik_Ix} &x>a
 \end{dcases}
  $$

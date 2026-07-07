@@ -11,7 +11,7 @@ modulo, ma con direzioni diverse.
 \section{Concetti e definizioni generali}
 Si considerano urti in 3 dimensioni e il sistema di riferimento è tale da avere l'asse $z$ parallelo
 al momento della particella incidente $\mathbf{p}$: si utilizzano le coordinate sferiche riferite a
-tale asse, come illustrato in figura \ref{fig:scattering}.
+tale asse, come illustrato nella seguente figura \ref{fig:scattering}.
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.65\linewidth]{./figures/scattering.png}
@@ -20,7 +20,7 @@ tale asse, come illustrato in figura \ref{fig:scattering}.
 \end{figure}
 In questa trattazione non si considereranno né effetti relativistici né urti anelastici e si
 supporrà che non avvengano mai né scattering multiplo (approssimazione di bersaglio sottile), né
-effetti di interferenza tra particelle che colpiscono bersagli diversi ($\lambda_{DeB}<<\text{distanza
+effetti di interferenza tra particelle che colpiscono bersagli diversi ($\lambda_\text{DeB}<<\text{distanza
 tra bersagli}$).
 \subsection{Sezione d'urto}
 Il flusso di particelle incidenti è definito come 
@@ -61,19 +61,19 @@ $$
 $$
 dove si è chiamato $\mathbf{P}$ il momento del centro di massa del sistema.\\
 Come in meccanica classica, questa fattorizzazione permette di ignorare il moto complessivo del
-sistema e di ridurre l'interazione tra due corpi al moto di uno solo in un potenziale diverso.
+sistema e di ridurre l'interazione tra due corpi al moto di uno solo di massa $\mu$ in un potenziale diverso.
 
 L'altra ipotesi che si fa sul potenziale è che esso sia a corto raggio, cioè che $\exists A$ tale che
 $V(\mathbf{r})\approx0$ per $|\mathbf{r}|>A$.
 \section{Risoluzione dell'equazione di Schrödinger}
 Si cercano le soluzioni stazionarie con $E\in Spc(H)$ del problema con equazione
-$$-\frac{\hbar^2}{2\mu}\laplacian\psi(\mathbf{x})+V(\mathbf{x})\psi(\mathbf{x})=E\psi(\mathbf{x})
+$$-\frac{\hbar^2}{2m}\laplacian\psi(\mathbf{x})+V(\mathbf{x})\psi(\mathbf{x})=E\psi(\mathbf{x})
 \rightarrow\left(\laplacian + k^2\right)\psi(\mathbf{x})=U(\mathbf{x})\psi(\mathbf{x})$$
-dove si sono definiti
+dove si è ridefinita $\mu:=m$ e si sono definiti
 $$k^2 = \frac{2mE}{\hbar^2}\text{,}\phantom{x}U(\mathbf{x})=\frac{2m}{\hbar^2}V(\mathbf{x})$$
 
 Si cercano soluzioni $\psi(\mathbf{x})$ tali che a $t=0$ e $z=-\infty$ siano onde piane con numero
-d'onda $\mathbf{k}=\frac{1}{\hbar}\mathbf{p}$ e che per $t\to\infty$ tornino ad essere onde piane
+d'onda $\mathbf{k}=\frac{1}{\hbar}\mathbf{p}$ e che per $t\to\infty$ tornino a essere onde piane
 con $\mathbf{k'}$ tale che $|\mathbf{k'}|=|\mathbf{k}|$.
 \subsection{Determinazione della funzione di Green}
 Per risolvere l'equazione di Schrödinger, si cerca la funzione di Green $G(\mathbf{x},\mathbf{y})$
