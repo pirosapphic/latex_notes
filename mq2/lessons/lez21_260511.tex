@@ -6,17 +6,17 @@ $\mathcal{H}=L^2(\mathbb{R}^3)$: per proseguire con la soluzione del problema di
 necessario decomporre la soluzione omogenea $\psi_\text{hom}$ in questa base
 $$\psi_\text{hom}(r,\vartheta,\varphi) = \frac{1}{(2\pi)^{\frac32}} e^{ikr\cos\vartheta} = 
 \bra{\mathbf{x}}\ket{0,0,k}$$
-dove $\ket{0,0,k} = \ket{l=0,m=0,k=k}$ è un autostato simultaneo di $L^2$ ($l=0$), $L_z$ ($m=0$) e
+dove $\ket{l,0,k} = \ket{l,m=0,k=k}$ è un autostato simultaneo di $L_z$ ($m=0$) e
 $H_0$ ($k=k$): è banale mostrare che $\psi_\text{hom}$ è la rappresentazione nello spazio delle
 coordinate di tale autostato. 
 
 In questa notazione, le $\varphi^0_{klm}$ rappresentano lo stato $\ket{l,m,k}$: utilizzando la
 completezza di questi autostati, si trova che
-$$\ket{0,0,k}=\int_{}^{}dk'\sum_{l'=0}^{\infty}\sum_{m'=-l'}^{l'}\ket{l',m',k'}\bra{l',m',k'}
-\ket{0,0,k} =\sum_{l'=0}^{\infty}\bra{l',0,k}\ket{0,0,k}\ket{l',0,k}
+$$\ket{l,0,k}=\int_{}^{}dk'\sum_{l'=0}^{\infty}\sum_{m'=-l'}^{l'}\ket{l',m',k'}\bra{l',m',k'}
+\ket{l,0,k} =\sum_{l'=0}^{\infty}\bra{l',0,k}\ket{l,0,k}\ket{l',0,k}
 :=\sum_{l'=0}^{\infty}c_{kl'}\ket{l',0,k}$$
 proiettando tale espressione nello spazio delle coordinate si ha
-$$\bra{\mathbf{x}}\ket{0,0,k} = \sum_{l'=0}^{\infty}c_{kl'}\bra{\mathbf{x}}\ket{l',0,k} \rightarrow
+$$\bra{\mathbf{x}}\ket{l,0,k} = \sum_{l'=0}^{\infty}c_{kl'}\bra{\mathbf{x}}\ket{l',0,k} \rightarrow
 \frac{e^{ikz}}{(2\pi)^\frac32}= \sum_{l'=0}^{\infty}c_{kl'}\sqrt{\frac{2k^2}{\pi}}j_{l'}(kr)
 Y^{l'0}(\vartheta,\varphi)
 $$

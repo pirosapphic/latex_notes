@@ -95,13 +95,13 @@ perturbativa
 $$\ket{E_+}_B = \ket{E}+G_+V\ket{E}$$
 proiettando sullo spazio delle coordinate si trova
 $$\psi_{E_+}(\mathbf{x}) = e^{i\mathbf{k}\cdot\mathbf{x}} - \frac{1}{4\pi}\int_{}^{}d^3\mathbf{y}
-\frac{e^{i\mathbf{k}\cdot(\mathbf{x}-\mathbf{y})}}{|\mathbf{x}-\mathbf{y}|}U(\mathbf{y})
+\frac{e^{ik|\mathbf{x}-\mathbf{y}|}}{|\mathbf{x}-\mathbf{y}|}U(\mathbf{y})
 e^{i\mathbf{k}\cdot\mathbf{y}}$$
 come in precedenza, se si considera $|\mathbf{x}|>>|\mathbf{y}|$ e $V$ con range finito si possono
-approssimare $|\mathbf{x}-\mathbf{y}| = |\mathbf{x}|=r$ e $i\mathbf{k}\cdot(\mathbf{x}-\mathbf{y})=
+approssimare $|\mathbf{x}-\mathbf{y}| = |\mathbf{x}|=r$ e $ik|\mathbf{x}-\mathbf{y}|=
 ikr - ik\mathbf{\hat x}\cdot\mathbf{y}:=ikr-i\mathbf{k'}\cdot\mathbf{y}$ e si trova
 \begin{gather*}
-\psi_{E_+}(\mathbf{x}) = E^{i\mathbf{k}\cdot\mathbf{x}} + \frac{e^{ikr}}{r}f(\vartheta,\varphi),
+\psi_{E_+}(\mathbf{x}) = e^{i\mathbf{k}\cdot\mathbf{x}} + \frac{e^{ikr}}{r}f(\vartheta,\varphi),
 \phantom{x}\text{con}\\f(\vartheta,\varphi)
 =-\frac{1}{4\pi}\int_{}^{}d^3\mathbf{y}e^{-i\mathbf{k'}\cdot\mathbf{y}}U(\mathbf{y})e^{i\mathbf{k}
 \cdot\mathbf{y}} = -\frac{m}{2\pi\hbar^2}\int_{}^{}d^3\mathbf{y}V(y)e^{-i(\mathbf{k'}-\mathbf{k})\cdot
@@ -133,11 +133,11 @@ dei potenziali di interesse in 3 dimensioni), $\psi_\text{out}(0)$ vale
 e^{ikr\cos\vartheta}V(r)=\\
 =-\frac{m}{\hbar^2}\int_{0}^{\infty}drre^{ikr}V(r)\int_{-1}^{1}dxe^{ikrx}=
 -\frac{m}{\hbar^2}\int_{0}^{\infty}drre^{ikr}V(r)\left(\frac{e^{ikr}-e^{-ikr}}{ikr}\right)=\\=
--\frac{2m}{\hbar^2k}\int_{0}^{\infty}e^{ikr}\sin(kr)V(r)
+-\frac{2m}{\hbar^2k}\int_{0}^{\infty}dr e^{ikr}\sin(kr)V(r)
 \end{gather*}
 dunque
 $$|c(k)|^2<<1\leftrightarrow|\psi_\text{out}(0)|\leq\frac{2m}{\hbar^2k}\int_{0}^{\infty}dr
-\left|e^{ikr}\sin(kr)V(r)\right|\leq\frac{2m}{\hbar^2k}\int_{0}^{\infty}|V(r)|<
+\left|e^{ikr}\sin(kr)V(r)\right|\leq\frac{2m}{\hbar^2k}\int_{0}^{\infty}dr|V(r)|<
 \frac{2m}{\hbar^2k}AV_0<<1
 $$
 dove $A$ è il range del potenziale e $V_0 = \underset{r<A}\max\,|V(r)|$. Questa condizione si può
