@@ -1,0 +1,96 @@
+\documentclass[a4paper,11pt]{article}
+% Package to make citations superscrit with brackets
+\usepackage[super,square]{natbib}
+% Package to change margin size
+\usepackage{anysize}
+\marginsize{1.5cm}{1.5cm}{1cm}{1.5cm} %left/right/top/bottom
+% Package to make headers
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt}
+% Package for highligths
+\usepackage{soul}
+% Colors for the references links
+\usepackage[dvipsnames]{xcolor}
+% Package to link references
+\usepackage{hyperref}
+\usepackage[]{graphicx}
+\usepackage{float}
+\usepackage{physics}
+\usepackage{tensor}
+\usepackage{esint}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{setspace} %to set line spacing, see TOC for an example
+\usepackage[italian]{babel}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=CadetBlue,
+    filecolor=CadetBlue,      
+    urlcolor=CadetBlue,
+}
+% Package for lorem ipsum
+\usepackage{lipsum}
+% Package for multicolumn
+\usepackage{multicol}
+
+\usepackage{multicol,caption}
+% Package for removing paragraph identations
+\usepackage{parskip}
+\setlength\columnsep{18pt} 
+\setlocalecaption{italian}{figure}{Fig.}
+\setlocalecaption{italian}{table}{Tab.}
+\counterwithin{figure}{section} % comandi per numerazione interna di figure, tabelle ed equazioni
+\counterwithin{table}{section}
+\counterwithin{equation}{section}
+\setcounter{tocdepth}{2}
+
+
+%Defining Chapter, a section bigger than \section
+\newcounter{Chapcounter}
+\newcommand\showmycounter{\addtocounter{Chapcounter}{1}\themycounter}
+\newcommand{\chapter}[1] 
+{ {\centering          
+    \addtocounter{Chapcounter}{1} \huge \underline{\textbf{#1}} } 
+    %\addcontentsline{toc}{section}{\underline{#1}}    
+    \addcontentsline{toc}{section}{\large \underline{#1}}    
+}
+ 
+\begin{document}
+\begin{center}
+\Large{\textbf{Appunti di intro QFT}}
+\vspace{0.4cm}
+\normalsize
+\\ Università degli Studi di Torino\\Anno Accademico 2026/2027 \\Prof. Boglione,
+appunti di Paolo Rocchietti March\footnote{paolo.rocchiettimarc@edu.unito.it} \\
+
+\vspace{0.1cm}
+%\textit{Organization}
+\medskip
+\normalsize
+\end{center}
+\vspace{0.4cm}
+{\color{gray}\hrule}
+\null\vfill
+%\begin{figure}[H]
+%    \centering
+%\includegraphics[width = 0.8\linewidth]{./frontpage.png}
+%\end{figure}
+\vfill\null
+%non mi convince, magari la cambierò
+\newpage
+\begin{spacing}{.9}
+\tableofcontents
+\end{spacing}
+\newpage
+\pagestyle{fancy}
+\thispagestyle{fancy}
+\fancyhead[L]{\small{\textbf{Università degli studi di Torino} \\ a.a. 2026/2027}}
+\fancyhead[R]{\small{\textbf{Appunti di intro QFT}\\ Prof.ssa Boglione}}
+\fancyfoot[C]{\small{\thepage}}
+%\input{./somefile.tex}
+\input{./lessons/les2_2409.tex}
+\end{document}
