@@ -1,5 +1,5 @@
 # Fdb version 4
-["lualatex"] 1790285407.31099 "template.tex" "template.pdf" "template" 1790285408.93595 0
+["lualatex"] 1790501289.16357 "intro_QFT.tex" "intro_QFT.pdf" "intro_QFT" 1790501291.07225 0
   "/etc/texmf/tex/generic/config/language.dat" 1788356983.60566 2850 b86a6c5c7bf423c3902454d7e037ed0f ""
   "/home/paolo/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc" 1785064381.88596 128397 dc8cded2bbafe8195c86cdaea92e40b2 ""
   "/home/paolo/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-italic.luc" 1785084000.01982 136299 81dfec24bbf14622db1629e3fd551117 ""
@@ -205,15 +205,17 @@
   "/usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload.lua" 1775415801 13566 16df94dd2de231b2bca0aaa0190941fe ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1788357437 5385490 8673be925240dc2054d816ce847ba982 ""
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1788357397 5658276 680ec518007a28275783e9b3a254cf48 ""
-  "aux/template.aux" 1790285408.68919 1049 52ee8db90285a455982895cc124df8c7 "lualatex"
-  "aux/template.out" 1790285408.69019 741 9af74871f2902b6b204013ae91c6272e "lualatex"
-  "aux/template.toc" 1790285408.69119 561 ff06f0cf18f3974442cbcad39bd6066a "lualatex"
-  "lessons/les2_2409.tex" 1790285405.93319 5855 9afd17b82709b47a298ad79c6861cae0 ""
-  "template.tex" 1790283721.28815 2707 e771b5a92451e5ced673b6474250e562 ""
+  "aux/intro_QFT.aux" 1790501290.74617 1161 4c39a924e3e471b86b36457f9542dcdc "lualatex"
+  "aux/intro_QFT.out" 1790501290.74717 865 f0097a0640ebc6f7253f9952755c56e2 "lualatex"
+  "aux/intro_QFT.toc" 1790501290.74817 632 929caf52323b2f09f3b658f5344535f6 "lualatex"
+  "intro_QFT.tex" 1790501003.42316 2771 d77a99c8fa6591de6f5e57b89c70eebf ""
+  "lessons/les1_2309.tex" 1790500613.94115 59 76ea578e8e26b90af9fdc7f65c403a0e ""
+  "lessons/les2_2409.tex" 1790501288.64073 5801 19c21b0608d4a8b6006cd519dd8ee4d6 ""
+  "lessons/les3_2809.tex" 1790501043.46016 113 134a6696f91e5c2c0078107139eb7db2 ""
   (generated)
-  "aux/template.aux"
-  "aux/template.log"
-  "aux/template.out"
-  "aux/template.toc"
-  "template.pdf"
+  "aux/intro_QFT.aux"
+  "aux/intro_QFT.log"
+  "aux/intro_QFT.out"
+  "aux/intro_QFT.toc"
+  "intro_QFT.pdf"
   (rewritten before read)

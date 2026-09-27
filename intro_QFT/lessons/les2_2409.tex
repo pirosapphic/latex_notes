@@ -1,14 +1,12 @@
 %-----------------------------------------------------------------------------------------------------
-\section{Lesson 1, 23/09}
-\textbf{PRIMA LEZIONE SU TABLET}
 \section{Lesson 2, 24/09}
 \subsection{Natural units}
 From this point onwards, natural units will be used:
 $$\hbar = c = 1$$
-\textbf{Note:} this messes up dimensionality, but, convenientely, forces mass and energy to have
+\textbf{Note:} this messes up dimensionality, but, conveniently, forces mass and energy to have
 the same units
 $$E=mc^2\underset{c=1}\rightarrow E=m,$$
-and lenght and time to have the same dimensionality
+and length and time to have the same dimensionality
 $$x=ct\underset{c=1}\rightarrow[x]=[t].$$
 To convert back into more familiar units the constants are, respectively,
 $$c=299.792.458\text{ m/s}$$
@@ -56,12 +54,12 @@ it yielded a double solution with $E<0$ states, violating a fundamental QM theor
 For this reason, he devised the concept of the \textit{Dirac sea}:
 these $E<0$ states must all be occupied (because they cannot be observed), and a uniform charge
 can be factored out of Maxwell's equations with proper boundary conditions; when one of these
-particles in the sea is excited, the "hole" left behind can be percieved as a "positive electron":
+particles in the sea is excited, the "hole" left behind can be perceived as a "positive electron":
 he predicted the existence of \textit{antiparticles}.
 
 This interpretation is still classical, but it begins to convey the concept that a finite number
 of particles is \textit{not} possible for relativistic QM, so the concept of wavefunctions must be
-left behind in favor of field theories.
+left behind in favour of field theories.
 \subsection{Symmetries and conservations}
 To build a theory, it is necessary to start with principles and symmetry:
 \textbf{Lorentz-invariance} to guarantee the conservation of distance between points (this is also
@@ -75,7 +73,7 @@ $$Q:=\int_{}^{}\dd^3xJ^0\text{, so that }\dv[]{Q}{t}=0$$
 The Lorentz invariant is
 $$s^2=t^2-x_ix^i = t'^2-x_i'x'^i = x_\mu x^\mu:$$
 the Lorentz group is the set of all transformations $x^\mu\rightarrow x'^\mu$ over the Minkowski
-space that conserve $s^2$; in matricial representation the elements are
+space that conserve $s^2$; in matrix representation the elements are
 $$x'^\mu = \Lambda\indices{^\mu_\nu} x^\nu$$
 the invariant is conserved \textbf{if and only if}
 $$\boxed{g_{\mu\nu}\Lambda\indices{^\mu_\rho}\Lambda\indices{^\nu_\sigma} = g_{\rho\sigma}.}$$
@@ -88,23 +86,23 @@ boosts.
 \textbf{Naming convention} Consider the determinant of the invariance condition:
 $$\det(\Lambda^Tg\Lambda)=\det(g)\leftrightarrow\det(\Lambda)^2=1\leftrightarrow\det(\Lambda)=\pm1$$
 Transformations with $\det(\Lambda) = 1$ are called \textit{proper Lorentz transformations}.\\
-Transformations with $\det(\Lambda)=-1$ are called \textit{imporper Lorentz transformations}.
+Transformations with $\det(\Lambda)=-1$ are called \textit{improper Lorentz transformations}.
 
 \textbf{Naming convention} Consider the (0,0) component of the invariance condition:
 $$g_{\mu\nu}{\Lambda^\mu}_0{\Lambda^\nu}_0 = 1 \leftrightarrow (\Lambda_{00})^2 - \Lambda\indices{^i_0}
 g_{ii}{\Lambda^i}_0=1\leftrightarrow |{\Lambda^0}_{0}|^2\geq1$$
 Because this term regulates how the transformation relates $x^0$ and $x'^0$,
 transformations with $\Lambda\indices{^0_0}\geq1$ are called
-\textit{orthocronous Lorentz transformations}, while those with $\Lambda\indices{^0_0}\leq1$ are
-called \textit{non-orthcoronous Lorentz transformations}.
+\textit{orthochronous Lorentz transformations}, while those with $\Lambda\indices{^0_0}\leq1$ are
+called \textit{non-orthochronous Lorentz transformations}.
 
 These 2 divisions split the Lorentz group into 4 parts
 \begin{itemize}
-    \item Proper and orthocronous $L^{\uparrow}_{+}$: restricted Lorentz group, sometimes referred to
+    \item Proper and orthochronous $L^{\uparrow}_{+}$: restricted Lorentz group, sometimes referred to
 	as "Lorentz Group";
-    \item Improper and orthocronous $L^{\uparrow}_-$: spacial inversion;
-    \item Proper and non-orthocronous $L^{\downarrow}_+$ : time inversion;
-    \item Improper and non-orthocronous $L^{\downarrow}_-$: total inversion of spacetime.
+    \item Improper and orthochronous $L^{\uparrow}_-$: spacial inversion;
+    \item Proper and non-orthochronous $L^{\downarrow}_+$ : time inversion;
+    \item Improper and non-orthochronous $L^{\downarrow}_-$: total inversion of spacetime.
 \end{itemize}
 \textbf{Note} The only subgroup is $L^\uparrow_+$, as it is the only one that contains the identity
 matrix $\mathbb{I}$.
