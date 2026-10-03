@@ -1,2 +1,120 @@
 %-------------------------------------------------------------------------------------
 \section{Lesson 3, 28/09}
+\subsection{Symmetries and Group Theory}
+The principle of symmetry (invariance) is the guiding light to create a theory:
+the first and fundamental symmetry is \textit{Lorentz invariance}, because special
+relativity states that \textbf{all physical laws must be the same in every inertial
+reference frame}; each particle (state) must also observe other symmetries, but those
+vary case by case.
+
+The language of symmetries is \textit{group theory}, so, in order to proceed, an
+introduction to groups is needed.
+
+\textbf{Def.} A group is a set $G$ with a binary operation $\cdot$ so that
+\begin{itemize}
+    \item $\forall g_1,g_2\in G$, $g_1\cdot g_2 \in G$;
+    \item $\exists e\in G$ so that $\forall g\in G$, $g\cdot e = e \cdot g = g$;
+    \item $\forall g\in G$, $\exists g^{-1}$, so that $g^{-1}\cdot g=g\cdot g^{-1}=e$;
+    \item $\forall g_1,g_2,g_3\in G$, $g_1 \cdot (g_2 \cdot g_3) = (g_1\cdot g_2)\cdot
+	g_3 = g_1\cdot g_2\cdot g_3$.
+\end{itemize}
+\textbf{Def.} A group is \textit{Abelian} if and only if
+$$\forall g_1,g_2\in G\text{, }g_1\cdot g_2 = g_2\cdot g_1$$
+\subsubsection{Zoology}
+\begin{itemize}
+    \item $U$ meaning "unitary" means $UU^\dagger=\mathbb{I}$, for complex valued
+	matrices;
+    \item $O$ meaning "orthogonal" means $OO^T=\mathbb{I}$, for real valued matrices
+    \item $S$ meaning "special" means $\det(S)=1$.
+\end{itemize}
+\newpage
+\textbf{Examples}\\
+\begin{itemize}
+    \item $U(1)$ is the group of phase rotations in $\mathbb{C}$;
+    \item $SU(2)$ is the group of spin;
+    \item $SO(3)$ is the group of proper rotations
+\end{itemize}
+\textbf{Note} The number in the name of the group is the dimensionality of the
+fundamental representation.
+
+\subsection{Lie Groups}
+The most important groups are those that represent \textit{continuous transformations},
+i.e. every element of the group corresponds to a transformation that can be broken
+down into \textit{infinitesimal transformations}: using parameters $\alpha$ and
+generators $T$, the element $g(\alpha)\in G$ is
+$$g(\alpha) = \mathbb{I}+i\alpha_a T^a + O(\alpha^2) = ... = \exp\left[i\alpha_a T^a
+\right]$$
+so its generators can be found as
+$$T^a = -i\eval{\dv[]{g}{\alpha_a}}_{\alpha=0}$$
+it is useful to work with generators as their number is small and they are operators
+(that can be represented as matrices).
+
+The operation of the groups can be used to construct the operation between the
+generators, by the BCH formula:
+$$g_1\cdot g_2 \rightarrow e^X\cdot e^Y := \exp\left(X+Y+\frac{1}{2}[X,Y]+
+\frac{1}{12}[X,[X,Y]]\right)$$
+where $[\cdot,\cdot]$ is the \textit{Lie commutator}.
+
+\textbf{Def.} The vector space of the generators equipped with a commutator
+(bilinear, anti-commutative, Jacobi Identity)
+is called a \textbf{Lie Algebra} $\mathfrak{g}$.
+
+\textbf{Note} The most general form of a commutator is 
+$$[T^a,T^b] = i f\indices{^a_b_c}T^c$$
+
+\subsubsection{Example: algebra of SO(3)}
+The rotation matrix about the X axis of an angle $\vartheta_1$ is
+$$R_1(\vartheta_1)=\begin{pmatrix}
+    1&0&0\\
+    0&\cos(\vartheta_1)&-\sin(\vartheta_1)\\
+    0&\sin(\vartheta_1)&\cos(\vartheta_1)
+\end{pmatrix}$$
+the first generator is then
+$$J_1 = \eval{-i\dv[]{R_1}{\vartheta_1}}_{\vartheta_1=0} = \begin{pmatrix}
+    0&0&0\\
+    0&0&-i\\
+    0&i&0
+\end{pmatrix}.
+$$
+The other 2 matrices can be obtained similarly:
+$$J_2 = 
+\begin{pmatrix}
+0&0&i\\
+0&0&0\\
+-i&0&0
+\end{pmatrix}\qquad J_3=
+\begin{pmatrix}
+0&-i&0\\
+i&0&0\\
+0&0&0
+\end{pmatrix}.
+$$
+The commutation relations turn out to be
+$$[J^i,J^j] = i\varepsilon_{ijk}J^k.$$
+From the generators, the $J^\pm$ operators are constructed.
+
+\subsubsection{Example: algebra of SU(2)}
+The definition states $SU(2) = \{\text{2x2 unitary matrices with}\det(U)=1\}$: the
+conditions imply, by the BCH formula:
+\begin{gather*}
+    U^\dagger U  =\mathbb{I}\rightarrow J_i^\dagger=J_i\\
+    \det(U)=\det(e^{J_i})=1=\exp[\Tr(J_i)] \rightarrow \Tr(J_i)=0
+\end{gather*}
+the traceless, hermitian matrix vector space has base $\sigma^ii$, the Pauli matrices,
+which have commutation relations
+$$[\sigma^i,\sigma^j] = i\varepsilon_{ijk}\sigma^k$$
+\subsection{Group representations}
+\textbf{Def.} A representation of a group $G$ is a map 
+\begin{align*}
+&r: G \rightarrow GL(V)\\
+&r: g \rightarrow \text{square matrix}
+\end{align*}
+so that
+$$r(g_1\cdot g_2) = r(g_1)\cdot	r(g_2)$$
+where the second $\cdot$ is the matrix multiplication.\\
+$\dim(V) = n$ is the dimension of the representation.
+
+\textbf{Def.} An irreducible representation is a representation in which no subset
+of $\Im(r)$ is a subgroup of $\Im(r)$.
+
+\textbf{Note} A reducible representation can always be block-diagonalized (?).

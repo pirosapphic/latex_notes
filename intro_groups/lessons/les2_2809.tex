@@ -1,0 +1,215 @@
+%-------------------------------------------------------------------------------------
+\section{Lesson 2, 28/09/2026}
+\subsection{Again on SU(2)}
+The matrices of SU(2) can be seen as matrices in the form
+$$g=
+\begin{pmatrix}
+    x_0+ix_3&x_2+ix_1\\
+    -x_2+ix_1&x_0-ix_3
+\end{pmatrix}\text{, with }
+x_0^2+x_1^2+x_2^2+x_3^2 = \det(g) = 1
+$$
+It can be also represented by bigger matrices, but some of them are trivial, like
+$$g=
+\begin{pmatrix}
+    x_0+ix_3&x_2+ix_1&0\\
+    -x_2+ix_1&x_0-ix_3&0\\
+    0&0&1
+\end{pmatrix}\text{, with }
+x_0^2+x_1^2+x_2^2+x_3^2 = \det(g) = 1
+$$
+which is the same as before, but with a bunch of zeros.
+\subsection{Generators}
+The generators are defined as the "directions" in which matrices can "move away"
+from the identity matrix: it is clear that
+$$g = x_0\mathbb{I} + i x_i\sigma^i$$
+where $\sigma^i$ are the Pauli matrices; since this is a continuous group, the
+infinitesimal movement in the direction $\sigma^1$ can be written as
+$$g=\mathbb{I} + i\varepsilon\sigma^1 + O(\varepsilon^2).$$
+
+Consider the set of generators of a continuous (Lie) group $\left\{T^a\right\}$: the
+commutator between them is
+$$[T^a,T^b] = T^aT^b-T^bT^a\underset{Lie}= if\indices{^a^b_c}T^c$$
+in the case of $SU(2)$, the structure constants turn out to be
+$f\indices{^a^b_c} = \varepsilon\indices{^a^b_c}$, which is the Levi-Civita symbol.
+
+The algebra of the generators of $SO(3)$ is exactly the same.
+
+\subsection{Lorentz-Poincaré Group}
+This is the group of transformations of Special Relativity: using 4-vectors, a kind of
+transformation that obeys the rules of SR is a boost along the x-axis
+$$B_1=\begin{pmatrix}
+\gamma&-\beta\gamma&0&0\\
+-\beta\gamma&\gamma&0&0\\
+0&0&1&0\\
+0&0&0&1
+\end{pmatrix}
+$$
+this is a kind of rotation in a Minkowski space; regular spacial rotations also obey
+SR
+$$\begin{pmatrix}
+1&0&0&0\\
+0&&&\\
+0&&R&\\
+0&&&
+\end{pmatrix}
+$$
+where $R\in SO(3)$.
+There are two other transformations, the parity and time-inversion:
+$$\begin{pmatrix}
+1&0&0&0\\
+0&-1&0&0\\
+0&0&-1&0\\
+0&0&0&-1
+\end{pmatrix}\qquad
+\begin{pmatrix}
+-1&0&0&0\\
+0&1&0&0\\
+0&0&1&0\\
+0&0&0&1
+\end{pmatrix}
+$$
+
+This group has 6 generators: 3 rotations from $SO(3)$ and 3 boosts (along the 3 axes);
+what are the generators for the boosts?
+
+From their definitions,
+$$\gamma^2 - (\gamma\beta)^2 = 1$$
+so they can be parametrized like
+$$\begin{dcases*}
+\gamma = \cosh(\eta) = 1 +O(\eta^2)\\
+\beta\gamma = \sinh(\eta) = \eta + O(\eta^2)
+\end{dcases*}
+$$
+where $\eta$ is called rapidity.
+
+$$B_1(\eta) = \mathbb{I} + i\eta\begin{pmatrix}
+0&i&0&0\\
+i&0&0&0\\
+0&0&0&0\\
+0&0&0&0
+\end{pmatrix} + O(\eta^2)
+$$
+
+So, the generators of rotations are $\{J_i\}$, with the aforementioned algebra.
+
+Similarly, the generators of the boosts $\{K_i\}$ have commutation relations
+$$[K^a,K^b]=-i\varepsilon\indices{^a^b_c}J^c$$
+Trying to mix the generators yields
+$$[J^a,K^b]=i\varepsilon\indices{^a^b_c}K^c.$$
+This can be written in a cleaner way, defining
+\begin{gather*}
+N_a = \frac{J_a+iK_a}{2}\\
+M_a = \frac{J_a+-iK_a}{2},
+\end{gather*}
+it can be proven that they satisfy 2 closed $SU(2)$ algebras:
+\begin{gather*}
+    [N^a,N^b]=i\varepsilon\indices{^a^b_c}N^c\\
+    [M^a,M^b]=i\varepsilon\indices{^a^b_c}M^c\\
+    [N_a,M_b]=0
+\end{gather*}
+Since $SU(2)$ is the angular momentum group, an "azimuthal number" can be defined
+for the two algebras, $p,q$: depending on the values of these eigenvalues the field
+satisfying the Lorentz invariance has different properties.
+\begin{table}[ht!]
+    \centering
+\begin{tabular}{c|c|c}
+    $p$&$q$&Name\\ \hline
+    $0$&$0$&Scalar \\
+    $1/2$&$0$&Spin 1/2 right\\
+    $0$ & $1/2$&Spin 1/2 left\\
+    \end{tabular}
+\end{table}\\
+The addition of the Poincaré group are spacetime translations, which are related to
+the 4-momentum $P^\mu$
+\subsection{Internal degrees of freedom}
+Some particles are invariant under transformations of "internal" degrees of freedom,
+like colour charge in quarks: if these transformations are local, they are called
+\textbf{gauge transformations}; locally it is always possible to redefine what the
+colour "blue" is for a quark.
+
+Why is it possible to assume local symmetries? Because it makes the mediator fields
+come out of the equations (what?).
+
+In the standard model, these internal degrees of freedom are
+$$\underbrace{SU(3)}_\text{QCD} \times \underbrace{SU(2) \times U(1)}_
+\text{Electroweak}$$
+
+\subsection{Other definitions on groups}
+\textbf{Def.} A group $(AG4,\cdot)$ is Abelian if and only if
+$$\forall g_1,g_2\in AG4,\;g_1\cdot g_2 = g_2\cdot g_1$$
+\textbf{Observation 1} The definition of group implies the uniqueness of the
+identity element.\\
+\textbf{Proof (by contradiction)} Consider 2 identity elements
+$$e\neq f:$$
+then their product must be, at the same time
+$$\begin{dcases*}
+  e\cdot f = f\\
+  e\cdot f = e
+  \end{dcases*}.$$
+This contradicts the assumption $e\neq f \qed$ %not working :(
+
+\textbf{Observation 2} The inverse of every element is unique. The proof is similar
+to the previous one
+
+\textbf{Def.} A magma is a set with an internal binary operation.\\
+\textbf{Def.} A magma $(M,\cdot)$ is called a semi-group if and only if the binary 
+operation is associative\\
+\textbf{Def.} A semi-group with an identity element is called a monoid.\\
+$$\text{Magma}\supset\text{Semi-group}\supset\text{Monoid}\supset\text{Group}\supset
+\text{Abelian Group}$$
+
+The set of a group can be
+\begin{itemize}
+    \item Finite;
+    \item infinite and discrete;
+    \item infinite and continuous.
+\end{itemize}
+The smallest non-trivial group is called $\mathbb{Z}_2$:
+$$\mathbb{Z}_2 = \{e,a\}$$
+and is called cyclic group of order $2$; in order to specify the algebraic structure,
+all the possible products must be determined: a useful tool is a Caylem table
+\begin{table}[ht!]
+    \centering
+    \begin{tabular}{c|cc}
+		&e	&a\\ \hline
+e	&$e \cdot e$&$e\cdot a$\\
+	a	&$a\cdot e$&$a\cdot a$\\
+    \end{tabular} 
+\end{table}
+In this case, the only element that has to be explicitly specified is $a\cdot a$.
+This must be $a\cdot a=e$, because supposing $a\cdot a =a$ implies
+\begin{gather*}
+a\cdot a = a\\
+(a\cdot a) \cdot a^{-1} = a\cdot a^{-1}\\
+a\cdot (a\cdot a^{-1}) = e\\
+a\cdot e = e\\
+a = e
+\end{gather*}
+which is absurd.
+
+This group can be realized in many ways (see lesson 1) and also with
+$$(\{\text{False},\text{True}\},\text{XOR})$$
+
+\textbf{Def.} Given two groups $(G_1,\cdot)$, $(G_2,\circ)$, their
+\textbf{direct group product} is the group $G_1\times G_2$ made from the set of
+ordered pairs
+$$(a_1;a_2)\text{, with }a_i\in G_i,$$
+and the internal operation $\Box = (\cdot\,;\circ)$ that works as follows
+$$(a_1;a_2)\Box(b_1;b_2) := (a_1\cdot b_1;a_2\circ b_2)$$
+\subsection{Examples of groups}
+\textbf{Integers}:
+The set $\mathbb{Z}$ is an Abelian group with the regular sum $+$, identity element
+$0$ and inverse $n^{-1}:=-n$.\\
+
+\textbf{Reals}:
+The set of real numbers is similarly an Abelian group with the regular sum, but to
+construct a group with the multiplication the number $0$ must be taken out:
+$(\mathbb{R}\setminus0,\cdot)$ is an Abelian group, with $1$ as the identity and
+$a^{-1}=\frac{1}{a}$.\\
+
+$\mathbf{n\times m}$\textbf{ matrices over $\mathbb{R}$}: These sets are groups with
+the matrix sum, as they are equivalent to $n\times m$ copies of $(\mathbb{R},+)$.
+
+\textbf{Invertible matrices}: These sets are groups with the matrix multiplication
+and the inverse is the matrix inverse.

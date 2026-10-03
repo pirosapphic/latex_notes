@@ -1,0 +1,14 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Lesson 1, 23/09}{3}{section.1}%
+\contentsline {section}{\numberline {2}Lesson 2, 29/09}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Internal Energy as a TD potential}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Legendre Transform}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Response Functions}{4}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Mechanical response functions}{5}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Maxwell Relations}{5}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Stability of equilibrium state}{6}{subsection.2.6}%
+\contentsline {section}{\numberline {3}Lesson 3, 30/09}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Equilibrium in external field}{6}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Second order equilibrium}{7}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Multi-component systems}{9}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Phase transitions}{9}{subsection.3.4}%

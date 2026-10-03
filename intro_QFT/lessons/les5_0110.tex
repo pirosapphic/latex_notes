@@ -1,0 +1,109 @@
+\newpage
+\section{Lesson 5, 01/10}
+\subsection{More on the Lorentz group}
+The generic Lorentz transformation can also be written in terms of $J,K$:
+$$\Lambda = \exp\left[i\vartheta_iJ^i+i\eta_iK^i\right]$$
+where $\vartheta_i$ are the Euler angles (parameters of the rotation) and $\eta_i$
+are the rapidities (parameters of the boost).
+
+With some work, it is possible to prove that
+$$\frac{1}{2}M_{\mu\nu}M^{\mu\nu} = J_iJ^i - K_iK^i = \mathbf{J^2}-\mathbf{K^2}$$
+and
+$$-\frac{1}{4} \varepsilon^{\mu\nu\rho\sigma}M_{\mu\nu}M_{\rho\sigma} = J_iK^i = 
+\mathbf{J}\cdot\mathbf{K}$$
+are Casimir operators for the representation: there exist only 2 linear independent
+Casimir operators and each and any linear combination of these two is valid, but
+these two are important because they are, respectively, symmetric and antisymmetric
+(how can they be?? They're scalar!).
+
+\textbf{Theorem:} The algebra of the Lorentz Group can be factorized as the direct
+product of two $SU(2)$ algebras
+$$\mathfrak{so}(1,3) = \mathfrak{su}(2)\otimes\mathfrak{su}(2)$$
+
+This suggests to find new generators that are suited to this decomposition
+\begin{gather*}
+\mathbf{N} = \frac{1}{2}\left(\mathbf{J}+i\mathbf{K}\right)\\
+\mathbf{N}^\dagger = \frac{1}{2}\left(\mathbf{J}-i\mathbf{K}\right)
+\end{gather*}
+their algebra is
+\begin{align*}
+&\left[N_i,N_j^\dagger\right] = 0\\
+&\left[N_i,N_j\right] = i\varepsilon_{ijk}N^k\\
+&\left[N_i^\dagger,N_j^\dagger\right] = i\varepsilon_{ijk}N^{k\dagger}
+\end{align*}
+\textbf{Observation:} These generators are convenient, since the algebra
+of the $N$'s and that of the $N^\dagger$'s are closed and disjoint.
+
+The Casimir operators are
+\begin{align*}
+    N_iN^i &\longrightarrow n(n+1)\\
+	   &\text{\footnotesize eigenvalues}\\
+    N^\dagger_iN^{i\dagger} &\longrightarrow m(m+1)    ,
+\end{align*}
+so the irreducible representations of the group will be labeled by the pair $(n,m)$.
+Since they obey $SU(2)$ algebra, it is clear that $n,m$ will have integer or
+semi-integer values and that the eigenvalues of
+$N_3,N_3^{\dagger}$, $s$ and $s^\dagger$, will respect
+$$-n<s<n\qquad-m<s^\dagger<m.$$
+To each pair $n,m$ corresponds a name for the field
+\begin{table}[ht!]
+    \centering
+    \begin{tabular}{c|c|c|c}
+	$(n,m)$&Field name&Dim&Example\\ \hline
+	$(0,0)$&Scalar $\varphi$&1&Higgs \\
+	$(1/2,0)$&Spinor $\psi_L$&2&Weyl Spinor\\
+	$(0,1/2)$&Spinor $\psi_R$&2&Weyl Spinor\\
+	$(1/2,0)\oplus(0,1/2)$&Dirac Spinor&4&\\
+	$(1/2,1/2)$&4-vector field (spin 1)&4&$A^\mu$ ELM\\
+	$(1,0)\oplus(0,1)$&Rank 2 antisymm tensor&6&$F^{\mu\nu}$ ELM
+    \end{tabular}
+\end{table}
+\newpage
+\subsection{Poincaré Group}
+The QFT must also be invariant over spacetime \textit{translations}: the Poincaré
+group includes Lorentz transformations \textit{and} translations
+$$x^\mu\rightarrow x'^\mu:=\Lambda\indices{^\mu_\nu}x^\nu + a^\mu$$
+the group parameters are $6+4=10$. The generators of the 4-translations,
+similarly to QM, are the 4-momenta
+$$P^\mu = (H,P^i);$$
+moreover, in QM1 the time evolution operator was found to be
+$$U=e^{-iH}$$
+which, in hindsight, is an exponential map, in which $H$ is the generator and $t$ is
+the parameter!
+
+There will be some problems with the fact that the translation group is not
+compact.
+
+Finding the commutation relations for the algebra is not trivial, since rotations
+and translations do not commute, even in Minkowski space. Consider two
+successive Poincaré transformations (why????):
+$$x^\mu\rightarrow{(\Lambda_{(1)})}\indices{^\mu_\nu}x^\nu + a_1^\mu \rightarrow
+{(\Lambda_{(2)})}\indices{^\mu_\rho}{(\Lambda_{(1)})}\indices{^\mu_\nu}x^\nu + 
+{(\Lambda_{(2)})}\indices{^\mu_\rho}a_1^\rho+a_2^\mu$$
+The commutation relations are
+\begin{align*}
+&\left[P^\mu,P^\nu\right]=0\\
+&\left[M_{\mu\nu},P_\rho\right] = -ig_{\rho\sigma}P_\nu+ig_{\nu\rho}P_\mu\\
+\end{align*}
+They are clearer when time and space indexes are expressed separately
+\begin{align*}
+&\left[P^i,P^j\right]=0\\
+&\left[P^i,H\right]=0\\
+&\left[K^i,P^j\right]=i\delta^{ij}H\\
+&\left[J^i,J^j\right]=i\varepsilon\indices{^i^j_k}J^k\\
+&\left[K^i,H\right]=iP^i\\
+&\left[J^i,P^j\right]=i\varepsilon\indices{^i^j_k}P^k\\
+&\left[J^i,H\right]=0\\
+&\left[K^i,K^j\right]=i\varepsilon\indices{^i^j_k}J^k\\
+&\left[J^i,K^i\right]=i\varepsilon\indices{^i^j_k}K^k\\
+\text{REORDER}
+\end{align*}
+Next, the Casimir operators: a natural choice is
+$$P^2 = P_\mu P^\mu$$
+a not so natural choice is the \textit{Pauli-Lubanski vector} squared:
+$$W^\mu = \varepsilon^{\mu\nu\rho\sigma}P_\nu M_{\rho\sigma}\rightarrow W^2 = W_\mu
+W^\mu.$$
+A nice relation is
+$$P_\mu W^\mu = 0$$
+for antisymmetry reasons.
+

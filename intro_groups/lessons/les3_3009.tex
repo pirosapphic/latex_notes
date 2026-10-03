@@ -1,0 +1,227 @@
+\section{Lesson 3, 30/09}
+\subsection{Other examples}
+\textbf{Dihedral groups}: The set is
+$$D_n = \left\{\text{Rotations and reflections that preserve the shape of a regular
+n-sided polygon}\right\}$$
+and the group product is the "composition" of these functions.\\
+The smallest group of this family, $D_3$, has 6 elements: 3 rotations of angles
+$0,\frac{2\pi}{3},\frac{4\pi}{3}$ and 3 reflections about the axes of the triangle.
+
+In $D_4$, there are 4 rotations, but the number of reflections is different: 2 about
+diagonal axes (as the other 2 are the same) and 2 about the axes of the
+sides (as the other 2 are the same).
+
+In general, $\forall n\geq3$, the group $D_n$ has $2n$ elements, so its order is
+$$|D_n|=2n:$$
+$n$ rotations of angles $\frac{2k\pi}{n}$, with $k=0,1...n-1$ and $n$ reflections.
+No dihedral group is Abelian, since rotations and reflections do not commute.\\
+
+\textbf{Linear transformations of orthonormal bases in $\mathbb{R}^2$}: There are only
+two kinds of transformations that preserve the orthonormality
+$$M(\alpha)=\begin{pmatrix}
+    \cos\alpha&\sin\alpha\\
+    -\sin\alpha&cos\alpha
+\end{pmatrix}\qquad
+N(\alpha)=\begin{pmatrix}
+    \cos\alpha&\sin\alpha\\
+    \sin\alpha&-cos\alpha
+\end{pmatrix}\text{, with }0\leq\alpha\leq2\pi
+$$
+the first has $\det(M)=1$, while the second has $\det(N)=-1$. The group product is
+again the matrix multiplication.\\
+This group is called the \textbf{2-dimensional orthogonal group over} $\mathbb{R}$
+$\mathbf{O(2,\mathbb{R})}$, and the
+matrices with $\det(M)=1$ form a subgroup called \textbf{special orthogonal group}
+$$SO(2,\mathbb{R}) = \left\{M\in O(2,\mathbb{R})| \det(M)=1\right\}$$
+The special group is Abelian (it is easy to show using the properties of trigonometric
+functions), while $O(2,\mathbb{R})$ is not because of the presence of "spatial
+inversions".\\
+
+\textbf{Linear transformations of orthonormal bases in} $\mathbb{C}^2$: They can be
+expressed as matrices in the form
+$$M=\begin{pmatrix}
+a_0+ia_3&a_2+ia_1\\
+-a_2+ia_1&a_0-ia_3\\
+\end{pmatrix}\text{, with }a_i\in\mathbb{R} \text{ s.t. } a_ia^i = 1
+$$
+note that $a_i$ satisfy the equation of a $3-$sphere in $\mathbb{R}^4$; this can
+also be expressed as
+$$M=\begin{pmatrix}
+\alpha&\beta\\
+-\beta^*&\alpha^*\\
+\end{pmatrix}\text{, with }|\alpha|^2+|\beta|^2=\det(M)=1.
+$$
+It is easy to show that matrices of this form are unitary:
+$$MM^\dagger = M^\dagger M = \mathbb{I}.$$
+It was shown before that
+$$M = a_0\mathbb{I} + ia_i\sigma^i+ O(\mathbf{a}^2):$$
+this is equivalent to
+$$M = \exp\left[i\varphi\hat v_i\sigma^i\right]$$
+where $0\leq\varphi\leq\pi$ is an angle, $\mathbf{\hat v}$ is a unit vector in
+$\mathbb{R}^3$ and the exponential of a matrix is defined as
+$$e^M:=\sum_{i=n}^{\infty}\frac{M^n}{n!}.$$
+Computing the exponential, it can be shown that these two expressions are equivalent:
+doing so is, in this case, quite easy using the properties of Pauli
+matrices
+\begin{align*}
+&\left[\sigma^i,\sigma^j\right] = 2i\varepsilon\indices{^i^j_k}\sigma^k\\
+&\left\{\sigma^i,\sigma^j\right\} = 2\delta^{ij}\mathbb{I}\rightarrow
+(\sigma^i)^2 = \mathbb{I}
+\end{align*}
+from the second property follows that
+$$\sigma^i\sigma^j = \frac{1}{2}\left(
+\sigma^i\sigma^j-\sigma^j\sigma^i+\sigma^i\sigma^j+\sigma^j\sigma^i\right)=
+\frac{1}{2}\left(\left[\sigma^i,\sigma^j\right]+\left\{\sigma^i,\sigma^j\right\}
+\right)$$
+From this and some calculations follows that
+$$\exp\left[i\varphi\hat v_i\sigma^i\right] = \cos\varphi\mathbb{I}+
+i\sin\varphi\hat v_i\sigma^i.
+$$
+Doing so explicitly for $\hat v = \begin{pmatrix}1&0&0\end{pmatrix}$ yields
+$$M = \sum_{n=0}^{\infty}\frac{(i\varphi\sigma^i)^n}{n!} = 
+\sum_{k=0}^{\infty}\frac{(i\varphi\sigma^i)^{2k}}{(2k)!}+
+\sum_{k=0}^{\infty}\frac{(i\varphi\sigma^i)^{2k+1}}{(2k+1)!}$$
+since $(\sigma^1)^{2k}=\mathbb{I}$ and $(\sigma^1)^{2k+1}=\sigma^1$, this becomes
+$$M = \mathbb{I}\sum_{k=0}^{\infty}\frac{(-1)^{k}\varphi^{2k}}{(2k)!} +
+i\sigma^i\sum_{k=0}^{\infty}\frac{(-1)^k\varphi^{2k+1}}{(2k+1)!} =
+\cos\varphi\mathbb{I}+i\sigma^i\sin\varphi$$
+
+\subsection{Subgroups}
+\textbf{Def.} Given a group $(G,\cdot)$, a subset $H\subseteq G$ is a
+\textit{subgroup} of $G$ if and only if $(H,\cdot)$ is a group.
+
+\textbf{Observation:} The trivial subgroups are $H=G$ and $H=\left\{e\right\}
+\subseteq G$; all other subgroups are called \textit{proper} subgroups.
+
+\textbf{Def.} A subgroup $H\subseteq G$ is called a \textit{normal} subgroup if and
+only if
+    $$\forall h\in H,\;\forall g\in G,\;g\cdot h \cdot g^{-1}\in H.$$
+\textbf{Observation:} If $G$ is Abelian, every subgroup is normal.
+
+\textbf{Def.} A group $G$ is called a \textit{semi-simple} group if and only if it
+does not admit a proper, normal and Abelian subgroup.
+
+\textbf{Def.} A group $G$ is called a \textit{simple} group if and only if it does
+not admit a proper and normal subgroup.
+
+\textbf{Observation:} All simple groups are semi-simple groups, but not vice-versa:
+a group that admits at least one proper, normal, non-Abelian subgroup and no Abelian
+subgroups is semi-simple but not simple!
+\subsection{Maps between groups}
+\textbf{Def.} A group \textit{homomorphism} $f$ is a map between two groups
+\begin{align*}
+&f:(G,\cdot)\rightarrow(Q,\circ)\\
+&f: g\in G \rightarrow q\in Q
+\end{align*}
+such that
+$$\forall g_1,g_2\in G,\;f(g_1\cdot g_2) = f(g_1)\circ f(g_2).$$
+To define a group \textit{isomorphism}, some other definitions are needed.
+
+\textbf{Def.} Given a set $X\neq\emptyset$, a binary relation $\sim$ among its
+elements is an \textit{equivalence relation} if and only if it is
+\begin{itemize}
+    \item Reflexive, i.e. $\forall a\in X,\;a\sim a$;
+    \item Symmetric, i.e. $\forall a,b\in X$, $a\sim b \rightarrow b\sim a$;
+    \item Transitive, i.e. $\forall a,b,c\in X$, $a\sim b \land b\sim c \rightarrow
+	a\sim c$.
+\end{itemize}
+\textbf{Def.} Given a set with an equivalence relation $(X,\sim)$, an \textit{
+equivalence class} is a subset $Y\subseteq X$ such that
+$$\forall a,b\in Y\subseteq X,\;a\sim b$$
+\textbf{Observation 1:} All sets equipped with an equivalence relation have trivial
+equivalence classes, which are all the subsets containing only one element.\\
+\textbf{Observation 2:} The equivalence classes of a set $X$ must be disjoint: this
+follows from the definition of the equivalence relation.
+
+Every equivalence class can be identified by one of its elements, called the
+\textit{representative} of the class.
+
+\textbf{Def.} A function $f:X\rightarrow Y$ is called
+\begin{itemize}
+    \item \textit{Injective} if and only if
+	$$\forall x_1,x_2\in X,\;f(x_1)=f(x_2)\leftrightarrow x_1=x_2;$$
+    \item \textit{Surjective} if and only if
+	$$\forall \in Y,\;\exists x\in X \text{ s.t. } y = f(x);$$
+    \item \textit{Bijective} if and only if it is injective \textit{and} surjective.
+\end{itemize}
+
+\textbf{Def.} A group \textit{isomorphism} is a bijective group homomorphism.
+
+\textbf{Def.} Two groups are \textit{isomorphic} if $\exists$ an isomorphism $f$
+between them.
+
+\textbf{Theorem} The property of isomorphism between two groups is an equivalence
+relation in the \textit{set of all groups}.\\
+\textbf{Proof:}\\
+\begin{itemize}
+    \item The reflexive property is satisfied by the identity function, which is
+an isomorphism of a group in itself;
+    \item $\forall G,Q$ groups, if $f: G\rightarrow Q$ is an isomorphism, the inverse
+    $f^{-1}:Q\rightarrow G$ is an isomorphism;
+\item $\forall G,Q,L$ groups, if $f:G\rightarrow Q$ and $g:Q\rightarrow L$ are
+    isomorphisms, then
+    $$g\circ f: G \underset{f}\rightarrow Q \underset{g}\rightarrow L$$
+    is an isomorphism, since the composition of group homomorphisms is an homomorphism
+    and the composition of bijective functions is bijective. \qed
+\end{itemize}
+\subsection{The smallest finite groups}
+The smallest finite group is the \textit{trivial group} and has order 1:
+$$\mathbb{Z}_1 = \left\{e\right\}$$
+its Cayley table is trivial
+\begin{table}[ht!]
+    \centering
+\begin{tabular}{c|c}
+    $\cdot$&$e$\\ \hline
+    $e$&$e$
+\end{tabular}
+\end{table}
+
+The second smallest group is the group of order 2
+$$\mathbb{Z}_2 = \left\{e,a\right\}$$
+and its Cayley table must be
+
+\begin{table}[ht!]
+    \centering
+    \begin{tabular}{c|cc}
+	$\cdot$	&$e$	&$a$\\ \hline
+	$e$	&$e$&$a$\\
+	$a$	&$a$&$e$\\
+    \end{tabular} 
+\end{table}
+\newpage
+The group of order 3 is
+$$\mathbb{Z}_3 = \left\{e,a,b\right\}$$
+and its Cayley table is
+\begin{table}[ht!]
+\centering
+\begin{tabular}{c|ccc}
+    $\cdot$	&$e$	&$a$	&$b$\\ \hline
+	$e$	&$e$	&$a$	&$b$\\
+	$a$	&$a$	&	& \\
+	$b$	&$b$	&	& \\
+\end{tabular}
+\end{table}
+The missing entries can be found by brute force, i.e. trying all the 3 possible
+results and seeing if the result contradicts the assumption $a\neq b\neq e$ and/or
+the properties of the group: there is only one table that is self-consisent and it is
+\begin{table}[ht!]
+\centering
+\begin{tabular}{c|ccc}
+    $\cdot$	&$e$	&$a$	&$b$\\ \hline
+	$e$	&$e$	&$a$	&$b$\\
+	$a$	&$a$	&$a^2=b$	&$e$ \\
+	$b$	&$b$	&$e$	&$a$ \\
+\end{tabular}
+\end{table}
+
+For bigger orders, there exist more than 1 self-consistent Cayley table, so how are
+cyclic groups defined?
+
+\textbf{Def.} The cyclic groups $\mathbb{Z}_n$, with $n=1,2...$ are in the form
+$$\mathbb{Z}_n = \left\{e,a,a^2,a^3...a^{n-1}\right\}$$
+where $a^k = \underbrace{a\cdot a\cdot a ...}_\text{k times}$.
+
+They can be visualized as the set of the $n$'th roots of $1$ over the complex numbers
+$\mathbb{C}$:
+$$\left\{z_k|z_k = e^{i\frac{2\pi}{n}k}\text{, with }k=0,1...n\right\}$$
+with the correspondence $z_0=e$, $z_k = a^{k-1}$ 

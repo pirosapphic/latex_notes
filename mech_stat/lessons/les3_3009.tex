@@ -1,0 +1,167 @@
+\section{Lesson 3, 30/09}
+\subsection{Equilibrium in external field}
+The TD system is often subject to external forces, like gravity: how can equilibrium
+be described in this case?
+
+Consider a TD system and subdivide it into smaller systems s.t they are still
+TD systems with a large number of particles: the coordinates of the portion is
+$\mathbf{x}$.
+
+Since $\mu$ is the energy needed to add particles to the system, the control
+variables used are $T,p,N$: from the definition of $G$
+$$\mu = \frac{G}{N}$$
+and from the fundamental equations
+$$\pdv[]{\mu}{p} = \frac{1}{N}\pdv[]{G}{p}:= \frac{V(T,p,N)}{N} = v(T,p)$$
+where $v$ is the volume per particle.
+
+The chemical potential consists of two parts
+$$\mu(T,p;\mathbf{x}) = \mu_0(T,p)+u(\mathbf{x})$$
+where $\mu_0$ is $\mu$ with the external field turned off and $u$ is related to the
+field.
+
+At the equilibrium, one expects that $T$ remains constant, $p$ depends on
+$\mathbf{x}$ (like the Stevino law) and $\mu$ remains constant and homogeneous.
+
+These conditions translate to
+$$\pdv{\mu}{x^i} = 0 = \pdv{\mu}{p}\cdot\pdv{p}{x^i}+\pdv{u}{x^i}$$
+so
+$$v(T,p)\pdv{p}{x^i}+\pdv{u}{x^i}.$$
+\textbf{Example: gravity} In this case $u(\mathbf{x})=mgz$, so
+$$\dv[]{p}{z}v(T,p)=-mg$$
+so $v$ does not depend on $T$, adding the incompressibility of the fluid imposes
+constant $v$, so
+$$\dv[]{p}{z} = -\frac{m}{v}gz=-\rho gz \rightarrow p(z) = p_0-mgz$$
+in the case of an ideal gas, using $pv=k_bT$ yields (prove it as an exercise)
+$$p(T,z)=p_0\exp\left[-\frac{mg}{kT}z\right]$$
+\subsection{Second order equilibrium}
+It was found that, at first order
+\begin{align*}
+&T,p,\mu \text{ are homogeneous}\\
+&\Delta S = 0
+\end{align*}
+To discuss the second order fluctuations, it is needed to re-express everything in
+terms of TD potentials: consider the control variables
+$$\left\{\underbrace{X_1,...X_r}_\text{extensive};
+\underbrace{I_{r+1},...I_n}_\text{intensive}\right\}$$
+and the potential
+$$\Phi(X_i;I_j):$$
+its differential is
+$$\dd\Phi = \sum_{i=1}^{r}I_i\dd X_i - \sum_{j=r+1}^{n}X_j\dd I_j$$
+\textbf{Note} This generalizes the problem to have $r$ extensive control variables
+and $r-n$ (?) intensive control variables.
+
+Consider a TD system subdivided in two parts and a fluctuation in the extensive
+variables:
+$$\delta X_i = \delta X_{i,1} + \delta X_{i,2} = 0$$
+at first order
+$$\Delta\Phi^{(1)} = \sum_{i=1}^{r}\left[\left(\pdv{\Phi}{X_i}\right)_1 -
+\left(\pdv[]{\Phi}{X_i}\right)_2\right]\delta X_{i,1}\geq0$$
+As before, the only way to ensure this condition is
+$$\left(\pdv[]{\Phi}{X_i}\right)_1 = \left(\pdv[]{\Phi}{X_i}\right)_2 
+\leftrightarrow I_{i,1} = I_{i,2}$$
+with finer partitions this means that the intensive variables conjugated to the
+extensive control variables are homogeneous in the system, at leas at first order.
+
+To get a non-trivial result, consider the second order of fluctuation of a single
+variable $X_i$ (i.e. considering the fluctuations independent):
+$$\Delta\Phi^{(2)} = \frac{1}{2}\left[\left(\pdv[2]{\Phi}{X_i}\right)_1 +
+\left(\pdv[2]{\Phi}{X_i}\right)_2\right](\delta X_{i,1})^2\geq0	$$
+where the minus sign was destroyed by the square; this statement is true only if
+$$\pdv[2]{\Phi}{X_i} = \pdv[]{I_i}{X_i}\geq0$$
+from this follows that
+$$\pdv[]{X_i}{I_i}\geq0$$
+and, remembering the Legendre transform
+$$\Phi(...,X_i,...)\rightarrow\tilde\Phi(...,I_i...) \leftrightarrow X_i =
+-\pdv[]{\tilde\Phi}{I_i}$$
+this gives
+$$\pdv[2]{\tilde \Phi}{I_i}\leq0$$
+
+This gives a geometric condition on the TD potentials at equilibrium: they are either
+a concave function of intensive variables or convex functions of extensive
+variables (or vice-versa \textbf{CHECK!!!!!!!})
+\textbf{Example} Consider the Helmholtz free energy: the stability condition
+implies that
+$$\pdv[2]{F}{T}\leq0$$
+but
+$$C_V = -T\pdv[2]{F}{T}\rightarrow C_V\geq0$$
+and also
+$$\underbrace{\pdv[2]{F}{V}}_{\geq0}=-\pdv[]{p}{V} = -\frac{1}{\pdv[]{V}{p}} =
+\frac{1}{\chi_T}\geq0 \leftrightarrow \chi_T\geq0$$
+\textbf{Example} Consider the Gibbs energy $G(T,p,N)$:
+$$\pdv[2]{G}{T}\leq0$$
+and the $C_p$ definition
+$$C_p = -T\pdv[2]{G}{T}\geq0.$$
+Again the $\chi_T$ definition is
+$$\chi_T = -\underbrace{\pdv[2]{G}{p}}_{\leq0}\geq0$$
+which is consistent with the previous example.
+
+From the relation
+$$C_p = C_V + \frac{T\alpha_p^2}{\chi_T}$$
+and the stability conditions discussed it follows that, in general
+$$C_p\geq C_V$$
+\subsection{Multi-component systems}
+Some TD systems have different components mixed (e.g. the atmosphere), indexed with
+$a=1,2...c$ so the chemical potential is not unique: $\mu_a,N_a$ and these potentials
+depend separately from those variables (which vars???)
+$$\dd E = T\dd S -p\dd V + \sum_{a=1}^{c}\mu_a \dd N_a + y\dd X$$
+Each potential has its own equilibrium condition $\mu_{a,1} = \mu_{a,2}$ and
+intensive variables depend only on $c-1$ ratios
+$$\nu_a = \frac{N_a}{N}$$
+with the constraint
+$$\sum_{a=1}^{c}N_a =N\leftrightarrow\sum_{a=1}^{c}\nu_a=1$$
+
+\subsection{Phase transitions}
+This topic is very difficult to treat mathematically and one of the most important
+results of statistical mechanics is the description of this phenomenon.
+
+What are the conditions of coexistence of different phases of matter in equilibrium
+(e.g. ice and water)?\\
+At equilibrium, the state of the TD system is characterized by $E,V,N$: it is not
+necessary that at equilibrium state these variables are homogeneous.
+
+Each different phase (each defined by its state equation) of the system has its set
+of variables $p_i,T_i,\mu_i$.
+
+If the state is equilibrium, the intensive variables must be homogeneous:
+$$p_1=p_2,\quad T_1=T_2,\quad\mu_1=\mu_2$$
+it is then natural to take $p,T$ as control variables, making $\mu$ a dependent
+variable; since the phases have different equations of state, the potentials will
+be different: for the phase $\alpha$
+$$G_\alpha(T,p,N_\alpha) = \mu_\alpha N_\alpha \rightarrow \mu_\alpha =
+\frac{G_\alpha}{N_\alpha}.$$
+The phases can only coexist on \textit{curves of coexistence} in the state space:
+for generic values of $p,T$, $\mu_\alpha\neq\mu_\beta$ and so the phases do not
+coexist and, considering $N$ constant, the system "selects" the phase which minimizes
+$$\mu=\frac{G}{N}.$$
+So phases $\alpha$ and $\beta$ coexist if and only if the values of $p,T$ are so that
+$$\mu_\alpha(p,T) = \mu_\beta(p,T)$$
+which typically is a curve $p(T)$ in the state space. When this curve is crossed, a
+phase transition occurs and it can be of two natures.
+\begin{itemize}
+\item \textbf{First order transition}
+        
+    The coexistence curve is determined by the intersection of the surfaces
+    $\mu_\alpha(T,p)$ and $\mu_\beta(T,p)$. In general, the value of the derivatives
+    differ at the intersection point(s): fixing $p$ they are
+    $$\left(\pdv[]{\mu_\alpha}{T}\right)_{p} = \frac{1}{N_\alpha}\left(\pdv[]{G}{T}
+    \right)_p = -\frac{S_\alpha}{N_\alpha}:=-s_\alpha$$
+    which is the entropy per particle, so in general
+    $$s_\alpha\neq s_\beta$$
+    Suppose $s_\alpha >s_\beta$: for $T=T(p)-\varepsilon$, $S_{(-)} = Ns_\beta$,
+    while for $T=T(p)+\varepsilon$, $S_{(+)} = Ns_\alpha$; in this case the
+    transition from $\beta$ to $\alpha$ makes the entropy jump of
+    $$\Delta S = N(s_\alpha-s_\beta)>0$$
+    this is nothing but the effect of latent heat, the heat to be furnished to the
+    system just to do a phase transition
+    $$L=T(p)\Delta S.$$
+    From an enthalpy p.o.v,
+    $$H(S,p,N) = G+TS$$
+    since $\mu_\alpha = \mu_\beta$, $\Delta G = 0$ and so
+    $$\Delta H = \Delta(TS) = T\Delta S = L.$$\\
+
+    This is similar for fixed temperature transitions, with derivative
+    $$\left(\pdv[]{\mu}{p}\right)_{T,N} = \frac{V}{N}=v$$
+    which is the volume per particle; so in general $v_\alpha\neq v_\beta$ and the
+    volume of the system changes during the transition
+    \textit{even at constant pressure} (e.g. ice melting).
+\end{itemize}

@@ -1,0 +1,162 @@
+\section{Lesson 2, 29/09}
+\subsection{Internal Energy as a TD potential}
+[10 min. cfr with notes pt 2 on moodle/Remi]
+$N = const.$
+\subsection{Legendre Transform}
+What if the control variables are the intensive ones, e.g. system in a thermostat? It
+is useful to use $T$ instead of $S$: the mathematical tool used is the \textit{Legendre
+transform} (the one used to transform $L(q,\dot q)\rightarrow H(q,p)$, using 
+$p = \pdv[]{L}{\dot q}$)
+$$E(S,V,N,X)\rightarrow F(T,V,N,X):=E\left(S,V,N,X\right)-TS$$
+where $S$ is found by inverting the relation $T=\pdv[]{E}{S}$. F is the Helmholtz
+free energy
+
+Using the fundamental equation of TD
+$$E=TS-pV+\mu N+yX$$
+the function $F$ can also be written as
+$$F = -pV +\mu N +yX:$$
+differentiating this yields
+$$\dd F \leq -S\dd T-p\dd V + \mu \dd N + y\dd X$$
+so keeping fixed $T,V,N,X$, the equilibrium is at minimal $F$.
+
+What are the conjugated variables? As always
+\begin{align*}
+S = -\pdv[]{F}{T}\\
+p = - \pdv[]{F}{V}\\
+\mu = \pdv[]{F}{N}
+\end{align*}
+This process can be done with every intensive variable e.g. enthalpy:
+$$E(S,V,N,X)\underset{p = -\pdv[]{E}{V}}\longrightarrow H(S,p,N,X) := E(S,V,N,X) +pV$$
+and
+$$H=TS+\mu N+yX \underset{\dd\text{ and fund. eq.}}\longrightarrow 
+\dd H \leq T\dd S + v \dd p +\mu \dd N +y\dd X$$
+so fixing $S,p,N,X$, the equilibrium is at minimal $H$.
+
+Doing this with respect to both couples $(T,S)$ and $(p,V)$ yields the Gibbs free
+energy:
+$$G(T,p,N,X) = E(S,V,N,X) - TS + pV$$
+using the fundamental equation yields
+$$G = \mu N + yX$$
+\textbf{Note} In simple systems (without $(y,X)$) $G=\mu N$. The differential is
+$$\dd G\leq -S\dd T + V\dd p +\mu \dd N +y\dd X$$
+that shows that, fixing $T,p,N,X$, equilibrium is at minimal $G$.
+
+The last Legendre Transform of interest is the one that yields the \textit{Grand
+Canonical potential}:
+$$E(S,V,N,X)\underset{(T,S),(\mu,N)}\longrightarrow \bar\omega(T,V,\mu,X) = E(S,V,N,X)-
+TS-\mu N$$
+The fundamental equation yields
+$$\bar\omega = -pV+yX$$
+and differentiating yields
+$$\dd \bar\omega\leq -S\dd T -p\dd V -N\dd\mu+y\dd X$$
+so the equilibrium is at the minimum of $\bar\omega$.
+
+The pressure is simply
+$$ p = -\pdv[]{\bar\omega}{V} = -\frac{\bar\omega}{V}$$
+\subsection{Response Functions}
+These functions describe the reaction of variables when another one changes (typically
+conjugated variables), are very easy to measure and they are deeply connected to the
+size of the fluctuations of the system (Fluctuation-dissipation theorem).
+
+\textbf{Def.} Heat capacity
+$$C = \frac{\delta Q}{\dd T}$$
+is the amount of heat to be furnished to change the $T$; it is not an exact
+differential, so it depends on the transformation.\\
+Heat capacity at constant $(V,N)$: if $\dd V = \dd N = \dd X = 0 \rightarrow\delta W=0$;
+by the first principle
+$$\delta Q = \dd E$$
+so
+$$C_{V,N,X} = C_V = \frac{\delta Q}{\dd T} = \eval{\pdv[]{E}{T}}_{V,N,X}$$
+or, using the definition of entropy
+$$\delta Q = T\dd S$$
+and fixing $(V,N,X)$
+$$\dd S = \eval{\pdv[]{S}{T}}_{V,N,X}\dd T$$
+so
+$$C_V = \frac{T\dd S}{\dd T} = T \left(\pdv[]{S}{T}\right)_{V,N,X}.$$
+
+A more natural approach springs from the Helmholtz free energy:
+$$S = -\eval{\pdv[]{F}{S}}_{V,N,X}\rightarrow C_V = - T \pdv[2]{F}{T}$$
+
+Heat capacity at constant $(p,N,X)$: the first principle states
+$$\delta W = p \dd V \rightarrow \delta Q = \dd E +p\dd V$$
+so
+$$C_p = \frac{\delta Q}{\dd T} = \eval{\pdv[]{E}{T}}_{p,V,X} +
+p\eval{\pdv[]{V}{T}}_{p,V,X}$$
+but also
+$$E = G +TS-pV = G - T\pdv[]{G}{T}-pV$$
+so
+$$C_p = \pdv[]{}{T}\left(G-T\pdv[]{G}{T} -pV\right) + p\pdv[]{V}{T} = -
+\eval{T\pdv[2]{G}{T}}_{p,N,X}$$
+\subsection{Mechanical response functions}
+Susceptibility $\chi$ is the volume response to a change in pressure: this also varies
+depending on the transformation.
+
+Isothermal: fixing $(T,N,X)$
+$$\chi_T := -\eval{\pdv[]{V}{p}}_{T,N,X}$$
+since the variables are $(T,p,N,X)$, with only p independent, the most natural
+TD potential to use is $G$: some calculations show that
+$$\chi_T = - \eval{\pdv[2]{G}{p}}_{T,N,X}$$
+
+Adiabatic: fixing $(S,N,X)$
+$$\chi_S = -\eval{\pdv[]{V}{p}}_{S,N,X}$$
+the TD potential is the enthalpy $H$:
+$$V = \eval{\pdv[]{H}{p}}_{S,N,X} \rightarrow \chi_S = \eval{\pdv[2]{H}{p}}_{S,N,X}$$
+
+All these response functions are between conjugated variables: what happens if they are
+not? Consider the Thermal expansion coefficient
+$$\alpha_{p,N,X} = \alpha_p = \eval{\pdv[]{V}{T}}_{p,N,X} \underset{\text{exercise}}=
+\eval{\pdv[2]{G}{p}{T}}_{p,N,X}$$
+
+\subsection{Maxwell Relations}
+These are relations between TD quantities: consider the set of independent variables
+$$\{Z_A\}$$
+their conjugated variables
+$$\{\xi_A\}$$
+and a TD potential
+$$\dd\Phi = \sum_{}^{}\xi_A\dd Z_A$$
+it follows that
+$$\pdv[]{\xi_A}{Z_B} = \pdv[2]{\Phi}{Z_A}{Z_B} = \pdv[2]{\Phi}{Z_B}{Z_A} =
+\pdv[]{\xi_B}{Z_A}$$
+from other mathematical properties (like the "chain rule", see Billò notes) arise other
+relations. One finds
+$$\frac{1}{T}C_p > \frac{1}{T}C_V + \frac{\alpha^2_p}{\chi_T}$$
+
+\subsection{Stability of equilibrium state}
+Even at equilibrium, at maximum $S$, there can be small fluctuations in TD variables.
+For all such fluctuations, the entropy \textbf{must decrease} to ensure stability.
+
+What are the conditions for local equilibrium? Consider an isolated system at
+equilibrium subdivided in 2 parts, which can exchange particles and heat.
+\begin{gather*}
+E=E_1+E_2\\
+V=V_1+V_2\\
+N = N_1+N_2
+\end{gather*}
+Suppose some fluctuation occurs in $E_i,V_i,N_i$: the other part of the system must
+have an opposite fluctuation
+$$\Delta E_2 = -\Delta E_1 ...$$
+Assuming small fluctuations, the variation of $S$ at first order is
+$$\Delta S = \sum_{i=i}^{2} \left(\eval{\pdv[]{S_i}{E_i}}_\text{eq}\Delta E_i +
+\eval{\pdv[]{S_i}{V_i}}_\text{eq}\Delta V_i + \eval{\pdv[]{S_i}{N_i}}_\text{eq}
+\Delta N_i \right)=\left(\frac{1}{T_1^\text{eq}}- \frac{1}{T^\text{eq}_2}
+\right)\Delta E_1 + \left(\frac{p_1^\text{eq}}{T_1^\text{eq}}-
+    \frac{p_2^\text{eq}}{T^\text{eq}_2}\right) + ...$$
+Since $\Delta S \leq 0$, it must be that all the quantities are equal
+$$T_1^\text{eq} = T_2^\text{eq} ...$$
+Iterating this process for smaller and smaller partitions of the system proves that,
+unsurprisingly, at first order
+$$\Delta S = 0.$$
+
+The chemical potential condition
+$$\mu^\text{eq}_1 = \mu^\text{eq}_2$$
+guarantees chemical equilibrium: supposing an isolated system with 
+$\delta Q = \delta W = 0$, $\Delta S>0$ and
+$$\Delta S \approx - \left(\frac{\mu_1}{T_1} - \frac{\mu_2}{T}\right)\Delta N_1>0$$
+so if $\mu_1>\mu_2$ it must be that
+$$\Delta N_1 < 0,$$
+in other words, matter flows from higher to lower $\mu$.
+
+The quantity
+$$-\gradient\left(\frac{\mu}{T}\right)$$
+is a generalized force (see first lesson), much like
+$\gradient \left(\frac{1}{T}\right)$.

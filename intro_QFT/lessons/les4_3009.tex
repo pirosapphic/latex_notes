@@ -1,0 +1,126 @@
+\section{Lesson 4, 30/09}
+The generators are useful because one can study the entire group just by considering
+the generators: they are operators uniquely defined by their commutation relations
+using Lie brackets; the set of generators equipped with their commutation relations
+is the \textbf{Lie algebra} associated with the group.
+
+Once the algebra is known, the choice of the representation yields matrices equivalent
+to the generators.
+
+As first examples, it is useful to consider $SO(3)$ and $SU(2)$, because they are
+closely related to the Lorentz group (which is the final purpose of this parenthesis
+on group theory).
+\subsection{Example: angular momentum as a representation}
+As is known, the algebra of the angular momentum operators $J^i$ is
+\begin{gather*}
+    \left[J^i,J^j\right] = i\varepsilon\indices{^i^j_k}J^k
+\end{gather*}
+the rank of a group is the maximum number of generators that commute with one another:
+in this case the rank is $1$ and the chosen operator is $J^3$.\\
+A Casimir operator is an operator that commutes with all generators: in this case it
+is
+$$J^2 = J_iJ^i.$$
+The physical question is then "how many possible values/eigenstate of the angular
+momentum are possible?" and it turns out that the answer to this question also
+answers, in a QFT formalism, "how many particles does the field predict?".\\
+The process to find the possible eigenvalues and eigenstates is known (see QM1 course)
+and it yields the fact that for each $j$ value, the number of eigenstates of $J^3$
+is finite and their eigenvalues $m$ must be in the range
+$$-j< m < j$$
+where $j$ is called the \textit{maximum weight}; so for each $j$ the possible values
+of $J^3$ (and so the number of different eigenstates) are $2j+1$. From this process
+also follows that the only possible values of $j$ are positive integers or
+semi-integers and that the values of $m$ always differ by an integer (so if $j$ is
+semi-integer, all the corresponding values of $m$ must also be semi-integer and
+vice-versa).
+
+This formalism is very powerful because it relates the irreducible representations
+of the algebra to its vector basis: in a QFT, the dimension of the vector space
+will correspond to the number of possible physical particles.
+
+This algebra is common between $SU(2)$ and $SO(3)$, with the key difference that
+for $SO(3)$ only integer values of $j$ are permitted: as seen in intro groups, $SU(2)$
+can be represented as a 3-sphere immersed in $\mathbb{R}^4$, while $SO(3)$ is
+only half 3-sphere in which antipodal points are mapped to the equator (??).
+
+\subsection{Example: reducible representation}
+The combination of 2 spin $\frac{1}{2}$ particles yields a reducible representation:
+the vector space is
+$$V = \mathbb{C}^2\otimes\mathbb{C}^2,\quad \dim(V)=4$$
+again, the process of spin combination is treated in the QM1 and QM2 courses and it
+yields a \textit{triplet} and a \textit{singlet} of states:
+\begin{align*}
+&\text{Triplet (J=1): }\begin{dcases*}
+\ket{J=1,M=-1}\\
+\ket{J=1, M=0}\\
+\ket{J=1, M=-1}
+\end{dcases*}\rightarrow\text{Vector states}\\
+\phantom{x}\\
+&\text{Singlet J=0}: \ket{J=0,M=0} \rightarrow\text{Scalar state}
+\end{align*}
+So the space $V$ is subdivided into two different vector spaces which differ in
+symmetry: the singlet is antisymmetric while the triplet is symmetric; this
+representation is reducible, because the image of the representation of the algebra
+is the direct sum of the images of the representations of two different algebras.
+\subsection{The Lorentz Group Representation}
+Only the subgroup $L^\uparrow_+$ is here considered and its formal name is
+$SO(1,3)$, where $(1,3)$ is the signature of the Minkowski metric $(+,-,-,-)$.
+
+Consider an infinitesimal Lorentz transformation
+$$\Lambda\indices{^\mu_\nu} = \delta\indices{^\mu_\nu}+\omega\indices{^\mu_\nu},\quad
+|\omega\indices{^\mu_\nu}|<<1\,\forall\mu,\nu
+$$
+where $\omega\indices{^\mu_\nu}$ are called \textit{parameters} of the transformation.
+
+Substituting into the invariance condition yields
+\begin{gather*}
+g_{\mu\nu} \Lambda\indices{^\mu_\rho}\Lambda\indices{^\nu_\sigma} = g_{\rho\sigma}\\
+g_{\mu\nu} \left(\delta\indices{^\mu_\rho}+\omega\indices{^\mu_\rho}\right)
+\left(\delta\indices{^\nu_\sigma}+\omega\indices{^\nu_\sigma}\right)=g_{\rho\sigma}\\
+g_{\mu\nu}\delta\indices{^\mu_\rho}\delta\indices{^\nu_\sigma} + 
+\omega_{\nu\rho}\delta\indices{^\nu_\sigma} +
+\omega_{\mu\sigma}\delta\indices{^\mu_\rho}=g_{\rho\sigma}\\
+\omega_{\rho\sigma} = -\omega_{\rho\sigma}
+\end{gather*}
+so the parameters must be \textbf{antisymmetric}. This confirms the fact that
+each transformation is uniquely determined by 6 quantities.
+The transformation becomes
+$$\Lambda\indices{^\mu_\nu}  =\delta\indices{^\mu_\nu} +
+g^{\mu\rho}g\indices{^\sigma_\nu}\omega_{\rho\sigma}$$
+since $\omega_{\rho\sigma}$ are antisymmetric, the only non-zero part of the product
+$\omega_{\rho\sigma}g^{\mu\rho}g\indices{^\sigma_\nu}$ is given by the antisymmetric
+part of $g^{\mu\rho}g\indices{^\sigma_\nu}$: anti-symmetrizing it yields
+$$\Lambda\indices{^\mu_\nu} = \delta\indices{^\mu_\nu}+\frac{1}{2}\omega_{\rho\sigma}
+\left(g^{\mu\rho}g\indices{^\sigma_\nu}-g^{\mu\sigma}g\indices{^\rho_\nu}\right)=
+\delta\indices{^\mu_\nu} + i\frac{1}{2}\omega_{\rho\sigma}\left(M^{\rho\sigma}\right)
+\indices{^\mu_\nu}
+$$
+confronting with the definition of generators
+$$g=\mathbb{I} + i\alpha_aT^a$$
+yields that the generators are
+$$M^{\rho\sigma} = -i\left(g^{\mu\rho}g\indices{^\sigma_\nu}-g^{\mu\sigma}
+g\indices{^\rho_\nu}\right)$$
+so the generic Lorentz transformation can be expressed as
+$$\Lambda = \exp\left[\frac{i}{2}\omega_{\rho\sigma}M^{\rho\sigma}\right]$$
+and its commutation relations are
+$$\left[M^{\lambda\tau},M^{\rho\sigma}\right]= -i \left(
+    g^{\lambda\sigma}M^{\tau\rho}+g^{\tau\rho}M^{\lambda\sigma}-g^{\lambda\rho}
+    M^{\tau\sigma}-g^{\tau\sigma}M^{\lambda\rho}
+\right)$$
+To make computations easier, the 6 generators are split into $3+3$ easier operators:
+since $SO(3)$ is a subgroup of $SO(1,3)$, there is a way to express half of the
+Lorentz Group generators in terms of those of $SO(3)$:
+$$J_i  =\frac{1}{2}\varepsilon_{ijk}M^{jk}$$
+which obey the $SO(3)$ algebra
+$$\left[J_i,J_j\right] = i \varepsilon\indices{_i_j^k}J_k$$
+and generate rotations; the boosts are generated by
+$$K^i = M^{0i}$$
+which obey the commutation relation
+$$\left[K^i,K^j\right] = -i \varepsilon\indices{^i^j_k}J^k$$
+which means that the algebra of the $K$'s is \textbf{not} closed, whereas the algebra
+of the $J$'s is: this is due to the fact that 3D rotations form a subgroup of
+$SO(1,3)$, while boosts do not (it is easy to check that the composition of 2 Cartesian
+boosts is the composition of a Cartesian boost and a rotation).
+The mixed commutator yields
+$$[J_i,K_j] = i\varepsilon_{ijk}J^k$$
+so the set of all $J$'s and all $K$'s is the set of the generators of $SO(1,3)$.
