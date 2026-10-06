@@ -12,3 +12,7 @@
 \contentsline {subsection}{\numberline {3.2}Second order equilibrium}{7}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Multi-component systems}{9}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Phase transitions}{9}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}First order transitions}{10}{subsubsection.3.4.1}%
+\contentsline {section}{\numberline {4}Lesson 4, 09/10}{10}{section.4}%
+\contentsline {subsubsection}{\numberline {4.0.1}Continuous transitions}{12}{subsubsection.4.0.1}%
+\contentsline {subsection}{\numberline {4.1}Maxwell construction}{13}{subsection.4.1}%

@@ -137,31 +137,28 @@ So phases $\alpha$ and $\beta$ coexist if and only if the values of $p,T$ are so
 $$\mu_\alpha(p,T) = \mu_\beta(p,T)$$
 which typically is a curve $p(T)$ in the state space. When this curve is crossed, a
 phase transition occurs and it can be of two natures.
-\begin{itemize}
-\item \textbf{First order transition}
-        
-    The coexistence curve is determined by the intersection of the surfaces
-    $\mu_\alpha(T,p)$ and $\mu_\beta(T,p)$. In general, the value of the derivatives
-    differ at the intersection point(s): fixing $p$ they are
-    $$\left(\pdv[]{\mu_\alpha}{T}\right)_{p} = \frac{1}{N_\alpha}\left(\pdv[]{G}{T}
-    \right)_p = -\frac{S_\alpha}{N_\alpha}:=-s_\alpha$$
-    which is the entropy per particle, so in general
-    $$s_\alpha\neq s_\beta$$
-    Suppose $s_\alpha >s_\beta$: for $T=T(p)-\varepsilon$, $S_{(-)} = Ns_\beta$,
-    while for $T=T(p)+\varepsilon$, $S_{(+)} = Ns_\alpha$; in this case the
-    transition from $\beta$ to $\alpha$ makes the entropy jump of
-    $$\Delta S = N(s_\alpha-s_\beta)>0$$
-    this is nothing but the effect of latent heat, the heat to be furnished to the
-    system just to do a phase transition
-    $$L=T(p)\Delta S.$$
-    From an enthalpy p.o.v,
-    $$H(S,p,N) = G+TS$$
-    since $\mu_\alpha = \mu_\beta$, $\Delta G = 0$ and so
-    $$\Delta H = \Delta(TS) = T\Delta S = L.$$\\
+\subsubsection{First order transitions}   
+The coexistence curve is determined by the intersection of the surfaces
+$\mu_\alpha(T,p)$ and $\mu_\beta(T,p)$. In general, the value of the derivatives
+differ at the intersection point(s): fixing $p$ they are
+$$\left(\pdv[]{\mu_\alpha}{T}\right)_{p} = \frac{1}{N_\alpha}\left(\pdv[]{G}{T}
+\right)_p = -\frac{S_\alpha}{N_\alpha}:=-s_\alpha$$
+which is the entropy per particle, so in general
+$$s_\alpha\neq s_\beta$$
+Suppose $s_\alpha >s_\beta$: for $T=T(p)-\varepsilon$, $S_{(-)} = Ns_\beta$,
+while for $T=T(p)+\varepsilon$, $S_{(+)} = Ns_\alpha$; in this case the
+transition from $\beta$ to $\alpha$ makes the entropy jump of
+$$\Delta S = N(s_\alpha-s_\beta)>0$$
+this is nothing but the effect of latent heat, the heat to be furnished to the
+system just to do a phase transition
+$$L=T(p)\Delta S.$$
+From an enthalpy p.o.v,
+$$H(S,p,N) = G+TS$$
+since $\mu_\alpha = \mu_\beta$, $\Delta G = 0$ and so
+$$\Delta H = \Delta(TS) = T\Delta S = L.$$\\
 
-    This is similar for fixed temperature transitions, with derivative
-    $$\left(\pdv[]{\mu}{p}\right)_{T,N} = \frac{V}{N}=v$$
-    which is the volume per particle; so in general $v_\alpha\neq v_\beta$ and the
-    volume of the system changes during the transition
-    \textit{even at constant pressure} (e.g. ice melting).
-\end{itemize}
+This is similar for fixed temperature transitions, with derivative
+$$\left(\pdv[]{\mu}{p}\right)_{T,N} = \frac{V}{N}=v$$
+which is the volume per particle; so in general $v_\alpha\neq v_\beta$ and the
+volume of the system changes during the transition
+\textit{even at constant pressure} (e.g. ice melting).

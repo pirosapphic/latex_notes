@@ -1,0 +1,82 @@
+\section{Lesson 6, 05/10}
+\subsection{Massive and massless particles representations}
+\textbf{Massive particles}\\
+It is known from SR that if a particle is massive, there exist a reference frame
+in which the particle is at rest, i.e.
+$$P^\mu = (m,\mathbf{0})$$
+which means that
+$$W^0 = 0\quad W^i = -\frac{1}{2} \varepsilon^{0ijk}M_{jk}$$
+recalling the definition of $J^i$ this is
+$$W^i = -\frac{1}{2}mJ^i$$
+since the particle is at rest, this cannot represent an orbital angular momentum,
+so it must be intrinsic, i.e. \textit{spin}:
+$$W^i = -\frac{1}{2}mS^i$$
+and so massive particles are identified by Casimir operators $P^2$ and $S^2\propto
+W^2$ and by the commuting operators $S_3$ and $P^\mu$:
+there are, for each value of $m,s$, $2s+1$ internal degrees of freedom.
+
+\textbf{Massless particles}\\
+If the particle is massless,
+$$P_\mu P^\mu = m^2 = 0$$
+which means
+$$W_\mu W^\mu = 0,$$
+and in general
+$$P_\mu W^\mu = 0:$$
+from these 3 conditions it can be shown\footnote{moodle?} that
+$$W^\mu = h P^\mu$$
+where $h = \pm 1$ is called \textbf{helicity} and represents the projection of the
+angular momentum on the direction of the momentum
+$$h = \frac{\mathbf{J}\cdot\mathbf{P}}{|\mathbf{P}|};$$
+in this case, they can only be parallel or anti-parallel: these states are called
+\textit{polarizations} and, for photons, they correspond to light polarizations.
+
+This framework also allows a sector of the theory in which spin is continuous
+($m=0$, $W^2<0$ states are like this, but they have not been observed in nature)
+and a sector in which some particles, tachyons can move at $v>c$.
+
+The key takeaway from this arguments is that
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{The irreducible representations of the Poincaré Group are in
+        one-to-one correspondence with the possible types of elementary particles.\\
+        The mathematical structure of space-time symmetries determines what kinds
+        of particles can exist in nature.}
+    }%
+}
+\subsection{Non-finite representations of groups: field representations}
+Until this point, all the representations have been finite-dimensional, with
+generators represented as matrices, but a field is continuous.
+
+\textbf{Def.} A field is a well-behaved function of spacetime
+$$\phi_a(x^\mu) = \begin{pmatrix}
+    \phi_1(x^\mu)\\
+    \phi_2(x^\mu)\\
+    ...
+\end{pmatrix}
+$$
+matrices can transform a field into another with linear combinations of the old
+components as new components: these transformations are finite-dimensional, while
+the ones on the coordinates $x^\mu$ can also be infinite-dimensional.
+
+In QM the allowed transformations were unitary transformations, as they preserve
+squared norms, which are the observable part of the theory: these transformations
+are infinite-dimensional (think of the time evolution: its generator is the
+Hamiltonian $H$, which is a differential operator).
+
+In parallel to the definition of the angular momentum operator in QM, the Lorentz
+generator for infinite-dimensional transformation is
+$$M_{\mu\nu} = i (x_\mu\partial_\nu-x_\nu\partial_\mu)$$
+and so a field transforms like
+$$\phi_a(x) \rightarrow \phi_a'(x') = M\indices{^a_b}(\Lambda)\phi_b(\Lambda x)$$
+where $\Lambda$ are infinite-dimensional transformations and $M\indices{^a_b}$ are
+finite-dimensional;
+the total transformation can be expressed with the exponential map
+$$\phi_a(x')=\exp\left[-\frac{i}{2}\omega^{\rho\sigma}M_{\rho\sigma}\right]\phi_b(x),
+$$
+with
+$$M_{\mu\nu} = M_{\mu\nu}^\text{inf} + M_{\mu\nu}^\text{fin}:$$
+where the finite part generates the transformations of the field components\footnote{
+Q: why are we assuming that the parameters are the same number and are the same?}
+and the infinite part those of the space-time coordinates. This generators can be
+expressed together thanks to the BCH formula.

@@ -17,8 +17,8 @@ these two are important because they are, respectively, symmetric and antisymmet
 (how can they be?? They're scalar!).
 
 \textbf{Theorem:} The algebra of the Lorentz Group can be factorized as the direct
-product of two $SU(2)$ algebras
-$$\mathfrak{so}(1,3) = \mathfrak{su}(2)\otimes\mathfrak{su}(2)$$
+sum of two $SU(2)$ algebras
+$$\mathfrak{so}(1,3) = \mathfrak{su}(2)\oplus\mathfrak{su}(2).$$
 
 This suggests to find new generators that are suited to this decomposition
 \begin{gather*}
@@ -36,9 +36,9 @@ of the $N$'s and that of the $N^\dagger$'s are closed and disjoint.
 
 The Casimir operators are
 \begin{align*}
-    N_iN^i &\longrightarrow n(n+1)\\
+    N^2=N_iN^i &\longrightarrow n(n+1)\\
 	   &\text{\footnotesize eigenvalues}\\
-    N^\dagger_iN^{i\dagger} &\longrightarrow m(m+1)    ,
+    N^{\dagger 2}=N^\dagger_iN^{i\dagger} &\longrightarrow m(m+1),
 \end{align*}
 so the irreducible representations of the group will be labeled by the pair $(n,m)$.
 Since they obey $SU(2)$ algebra, it is clear that $n,m$ will have integer or
@@ -54,11 +54,47 @@ To each pair $n,m$ corresponds a name for the field
 	$(1/2,0)$&Spinor $\psi_L$&2&Weyl Spinor\\
 	$(0,1/2)$&Spinor $\psi_R$&2&Weyl Spinor\\
 	$(1/2,0)\oplus(0,1/2)$&Dirac Spinor&4&\\
-	$(1/2,1/2)$&4-vector field (spin 1)&4&$A^\mu$ ELM\\
-	$(1,0)\oplus(0,1)$&Rank 2 antisymm tensor&6&$F^{\mu\nu}$ ELM
+	$(1/2,1/2)$&4-vector field (spin 1)&4&$A^\mu$ EM\\
+	$(1,0)\oplus(0,1)$&Rank 2 antisymm tensor&6&$F^{\mu\nu}$ EM
     \end{tabular}
 \end{table}
-\newpage
+
+The generators for each field can be derived: for scalar particles it is easy,
+consider
+\begin{gather*}
+n=0\rightarrow \mathbf{N}=0=\frac{1}{2}\left(\mathbf{J}+i\mathbf{K}\right)\\
+m=0\rightarrow \mathbf{N^\dagger}=0=\frac{1}{2}\left(\mathbf{J}-i\mathbf{K}\right)\\
+\end{gather*}
+which has only one solution.
+$$\mathbf{J}=\mathbf{K}=0$$
+For the spinor $\left(1/2,0\right)$,
+\begin{gather*}
+n=1/2\rightarrow\mathbf{N} = \frac{1}{2}\mathbf{\sigma}\\
+m=0\rightarrow\mathbf{N^\dagger} = 0
+\end{gather*}
+which implies
+$$\begin{dcases*}
+  \left(\mathbf{J}+i\mathbf{K}\right)=\mathbf{\sigma}\\
+  \mathbf{J} = i\mathbf{K}
+  \end{dcases*} \rightarrow
+  \begin{dcases*}
+  \mathbf{J} = \frac{i}{2}\mathbf{\sigma}\\
+  \mathbf{K} = -\frac{i}{2}\mathbf{\sigma}
+  \end{dcases*}
+$$
+and so the generic transformation can be written as
+$$\Lambda_{(1/2,0)} = \exp\left[\frac{i}{2}\left(\vartheta_a\sigma^a-
+i\eta_a\sigma^a\right)\right].$$
+A similar process can be done for $(0,1/2)$ and it yields
+$$\Lambda_{(0,1/2)} = \exp\left[\frac{i}{2}\left(\vartheta_a\sigma^a+
+i\eta_a\sigma^a\right)\right]$$
+These two spinorial fields will be united into a single, 4-component field called
+a \textit{Dirac Field}, (by taking the direct sum of the two components),
+which has some symmetry properties that these two do not possess singularly and
+describes \textbf{the electron}. Their direct product will yield a vector field
+that describes \textbf{the photon}.
+%
+%\newpage
 \subsection{Poincaré Group}
 The QFT must also be invariant over spacetime \textit{translations}: the Poincaré
 group includes Lorentz transformations \textit{and} translations
@@ -76,10 +112,11 @@ compact.
 
 Finding the commutation relations for the algebra is not trivial, since rotations
 and translations do not commute, even in Minkowski space. Consider two
-successive Poincaré transformations (why????):
-$$x^\mu\rightarrow{(\Lambda_{(1)})}\indices{^\mu_\nu}x^\nu + a_1^\mu \rightarrow
-{(\Lambda_{(2)})}\indices{^\mu_\rho}{(\Lambda_{(1)})}\indices{^\mu_\nu}x^\nu + 
-{(\Lambda_{(2)})}\indices{^\mu_\rho}a_1^\rho+a_2^\mu$$
+successive Poincaré transformations:
+$$x^\mu\rightarrow x'^\mu={(\Lambda_{(1)})}\indices{^\mu_\nu}x^\nu+a_1^\mu\rightarrow
+ x''^\mu={(\Lambda_{(2)})}\indices{^\mu_\rho}{(\Lambda_{(1)})}\indices{^\mu_\nu}
+ x^\nu+ {(\Lambda_{(2)})}\indices{^\mu_\rho}a_1^\rho+a_2^\mu$$
+it is clear that they do not commute.\\
 The commutation relations are
 \begin{align*}
 &\left[P^\mu,P^\nu\right]=0\\
@@ -87,23 +124,25 @@ The commutation relations are
 \end{align*}
 They are clearer when time and space indexes are expressed separately
 \begin{align*}
-&\left[P^i,P^j\right]=0\\
-&\left[P^i,H\right]=0\\
-&\left[K^i,P^j\right]=i\delta^{ij}H\\
-&\left[J^i,J^j\right]=i\varepsilon\indices{^i^j_k}J^k\\
-&\left[K^i,H\right]=iP^i\\
-&\left[J^i,P^j\right]=i\varepsilon\indices{^i^j_k}P^k\\
-&\left[J^i,H\right]=0\\
-&\left[K^i,K^j\right]=i\varepsilon\indices{^i^j_k}J^k\\
-&\left[J^i,K^i\right]=i\varepsilon\indices{^i^j_k}K^k\\
-\text{REORDER}
+&\left[P^i,P^j\right]=0\quad
+\left[P^i,H\right]=0\quad
+\left[K^i,P^j\right]=i\delta^{ij}H\\
+&\left[J^i,J^j\right]=i\varepsilon\indices{^i^j_k}J^k\quad
+\left[K^i,H\right]=iP^i\quad
+\left[J^i,P^j\right]=i\varepsilon\indices{^i^j_k}P^k\\
+&\left[J^i,H\right]=0\quad
+\left[K^i,K^j\right]=i\varepsilon\indices{^i^j_k}J^k\quad
+\left[J^i,K^i\right]=i\varepsilon\indices{^i^j_k}K^k
 \end{align*}
-Next, the Casimir operators: a natural choice is
-$$P^2 = P_\mu P^\mu$$
+Next, the Casimir operators: the expected number is 2, as there are only
+2 commuting generators, a natural choice is
+$$P^2 = P_\mu P^\mu\underset{\text{eigenvalue}}\longrightarrow m^2,$$
+where $m$ is the mass of the particle (as the mass-shell dictates);
 a not so natural choice is the \textit{Pauli-Lubanski vector} squared:
-$$W^\mu = \varepsilon^{\mu\nu\rho\sigma}P_\nu M_{\rho\sigma}\rightarrow W^2 = W_\mu
+$$W^\mu = \frac{1}{2}\varepsilon^{\mu\nu\rho\sigma}P_\nu M_{\rho\sigma}\rightarrow
+W^2 = W_\mu
 W^\mu.$$
 A nice relation is
 $$P_\mu W^\mu = 0$$
-for antisymmetry reasons.
-
+for antisymmetry reasons, and one can show that
+$$\left[W^\mu,P^\nu\right]=0$$

@@ -1,0 +1,143 @@
+\section{Lesson 4, 09/10}
+[...] qualcosa su T fissata, $p = p(T)\pm\varepsilon$ usando $G$ si vede che c'è
+un $\Delta V$
+
+How can the shape of the transition curve $p(T)$ be determined? With the \textit{
+Clausius-Clapeyron equation}.
+
+Recall that
+$$\mu(T,p) = \frac{G}{N}\quad \dd\mu = - s \dd T + v\dd p$$
+and this has to be satisfied at each point on the curve: consider the
+infinitesimal change in $\mu$ along the curve
+\begin{gather*}
+    \mu_\alpha \rightarrow \mu_\alpha+\dd\mu_\alpha\\
+    \mu_\beta \rightarrow \mu_\beta+\dd\mu_\beta
+\end{gather*}
+since $\mu_\alpha = \mu_\beta$ at all points,
+$$\dd\mu_\alpha = \dd\mu_\beta$$
+substituting yields
+$$-s_\alpha\dd T + v_\alpha\dd p = -s_\beta\dd T + v_\beta \dd p$$
+which implies
+$$\dv[]{p}{T} = \frac{\Delta s}{\Delta v} = \frac{\Delta S}{\Delta V}$$
+in terms of the latent heat $L = T\Delta S$ it can be written as
+$$\dv[]{p}{T} = \frac{L}{T\Delta V} = \frac{1}{T}\frac{l}{\Delta v}=
+\frac{1}{T}\frac{l_\text{mol}}{\Delta v_\text{mol}} = \frac{1}{T}\frac{l_\text{sp}}
+{\Delta v_\text{sp}}$$
+where $l = \frac{L}{N}$ is the latent heat per particle, $l_\text{mol}$ is
+the molar latent heat and $l_\text{sp}$ is the specific latent heat (J/kg).
+
+\textbf{Example} water to ice transition\\
+In standard conditions, $p_\text{atm} = 101325$ Pa, $T_0 = 273.15$ K, the transition
+is possible and, contrary to many substances, water is denser than ice: the variation
+of specific volume for the transition is
+$$\Delta v_\text{sp} = v^\text{ice}_\text{sp} - v^\text{water}_\text{sp} = 9\cdot
+10^{-5}\text{ m}^3/\text{kg}$$
+and the specific latent heat is
+$$l_\text{sp} = 2.3\cdot10^{5}\text{ J/kg}$$
+The question is, how much pressure is needed to melt the ice at temperature
+$T_0-1$ K?
+
+In this case, $1\text{ K} =\Delta T << T_0$ and the C-C equation becomes
+$$\dv[]{p}{T} = \frac{1}{T}\frac{l_\text{sp}}{\Delta v_\text{sp}}\rightarrow
+\frac{\Delta p}{\Delta T} = \frac{1}{T}\frac{l_\text{sp}}{v_\text{sp}}\rightarrow
+\Delta p = \frac{\Delta T}{T_0} \frac{l_\text{sp}}{\Delta v_\text{sp}}\approx 10^7
+\text{ Pa}
+$$
+
+\textbf{Example} vapour at saturation\\
+When the liquid and gas phases coexist, the vapour is at saturation; this is a first
+order transition in which $l>0$ and $v_\text{gas}>>v_\text{liquid}$, so $\Delta v 
+\approx v_\text{gas}$. The C-C equations takes form as
+$$\dv[]{p}{T} = \frac{l}{Tv_\text{gas}}$$
+assuming a perfect gas that satisfies the ideal state equation
+$$pV = NkT\rightarrow pv_\text{gas} = kT$$
+the equation becomes
+$$\dv[]{p}{T} = \frac{l}{T}\frac{p}{kT}\rightarrow \frac{\dd p}{p} = \frac{l}{k}
+\frac{\dd T}{T^2}\rightarrow\ln\left(\frac{p}{p_0}\right) = -\frac{l}{k}\left(
+\frac{1}{T}-\frac{1}{T_0}\right)$$
+so the form of the transition curve is an exponential
+$$p(T) = p_0\exp\left[-\frac{l}{k}\left(\frac{1}{T}-\frac{1}{T_0}\right)\right]$$
+
+What about the $pV$ plane? Since the control variables can always be chosen, it should
+not be fundamentally different: consider a coexistence curve with a point
+$(p(T_0),T_0)$ and $\dv[]{p}{T}(T_0)>0$ and a transition at constant $T$ and
+decreasing $p$; the transition follows an isothermal curve in the $pV$ plane, then
+at $p(T_0)$ it becomes "isobara" while the volume changes, this is the coexistence
+curve, and finally it becomes isothermal again.\\
+Consider the coexistence curve: during the "isobara"
+$$V = N_\alpha v_\alpha \underset{\text{"isobara"}}\longrightarrow V = N_\alpha
+v_\alpha + N_\beta v_\beta\rightarrow v = \nu_\alpha v_\alpha + \nu_\beta v_\beta$$
+where $\nu_i = N_i/N$; from this follows
+$$v-v_\alpha = \nu_\beta(v_\beta-v_\alpha)$$
+and
+$$v_\beta - v = \nu_\alpha(v_\beta-v_\alpha)$$
+their quotient yields
+$$\frac{v-v_\alpha}{v_\beta-v} = \frac{\nu_\beta}{\nu_\alpha}$$
+
+Considering all the different values of $T$ shows that in the $pV$ plane
+the coexistence happens in a 2D region instead of a curve.
+
+$v_\alpha$ and $v_\beta$ are implicitly determined by
+$$\begin{dcases*}
+  p_\alpha = p_\beta\\
+  \mu_\alpha = \mu_\beta
+  \end{dcases*}$$
+In terms of free energy per particle $f = F/N$, $p = -\pdv[]{f}{v}$:
+since $p$ is constant in the phase transition, $f(v)$ is linearly decreasing with
+slope
+$$-p = \frac{f_\alpha - f_\beta}{v_\beta-v_\alpha}$$ 
+so
+$$f_\beta-f_\alpha = -p (v_\beta-v_\alpha) \rightarrow (f+pv)_\alpha = (f+pv)_\beta$$
+recalling that $F$ is related with a Legendre transform to the Gibbs free energy $G$,
+$$f+pv = G/N = \mu$$
+it implies
+$$\mu_\alpha = \mu_\beta.$$
+It can be shown that
+$$f(v) = \nu_\alpha f_\alpha + \nu_\beta f_\beta$$
+\subsubsection{Continuous transitions}
+In this case the first derivatives of $\mu$ are continuous and that means
+$$\Delta S = 0\quad\Delta V = 0$$
+and the discontinuity is at higher orders. Typically the coexistence in the
+plane $p,T$ is represented by single points, as opposed to curves for first
+order transitions: these are called \textit{critical points} and usually they
+are endpoints of first order transitions.
+
+\subsection{Maxwell construction}
+Suppose to know an approximated empirical equation of state for some system
+$$p=p(V,T)$$
+that in some regions \textit{does not} obey the stability conditions, i.e.
+in some regions, at constant temperature,
+$$\eval{\pdv[]{p}{V}}_{T,N}>0$$
+this is not possible and means that the equation of state is wrong, but suppose it
+works well in other regions: how can this be corrected?\\
+There is a method to connect "good" regions with one another, due to Maxwell, that
+consists in supposing that the "bad" region represents a phase transition: for
+example connecting two points in the $pV$ plane with a straight line at $p=\bar p$;
+this connection must be between two points $V_1,V_2$ so that the free energy at
+those points is the same as the one determined by the equation of state.
+$$\dd F = -S\dd T -p\dd V +\mu \dd N$$
+fixing $T,N$ this becomes
+$$F(V_2,T,N) - F(V_1,T,N) = -\int_{V_1}^{V_2}\dd V p(V,T,N)$$
+On the contrary, for the "isobara" the difference in free energy is
+$$F(V_2,T,N)-F(V_1,T,N)=\bar p (V_2-V_1)$$
+so the condition is
+$$\bar p (V_2-V_1) = \int_{V_1}^{V_2}\dd V p(V,T,N)$$  
+\textbf{Example: Van Deer Waals}\\
+The VdW equation considers intermolecular interactions with a potential "wall" at
+distance $d$ and for $r>d$ a $\sim -\frac{1}{r}$ potential: this is a good
+approximation of the real potential that governs intermolecular interactions;
+this also determines an effective volume
+$$V_\text{eff} = V-b$$
+as the single molecule's "volume" is $\sim d^3$ and this volume is unavailable for
+the rest of the system. The well after distance $d$ forms bound states, which 
+lowers the kinetic pressure:
+$$p = p_\text{kin} - \frac{a}{V^2}$$
+this defect in pressure is proportional to $V^{-2}$ (why?).
+
+The last hypothesis is that the kinetic pressure and the effective volume follow
+the ideal gas law
+$$p_\text{kin}V_\text{eff} = nRT$$
+substituting yields the VdW equation of state
+$$\left(p+\frac{a}{V^2}\right)(V-b) = nRT$$
+since $p(V)$ is approximately dependent on $V^{-3}$, some isothermals are
+non-physical, since they present horizontal flex points.
