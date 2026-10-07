@@ -1,5 +1,5 @@
 # Fdb version 4
-["lualatex"] 1791288105.22851 "intro_QFT.tex" "intro_QFT.pdf" "intro_QFT" 1791288108.13576 0
+["lualatex"] 1791386230.50635 "intro_QFT.tex" "intro_QFT.pdf" "intro_QFT" 1791386233.03455 0
   "/etc/texmf/tex/generic/config/language.dat" 1788356983.60566 2850 b86a6c5c7bf423c3902454d7e037ed0f ""
   "/home/paolo/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc" 1785064381.88596 128397 dc8cded2bbafe8195c86cdaea92e40b2 ""
   "/home/paolo/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-italic.luc" 1785084000.01982 136299 81dfec24bbf14622db1629e3fd551117 ""
@@ -212,17 +212,18 @@
   "/usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload.lua" 1775415801 13566 16df94dd2de231b2bca0aaa0190941fe ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1788357437 5385490 8673be925240dc2054d816ce847ba982 ""
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1788357397 5658276 680ec518007a28275783e9b3a254cf48 ""
-  "aux/intro_QFT.aux" 1791288107.77584 3659 77a3821de10ce8bf83387a927ab163c4 "lualatex"
-  "aux/intro_QFT.out" 1791288107.77884 3766 6f7d89a2a3bfd8705555f79f76d1ba0b "lualatex"
-  "aux/intro_QFT.toc" 1791288107.77884 2342 204abb5dc850cb18483323112657c5ed "lualatex"
-  "intro_QFT.tex" 1791276357.06067 2927 068043d4854eae8e1510c37f7e4ba633 ""
+  "aux/intro_QFT.aux" 1791386232.68225 4150 1e6a7061ff97226b192996b4018bd7ba "lualatex"
+  "aux/intro_QFT.out" 1791386232.68325 4347 c4dfcf602905dc509f4ae7ac857796ca "lualatex"
+  "aux/intro_QFT.toc" 1791386232.68425 2669 e597a4e6d1ae57b8fd31129a5c438abf "lualatex"
+  "intro_QFT.tex" 1791386229.49025 3029 517946842711a8782e6ae3d305d539a5 ""
   "lessons/les1_2309.tex" 1790500613.94115 59 76ea578e8e26b90af9fdc7f65c403a0e ""
   "lessons/les2_2409.tex" 1790501602.84503 5799 e88d1e631ed076becd42bf40a654587a ""
   "lessons/les3_2809.tex" 1790600894.85928 4731 a62a99bb0f564e984357567a2b590d90 ""
   "lessons/les4_3009.tex" 1790838174.96878 6843 d9b749ddf3e7ada49fa082a077e494ef ""
   "lessons/les5_0110.tex" 1791280635.82193 6307 c260a26eff830fcecc6e7edad7ccf63a ""
   "lessons/les6_0510.tex" 1791209750.33207 3805 804e69717a328db34b454395779af691 ""
-  "lessons/les7_0610.tex" 1791288104.16584 8937 320214b59e273b3bbc61f456b32b1d8d ""
+  "lessons/les7_0610.tex" 1791385869.56324 8972 0c7054ecf9f8f169a8cb97084eb893b3 ""
+  "lessons/les8_0710.tex" 1791385702.73723 7092 b7847fb989d967e5804a28b97a3fd512 ""
   (generated)
   "aux/intro_QFT.aux"
   "aux/intro_QFT.log"

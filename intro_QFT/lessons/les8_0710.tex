@@ -1,0 +1,146 @@
+\section{Lesson 8, 07/10}
+\subsection{Constructing a Lagrangian}
+The guiding principle of this process is the Occam's Razor: nature will realize
+the simplest Lorentz-invariant terms in the Lagrangian.
+
+The fundamental quantity to build a Lagrangian theory is \textbf{the action}, defined
+before as
+$$S = \int\dd^4x\mathcal{L}(\phi,\pd_\mu\phi):$$
+in classical mechanics the physical trajectory is the one on which the action (as a 
+functional) is minimal; in QM, even if no trajectory exists, this process can be still
+used in path integral formulation.
+
+As before stated, the Lagrangian density must be \textit{local}, to guarantee
+causality, \textit{real}, to preserve probability, \textit{Poincaré 
+invariant}, to ensure that the theory is relativistic and must contain \textit{at
+most a second derivative}, again to guarantee causality.
+
+Other invariances are admitted (and usually present) and are called \textit{internal
+symmetries}: for example the invariance of a spinor under a global phase shift
+guarantees \textbf{charge conservation}.
+\COMMENT{
+\textbf{Example: The Return of Klein-Gordon}\footnote{probably useless,
+maybe take it out}\\
+The K-G equation can be interpreted as an eigenvalue equation for a field:
+$$(\Box+m^2)\phi(x)=0$$
+where the d'Alembert operator $\Box = -P_\mu P^\mu$ is a Casimir operator of
+eigenvalue $m^2$.
+}
+\subsection{Least action}
+The action in natural units is dimensionless, so the Lagrangian density must have
+units [m$^{-4}$]=[kg$^4$].
+
+Consider an internal symmetry (i.e. a transformation that does not change the
+spacetime coordinates)\footnote{this is equivalent to the small variations of the
+trajectory in Lagrangian Mechanics.}:
+$$\phi(x)\rightarrow \phi'(x')=\phi(x)+\delta\phi(x),$$
+the action
+$$S=\int_{}^{}\dd^4x\mathcal{L}$$
+is minimal if
+$$\delta S =0 = \int_{}^{}\dd^4x\delta\mathcal{L} = 
+\int_{}^{}\dd^4x \left[\pdv[]{\mathcal{L}}{\phi}\delta\phi + \pdv{\mathcal{L}}
+{(\pd_\mu\phi)}\pd_\mu(\delta\phi)\right],
+$$
+where the relation $\delta(\pd_\mu\phi) = \pd_\mu(\delta\phi)$ was used;
+consider
+\begin{gather*}
+\pd_\mu\left(\pdv[]{\mathcal{L}}{(\pd_\mu\phi)}\delta\phi\right) = 
+\pdv[]{\mathcal{L}}{(\pd_\mu\phi)}\pd_\mu(\delta\phi)+\pd_\mu\left(
+\pdv[]{\mathcal{L}}{(\pd_\mu\phi)}\right)\delta\phi \rightarrow\\
+\rightarrow\pdv[]{\mathcal{L}}{(\pd_\mu\phi)}\pd_\mu(\delta\phi) = \pd_\mu\left(
+\pdv[]{\mathcal{L}}{(\pd_\mu\phi)}\delta\phi
+\right) - \pd_\mu\left(\pdv[]{\mathcal{L}}{(\pd_\mu\phi)}\right)\delta\phi:
+\end{gather*}
+substituting it into the $\delta S=0$ condition yields
+$$0=\int_{}^{}\dd^4x\left[\pdv[]{\mathcal{L}}{\phi}-\pd_\mu\pdv[]{\mathcal{L}}
+{(\pd_\mu\phi)}\right]\delta\phi + \int_{}^{}\dd^4x\pd_\mu\left(\pdv[]{\mathcal{L}}
+{(\pd_\mu\phi)}\delta \phi\right).$$
+If the variation of the fields $\delta\phi$ goes to zero at the boundary of the
+surface enclosing the dominion of integration (i.e. infinity)\footnote{
+this is the case for all physical fields.}, the second integral
+is zero by the divergence theorem and the action is stationary if and only if
+$$\boxed{\pdv[]{\mathcal{L}}{\phi}-\pd_\mu\pdv[]{L}{(\pd_\mu\phi)}=0}$$
+which is called the \textbf{Euler-Lagrange equation} for fields.
+
+\textbf{Note}: the E-L equation is invariant under transformations in the form
+$$\mathcal{L}'=\mathcal{L}+\pd_\mu\Lambda^\mu$$
+where $\Lambda^\mu$ is any 4-vector function: these are called \textit{canonical
+transformations}. A trivial example of these transformations are simple translations
+of $\mathcal{L}\rightarrow\mathcal{L}+C$.
+
+\subsection{Noether's Theorem}
+This is one of the pivotal theorems of QFT and all of theoretical physics and it
+states
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+    \textit{To each symmetry of a system corresponds a 4-current satisfying a
+    continuity equation and a conserved quantity, called Noether charge.}
+    }%
+}
+
+Consider a transformation that acts both on the coordinates and a field
+$$\begin{dcases*}
+  x'^\mu = x^\mu + \delta x^\mu\\
+  \phi'(x')=\phi(x)+\Delta\phi(x)
+  \end{dcases*}$$
+which does not change the action $S$\footnote{This is the definition of symmetry}.
+Staring with $\phi$ as a solution to the E-L equation, the action is invariant under
+the transformation if and only if
+$$\Delta S =0=\int_{}^{}\dd^4x\Delta\mathcal{L}+\int_{}^{}\delta(\dd^4x)\mathcal{L}$$
+where
+$$\Delta\mathcal{L} = \underbrace{\pdv[]{\mathcal{L}}{\phi}\delta\phi+
+\pdv[]{\mathcal{L}}{\pd_\mu\phi}\pd_\mu\delta\phi}_{
+= \delta\mathcal{L}} + \pd_\mu\mathcal{L}\delta x^\mu= \underbrace{\left(\pdv[]{
+\mathcal{L}}{\phi} - \pd_\mu\pdv{\mathcal{L}}{\pd_\mu\phi}\right)}_{=0\text{ E-L}}
+\delta\phi+\pd_\mu\left(\pdv[]{\mathcal{L}}{\pd_\mu\phi}\delta\phi\right)+
+(\pd_\mu\mathcal{L})\delta x^\mu.$$
+In this case, since the transformation acts on the coordinates, the variation of
+the integration measure must be considered:
+$$\delta(\dd^4x)= \dd^4x'-\dd^4x$$
+using the Jacobian of the coordinate transformation
+$$\dd^4x' = |\det(J(x))|\dd^4x = \left|\det\pdv{x'^\mu}{x^\nu}\right|\dd^4x$$
+$$
+\delta(\dd^4x)=\dd^4x'-\dd^4x\approx \pd_\mu\delta x^\mu\dd^4x,
+$$
+since
+$$\pdv{x'^\mu}{x^\mu} = \pdv{(x^\mu+\delta x^\mu)}{x^\nu} = g\indices{^\mu_\nu}+
+\pd_\nu\delta x^\mu,$$
+the property $\det A=e^{\Tr(\ln A)}$ yields
+$$\det J(x) \underset{\delta x^\mu\to0}\approx\exp\left[\Tr\pd_\nu\delta x^\mu\right]
+\sim 1+\pd_\mu\delta x^\mu.$$
+From this follows that the variation of the measure is
+$$\delta(\dd^4x) \approx \pd_\mu\delta x^\mu\dd^4x.$$
+
+So the action is stationary if and only if
+\begin{gather*}
+0 = \Delta S = \int_{}^{}\dd^4x \left[\pd_\mu\left(\pdv[]{\mathcal{L}}{\pd_\mu\phi}
+\delta\phi\right)+\underbrace{\pd_\mu\mathcal{L}\delta x^\mu + \mathcal{L}\pd_\mu
+\delta x^\mu}_{=\pd_\mu(\mathcal{L}\delta x^\mu)}\right] = \\
+= \int_{}^{}\dd^4x \pd_\mu\left(\pdv[]{\mathcal{L}}{\pd_\mu\phi}\delta\phi+
+\mathcal{L}\delta x^\mu\right) = 0
+\end{gather*}
+this happens if and only if
+$$\pd_\mu\left(\pdv[]{\mathcal{L}}{\pd_\mu\phi}\delta\phi+
+\mathcal{L}\delta x^\mu\right)= 0. $$
+The function in parenthesis is \textit{the Noether current}
+$$J^\mu =\pdv[]{\mathcal{L}}{\pd_\mu\phi}\delta\phi+\mathcal{L}\delta x^\mu $$
+and the found relation is its continuity equation, as
+$$\pd_\mu J^\mu = \pd_0 J^0 + \pd_i J^i = \pdv[]{\rho}{t}+\divergence\mathbf{j}=0,$$
+where $J^0:=\rho$, the density associated with the 3-current
+$\mathbf{j}$.
+
+Integrating the continuity equation yields
+$$0=\int_{}^{}\dd^3x \pd_\mu J^\mu = \int_{}^{}\dd^3x \pd_0J^0+
+\underbrace{\int_{}^{}\dd^3x\pd_i J^i}_{=0\text{ by div thm}}=
+\int_{}^{}d^3x\pdv[]{J^0}{t} = \dv[]{}{t}\int_{}^{}\dd^3xJ^0:=\dv[]{Q}{t}=0$$
+so the Noether charge which is conserved is
+$$Q = \int_{}^{}d^3xJ^0(x^\mu).$$
+It is useful to rewrite the Noether current in terms of $\Delta\phi$:
+recalling that
+$$\delta\phi = \Delta\phi - \pd_\nu\phi\delta x^\nu$$
+the current becomes
+$$J^\mu = \underbrace{\left(\mathcal{L}g\indices{^\mu_\nu}-\pdv[]{\mathcal{L}}{
+\pd_\mu\phi}\pd_\nu\phi\right)}_{:=-T\indices{^\mu_\nu}}\delta x^\nu +
+\pdv[]{\mathcal{L}}{\pd_\mu\phi}\Delta\phi$$
+where $T\indices{^\mu_\nu}$ is called the \textit{stress energy tensor}.

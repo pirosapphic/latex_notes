@@ -25,3 +25,7 @@
 \contentsline {section}{\numberline {7}Lesson 7, 06/10}{14}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Classical Field theory}{14}{subsection.7.1}%
 \contentsline {subsubsection}{\numberline {7.1.1}Transformations of fields}{15}{subsubsection.7.1.1}%
+\contentsline {section}{\numberline {8}Lesson 8, 07/10}{17}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Constructing a Lagrangian}{17}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Least action}{18}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Noether's Theorem}{19}{subsection.8.3}%

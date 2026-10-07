@@ -60,14 +60,14 @@ then an infinitesimal transformation $x'^\mu = x^\mu+\delta x^\mu$ so that
 $$\Delta f = f'(x'^\mu) - f(x^\mu) = f'(x^\mu+\delta x^\mu) - f(x^\mu) = f'(x^\mu)
 -f(x^\mu) + \pd_\mu f'(x^\mu)\delta x^\mu + O(\delta^2 x^\mu)
 $$
-at first order, considering $\pd_\mu f'(x^\mu) = \pd_\mu f(x^\mu) + O(\delta x^\mu)$,
+at first order, noting that $\pd_\mu f'(x^\mu) = \pd_\mu f(x^\mu) + O(\delta x^\mu)$,
 this can be written as
 $$\Delta f = \delta f +\pd_\mu f(x^\mu)\delta x^\mu.$$
-This can be seen as the definition of the operator $\Delta$ on fields:
-$$\Delta = \delta + \delta x^\mu \pd_\mu$$
-under a Poincaré transformation, the variation of a field is made up of the functional
-variation in the field itself and the variation in the field given by the
-transformation of the coordinates.
+This can be seen as the definition of the operator $\Delta$ on fields
+$$\Delta = \delta + \delta x^\mu \pd_\mu:$$
+under a Poincaré transformation, the variation of a field is made up of the
+functional variation in the field itself ($\delta$) and the variation in the field
+given by the transformation of the coordinates (called transport term).
 
 \textbf{Example:} spacetime translations.\\
 Consider the infinitesimal Poincaré transformation
@@ -103,7 +103,7 @@ $$\delta\phi = -\varepsilon^{\mu\rho}x_\rho\pd_\mu\phi \rightarrow \delta
 this operator is non-zero only for the antisymmetric part of $x_\rho\pd_\mu$, so
 antisymmetrizing yields
 $$\delta = -\varepsilon^{\mu\rho}\frac{1}{2}\left(x_\rho\pd_\mu-x_\mu\pd_\rho\right)=
--\varepsilon^{\mu\rho}\frac{1}{2}L_{\rho\mu}
+-\varepsilon^{\mu\rho}\frac{i}{2}L_{\rho\mu}
 $$
 where $L_{\rho\mu}$ is the generalized angular momentum expressed in its
 infinite-dimensional form, related to the $M_{\rho\mu}$ generators.\\
