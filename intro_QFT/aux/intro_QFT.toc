@@ -29,3 +29,9 @@
 \contentsline {subsection}{\numberline {8.1}Constructing a Lagrangian}{17}{subsection.8.1}%
 \contentsline {subsection}{\numberline {8.2}Least action}{18}{subsection.8.2}%
 \contentsline {subsection}{\numberline {8.3}Noether's Theorem}{19}{subsection.8.3}%
+\contentsline {section}{\numberline {9}Lesson 9, 08/10}{20}{section.9}%
+\contentsline {subsubsection}{\numberline {9.0.1}Transformation parameters}{20}{subsubsection.9.0.1}%
+\contentsline {subsubsection}{\numberline {9.0.2}Examples}{21}{subsubsection.9.0.2}%
+\contentsline {subsection}{\numberline {9.1}The action of a scalar field}{22}{subsection.9.1}%
+\contentsline {subsubsection}{\numberline {9.1.1}Symmetries: translations}{22}{subsubsection.9.1.1}%
+\contentsline {subsubsection}{\numberline {9.1.2}Symmetries: Lorentz invariance}{22}{subsubsection.9.1.2}%

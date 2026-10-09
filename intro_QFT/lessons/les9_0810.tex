@@ -1,0 +1,134 @@
+\section{Lesson 9, 08/10}
+\textbf{Observation} The action is invariant under canonical transformations
+(because the E-L equation is), but the Lagrangian density is not: this produces
+an ambiguity in the Noether current $J^\mu$, which is invariant under transformations
+in the form
+$$J^\mu\rightarrow J'^\mu = J^\mu + \pd_\rho t\indices{^\rho^\mu}\text{, with }
+t^{\rho\mu} = - t^{\mu\rho}$$
+\subsubsection{Transformation parameters}
+It is convenient to drop the dependency on the parameters of the transformation:
+\begin{gather*}
+\delta x^\rho = \pdv{\delta x^\rho}{\omega^A}\delta\omega^A\\
+\delta \phi = \pdv{\delta\phi}{\omega^A}\delta\omega^A
+\end{gather*}
+where $\omega^A$ are the parameters of the symmetry and $A$ is a set of indices:
+in general the Noether current is in the form 
+$$J'^\mu = J\indices{^\mu_A}\delta\omega^A$$
+and, because the continuity equation holds $\forall \omega^A$,
+$$\pd_\mu J\indices{^\mu_A}\delta \omega^A=0
+\leftrightarrow \pd_\mu J\indices{^\mu_A} = 0.$$
+This form underlines the fact that the number of charges also depends on the indices of
+the parameters:
+$$Q_A = \int_{}^{}\dd^3 x J^0_A(x^\mu) \rightarrow \dv[]{Q_A}{t} = 0.$$
+\COMMENT{
+\\ \textbf{Example: translations}\\
+For translations the relation between $\delta x^\mu$ and the parameter is
+$\delta x^\mu = \varepsilon^\mu$, so $\pdv{\varepsilon^\mu}{\varepsilon^\rho} =
+g\indices{^\mu_\rho}=\delta\indices{^\mu_\rho}$.
+
+\textbf{Example: Lorentz transformations}\\
+Here $\delta x^\mu = \varepsilon^{\mu\nu}x_\nu$, so
+$$\pdv{\delta x^\mu}{\varepsilon^{\rho\sigma}}= \pdv{}{\varepsilon^{\rho\sigma}}
+\left(g\indices{^\mu_\rho} g\indices{^\nu_\sigma} \varepsilon^{\rho\sigma}x_\nu\right)
+$$
+antisymmetrizing yields
+$$\pdv{\delta x^\mu}{\varepsilon^{\rho\sigma}}=\pdv{}{\varepsilon^{\rho\sigma}}
+\left(\varepsilon^{\rho\sigma}\frac{1}{2}\left(g\indices{^\mu_\rho}
+g\indices{^\nu_\sigma}x_\nu - g\indices{^\mu_\sigma}g\indices{^\nu_\rho}x_\nu\right)
+\right) = \frac{1}{2}\left(g\indices{^\mu_\rho}
+g\indices{^\nu_\sigma}x_\nu - g\indices{^\mu_\sigma}g\indices{^\nu_\rho}x_\nu\right)
+$$
+}
+\subsubsection{Examples}
+\begin{itemize}
+    \item \textbf{Internal symmetries}\\
+Consider a field $\phi$ and its symmetry
+$$\phi\rightarrow\phi+\delta\phi,\quad\delta x^\mu=0$$
+The Noether current is
+$$J^\mu=\pdv{\mathcal{L}}{\pd_\mu\phi}\delta\phi$$
+and the charges are
+$$Q = \int_{}^{}\dd^3 x J^0$$
+\item \textbf{Space-time translations}\\
+    Consider the transformation
+$$x^\mu\rightarrow x'^\mu = x^\mu+\varepsilon^\mu\text{, with }\varepsilon^\mu<<1$$
+Since $\phi$ is a local field, $\Delta\phi= 0$ and
+$$\delta\phi = -\varepsilon^\mu\pd_\mu\phi$$
+The current is
+$$J^\mu = \pdv{\mathcal{L}}{\pd_\mu\phi^\alpha}\left(-\varepsilon^\nu\pd_\nu
+\phi^\alpha\right) + \mathcal{L}\varepsilon^\mu = \varepsilon^\nu\left[\mathcal{L}
+g\indices{^\mu_\nu}-\pdv{\mathcal{L}}{\pd_\mu\phi^\alpha}\pd_\nu\phi^\alpha\right]=
+-\varepsilon^\nu T\indices{^\mu_\nu}$$
+as seen before, the continuity equation must hold $\forall \varepsilon^\nu$, so
+$$\pd_\mu T\indices{^\mu_\nu} = 0.$$
+The Noether charges are
+$$Q^\mu:=P^\mu = \int_{}^{}\dd^3 x T\indices{^0_\mu}$$
+The 0-component is the total energy of the system, i.e. the Hamiltonian
+$$P^0 = H = \int_{}^{}\dd^3x T\indices{^0_0} = \int_{}^{}\dd^3x\mathcal{H}$$
+where $\mathcal{H}$ is the Hamiltonian density.\\
+This quantity can also be defined using the conjugated "coordinate" to $\phi$
+$$\pi(x^\mu) = \pdv{\mathcal{L}}{\pd_0\phi} = \pdv{\mathcal{L}}{\dot \phi}$$
+then
+$$\mathcal{H} = \pi\dot\phi-\mathcal{L}$$
+\end{itemize}
+\subsection{The action of a scalar field}
+The Lagrangian density of a scalar field is
+$$\boxed{\mathcal{L} = \frac{1}{2}\pd_\mu\phi\pd^\mu\phi - V(\phi(x^\mu))}$$
+which includes a second derivative (since this is Lorentz-invariant) as a kinetic
+term and a potential term that depends only on $\phi$.
+
+The dimension of $\mathcal{L}$ turn out to be $[\mathcal{L}] = m^{-4}=kg^4$, so
+that of the field is $[\phi] = m^{-1} = kg$.
+
+Using these dimensionality considerations, the simplest Lagrangian is the \textbf{
+Lagrangian of a non-interacting system}
+$$\mathcal{L} = \frac{1}{2}\pd_\mu\phi\pd^\mu\phi - \frac{1}{2}m^2\phi^2.$$
+From this, the E-L equation is the equation of motion for the field
+\begin{gather*}
+\pdv[]{\mathcal{L}}{\phi}-\pd_\mu\pdv{\mathcal{L}}{\pd_\mu\phi}=0\\
+-m^2\phi-\pd_\mu(\pd^\mu\phi) = 0\\
+(\pd_\mu\pd^\mu + m^2)\phi(x^\mu)=0
+\end{gather*}
+this is the K-G equation! This can also be interpreted as an eigenvalue equation for
+the Casimir operator $\Box=-P^2$, which implies
+$$(-P^2+m^2)\phi=0\leftrightarrow P^2=m^2:$$
+this means that the dimensional parameter $m$ in $\mathcal{L}$ is indeed the mass
+associated with the field.
+\subsubsection{Symmetries: translations}
+The Noether current for translations, the stress-energy tensor, in this case comes
+out to be
+$$J_{\mu\nu}=T\indices{_\mu_\nu} = -g^{\mu\nu}\mathcal{L}+ \pd_\mu\phi\pd_\nu\phi$$
+and the charges, the momenta, are
+$$P_\mu = \int_{}^{}\dd^3x J_{\mu0} = \int_{}^{}\dd^3x (-g_{\mu0}\mathcal{L} +
+\pd_\mu\phi\pd_0\phi).$$
+The $T_{00}$ component is
+$$T_{00}=-\mathcal{L} + \pd_0\phi\pd_0\phi = \frac{1}{2}\dot\phi^2 + \frac{1}{2}\pd_i
+\phi\pd^i\phi+\frac{1}{2}m^2\phi^2 := \mathcal{H}$$
+\subsubsection{Symmetries: Lorentz invariance}
+Here $\delta x^\mu = \varepsilon^{\mu\nu}x_\nu$ and, by definition,
+$\Delta\phi=0$, so $\delta\phi = -\varepsilon^{\mu\nu}x_\nu\pd_\mu\phi$:
+the Noether current is
+$$J^\mu = \left(\mathcal{L}g\indices{^\mu_\nu}-\pdv{\mathcal{L}}{\pd_\mu\phi}
+\pd_\nu\phi\right)\delta x^\nu,$$   
+some boring calculations yield
+$$J^\mu = -\varepsilon^{\nu\rho}\left(\pd^\mu\phi\pd_\nu\phi x_\rho-\mathcal{L}
+g\indices{^\mu_\nu}x_\rho\right);$$
+before eliminating the parameters $\varepsilon^{\nu\rho}$, it is necessary to
+antisymmetrize the parenthesis, the result is
+\begin{gather*}
+    J^\mu = -\frac{1}{2}\varepsilon^{\nu\rho}\underbrace{
+    \left[\left(\pd^\mu\phi\pd_\nu\phi-\mathcal{L}g\indices{^\mu_\nu}\right)x_\rho -
+    \left(\pd^\mu\phi\pd_\rho\phi-\mathcal{L}g\indices{^\mu_\rho}\right)\right]}_
+    {:=J\indices{^\mu_\nu_\rho}}.\\
+    \pd_\mu J^\mu = 0 \leftrightarrow \pd_\mu J\indices{^\mu_\nu_\rho}=0
+    \leftrightarrow \pd_\mu J^{\mu\nu\rho}=0
+\end{gather*}
+So the parameter-independent Noether currents are $J^{\mu\nu\rho}$: they can be
+written in terms of the energy-momentum tensor
+$$J^{\mu\nu\rho}=T^{\mu\nu}x^\rho - T^{\mu\rho}x^\nu.$$
+It can be shown that the corresponding charges are the generators of
+Lorentz transformations in its infinite representation (?):
+$$Q^{\mu\nu}=\int_{}^{}\dd^3 x J^{0\nu\rho} = M^{\mu\nu}$$
+so the angular momenta are conserved, since
+$$L^i = \frac{1}{2}\varepsilon^{ijk}M_{jk},$$
+and so are the boost generators
+$$K^i = M^{0i}.$$

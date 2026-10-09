@@ -224,6 +224,7 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm5.tfm
 INPUT ./lessons/les7_0610.tex
 INPUT ./lessons/les8_0710.tex
+INPUT ./lessons/les9_0810.tex
 INPUT ./aux/intro_QFT.aux
 INPUT ./aux/intro_QFT.out
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb

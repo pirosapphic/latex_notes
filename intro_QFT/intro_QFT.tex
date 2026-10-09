@@ -58,6 +58,15 @@
     %\addcontentsline{toc}{section}{\underline{#1}}    
     \addcontentsline{toc}{section}{\large \underline{#1}}    
 }
+
+\newcounter{Lessoncounter}
+\newcommand\showmycounterL{\addtocounter{Lessoncounter}{1}\themycounter}
+\newcommand{\lesson}[1] 
+{ {\centering          
+    \addtocounter{Lessoncounter}{1} \large \underline{\textbf{#1}} } 
+    %\addcontentsline{toc}{section}{\underline{#1}}    
+    \addcontentsline{toc}{section}{\large \underline{#1}}    
+}
 \newcommand\pd{\partial}
 \newcommand{\COMMENT}[1]{} %comment block
  
@@ -102,4 +111,5 @@ notes by Paolo Rocchietti March\footnote{paolo.rocchiettimarc@edu.unito.it} \\
 \input{./lessons/les6_0510.tex}
 \input{./lessons/les7_0610.tex}
 \input{./lessons/les8_0710.tex}
+\input{./lessons/les9_0810.tex}
 \end{document}
