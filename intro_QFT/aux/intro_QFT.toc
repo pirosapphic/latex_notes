@@ -1,37 +1,37 @@
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {1}Lesson 1, 23/09}{3}{section.1}%
-\contentsline {section}{\numberline {2}Lesson 2, 24/09}{3}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Natural units}{3}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Klein-Gordon Equation}{3}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Symmetries and conservations}{4}{subsection.2.3}%
-\contentsline {subsubsection}{\numberline {2.3.1}Lorentz-Poincaré group}{4}{subsubsection.2.3.1}%
-\contentsline {section}{\numberline {3}Lesson 3, 28/09}{5}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Symmetries and Group Theory}{5}{subsection.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.1}Zoology}{5}{subsubsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.2}Lie Groups}{6}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Example: algebra of SO(3)}{6}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Example: algebra of SU(2)}{7}{subsubsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.3}Group representations}{7}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Lesson 4, 30/09}{7}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Example: angular momentum as a representation}{7}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Example: reducible representation}{8}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}The Lorentz Group Representation}{8}{subsection.4.3}%
-\contentsline {section}{\numberline {5}Lesson 5, 01/10}{10}{section.5}%
-\contentsline {subsection}{\numberline {5.1}More on the Lorentz group}{10}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Poincaré Group}{11}{subsection.5.2}%
-\contentsline {section}{\numberline {6}Lesson 6, 05/10}{12}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Massive and massless particles representations}{12}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Non-finite representations of groups: field representations}{13}{subsection.6.2}%
-\contentsline {section}{\numberline {7}Lesson 7, 06/10}{14}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Classical Field theory}{14}{subsection.7.1}%
-\contentsline {subsubsection}{\numberline {7.1.1}Transformations of fields}{15}{subsubsection.7.1.1}%
-\contentsline {section}{\numberline {8}Lesson 8, 07/10}{17}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Constructing a Lagrangian}{17}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Least action}{18}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Noether's Theorem}{19}{subsection.8.3}%
-\contentsline {section}{\numberline {9}Lesson 9, 08/10}{20}{section.9}%
-\contentsline {subsubsection}{\numberline {9.0.1}Transformation parameters}{20}{subsubsection.9.0.1}%
-\contentsline {subsubsection}{\numberline {9.0.2}Examples}{21}{subsubsection.9.0.2}%
-\contentsline {subsection}{\numberline {9.1}The action of a scalar field}{22}{subsection.9.1}%
-\contentsline {subsubsection}{\numberline {9.1.1}Symmetries: translations}{22}{subsubsection.9.1.1}%
-\contentsline {subsubsection}{\numberline {9.1.2}Symmetries: Lorentz invariance}{22}{subsubsection.9.1.2}%
+\contentsline {section}{\textbf {Lesson 1, 23/09}}{4}{section*.1}%
+\contentsline {section}{\textbf {Lesson 2, 24/09}}{4}{section*.1}%
+\contentsline {section}{\numberline {1}Natural units}{4}{section.1}%
+\contentsline {section}{\numberline {2}Klein-Gordon Equation}{4}{section.2}%
+\contentsline {section}{\numberline {3}Symmetries and conservations}{5}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Lorentz-Poincaré group}{5}{subsection.3.1}%
+\contentsline {section}{\textbf {Lesson 3, 28/09}}{6}{subsection.3.1}%
+\contentsline {section}{\numberline {4}Symmetries and Group Theory}{6}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Zoology}{6}{subsection.4.1}%
+\contentsline {section}{\numberline {5}Lie Groups}{7}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Example: algebra of SO(3)}{7}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Example: algebra of SU(2)}{8}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Group representations}{8}{section.6}%
+\contentsline {section}{\textbf {Lesson 4, 30/09}}{8}{section.6}%
+\contentsline {section}{\numberline {7}Example: angular momentum as a representation}{8}{section.7}%
+\contentsline {section}{\numberline {8}Example: reducible representation}{9}{section.8}%
+\contentsline {section}{\numberline {9}The Lorentz Group Representation}{9}{section.9}%
+\contentsline {section}{\textbf {Lesson 5, 01/10}}{11}{section.9}%
+\contentsline {section}{\numberline {10}More on the Lorentz group}{11}{section.10}%
+\contentsline {section}{\numberline {11}Poincaré Group}{12}{section.11}%
+\contentsline {section}{\textbf {Lesson 6, 05/10}}{13}{section.11}%
+\contentsline {section}{\numberline {12}Massive and massless particles representations}{13}{section.12}%
+\contentsline {section}{\numberline {13}Non-finite representations of groups: field representations}{14}{section.13}%
+\contentsline {section}{\textbf {Lesson 7, 06/10}}{15}{section.13}%
+\contentsline {section}{\numberline {14}Classical Field theory}{15}{section.14}%
+\contentsline {subsection}{\numberline {14.1}Transformations of fields}{16}{subsection.14.1}%
+\contentsline {section}{\textbf {Lesson 8, 07/10}}{18}{subsection.14.1}%
+\contentsline {section}{\numberline {15}Constructing a Lagrangian}{19}{section.15}%
+\contentsline {section}{\numberline {16}Least action}{19}{section.16}%
+\contentsline {section}{\numberline {17}Noether's Theorem}{20}{section.17}%
+\contentsline {section}{\textbf {Lesson 9, 08/10}}{21}{section.17}%
+\contentsline {subsection}{\numberline {17.1}Transformation parameters}{22}{subsection.17.1}%
+\contentsline {subsection}{\numberline {17.2}Examples}{22}{subsection.17.2}%
+\contentsline {section}{\numberline {18}The action of a scalar field}{23}{section.18}%
+\contentsline {subsection}{\numberline {18.1}Symmetries: translations}{23}{subsection.18.1}%
+\contentsline {subsection}{\numberline {18.2}Symmetries: Lorentz invariance}{24}{subsection.18.2}%

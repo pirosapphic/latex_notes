@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (TeX Live 2026/Arch Linux)  (format=lualatex 2026.9.2)  7 OCT 2026 17:17
+This is LuaHBTeX, Version 1.24.0 (TeX Live 2026/Arch Linux)  (format=lualatex 2026.9.2)  10 OCT 2026 13:45
  restricted system commands enabled.
 **mech_stat.tex
 (./mech_stat.tex
@@ -511,41 +511,42 @@ Package caption Info: hyperref package is loaded.
 Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
 )
 \c@Chapcounter=\count335
+\c@Lessoncounter=\count336
  (./aux/mech_stat.aux)
 \openout1 = mech_stat.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count336
+\scratchcounter=\count337
 \scratchdimen=\dimen261
 \scratchbox=\box105
-\nofMPsegments=\count337
-\nofMParguments=\count338
+\nofMPsegments=\count338
+\nofMParguments=\count339
 \everyMPshowfont=\toks34
-\MPscratchCnt=\count339
+\MPscratchCnt=\count340
 \MPscratchDim=\dimen262
-\MPnumerator=\count340
-\makeMPintoPDFobject=\count341
+\MPnumerator=\count341
+\makeMPintoPDFobject=\count342
 \everyMPtoPDFconversion=\toks35
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -553,22 +554,22 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring ON on input line 61.
+Package hyperref Info: Link coloring ON on input line 75.
  (./aux/mech_stat.out) (./aux/mech_stat.out)
 \@outlinefile=\write3
 
 \openout3 = mech_stat.out
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+esint on input line 67.
+LaTeX Font Info:    Trying to load font information for U+esint on input line 81.
  (/usr/share/texmf-dist/tex/latex/esint/uesint.fd
 File: uesint.fd 
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 67.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 81.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 67.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 81.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -578,6 +579,10 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 \openout4 = mech_stat.toc
  [2] (./lessons/les1_2309.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--1
+
+ []
+
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2.
@@ -603,6 +608,10 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2.
 
 ) (./lessons/les2_2909.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--1
+
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 22.64003pt, for example:
@@ -627,6 +636,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.64003pt}.
 
 [5]) (./lessons/les3_3009.tex
+Underfull \hbox (badness 10000) in paragraph at lines 160--1
+
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 22.64003pt, for example:
@@ -664,6 +677,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 158--159
  []
 
 ) (./lessons/lez4_0610.tex
+Underfull \hbox (badness 10000) in paragraph at lines 161--1
+
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 22.64003pt, for example:
@@ -688,6 +705,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.64003pt}.
 
 [12]) (./lessons/lez5_0710.tex
+Underfull \hbox (badness 10000) in paragraph at lines 141--1
+
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 22.64003pt, for example:
@@ -696,11 +717,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.64003pt}.
 
 [13]
-<./triple_water.png, id=193, 605.1408pt x 491.436pt>
+<./triple_water.png, id=196, 605.1408pt x 491.436pt>
 File: ./triple_water.png Graphic file (type png)
 <use ./triple_water.png>
 Package luatex.def Info: ./triple_water.png  used on input line 20.
 (luatex.def)             Requested size: 256.07481pt x 207.96144pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -710,10 +735,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.64003pt}.
 
 [14<./triple_water.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 46--47
-
- []
-
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 48.
@@ -779,25 +800,25 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `mech_stat.out' has not changed.
-(rerunfilecheck)             Checksum: 78BF0E94C532846F921C0691BD997BE0;3506.
+(rerunfilecheck)             Checksum: 3D1BA438CF8F5DCD9D510E63BD0EA445;3657.
 )
 
 Here is how much of LuaTeX's memory you used:
- 16382 strings out of 476076
+ 16384 strings out of 476076
  125086,794899 words of node,token memory allocated
  1360 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 274 attribute, 64 glue_spec, 138 attribute_list, 1 write nodes
-   avail lists: 1:1,2:728,3:232,4:160,5:538,6:68,7:5080,8:126,9:1001,10:10,11:339
- 38435 multiletter control sequences out of 65536+600000
+   avail lists: 1:1,2:740,3:253,4:116,5:499,6:74,7:5264,8:126,9:972,10:10,11:338
+ 38442 multiletter control sequences out of 65536+600000
  97 fonts using 6617887 bytes
- 73i,13n,83p,527b,434s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 73i,13n,83p,527b,452s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 warning  (pdf backend): unreferenced destination with name 'Hfootnote.1'
 </usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman9-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman6-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb>
-Output written on mech_stat.pdf (16 pages, 284207 bytes).
+Output written on mech_stat.pdf (16 pages, 284716 bytes).
 
-PDF statistics: 297 PDF objects out of 1000 (max. 8388607)
- 241 compressed objects within 3 object streams
- 44 named destinations out of 1000 (max. 1048576)
- 177 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 300 PDF objects out of 1000 (max. 8388607)
+ 244 compressed objects within 3 object streams
+ 39 named destinations out of 1000 (max. 1048576)
+ 193 words of extra memory for PDF output out of 10000 (max. 100000000)
 

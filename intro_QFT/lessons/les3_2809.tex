@@ -1,6 +1,6 @@
 %-------------------------------------------------------------------------------------
-\section{Lesson 3, 28/09}
-\subsection{Symmetries and Group Theory}
+\lesson{28/09}
+\section{Symmetries and Group Theory}
 The principle of symmetry (invariance) is the guiding light to create a theory:
 the first and fundamental symmetry is \textit{Lorentz invariance}, because special
 relativity states that \textbf{all physical laws must be the same in every inertial
@@ -20,7 +20,7 @@ introduction to groups is needed.
 \end{itemize}
 \textbf{Def.} A group is \textit{Abelian} if and only if
 $$\forall g_1,g_2\in G\text{, }g_1\cdot g_2 = g_2\cdot g_1$$
-\subsubsection{Zoology}
+\subsection{Zoology}
 \begin{itemize}
     \item $U$ meaning "unitary" means $UU^\dagger=\mathbb{I}$, for complex valued
 	matrices;
@@ -37,7 +37,7 @@ $$\forall g_1,g_2\in G\text{, }g_1\cdot g_2 = g_2\cdot g_1$$
 \textbf{Note} The number in the name of the group is the dimensionality of the
 fundamental representation.
 
-\subsection{Lie Groups}
+\section{Lie Groups}
 The most important groups are those that represent \textit{continuous transformations},
 i.e. every element of the group corresponds to a transformation that can be broken
 down into \textit{infinitesimal transformations}: using parameters $\alpha$ and
@@ -62,7 +62,7 @@ is called a \textbf{Lie Algebra} $\mathfrak{g}$.
 \textbf{Note} The most general form of a commutator is 
 $$[T^a,T^b] = i f\indices{^a_b_c}T^c$$
 
-\subsubsection{Example: algebra of SO(3)}
+\subsection{Example: algebra of SO(3)}
 The rotation matrix about the X axis of an angle $\vartheta_1$ is
 $$R_1(\vartheta_1)=\begin{pmatrix}
     1&0&0\\
@@ -93,7 +93,7 @@ The commutation relations turn out to be
 $$[J^i,J^j] = i\varepsilon_{ijk}J^k.$$
 From the generators, the $J^\pm$ operators are constructed.
 
-\subsubsection{Example: algebra of SU(2)}
+\subsection{Example: algebra of SU(2)}
 The definition states $SU(2) = \{\text{2x2 unitary matrices with}\det(U)=1\}$: the
 conditions imply, by the BCH formula:
 \begin{gather*}
@@ -103,7 +103,7 @@ conditions imply, by the BCH formula:
 the traceless, hermitian matrix vector space has base $\sigma^ii$, the Pauli matrices,
 which have commutation relations
 $$[\sigma^i,\sigma^j] = i\varepsilon_{ijk}\sigma^k$$
-\subsection{Group representations}
+\section{Group representations}
 \textbf{Def.} A representation of a group $G$ is a map 
 \begin{align*}
 &r: G \rightarrow GL(V)\\

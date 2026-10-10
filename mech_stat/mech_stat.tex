@@ -57,6 +57,20 @@
     %\addcontentsline{toc}{section}{\underline{#1}}    
     \addcontentsline{toc}{section}{\large \underline{#1}}    
 }
+
+\newcounter{Lessoncounter}
+\newcommand\showmycounterL{\addtocounter{Lessoncounter}{1}\themycounter}
+\newcommand{\lesson}[1] 
+{ {          
+    \addtocounter{Lessoncounter}{1}
+    \Large \underline{\textbf{Lesson \arabic{Lessoncounter}, #1}}\newline
+
+} 
+    %\addcontentsline{toc}{section}{\underline{#1}}    
+\addcontentsline{toc}{section}{\underline{\textbf{Lesson \arabic{Lessoncounter}, #1}}}    
+}
+\newcommand\pd{\partial}
+\newcommand{\COMMENT}[1]{} %comment block
  
 \begin{document}
 \begin{center}

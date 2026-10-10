@@ -1,11 +1,11 @@
-\section{Lesson 9, 08/10}
+\lesson{08/10}
 \textbf{Observation} The action is invariant under canonical transformations
 (because the E-L equation is), but the Lagrangian density is not: this produces
 an ambiguity in the Noether current $J^\mu$, which is invariant under transformations
 in the form
 $$J^\mu\rightarrow J'^\mu = J^\mu + \pd_\rho t\indices{^\rho^\mu}\text{, with }
 t^{\rho\mu} = - t^{\mu\rho}$$
-\subsubsection{Transformation parameters}
+\subsection{Transformation parameters}
 It is convenient to drop the dependency on the parameters of the transformation:
 \begin{gather*}
 \delta x^\rho = \pdv{\delta x^\rho}{\omega^A}\delta\omega^A\\
@@ -39,7 +39,7 @@ g\indices{^\nu_\sigma}x_\nu - g\indices{^\mu_\sigma}g\indices{^\nu_\rho}x_\nu\ri
 g\indices{^\nu_\sigma}x_\nu - g\indices{^\mu_\sigma}g\indices{^\nu_\rho}x_\nu\right)
 $$
 }
-\subsubsection{Examples}
+\subsection{Examples}
 \begin{itemize}
     \item \textbf{Internal symmetries}\\
 Consider a field $\phi$ and its symmetry
@@ -70,7 +70,7 @@ $$\pi(x^\mu) = \pdv{\mathcal{L}}{\pd_0\phi} = \pdv{\mathcal{L}}{\dot \phi}$$
 then
 $$\mathcal{H} = \pi\dot\phi-\mathcal{L}$$
 \end{itemize}
-\subsection{The action of a scalar field}
+\section{The action of a scalar field}
 The Lagrangian density of a scalar field is
 $$\boxed{\mathcal{L} = \frac{1}{2}\pd_\mu\phi\pd^\mu\phi - V(\phi(x^\mu))}$$
 which includes a second derivative (since this is Lorentz-invariant) as a kinetic
@@ -93,7 +93,7 @@ the Casimir operator $\Box=-P^2$, which implies
 $$(-P^2+m^2)\phi=0\leftrightarrow P^2=m^2:$$
 this means that the dimensional parameter $m$ in $\mathcal{L}$ is indeed the mass
 associated with the field.
-\subsubsection{Symmetries: translations}
+\subsection{Symmetries: translations}
 The Noether current for translations, the stress-energy tensor, in this case comes
 out to be
 $$J_{\mu\nu}=T\indices{_\mu_\nu} = -g^{\mu\nu}\mathcal{L}+ \pd_\mu\phi\pd_\nu\phi$$
@@ -103,7 +103,7 @@ $$P_\mu = \int_{}^{}\dd^3x J_{\mu0} = \int_{}^{}\dd^3x (-g_{\mu0}\mathcal{L} +
 The $T_{00}$ component is
 $$T_{00}=-\mathcal{L} + \pd_0\phi\pd_0\phi = \frac{1}{2}\dot\phi^2 + \frac{1}{2}\pd_i
 \phi\pd^i\phi+\frac{1}{2}m^2\phi^2 := \mathcal{H}$$
-\subsubsection{Symmetries: Lorentz invariance}
+\subsection{Symmetries: Lorentz invariance}
 Here $\delta x^\mu = \varepsilon^{\mu\nu}x_\nu$ and, by definition,
 $\Delta\phi=0$, so $\delta\phi = -\varepsilon^{\mu\nu}x_\nu\pd_\mu\phi$:
 the Noether current is

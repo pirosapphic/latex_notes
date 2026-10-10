@@ -1,5 +1,5 @@
 # Fdb version 4
-["lualatex"] 1791386258.51736 "mech_stat.tex" "mech_stat.pdf" "mech_stat" 1791386261.11962 0
+["lualatex"] 1791632744.32142 "mech_stat.tex" "mech_stat.pdf" "mech_stat" 1791632747.0089 0
   "/etc/texmf/tex/generic/config/language.dat" 1788356983.60566 2850 b86a6c5c7bf423c3902454d7e037ed0f ""
   "/home/paolo/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc" 1785064381.88596 128397 dc8cded2bbafe8195c86cdaea92e40b2 ""
   "/home/paolo/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-italic.luc" 1785084000.01982 136299 81dfec24bbf14622db1629e3fd551117 ""
@@ -206,15 +206,15 @@
   "/usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload.lua" 1775415801 13566 16df94dd2de231b2bca0aaa0190941fe ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1788357437 5385490 8673be925240dc2054d816ce847ba982 ""
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1788357397 5658276 680ec518007a28275783e9b3a254cf48 ""
-  "aux/mech_stat.aux" 1791386260.73425 3471 e9710d644f2121ec7b10cfd30f52a67c "lualatex"
-  "aux/mech_stat.out" 1791386260.73625 3506 78bf0e94c532846f921c0691bd997be0 "lualatex"
-  "aux/mech_stat.toc" 1791386260.73625 2075 451ee03d7f9857325682e3087c1a2ea6 "lualatex"
-  "lessons/les1_2309.tex" 1791356988.28826 80 363103fc759c1f501f2c0d9c7b2c9125 ""
-  "lessons/les2_2909.tex" 1791022786.85551 6725 6d19cdc85691059a30732e48d44cc2a3 ""
-  "lessons/les3_3009.tex" 1791270060.9599 7723 d7c2bd16581ca01714a11a62e4a245f0 ""
-  "lessons/lez4_0610.tex" 1791275417.63495 7037 7e64cc4435c5069acafc2912ea255d3a ""
-  "lessons/lez5_0710.tex" 1791361817.38926 5951 745abf0cc9b9bf5e308d93f524497fce ""
-  "mech_stat.tex" 1791386256.56725 2804 d5cb9f313a7345f34df86f9dddb3d6cd ""
+  "aux/mech_stat.aux" 1791632746.63846 3304 beb3080fc1ecaee0942a67fe837498a3 "lualatex"
+  "aux/mech_stat.out" 1791632746.64046 3657 3d1ba438cf8f5dcd9d510e63bd0ea445 "lualatex"
+  "aux/mech_stat.toc" 1791632746.64146 1902 45afe54e6468a509922f6dbd39a7682f "lualatex"
+  "lessons/les1_2309.tex" 1791632583.88145 70 6784d805a6ee967d6079accaa48c453e ""
+  "lessons/les2_2909.tex" 1791632623.51946 6696 34cc4d60c8f0a753a7e80df585acf4bc ""
+  "lessons/les3_3009.tex" 1791632651.77646 7697 dcdbc65ba19b5d18353b6afaa97f44dd ""
+  "lessons/lez4_0610.tex" 1791632713.47846 7020 1c1f0da492d6bc01dfb3d9c8fad75d7d ""
+  "lessons/lez5_0710.tex" 1791632740.22446 5928 879992b5ec0f809783233989ecac4c35 ""
+  "mech_stat.tex" 1791632540.93845 3246 0a2d8316a005f4f50580d2986ac94f75 ""
   "triple_water.png" 1791355612.19126 118992 05e3c3855db553697565b41900c2f52c ""
   (generated)
   "aux/mech_stat.aux"

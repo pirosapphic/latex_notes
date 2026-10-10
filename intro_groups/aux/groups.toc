@@ -1,14 +1,14 @@
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {1}Lesson 1, 23/09/2026}{3}{section.1}%
-\contentsline {section}{\numberline {2}Lesson 2, 28/09/2026}{3}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Again on SU(2)}{3}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Generators}{3}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Lorentz-Poincaré Group}{3}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Internal degrees of freedom}{5}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Other definitions on groups}{5}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Examples of groups}{6}{subsection.2.6}%
-\contentsline {section}{\numberline {3}Lesson 3, 30/09}{6}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Other examples}{6}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Subgroups}{8}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Maps between groups}{8}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}The smallest finite groups}{9}{subsection.3.4}%
+\contentsline {section}{\underline {\textbf {Lesson 1, 23/09}}}{3}{section*.1}%
+\contentsline {section}{\underline {\textbf {Lesson 2, 28/09}}}{3}{section*.1}%
+\contentsline {section}{\numberline {1}Again on SU(2)}{3}{section.1}%
+\contentsline {section}{\numberline {2}Generators}{3}{section.2}%
+\contentsline {section}{\numberline {3}Lorentz-Poincaré Group}{3}{section.3}%
+\contentsline {section}{\numberline {4}Internal degrees of freedom}{5}{section.4}%
+\contentsline {section}{\numberline {5}Other definitions on groups}{5}{section.5}%
+\contentsline {section}{\numberline {6}Examples of groups}{6}{section.6}%
+\contentsline {section}{\underline {\textbf {Lesson 3, 30/09}}}{6}{section.6}%
+\contentsline {section}{\numberline {7}Other examples}{6}{section.7}%
+\contentsline {section}{\numberline {8}Subgroups}{8}{section.8}%
+\contentsline {section}{\numberline {9}Maps between groups}{8}{section.9}%
+\contentsline {section}{\numberline {10}The smallest finite groups}{9}{section.10}%
