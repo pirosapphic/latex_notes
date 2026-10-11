@@ -1,0 +1,160 @@
+
+\lesson{05/10}
+The order $4$ group's Cayley table is not uniquely defined: this means that there
+exist two order $4$ groups, one is $\mathbb{Z}_4$, defined as before stated, and the
+other is $V_4$, called the \textit{viergruppe} or the Klein four-group, which is
+Abelian.
+
+The order $5$ group is again uniquely defined and coincides with $\mathbb{Z}_5$; at
+order $6$, along with $\mathbb{Z}_6$, there is the group of symmetries of the
+equilateral triangle, the dihedral group $D_6$, which was described earlier:
+another description is
+$$D_6 = \left\{e,a,b,aba,ab,ba\right\}$$
+with an operation such that
+$$a^2=b^2 = e,\quad (ab)^3=(ba)^3$$
+this underlines the fact that $a,b,aba$ are the reflections, while $e,ab,ba$ are
+the rotations.
+\subsection{Symmetric groups}
+\textbf{Def.} Given a set $X\neq\emptyset$, a \textit{permutation} of the elements
+of $X$ is a bijective function
+$$f: X\rightarrow X.$$
+The set of permutations of $X$ is denoted as $\text{Perm}(X)$ and it is a group with
+multiplication defined as function composition.
+
+If $|X|=N\in\mathbb{N}$,
+$$|\text{Perm}(X)| = N!$$
+and $\text{Perm}(X)$ is also denoted as $S_N$, \textit{symmetric group} of degree $N$.
+
+Of course, $S_1=\mathbb{Z}_1$ and $S_2=\mathbb{Z}_2$.\\
+
+A permutation can be represented in two ways:
+\begin{enumerate}
+    \item With a $2\times N$ matrix
+        $$\begin{pmatrix}
+              1&2&...&N \\
+              x_1&x_2&...&x_N
+          \end{pmatrix}$$
+        where $x_i=f(i)$.
+    \item In terms of cycles, for example an element of $S_3$ can be represented as
+        $$1\to2\to3 = (132)$$
+        which denotes that $1$ is mapped to $3$, $3$ is mapped to $2$ and $2$ is
+        mapped to $1$.
+
+        In matrix representation this is
+        $$\begin{pmatrix}
+            1&2&3\\
+            3&1&2
+        \end{pmatrix}.
+        $$
+    \textbf{Note} The cycle notation is \textit{not} guaranteed to contain all
+    elements of the group, for example an element of $S_3$ can be represented as
+    $$1\to2 = (12) \leftrightarrow  \begin{pmatrix}
+        1&2&3\\
+        2&1&3
+    \end{pmatrix}.
+    $$
+\end{enumerate}
+\textbf{Observations:}
+\begin{enumerate}
+    \item Distinct cycles commute
+    $$(14)(23) = (23)(14)$$
+    \item Positive permutations of the cycles are equivalent
+        $$(132)=(321)=(213)$$
+        and, by convention, they are denoted beginning with the smallest element.
+    \item Every cycle can be represented as the product of cycles with length 2 by
+        repeating elements:
+        $$(1324) = (13)(32)(24).$$
+\end{enumerate}
+This last remark is useful because it can be used to categorize permutations.
+
+\textbf{Def.} The signature of a permutation $P\in\text S_N$ is defined as
+$$\text{sgn}(P) = (-1)^p\text{, where $p$ is the number of permutations of length 2
+that add up to $P$.}$$
+Permutations with $\text{sgn}(P)=1$ are called \textit{even}, while the others are
+called \textit{odd}.
+
+It is easy to show that even permutations form a subgroup of $S_N$, called
+the \textit{alternating group} $A_N$, which has order
+$$|A_N| = \frac{|S_N|}{2} = \frac{N!}{2}.$$
+
+\textbf{Cayley's Theorem:}\\
+\textit{Every finite group of order $N$ is isomorphic to some subgroup of $S_N$.}
+
+\textbf{Proof.} Consider $G$ with $|G|=N$ and the set
+$$K = \left\{f_g: G\to G \text{ s.t. } x\to g\cdot x\text{, }\forall g\in G\right\}$$
+which contains $N$ functions $f_g$: these functions are bijective, because $\forall g
+\in G$, $(f_g)^{-1} = f_{g^{-1}}\in K$.
+
+For this reason, $K$ is a group with function composition as the group product.
+
+$f_g\in K$ are permutations of $G$, so $K$ is a subset of $\text{Perm}(G) = S_N$,
+but, since it is a group with the same operation as $S_N$, it is also a subgroup of
+$S_N$.
+
+Consider the function
+$$\mathcal{H}:G\to K \text{ s.t. }g\to f_g$$
+this is a group isomorphism: since $G$ is a generic group of order $N$, the statement
+is proven. \qed\\
+
+Partitions can also be defined for \textit{multigroups}, which are groups in which
+elements can be repeated: it suffices to use the multinomial coefficient\footnote{
+Idk why he said this}
+$$Y = \left\{1,2,2,3,3\right\} \rightarrow |Y|(?) = \frac{5!}{1!2!2!}$$
+
+\subsection{Partitions and Young diagrams}
+For every permutation in $S_N$, the length of the cycles composing it ($n_i$) always
+adds up to $N$
+$$\sum_{i}^{}n_i=N:$$
+this means that $n_1,n_2,...\in\mathbb{Z}^+$ are a \textit{partition} of $N$.
+
+How many of these partitions are there for a fixed $N\in\mathbb{Z}^+$? The number of
+partitions is denoted as $p(N)$ and it can be shown that
+$$\sum_{N=0}^{\infty}p(N)x^N = \prod_{k=1}^{\infty}\frac{1}{1-x^k}.$$
+Each partition of $N$ can be associated to a \textit{Young diagram}: they are tables
+composed by $N$ boxes, in which the rows have non-increasing length\footnote{
+See section ($2.6.2$) of the book for more information}. 
+
+\subsection{Free Groups}
+\textbf{Def.} Given a group $G$ and a subset
+$$X = \left\{x_1,x_2,...,x_n\right\}\subset G,$$
+if every element $g\in G \setminus \{e\}$ can be \textit{uniquely} written as a
+product of the elements of $X$ in the form
+$$g = x^{i_1}_{j_1}x^{i_2}_{j_2}...x^{i_m}_{j_m}$$
+in which $i_k\in\mathbb{Z}\setminus\{0\}$ and consecutive elements are different,
+i.e. $x_{j_k}\neq x_{j_{k+1}}\text{, }\forall k=1,2...,m$, then $G$ is called a
+\textit{free group} and $X$ is called a \textit{free set of generators of $G$}.
+
+The elements of $X$ are called \textit{letters} and their product is called a \textit
+{word}: if the word obeys the constraints earlier stated, it is called a
+\textit{reduced} word.
+
+\textbf{Observation} The \textit{inverse} of a reduced word, i.e. the inverse element
+$g^{-1}$, can be written as
+$$g^{-1} = x^{-i_1}_{j_1}x^{-i_2}_{j_2}...x^{-i_m}_{j_m}$$
+
+\textbf{Def.} The reduced words which give the identity element of a free group
+are called \textit{relations} $r$ for the group:
+$$x_{j_1}^{i_1}...x_{j_m}^{i_m} = e \rightarrow r=e.$$
+
+\textbf{Def.} The \textit{presentation} of a free group is a way of uniquely
+determine it, using its generators and its independent relations\footnote{
+Since the relations are \textit{reduced} words, two relations are independent if
+and only if they are different.}:
+$$G = \bra{x_1,x_2,...,x_n}\ket{r_1,r_2,...,r_m}.$$
+\textbf{Example 1} $\mathbb{Z}_N$ is a free group, because the set
+$$X = \left\{a\right\}$$
+generates the whole group: the relation of the group is $a^N=e$, so its presentation
+is
+$$\mathbb{Z}_N=\bra{a}\ket{a^N}.$$
+\textbf{Example 2} $D_4$ can be generated by just $2$ letters $r,f$,
+which are, respectively, the rotation of $\flatfrac{\pi}{2}$ and the reflection
+along the vertical axis:
+$$D_4 = \bra{r,f}\ket{r^4,f^2,rfrf}$$
+\textbf{Example 3} The Pauli group 
+$$G_1 = \left\{\pm\mathbb{I},\pm i\mathbb{I},\pm\sigma_{1,2,3},\pm i\sigma_{1,2,3}
+\right\},$$
+relevant for $1-$qubit information theory, has presentation
+$$G_1=\bra{\sigma_1,\sigma_2,\sigma_3}\ket{\sigma_a^2=\mathbb{I}, \sigma_a\sigma_b=
+i\varepsilon_{abc}\sigma_c\,\forall a\neq b)}\footnote{Unclear if relations must
+always equate to the identity or not.}$$
+

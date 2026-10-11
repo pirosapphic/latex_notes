@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (TeX Live 2026/Arch Linux)  (format=lualatex 2026.9.2)  10 OCT 2026 13:49
+This is LuaHBTeX, Version 1.24.0 (TeX Live 2026/Arch Linux)  (format=lualatex 2026.9.2)  11 OCT 2026 13:58
  restricted system commands enabled.
 **groups.tex
 (./groups.tex
@@ -755,7 +755,51 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.64003pt}.
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 154--158
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.64003pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.64003pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-10.64003pt}.
+
+[9]) (./lessons/les4_0510.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--2
+
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@@underline' on input line 2.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 2.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 2.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 2.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.64003pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.64003pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-10.64003pt}.
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
  []
 
@@ -766,7 +810,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-10.64003pt}.
 
-[9])
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 95--98
+
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 22.64003pt, for example:
@@ -774,31 +822,126 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-10.64003pt}.
 
-[10] (./aux/groups.aux)
+[12]) (./lessons/les5_0810.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--1
+
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@@underline' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
+
+<./Reidemeister.png, id=220, 487.8225pt x 365.365pt>
+File: ./Reidemeister.png Graphic file (type png)
+<use ./Reidemeister.png>
+Package luatex.def Info: ./Reidemeister.png  used on input line 9.
+(luatex.def)             Requested size: 123.5374pt x 92.52292pt.
+<./sigma_1.png, id=221, 370.38374pt x 279.0425pt>
+File: ./sigma_1.png Graphic file (type png)
+<use ./sigma_1.png>
+Package luatex.def Info: ./sigma_1.png  used on input line 14.
+(luatex.def)             Requested size: 123.5374pt x 93.06786pt.
+
+Overfull \vbox (25.63211pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (25.63211pt too high) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.64003pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.64003pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-10.64003pt}.
+
+[13<./Reidemeister.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.64003pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.64003pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-10.64003pt}.
+
+[14<./sigma_1.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.64003pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.64003pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-10.64003pt}.
+
+[15]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.64003pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.64003pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-10.64003pt}.
+
+[16])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.64003pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.64003pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-10.64003pt}.
+
+[17] (./aux/groups.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `groups.out' has not changed.
-(rerunfilecheck)             Checksum: 653344190397B9E2EFFBD890C18B1B18;1799.
+(rerunfilecheck)             Checksum: 7E174158E9470093EBED73C54FB32F71;3475.
 )
 
 Here is how much of LuaTeX's memory you used:
- 16480 strings out of 476076
+ 16588 strings out of 476076
  125086,794899 words of node,token memory allocated
- 876 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 sub_mlist, 1 glyph, 110 attribute, 65 glue_spec, 56 attribute_list, 1 write nodes
-   avail lists: 1:2,2:1069,3:206,4:62,5:388,6:58,7:4950,8:62,9:816,10:8,11:278
- 38553 multiletter control sequences out of 65536+600000
- 87 fonts using 5718143 bytes
- 73i,13n,83p,542b,436s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 1311 words of node memory still in use:
+   8 hlist, 2 vlist, 2 rule, 9 glue, 4 kern, 1 sub_mlist, 1 glyph, 238 attribute, 65 glue_spec, 120 attribute_list, 1 write nodes
+   avail lists: 1:1,2:943,3:262,4:144,5:392,6:77,7:5017,8:62,9:815,10:12,11:291
+ 38604 multiletter control sequences out of 65536+600000
+ 92 fonts using 6237431 bytes
+ 73i,13n,83p,542b,553s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+warning  (pdf backend): unreferenced destination with name 'Hfootnote.6'
+
+warning  (pdf backend): unreferenced destination with name 'Hfootnote.5'
+
+warning  (pdf backend): unreferenced destination with name 'Hfootnote.4'
+
+warning  (pdf backend): unreferenced destination with name 'Hfootnote.3'
+
+warning  (pdf backend): unreferenced destination with name 'Hfootnote.2'
 
 warning  (pdf backend): unreferenced destination with name 'Hfootnote.1'
-</usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman9-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman6-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on groups.pdf (10 pages, 181327 bytes).
+</usr/share/texmf-dist/fonts/opentype/public/lm/lmroman9-italic.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman9-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman6-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on groups.pdf (17 pages, 272784 bytes).
 
-PDF statistics: 221 PDF objects out of 1000 (max. 8388607)
- 174 compressed objects within 2 object streams
- 29 named destinations out of 1000 (max. 1048576)
- 105 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 369 PDF objects out of 1000 (max. 8388607)
+ 304 compressed objects within 4 object streams
+ 68 named destinations out of 1000 (max. 1048576)
+ 201 words of extra memory for PDF output out of 10000 (max. 100000000)
 

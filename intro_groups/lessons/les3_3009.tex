@@ -153,7 +153,7 @@ between them.
 
 \textbf{Theorem} The property of isomorphism between two groups is an equivalence
 relation in the \textit{set of all groups}.\\
-\textbf{Proof:}\\
+\textbf{Proof:}
 \begin{itemize}
     \item The reflexive property is satisfied by the identity function, which is
 an isomorphism of a group in itself;
@@ -165,7 +165,15 @@ an isomorphism of a group in itself;
     is an isomorphism, since the composition of group homomorphisms is an homomorphism
     and the composition of bijective functions is bijective. \qed
 \end{itemize}
+\section{Definitions}
+\textbf{Def.} The order of a group $G$, denoted as $|G|$ is the number of elements
+in the set of $G$.
+
+\textbf{Def.} The order of an element $a\in G$, with $a\neq e$, is the smallest
+$n\in\mathbb{N}$ s.t. $a^n=e$.
+
 \section{The smallest finite groups}
+\subsection{Cyclic groups}
 The smallest finite group is the \textit{trivial group} and has order 1:
 $$\mathbb{Z}_1 = \left\{e\right\}$$
 its Cayley table is trivial
@@ -180,7 +188,6 @@ its Cayley table is trivial
 The second smallest group is the group of order 2
 $$\mathbb{Z}_2 = \left\{e,a\right\}$$
 and its Cayley table must be
-
 \begin{table}[ht!]
     \centering
     \begin{tabular}{c|cc}
@@ -189,7 +196,6 @@ and its Cayley table must be
 	$a$	&$a$&$e$\\
     \end{tabular} 
 \end{table}
-\newpage
 The group of order 3 is
 $$\mathbb{Z}_3 = \left\{e,a,b\right\}$$
 and its Cayley table is
@@ -202,6 +208,7 @@ and its Cayley table is
 	$b$	&$b$	&	& \\
 \end{tabular}
 \end{table}
+
 The missing entries can be found by brute force, i.e. trying all the 3 possible
 results and seeing if the result contradicts the assumption $a\neq b\neq e$ and/or
 the properties of the group: there is only one table that is self-consisent and it is
@@ -225,4 +232,5 @@ where $a^k = \underbrace{a\cdot a\cdot a ...}_\text{k times}$.
 They can be visualized as the set of the $n$'th roots of $1$ over the complex numbers
 $\mathbb{C}$:
 $$\left\{z_k|z_k = e^{i\frac{2\pi}{n}k}\text{, with }k=0,1...n\right\}$$
-with the correspondence $z_0=e$, $z_k = a^{k-1}$ 
+with the correspondence $z_0=e$, $z_k = a^{k-1}$ and with complex multiplication
+as the group operation.

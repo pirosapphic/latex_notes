@@ -11,4 +11,16 @@
 \contentsline {section}{\numberline {7}Other examples}{6}{section.7}%
 \contentsline {section}{\numberline {8}Subgroups}{8}{section.8}%
 \contentsline {section}{\numberline {9}Maps between groups}{8}{section.9}%
-\contentsline {section}{\numberline {10}The smallest finite groups}{9}{section.10}%
+\contentsline {section}{\numberline {10}Definitions}{9}{section.10}%
+\contentsline {section}{\numberline {11}The smallest finite groups}{9}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Cyclic groups}{9}{subsection.11.1}%
+\contentsline {section}{\underline {\textbf {Lesson 4, 05/10}}}{10}{table.caption.7}%
+\contentsline {subsection}{\numberline {11.2}Symmetric groups}{11}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Partitions and Young diagrams}{12}{subsection.11.3}%
+\contentsline {subsection}{\numberline {11.4}Free Groups}{12}{subsection.11.4}%
+\contentsline {section}{\underline {\textbf {Lesson 5, 08/10}}}{13}{subsection.11.4}%
+\contentsline {subsection}{\numberline {11.5}Braid Groups}{13}{subsection.11.5}%
+\contentsline {section}{\numberline {12}Continuous Groups}{14}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Simplest Lie groups}{15}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}Matrix Groups}{15}{subsection.12.2}%
+\contentsline {subsection}{\numberline {12.3}Action of Groups}{16}{subsection.12.3}%
