@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (TeX Live 2026/Arch Linux)  (format=lualatex 2026.9.2)  11 OCT 2026 13:58
+This is LuaHBTeX, Version 1.24.0 (TeX Live 2026/Arch Linux)  (format=lualatex 2026.9.2)  12 OCT 2026 16:28
  restricted system commands enabled.
 **groups.tex
 (./groups.tex
@@ -598,7 +598,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write4
 
 \openout4 = groups.toc
- [2] (./lessons/les1_2309.tex
+ [2] (./lessons/les01_2309.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--2
 
  []
@@ -627,7 +627,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2.
 
-) (./lessons/les2_2809.tex
+) (./lessons/les02_2809.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--2
 
  []
@@ -693,7 +693,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 205--210
 
  []
 
-) (./lessons/les3_3009.tex
+) (./lessons/les03_3009.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--2
 
  []
@@ -762,7 +762,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-10.64003pt}.
 
-[9]) (./lessons/les4_0510.tex
+[9]) (./lessons/les04_0510.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--2
 
  []
@@ -822,7 +822,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-10.64003pt}.
 
-[12]) (./lessons/les5_0810.tex
+[12]) (./lessons/les05_0810.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--1
 
  []
