@@ -23,3 +23,11 @@
 \contentsline {section}{\large \underline {Statistical Mechanics}}{15}{section.13}%
 \contentsline {section}{\numberline {14}Statistical approach to TD}{15}{section.14}%
 \contentsline {section}{\numberline {15}Observables}{15}{section.15}%
+\contentsline {section}{\underline {\textbf {Lesson 6, 13/10}}}{16}{section.15}%
+\contentsline {section}{\numberline {16}Description of TD systems through independent subsystems}{16}{section.16}%
+\contentsline {subsection}{\numberline {16.1}Additive observables}{17}{subsection.16.1}%
+\contentsline {subsection}{\numberline {16.2}Explicit formula for $\rho $}{17}{subsection.16.2}%
+\contentsline {section}{\numberline {17}The Time reversal problem}{17}{section.17}%
+\contentsline {subsection}{\numberline {17.1}Reduced Observables}{17}{subsection.17.1}%
+\contentsline {section}{\underline {\textbf {Lesson 7, 14/10}}}{20}{subsection.17.1}%
+\contentsline {subsection}{\numberline {17.2}Time scales in BBGKY}{20}{subsection.17.2}%

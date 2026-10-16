@@ -1,0 +1,94 @@
+
+\lesson{13/10}
+The role of the improper transformations of $L^\uparrow_-$ is to \textit{connect}
+the two representations: the representation associated with the Dirac spinor
+is the $(1/2,0)\oplus(0,1/2)$.
+\subsection{Weyl representation}
+In the Weyl representation, the $\gamma^0$ matrix is the operator that exchanges
+$\psi_L$ and $\psi_R$, while the $\gamma^i$ are the $4\times 4$ extension of
+the Pauli matrices.
+
+They have an important property
+$$(\gamma^0)^2=\mathbb{I},\; \left(\gamma^i\right)^2 = -\mathbb{I}$$
+and their algebra satisfies
+$$\left\{\gamma^\mu,\gamma^\nu\right\} = 2 g^{\mu\nu}\mathbb{I}.$$
+\textbf{Note:} This is the first anti-commutation relation encountered in this
+course.
+
+The gamma matrices form a structure called a \textbf{Clifford Algebra} and are
+not Hermitian matrices, since
+$$\left(\gamma^0\right)^\dagger = \gamma^0,\; \left(\gamma^i\right)^\dagger =
+-\gamma^i \longrightarrow \left(\gamma^\mu\right)^\dagger =
+\gamma^0\gamma^\mu\gamma^0$$
+There is another matrix, called \textit{chirality matrix}
+$$\gamma_5 = i\gamma^0\gamma^1\gamma^2\gamma^3 \longrightarrow
+(\gamma^5)^2=\mathbb{I},\; \left\{\gamma_5,\gamma^\mu\right\} = 0,\;
+\gamma_5^\dagger = \gamma_5$$
+\subsection{Action and Lagrangian for Spinor Fields}
+As seen before, the kinetic terms contain derivatives and an invariant is the
+sum of the two separate invariants found before
+$$\mathcal{L}^K=\underbrace{i\psi_L^\dagger\bar\sigma^\mu\pd_\mu\psi_L}_{\text{
+kinetic L}}+
+\underbrace{i\psi_R^\dagger\sigma^\mu\pd_\mu\psi_R}_{\text{kinetic R}}=
+i\bar\psi\gamma^\mu\pd_\mu\psi$$
+where $\bar\psi = \psi^\dagger\gamma^0$: to check if this is an invariant, the
+kinetic term explicitly is
+\begin{gather*}
+\mathcal{L}=i\begin{pmatrix}
+    \psi_L^\dagger&\psi_R^\dagger
+\end{pmatrix}\begin{pmatrix}
+    \mathbb{O}&\mathbb{I}\\
+    \mathbb{I}&\mathbb{O}
+\end{pmatrix}\begin{pmatrix}
+    \mathbb{O}&\sigma^\mu\\
+    \bar\sigma^\mu&\mathbb{O}
+\end{pmatrix}
+\pd_\mu\begin{pmatrix}
+\psi_L\\ \psi_R
+\end{pmatrix}=\\
+=i\begin{pmatrix}
+    \psi_L^\dagger&\psi_R^\dagger
+\end{pmatrix}\begin{pmatrix}
+    \bar\sigma^\mu&\mathbb{O}\\
+    \mathbb{O}&\sigma^\mu
+\end{pmatrix}\begin{pmatrix}
+\pd_\mu\psi_L\\ \pd_\mu\psi_R
+\end{pmatrix} = i\left(\psi_L^\dagger\bar\sigma^\mu\pd_\mu\psi_L+
+\psi_R^\dagger\sigma^\mu\pd_\mu\psi_R\right)
+\end{gather*}
+The mass term is simpler and is
+$$\mathcal{L}^m = -m\bar\psi\psi = -m\left(\psi_L^\dagger\psi_R+\psi_R^\dagger
+\psi_L\right)$$
+Finally, the Dirac Lagrangian is
+$$\boxed{\mathcal{L}_D = \bar\psi\left(i\gamma^\mu\pd_\mu - m\right)\psi}$$
+with a quick dimensional check, $m$ is indeed the mass associated to the field,
+while the dimension of $\psi$ is $L^{-\flatfrac{3}{2}}$.
+
+\textbf{Note:} Another possible mass term is
+$$\mathcal{L}^m_5 = -im\bar\psi\gamma^5\psi:$$
+this will be explained later.
+
+\subsection{Dirac equation and Noether charges}
+Applying the E-L equation with respect to $\bar\psi,\psi$ yields the equations
+of motion
+$$\boxed{\left(i\gamma^\mu\pd_\mu-m\right)\psi = 0}$$
+$$\boxed{i\pd_\mu\bar\psi\gamma^\mu+m\bar\psi = 0.}$$
+The first of these equations is the \textbf{Dirac equation}.\\
+By construction, the Lagrangian is invariant under phase transformations ($U(1)$)
+of the fields:
+$$\begin{dcases*}
+  \psi\rightarrow\psi'=e^{i\alpha}\psi\to\delta\psi = i\alpha\psi\\
+  \bar\psi\rightarrow\bar\psi'=e^{-i\alpha}\bar\psi\to\delta\bar\psi =
+  -i\alpha\bar\psi
+  \end{dcases*}$$
+Since this is an internal symmetry, the Noether current is
+$$J^\mu = \pdv[]{\mathcal{L}}{\pd_\mu\psi}\delta\psi +
+\pdv{\mathcal{L}}{\pd_\mu\bar\psi}\delta\bar\psi=-\alpha\bar\psi\gamma^\mu\psi,$$
+getting rid of the parameter the current turns out to be
+$$J^\mu = \bar\psi\gamma^\mu\psi$$
+which is called the \textit{vector current} and will turn out to be
+\textit{exactly} the electric current after quantizing this field.
+The Noether charge is
+$$Q = \int_{}^{}\dd x^3J^0 = \int_{}^{}\dd^3x \bar\psi\gamma^0\psi = \int_{}^{}
+\dd^3x\psi^\dagger\gamma^0\gamma^0\psi  =\int_{}^{}\dd^3x\psi^\dagger\psi=
+\int\dd^3x\left(\psi_L^\dagger\psi_L+\psi_R^\dagger\psi_R\right)$$

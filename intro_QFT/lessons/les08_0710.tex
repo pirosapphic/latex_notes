@@ -124,7 +124,8 @@ this happens if and only if
 $$\pd_\mu\left(\pdv[]{\mathcal{L}}{\pd_\mu\phi}\delta\phi+
 \mathcal{L}\delta x^\mu\right)= 0. $$
 The function in parenthesis is \textit{the Noether current}
-$$J^\mu =\pdv[]{\mathcal{L}}{\pd_\mu\phi}\delta\phi+\mathcal{L}\delta x^\mu $$
+$$\boxed{J^\mu =\pdv[]{\mathcal{L}}{\pd_\mu\phi}\delta\phi+\mathcal{L}\delta
+x^\mu}$$
 and the found relation is its continuity equation, as
 $$\pd_\mu J^\mu = \pd_0 J^0 + \pd_i J^i = \pdv[]{\rho}{t}+\divergence\mathbf{j}=0,$$
 where $J^0:=\rho$, the density associated with the 3-current
@@ -135,13 +136,14 @@ $$0=\int_{}^{}\dd^3x \pd_\mu J^\mu = \int_{}^{}\dd^3x \pd_0J^0+
 \underbrace{\int_{}^{}\dd^3x\pd_i J^i}_{=0\text{ by div thm}}=
 \int_{}^{}d^3x\pdv[]{J^0}{t} = \dv[]{}{t}\int_{}^{}\dd^3xJ^0:=\dv[]{Q}{t}=0$$
 so the Noether charge which is conserved is
-$$Q = \int_{}^{}d^3xJ^0(x^\mu).$$
+$$\boxed{Q = \int_{}^{}d^3xJ^0(x^\mu).}$$
 It is useful to rewrite the Noether current in terms of $\Delta\phi$:
 recalling that
 $$\delta\phi = \Delta\phi - \pd_\nu\phi\delta x^\nu$$
 the current becomes
-$$J^\mu = \underbrace{\left(\mathcal{L}g\indices{^\mu_\nu}-\pdv[]{\mathcal{L}}{
-\pd_\mu\phi}\pd_\nu\phi\right)}_{:=-T\indices{^\mu_\nu}}\delta x^\nu +
-\pdv[]{\mathcal{L}}{\pd_\mu\phi}\Delta\phi$$
+$$\boxed{J^\mu = \underbrace{\left(\mathcal{L}g\indices{^\mu_\nu}-
+\pdv{\mathcal{L}}{\pd_\mu\phi}\pd_\nu\phi\right)}_{:=-T\indices{^\mu_\nu}}
+\delta x^\nu +\pdv[]{\mathcal{L}}{\pd_\mu\phi}\Delta\phi}$$
 where $T\indices{^\mu_\nu}$ is called the \textit{stress energy tensor}; the sign
 is a convention that ensures $T\indices{^0_0}\geq0$.
+

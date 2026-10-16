@@ -1,0 +1,93 @@
+
+\lesson{15/10}
+The Dirac Lagrangian admits another continuous internal symmetry, the
+\textit{chiral} phase transformation
+$$\psi\rightarrow\psi' = e^{i\beta\gamma_5}\rightarrow\delta\psi=i\beta\gamma_5$$
+and its Noether current turns out to be
+$$J^\mu_5 = \bar\psi\gamma^\mu\gamma_5\psi$$
+and is called the \textit{axial current}. The associated Noether charge is
+$$Q_5 = \int_{}^{}\dd^3x\bar\psi\gamma^0\gamma_5\psi=
+\int_{}^{}\dd^3x\left(\psi^\dagger_L\psi_L - \psi^\dagger_R\psi_R\right)$$
+Chirality is important for QFT, because it can only be "detected" by weak
+interactions: the Weyl representation is convenient to distinguish the left
+and right spinor, while the other, the \textbf{Dirac} representation, is useful
+to distinguish particles from antiparticles.
+\subsection{Properties of the Dirac Equation}
+\textbf{Notation:} Given a 4-vector $a^\mu$, it is sometimes useful to use
+$$\slashed{a} := \gamma^\mu a_\mu,$$
+even for the 4-gradient:
+$$\slashed{\pd} = \gamma^\mu\pd_\mu.$$
+So the Dirac equation can be written as
+$$(i\slashed{\pd}-m)\psi=0.$$
+\subsubsection{Covariance}
+Consider a Lorentz transformation of the spinor:
+$$\psi(x^\mu)\rightarrow\psi'(x'^\mu) = S(\Lambda)\psi(x^\mu)$$
+where
+$$S(\Lambda) = e^{\flatfrac{-i}{2}\omega_{\rho\sigma}M^{\rho\sigma}}:$$
+how does the Dirac equation transform?
+$$(i\gamma^\mu\pd_\mu'-m)\psi'(x')$$
+the transformation of the derivative is
+$$\pd_\mu' = \underbrace{\Lambda\indices{_\mu^\nu}}_{:=\left(
+\Lambda\indices{^\nu_\nu}\right)^{-1}}\pd_\nu$$
+and the $\gamma^\mu$ is independent of $x^\mu$: the equation becomes
+$$(i\gamma^\mu\Lambda\indices{_\mu^\nu}\pd_\nu-m)S(\Lambda)\psi(x^\mu)=0$$
+Applying $S^{-1}(\Lambda)$ yields
+$$\left(S^{-1}(\Lambda)\gamma^\mu S(\Lambda)\Lambda\indices{_\mu^\nu}\pd_\nu
+-m\right)\psi(x^\mu)=0$$
+\textbf{Note:} The $S(\Lambda)$ operator and the $\gamma^\mu$ operate in the same
+vector space (that of Dirac spinors), while $\Lambda$ and $\pd$ operate on the
+spacetime coordinates: this implies that $S(\Lambda)$ does not commute with
+$\gamma^\mu$, but it does with $\Lambda$ and $\pd$.
+
+The equation is covariant if and only if
+$$S^{-1}(\Lambda)\gamma^\mu S(\Lambda)= \gamma^\rho\Lambda\indices{^\mu_\rho}.$$
+Recalling
+$$S(\Lambda) = \exp\left[-\frac{i}{2}\omega_{\rho\sigma}M^{\rho\sigma}\right],\;
+M^{0i}=-\frac{i}{2}\begin{pmatrix}
+    \sigma^i&\mathbb{O}\\
+    \mathbb{O}&-\sigma^i
+\end{pmatrix},\;
+M^{ij}=\frac{1}{2}\varepsilon^{ijk}\begin{pmatrix}
+    \sigma_k&\mathbb{O}\\
+    \mathbb{O}&\sigma_k
+\end{pmatrix},
+$$
+one can define
+$$\sigma^{\mu\nu}=\frac{i}{2}\left[\gamma^\mu,\gamma^\nu\right]$$
+so that the Lorentz generators can be expressed as
+$$M^{\mu\nu}=\frac{1}{2}\sigma^{\mu\nu};$$
+so the operator is
+$$S(\Lambda) = e^{\flatfrac{-i}{4}\omega_{\mu\nu}\sigma^{\mu\nu}}$$
+\subsubsection{Klein-Gordon strikes back}
+Another way to write the equation is by multiplying it by $-i\gamma^\mu\pd_\mu-m$:
+\begin{gather*}
+(-i\gamma^\mu\pd_\mu-m)(i\gamma^\nu\pd_\nu -m)\psi=0\\
+(\gamma^\mu\gamma^\nu\pd_\mu\pd_\nu+m^2)\psi=0\\
+\end{gather*}
+the $\gamma^\mu\gamma^\nu$ needs to be symmetrized and yields the anticommutator
+$$(\frac{1}{2}\underbrace{\{\gamma^\mu\gamma^\nu\}}_{=2g^{\mu\nu}}\pd_\mu\pd_\nu
++m^2)\psi = 0$$
+and so the Klein Gordon equation pops out
+$$\left(\Box + m^2\right)\psi=0$$
+which means that \textbf{each component of the Dirac spinor is a scalar field},
+because its equation of motion is the K-G equation.
+\subsubsection{Parity invariance}
+The reason Dirac spinors were introduced was to construct a parity-invariant
+theory: how do these spinors behave under parity transformations?
+
+Consider a parity transformation
+$$x^\mu\to x'^\mu = (x^0,-\mathbf{x})$$
+which acts on the field as
+$$\psi(x^\mu)\to\psi'(x'^\mu) = S_p\psi(x^\mu).$$
+The Dirac equation transforms like
+$$(i\gamma^0\pd_0-i\gamma^i\pd_i-m)S_p\psi(x^\mu)=0$$
+applying $S^{-1}_p$ to the left
+$$(i S^{-1}_p\gamma^0S_p\pd_0-iS_p^{-1}\gamma^i S_p\pd_i-m)\psi(x^\mu)$$
+This is invariant if and only if
+$$S^{-1}_p\gamma^0 S_p = \gamma^0,\; S^{-1}_p\gamma^i S_p = \gamma^i
+\longleftrightarrow S_p = \eta_p\gamma^0$$
+where $\eta_p$ is a complex constant called \textit{intrinsic parity}.
+
+Since the quantity $\psi^\dagger\psi$ must be invariant under parity (? showed
+using Weyl spinors???), the intrinsic parity $\eta_p$ must be so that
+$$|\eta_p|^2=1 \leftrightarrow\eta_p=\pm1$$

@@ -1,0 +1,163 @@
+
+\lesson{13/10}
+In this formalism, the equilibrium is found when the explicit dependency of $\rho$
+on time is null:
+$$\pdv[]{\rho}{t}=0 \leftrightarrow \left\{\rho,H\right\}=0$$
+which means that $\rho$ should be a \textit{constant of motion}, depending on
+$q,p$ and other constants of motion.
+
+\section{Description of TD systems through independent subsystems}
+Consider a TD system composed of quasi-isolated subsystems (i.e. the interaction
+between subsystems are confined to their boundaries): for this reason, their
+probability densities can be well approximated as independent, which means
+$$\rho_{ij}(q_i,p_i,q_j,p_j) = \rho_i(q_i,p_i)\rho_j(q_j,p_j)$$
+for every subsystems $i\neq j$.
+\subsection{Additive observables}
+These observables can be expressed as the sum of the observable in each subsystem
+$$O = \sum_{i=1}^{n}O_i,$$
+like the total internal energy; their expectation values are also additive.
+
+For this approach to be useful, the inevitable fluctuations about the equilibrium
+state must be small: consider the variance
+\begin{gather*}
+\sigma^2 = \langle O^2\rangle-\langle O\rangle^2 = \langle\sum_{ij}^{}O_iO_j
+\rangle - \langle\sum_{i}^{}O_i\rangle^2 = \sum_{ij}^{}\left(
+\langle O_iO_j\rangle - \langle O_i\rangle\langle O_j\rangle\right) =\\=
+\sum_{i}^{}\left(\langle O_i^2\rangle-\langle O_i\rangle^2\right) +
+\sum_{i\neq j}^{}\left(\langle O_iO_j\rangle - \langle O_i\rangle\langle O_j\rangle
+\right) = \sum_{i}^{}\sigma^2_i
+\end{gather*}
+where the last sum vanishes for the quasi-isolation condition.
+
+The mean value scales with $n$, while the standard deviation scales like
+$\sqrt{n}$: their quotient becomes smaller as $n$ gets bigger, so the statistical
+approach becomes better the bigger the number of subsystems.
+\subsection{Explicit formula for $\rho$}
+Since $\rho_{ij} = \rho_i\rho_j$, $\ln(\rho_{ij}) = \ln(\rho_i)+\ln(\rho_j)$ is
+an extensive quantity and so should only depend on \textit{additive} constants
+of motion.
+
+From classical mechanics it is known that there exist \textbf{only 7 additive
+constants of motion}:
+$$E_i,\,\mathbf{P}_i,\,\mathbf{L}_i$$
+for the $i$'th subsystem; so the log of the probability density must be a
+function in the form
+$$\ln(\rho_i) = \alpha+\beta E_i + \mathbf{\gamma}\cdot\mathbf{P_i}+
+\mathbf{\delta}\cdot\mathbf{L_i}$$
+where the constants are independent of the subsystem and completely determined by
+the \textit{total motion of the system}: the only non-trivial dependency of
+$\rho$ at equilibrium is \textbf{energy}, because the total momentum and angular
+momentum can be factored out with a change of reference frame.
+\section{The Time reversal problem}
+One of the main problems in statistical mechanics is the fact that microscopic
+laws are time-reversible, while the macroscopic laws of TD are not.
+\subsection{Reduced Observables}
+A one-body observable is an observable in the form
+$$O_1(q,p) = \sum_{i=1}^{N} O(\mathbf{q_i,p_i})$$
+for example $E_k = \sum_{}^{}\flatfrac{\mathbf{p_i}^2}{2m}$.
+
+A two-body observable is an observable in the form
+$$O_2(q,p) = \sum_{i<j=1}^{N}O(\mathbf{q_i},\mathbf{p_i},\mathbf{q_j},
+\mathbf{p_j}).$$
+
+Consider the expected value of a 1-body observable
+$$\langle O_1(t)\rangle = \int_{}^{}\dd\mu_1...\dd\mu_N \sum_{i=1}^{N} O(i)
+\rho(1,2,...N)$$
+the density does not distinguish the particles, so $\rho$ must be symmetric
+for variable swap: this means that the sum can be factored out as a $N$ factor
+$$\langle O_1(t)\rangle = N\int_{}^{}\dd\mu_1 O(1)
+\underbrace{\int_{}^{}\dd\mu_2...\dd\mu_N \rho(1,2,...N)}_{:=\rho_1(1;t)}$$
+this $\rho_1$ is called the \textbf{reduced probability density of order 1} and
+it is clearly normalized.
+
+The same can be done for two-body observables
+$$\langle O_2(t)\rangle=\int_{}^{}\dd\mu_1...\dd\mu_N \sum_{i<j}^{}O(i,j)\rho
+(1,2...N)$$
+The double sum is comprised of $\begin{pmatrix}
+N\\2
+\end{pmatrix}
+$ equal terms, so the \textbf{reduced probability of order 2} is 
+$$\begin{pmatrix}
+N\\2
+\end{pmatrix}
+\int_{}^{}\dd\mu_1\dd\mu_2 O(1,2)\underbrace{\int_{}^{}\dd\mu_3...\dd\mu_N
+\rho(1,2,...N)}_{:=\rho_2(1,2;t)}
+$$
+
+\textbf{Assumptions} (Diluted Gas):
+\begin{itemize}
+    \item $H = \sum_{i}^{}\frac{\mathbf{p}_i^2}{2m} + \sum_{i<j}^{}\phi_{ij}$;
+    \item $\phi_{ij} = \phi_{ji} = \phi(\left|\mathbf{q}_i-\mathbf{q_j}\right|)$
+    \item "Short range" potential: $\phi_{ij} = 0$ for $\left|\mathbf{q}_i-
+    \mathbf{q_j}\right|>r_0$
+\end{itemize}
+The Hamilton equations are
+$$\begin{dcases*}
+  \pdv{H}{\mathbf{p}_i} = \frac{\mathbf{p}_i}{m}\\
+  \pdv{H}{\mathbf{q}_i} = \sum_{k<l}^{}\pdv{\phi_{kl}}{\mathbf{q}_i}
+  \end{dcases*}$$
+the second equation can be simplified to
+$$\pdv{H}{\mathbf{q}_i} = \sum_{i<l}^{}\pdv{\phi_{il}}{\mathbf{q}_i} + 
+\underbrace{\sum_{k<i}^{}\pdv{\phi_{ki}}{\mathbf{q}_i}}_{=\sum_{i<k}^{}...} = 
+\sum_{j\neq i}^{} \pdv{\phi_{ij}}{\mathbf{q}_i} := -\mathbf{K}_{ij}$$
+where $\mathbf{K}_{ij} = \mathbf{K}_{ji}$: Liouville's theorem becomes
+$$\pdv{\rho}{t} + \sum_{i}^{}\frac{\mathbf{p}_i}{m}\pdv{\rho}{\mathbf{q}_i} + 
+\sum_{i\neq j}^{}\mathbf{K_{ij}}\pdv{\rho}{\mathbf{p}_i}=0$$
+antisymmetrizing the second sum yields
+$$\pdv{\rho}{t} + \sum_{i}^{}\frac{\mathbf{p}_i}{m}\pdv{\rho}{\mathbf{q}_i} + 
+\frac{1}{2}\sum_{i\neq j}^{}\mathbf{K_{ij}}\left(\pdv{\rho}{\mathbf{p}_i}
+\pdv{\rho}{\mathbf{p}_j}\right)=0.$$
+Defining the operators
+\begin{gather*}
+\hat S_i = \frac{\mathbf{p}_i}{m}\pdv[]{}{\mathbf{q}_i}\\
+\hat P_{ij} = K_{ij}\left(\pdv{}{\mathbf{p}_i}-\pdv[]{}{\mathbf{p}_j}\right)\\
+\end{gather*}
+the equation becomes
+$$(\pdv[]{}{t} + \underbrace{\sum_{i=1}^{N}\hat S_i +
+\frac{1}{2}\sum_{i\neq j=1}^{N}\hat P_{ij}}_{:=\hat L_N})\rho=0.$$
+To find the consequences of this calculation on the reduced probability density,
+it is useful to redefine them with a different normalization:
+\begin{gather*}
+f_1(i) = N\rho_1(i)\\
+f_s(1,2,...s) = \frac{N!}{(N-S)!}\int_{}^{}\dd\mu_{s+1}...\dd\mu_N\rho(1,2...N)=
+\frac{N!}{(N-S)!}\rho_s(1,2...s)
+\end{gather*}
+where the second formula is the generalization of the reduced probability density
+at $s$ bodies.
+
+The relation with the Liouville operator $\hat L_N$ is
+$$\pdv[]{f_s}{t} = -\frac{N!}{(N-S)!}\int\dd\mu_{s+1}...\dd\mu_N\hat L_N
+\rho$$
+It is better to subdivide $\hat L_N$ in the following fashion
+$$
+\hat L_N = \sum_{i=1}^{s}\hat S_i + \sum_{j=s+1}^{N}\hat S_j + \frac{1}{2}
+\sum_{i\neq j=1}^{s}\hat P_{ij} + \frac{1}{2}\sum_{i\neq j=s+1}^{N}\hat P_{ij} +
+\sum_{i=1}^{s}\sum_{j=s+1}^{N} \hat P_{ij}=\hat L_s + \hat L_{N-s}+\sum_{i=1}^{s}
+\sum_{j=s+1}^{N}\hat P_{ij}
+$$
+So the derivative becomes
+$$\pdv[]{f_s}{t}\frac{N!}{(N-s)!}\int_{}^{}\dd\mu_{s+1}...\dd\mu_N\left(\hat
+L_s\rho + \underbrace{\hat L_{N-s}\rho}+\sum_{i=1}^{s}\sum_{j=s+1}^{N}
+\hat P_{ij}\rho\right)$$
+the highlighted part is zero, because its parts can be factored and integrated
+by parts, e.g.
+$$\int_{}^{}\dd^3p_{s+1}\dd^3q_{s+1} \frac{\mathbf{p}_{s+1}}{m}
+\pdv{\rho}{\mathbf{q}_{s+1}}= [...?!]$$
+and so reshuffling the terms
+$$\left(\pdv[]{}{t}+\hat L_s\right)f_s = -\frac{N!}{(N-s)!}
+\int_{}^{}\dd\mu_{s+1}...\dd\mu_N \sum_{i=1}^{s}\sum_{j=s+1}^{N}\hat P_{ij}\rho$$
+since the $s+1,...,N$ coordinates are integrated, the sum over $j$ gives the same
+result $N-s$ times, using $j=s+1$ yields
+$$\left(\pdv[]{}{t}+\hat L_s\right)f_s = -\frac{N!}{(N-s)!}(N-s)\sum_{i=1}^{s}
+\int_{}^{}\dd\mu_{s+1}...\dd\mu_N\hat P_{i,s+1} \rho=$$
+$$= -\sum_{i=1}^{s}\int_{}^{}
+\dd\mu_{s+1}\hat P_{i,s+1}\underbrace{\frac{N!}{(N-(s+1))!}\int_{}^{}
+\dd\mu_{s+2}...\dd\mu_N\rho}_{:=f_{s+1}}=$$
+$$=-\sum_{i=1}^{s}\int_{}^{}\dd\mu_{s+1}\mathbf{K}_{i,s+1}\left(
+\pdv[]{}{\mathbf{p}_i}-\pdv[]{}{\mathbf{p}_{s+1}}\right)f_{s+1}(1,2...,s+1;t)$$
+the derivative with respect to $\mathbf{p}_{s+1}$ can be cancelled integating
+by parts.
+
+The final result is the BBGKY hierarchy
+$$\left(\pdv{}{t}+\hat L_s\right)f_s(1,2...s;t) = -\sum_{i=1}^{s}\int_{}^{}
+\dd\mu_{s+1}\mathbf{K}_{i,s+1}\pdv[]{}{\mathbf{p}_i}f_{s+1}(1,2,...,s+1;t)$$
