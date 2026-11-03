@@ -1,0 +1,154 @@
+\newpage
+\lesson{21/10}
+\chapter{Quantum Field Theory}\\
+
+Up to this point the constructed field theory was purely classical:
+now the goal is to quantize it.
+
+There are several ways to do so, but the simplest to approach is
+\textbf{Canonical Quantization}, while the better and more difficult approach,
+\textbf{Path Integral Quantization} will be employed for interacting theories
+in the Foundations of QFT course.
+\section{Canonical Quantization: general idea}
+The core idea is to promote the classical fields to \textit{field operators}
+$$\phi(x^\mu) \longrightarrow \hat \phi(x^\mu),$$
+specify its commutation relations with other fields and then express
+the field as a \textit{Fourier expansion}. The final step is to compute
+the Hamiltonian of the system and find its eigenstates and eigenvalues.
+
+Schematically, the process can be divided in
+\begin{itemize}
+    \item Write the Lagrangian of the system and compute the Hamiltonian of the
+        system;
+    \item Promote the field(s) to operator(s) and set the commutation relations
+        among the fields;
+    \item Expand the field(s) as Fourier Transforms;
+    \item Solve for the eigenvalues and eigenstates of the Hamiltonian.
+\end{itemize}
+\subsection{Canonical Quantization of the Scalar Field}
+The Lagrangian of the scalar field is
+$$\mathcal{L}(\phi(x^\mu),\pd_\mu\phi(x^\mu)) =
+\frac{1}{2}\pd_\mu\phi\pd^\mu\phi - \frac{1}{2}m^2\phi^2:$$
+consider now the \textit{canonical conjugated field}, defined with a parallelism
+to conjugated momenta in classic Hamiltonian mechanics
+$$\pi(x^\mu):=\pdv{\mathcal{L}}{\pd_0\phi}=\pdv[]{\mathcal{L}}{\dot\phi}=
+\dot\phi.$$
+Again in analogy with Hamiltonian Mechanics, the Hamiltonian of the system is
+$$\mathcal{H} := \pi\dot\phi-\mathcal{L} = \frac{1}{2}\dot\phi^2 - \frac{1}{2}
+\pd_i\phi\pd^i\phi+\frac{1}{2}m^2\phi^2$$
+\textbf{Note 1} The Hamiltonian formulation \textit{loses} the manifest Lorentz
+covariance.\\
+\textbf{Note 2} This Hamiltonian is definite positive, as is expected from a
+non-interacting theory.
+
+Now $\phi$ and $\pi$ are promoted to operators, and their commutator is
+\textbf{defined at fixed time and different space}:
+$$\left[\hat \phi(t,\mathbf{x}),\hat \pi(t,\mathbf{y})\right]=
+i\hbar\delta^3(\mathbf{x-y})$$
+again in analogy to the quantization of Hamiltonian mechanics for point-like
+particles. There is an explanation for the result of this commutator, connected
+with Noether charges that will not be covered in the lectures, but is present
+in the notes of prof. Boglione.
+
+The other commutation relations are trivial
+$$\left[\hat \phi(t,\mathbf{x}),\hat\phi(t,\mathbf{y})\right]=0,\;
+\left[\hat\pi(t,\mathbf{x}),\hat\pi(t,\mathbf{y})\right]=0$$
+but have a deep implication: if a measurement is taken at the same time, but
+in different places, their result will be \textbf{independent}, salvaging
+causality in the theory.
+
+Consider now the Fourier Transform of $\hat\phi$:
+$$\hat\phi(x^\mu) = \frac{1}{(2\pi)^\frac{3}{2}}\int \dd ^4k \delta(k^2-m^2)
+\vartheta(k^0)\left[\hat A(\mathbf{k})e^{-ikx}+\hat A^\dagger(\mathbf{k})e^{ikx}\right]
+$$
+where $k^2=k_\mu k^\mu$ and $kx = k_\mu x^\mu$\\
+\textbf{Notes}
+\begin{itemize}
+    \item The measure of integration is Lorentz-invariant;
+    \item $k^\mu$ plays the role of the 4-momentum, so $k^0=E_k$;
+    \item The Heaviside $\vartheta$ guarantees $k^0=E_k\geq0$;
+    \item The Dirac $\delta$ guarantees the mass-shell dispersion
+        relations and fixes one of the components of $k^\mu$: for
+        convention, $k^0$ is used.
+\end{itemize}
+Using the $\delta$, an integration over $k^0$ is performed, recalling
+$$\delta(f(k))=\sum_{a}^{}\frac{\delta(k-a)}{|f'(a)|}$$
+where $a$ are the simple zeroes of $f(k)$, the argument of the $\delta$
+in the F.T. has poles at
+$$k^2=m^2\iff k^0 =\pm\sqrt{\mathbf{k}^2+m^2}$$
+and so
+$$\delta(k^2-m^2) = \frac{\delta(k^0-\sqrt{\mathbf{k}^2+m^2})}{2k_0} +
+\frac{\delta(k^0+\sqrt{\mathbf{k}^2+m^2})}{2|k^0|}$$
+the second contribution is not admissible, since the $\vartheta$ filters out
+the $k^0<0$ values:
+$$\delta(k^2-m^2)\vartheta(k^0) = \frac{\delta(k^0-\omega_k)}{2\omega_k},\;
+\text{with }\omega_k=+\sqrt{\mathbf{k}^2+m^2}$$
+The F.T. becomes
+$$\hat\phi(x^\mu) = \int \frac{\dd^3k}{(2\pi)^\frac{3}{2}}\frac{1}{2\omega_k}
+\left[\hat A(\mathbf{k})e^{-ikx}+\hat A^\dagger(\mathbf{k})e^{ikx}\right]$$
+and, defining
+$$\hat a^{(+)} = \frac{\hat A^{(+)}}{\sqrt{2\omega_k}}$$
+one gets
+$$\boxed{\hat\phi(x^\mu) = \int \frac{\dd^3k}{(2\pi)^\frac{3}{2}}\frac{1}
+{\sqrt{2\omega_k}}\left[\hat a(\mathbf{k})e^{-ikx}+\hat a^\dagger(\mathbf{k})e^{ikx}
+\right]}$$
+and the conjugated field
+$$\boxed{\hat\pi(x^\mu) = \hat{\dot\phi} =
+\int \frac{\dd^3k}{(2\pi)^\frac{3}{2}}\frac{1}
+{\sqrt{2\omega_k}}i\omega_k\left[-\hat a(\mathbf{k})e^{-ikx}+\hat a^\dagger(\mathbf{k})
+e^{ikx}\right].}$$
+
+Since now all the information on the field is encoded in $\hat a^{(+)}$, it is
+necessary to find out what are these operators: consider the commutation relation
+$$\left[\hat\phi(t,\mathbf{x}),\hat\pi(t,\mathbf{y})\right] = 
+\int \frac{\dd^3k}{(2\pi)^{\flatfrac{3}{2}}(2\omega_k)^{\flatfrac{1}{2}}}
+\int \frac{i\omega_{k'}\dd^3k'}{(2\pi)^{\flatfrac{3}{2}}(2\omega_{k'})^
+{\flatfrac{1}{2}}}\left[(\hat a_ke^{-ikx}+a_k^\dagger e^{ikx}),
+(-a_{k'}e^{-ik'y}+a^\dagger_{k'}e^{ik'y})\right]$$
+it is NOT easy to show that for this commutation relation to yield
+$i\delta^3(\mathbf{x}-\mathbf{y})$, the $a$ operators must obey
+$$\boxed{
+    \left[\hat a_k,\hat a_{k'}\right]=0,\;
+    \left[\hat a_k^\dagger,\hat a_{k'}^\dagger\right]=0,\;
+    \left[\hat a_k,\hat a_{k'}^\dagger\right]=\delta^3(\mathbf{k-k'}).
+}$$
+these operators obey the \textbf{same algebra of the creation and annihilation
+operators for the quantum harmonic oscillator} and they are interpreted
+as operators that \textbf{create and destroy local ripples in the fields}, which
+are \textbf{the particles we see.}
+
+Now, the Hamiltonian is computed with the F.Ts of the fields
+\begin{gather*}
+H =\int \dd ^3x \mathcal{H} =  \frac{1}{2}\int \dd ^3x \left(
+\hat\pi^2 +\pd_i\hat\phi\pd^i\hat\phi + m^2\hat\phi^2\right)=\\
+=\frac{1}{2}\int \dd^3x \int \frac{\dd^3k\dd^3k'}{(2\pi)^3\sqrt{2\omega_k}
+\sqrt{2\omega_{k'}}}\left[
+-(\omega_k\omega_{k'}+\mathbf{k\cdot k'})(\hat a_ke^{-ikx}-\hat a_k^\dagger e^{ikx})
+(\hat a_{k'}e^{-ik'x}-\hat a^\dagger_{k'}e^{ik'x})+\right. \\
+\left. +m^2(\hat a_ke^{-ikx}+\hat a_k^\dagger 
+e^{ikx})(\hat a_{k'}e^{-ik'x}+\hat a_{k'}^\dagger e^{ikx})\right].
+\end{gather*}
+Integrating over $x$ only touches the 3-vector part of the exponentials,
+yielding Dirac $\delta^3(\mathbf{k\pm k'})$ and greatly simplifying matters.
+$$H =[...]= \frac{1}{2}\int \dd^3k \omega_k(\hat a_k\hat a^\dagger_k+
+\hat a^\dagger_k\hat a_k)$$
+The commutation relation with $\mathbf{k=k'}$ yields a problematic result
+$$\left[\hat a(k),\hat a^\dagger(k)\right] = \delta^3(0)\to\infty$$
+
+Using the commutation relation in H yields
+$$H = \int \dd^3k \omega_k\left(\hat a_k \hat a_k^\dagger+\frac{1}{2}
+\delta^3(0)\right):$$
+the form of this Hamiltonian density is in the form of that of the familiar
+quantum harmonic oscillator, with the key difference that the $0$-point energy
+is $\delta^3(0)$; this enforces the idea that the scalar field can
+be though of as an infinite sum of Harmonic Oscillators,
+so its ground state energy is the divergent series
+$$\sum_{i=0}^{\infty}\frac{1}{2}\omega.$$
+
+This problem with the $\delta$ can be resolved by setting the \textbf{0-point
+energy to 0}, since this is always allowed in physics; to do so, the Hamiltonian
+must be redefined so that the annihilation operators are on the right: this is
+called \textbf{normal ordering}
+$$N(H) = :H: =\int \dd^3k \omega_k \hat a^\dagger_k\hat a_k$$
+and it consists in putting the annihilation operators, $\hat a_k$ in this case,
+on the right side of the Hamiltonian density $\mathcal{H}$.

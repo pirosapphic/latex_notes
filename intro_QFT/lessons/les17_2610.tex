@@ -1,0 +1,119 @@
+
+\lesson{26/10}
+\textbf{Note} Since from Quantum Mechanics spin-$\frac{1}{2}$ particles obey
+the Fermi-Dirac statistic, we expect anti-symmetry for the Dirac field and this
+is provided by \textit{anti}commutators.
+
+As before, the fields are expanded in their F.Ts:
+$$\psi(x^\mu) = \int \frac{\dd^3p}{(2\pi)^{\frac{3}{2}}\sqrt{2E_p}}
+\sum_{s=1}^{2}\left[u_s(\mathbf{p})a_s(\mathbf{p})e^{-ipx} +
+   v_s(\mathbf{p}) b_s^\dagger(\mathbf{p})e^{ipx}
+\right]
+$$
+where $px = P_\mu x^\mu$, $P^0=E_p$ and $u_s,v_s$ are the spinors defined earlier
+in the solution of the Dirac equation.
+
+It can be shown that the field anticommutation relation in terms of the
+operators $a,b$ is
+$$\left\{\psi_s(t,x),\psi_r^\dagger(t,y)\right\}=\delta^3(\mathbf{x-y})\delta_{rs}
+\iff
+\left\{a_s(\mathbf{p}),a_r^\dagger(\mathbf{p'})\right\}
+=\left\{b_s(\mathbf{p}),b_r^\dagger(\mathbf{p'})\right\}=\delta^3(\mathbf{p-p'})
+\delta_{rs}
+$$
+and the other are zero.
+
+From this expansion of the field, $\psi^\dagger$ and $\dot\psi$ can be built
+and the Hamiltonian turns out to be
+$$H = \int \dd^3x \mathcal{H} = i\int \dd^3x\psi^\dagger\dot\psi$$
+the strategy to integrate is to integrate over $\mathbf{x}$, yielding 
+$\delta^3(\mathbf{p-p'})$ and then using this to apply the orthogonality relations
+of the spinors $u,v,u^\dagger,v^\dagger$:
+$$H = \int \dd^3p \sum_{s,r = 1}^{2} \frac{1}{2}\left[u_s^\dagger(\mathbf{p})
+u_r(\mathbf{p})a_s^\dagger(\mathbf{p})a_r(\mathbf{p}) - 
+v_s^\dagger(\mathbf{p})v_s(\mathbf{p})v_r(\mathbf{p})b_s(\mathbf{p})b_r^\dagger(
+\mathbf{p})\right]$$
+since
+$$u^\dagger_s u_r =  v_s^\dagger v_r=2E_p\delta_{rs},$$and
+$$ b_sb_s^\dagger = -b_s^\dagger b_s + \delta^3(0), $$
+after taming the infinite offset, the Hamiltonian finally is
+$$N(H) = \int \dd^3p E_p \sum_{s}^{}\left[a_s^\dagger(\mathbf{p})a_s(\mathbf{p})
++b_s^\dagger(\mathbf{p})b_s(\mathbf{p})\right].$$
+\textbf{Note} Had the relations between $\psi,\pi_\psi$ been commutators,
+the sign of the $b^\dagger_sb_s$ would have changed, giving way to a theory
+without \textit{definite positive} energy, which is non-physical.
+
+The operators have a similar physical interpretation: $a_s^\dagger(\mathbf{p})$
+creates a fermion with spin $s$ and momentum $\mathbf{p}$, while
+$b^\dagger_s(\mathbf{p})$ creates an antifermion with same spin and momentum.
+
+\textbf{Note} The form of the Hamiltonian is remarkable: the terms
+$a_s^\dagger a_s$, $b_s^\dagger b_s$ are number operators, so the total energy 
+$H$ is the energy $E_p$ multiplied by the total number of particles and
+antiparticles of momentum $p^i$ and integrated over all the possible values of
+$p^i$.
+
+\textbf{Note} This formalization has a \textbf{built-in Pauli exclusion principle,
+} since applying two creation operators with same quantum number $s$ and same
+momentum $p$ to the vacuum yields
+$$a^\dagger_s(p)a^\dagger_s(p)\ket{0} = -a^\dagger_s(p)a^\dagger_s(p)\ket{0}
+\equiv 0$$
+while, if $r\neq s$ or $p\neq p'$,
+$$a^\dagger_s(p)a^\dagger_r(p')\ket{0} = -a^\dagger_r(p')a^\dagger_s(p)\ket{0}
+\neq0$$
+since $\left\{a_s^\dagger(\mathbf{p}),a_r^\dagger(\mathbf{p'})\right\}=0$: this
+closely resembles the Fermi-Dirac Statistic and is a direct consequence of the
+choice of anticommutators over commutators.
+
+Using again normal ordering and the F.Ts of the fields, the momentum operator
+is
+$$P^i = \int \dd^3x\psi^\dagger(-i\pd^i)\psi\to
+N(P^i) = \int \dd^3pp^i\sum_{s}^{}(a^\dagger_sa+b^\dagger_sb_s).$$
+Again this is the number of particles and antiparticles of momentum
+$p^i$, multiplied by their momentum and integrated over all possible
+values of it.
+\subsubsection{Noether current and charges}
+It was shown that the phase transformation
+$$\psi\to \psi'=e^{i\alpha}\psi$$
+is a symmetry for the Lagrangian and its associated Noether current is
+$$J^\mu = \bar\psi\gamma^\mu\psi$$
+with charge
+$$Q = \int \dd^3x J_0 = \int \dd ^3x \psi^\dagger\psi$$
+replacing the F.Ts into the integral (with the same \textit{caveat} of integrating
+first over $x$) yields
+$$Q = \int \dd^3p \sum_{s}^{}a^\dagger_sa_s + b_sb_s^\dagger$$
+the normal ordering yields
+$$N(Q) = \int \dd^3p \sum_{s}^{}\left[a^\dagger_sa_s - b_s^\dagger b_s\right]$$
+this implies that the number of fermions - the number of antifermions \textbf{is
+conserved}: so every time a fermion is created, an antifermion must also be
+created [ragionamento su H e P, perso...].
+
+Using Noether's theorem on Lorentz invariance of the Dirac field, the
+Energy-momentum tensor turns out to be
+$$T^{\mu\nu} = i\bar\psi\gamma^\mu\pd^\nu\psi$$
+and the angular momentum becomes
+$$M^{\lambda\mu\nu} = ... = i\bar\psi\gamma^\lambda(\underbrace{x^\mu\pd^\nu -
+x^\nu\pd^\mu}_{\text{orbital ang mom}} \underbrace{-\frac{i}{2}\sigma^
+{\mu\nu}}_\text{spin})$$
+[RIVEDI!]
+\section{The Propagator}
+Until now, time was fixed, so the next natural step is to consider the
+(space-)time evolution of the fields.
+
+The propagator in QM is defined as
+$$\psi(\mathbf{x},t) = \int \dd^3y K(\mathbf{y},t',\mathbf{x},t)\psi
+(\mathbf{y},t')$$
+
+\textbf{Def.} The free propagator of a field $\phi$ is the function
+$$G(x^\mu,y^\nu) = \vartheta(x^0-y^0)\bra{0}\phi(x^\mu)\phi^\dagger(y^\nu)\ket{0}
++\vartheta(y^0-x^0) \bra{0}\phi(y^\mu)\phi^\dagger(x^\mu)\ket{0}$$
+The first sandwich part can be interpreted as follows: $\phi^\dagger$ creates a
+probe particle at spacetime $y^\nu$, the system is then left to evolve, until at
+the spacetime point $x^\mu$ the particle is destroyed by $\phi$; the Heaviside
+theta ensures the particle is destroyed only after it is created. The second
+addend is the exact same, but with the creation and destruction of an
+antiparticle.
+
+The propagator is the \textbf{transition probability amplitude} of returning to
+the ground state, which, in the case of free theories, is the vacuum $\ket{0}$.
+

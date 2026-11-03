@@ -1,0 +1,236 @@
+
+\lesson{02/11}
+\subsection{Characters}
+\textbf{Def.} The \textit{character} of a representation $U_\alpha$ of a finite
+group $G$ is the map
+\begin{align*}
+    \chi_\alpha:&G\to\mathbb{C}\\
+                &g\to\chi_\alpha(g):=\tr(U_\alpha(g))
+\end{align*}
+\textbf{Observation 1} If two representations are linked by a similarity
+transfomation
+$$D_\alpha(g)=AD_\beta(g)A^{-1}$$
+their characters are the same, for the properties of the trace
+$$\chi_\alpha(g)=\chi_\beta(g)$$
+\textbf{Observation 2} If $g_1,g_2\in G$ are so that
+$$\exists g\in G\text{ s.t. }g_2=g\cdot g_1\cdot g^{-1}$$
+then
+$$\chi_\alpha(g_1)=\chi_\alpha(g_2),\,\forall \alpha$$
+and $g_1,g_2$ are in the same \textit{conjugacy class}, which is an equivalence
+class.
+
+\textbf{Observation 3} The character of any representation for any group
+evaluated at the identity yields
+$$\chi_\alpha(e)=\dim(D_\alpha),\,\forall G,\,\forall D_\alpha$$
+\textbf{Observation 4} From the orthogonality theorem follows that
+$$\sum_{g\in G}^{} \chi_\alpha^*(g)\chi_\beta(g) = |G|\delta_{\alpha\beta}$$
+\textbf{Observation 5} For a completely reducible representation, i.e.\footnote{
+unclear, maybe it is explained in lessons 6,7,8}
+$$U=\bigoplus_\alpha n_\alpha U_\alpha$$
+the linearity of the trace implies
+$$\tr U(g)=\sum_{\beta}^{}n_\beta\tr(U_\beta(g))\implies\chi(g)=
+\sum_{\beta}^{}n_\beta\chi_\beta(g)$$
+multiplying by $\chi^*_a(g)$ and summing over $g\in G$ yields
+$$\sum_{g\in G}^{}\chi_\alpha^*(g)\chi(g) = \sum_{\beta}^{}n_\beta\sum_{g\in G}
+\chi_\alpha^*(g)\chi_\beta(g)=\sum_{\beta}^{}n_\beta|G|\delta_{\alpha\beta}=
+n_\alpha|G|$$
+thus
+$$n_\alpha = \frac{1}{|G|}\sum_{g\in G}^{}\chi_\alpha^*\chi(g)$$
+
+By considering the conjugacy equivalence classes $c_i$, $i=1,2,...k$,
+this becomes
+$$n_\alpha= \frac{1}{|G|}\sum_{i=1}^{k}|c_i|\chi_\alpha^*(c_i)\chi(c_i).$$\\
+
+By defining the \textit{character vector}
+$$\vec{\chi}_\alpha = \begin{pmatrix}
+\sqrt{|c_1|}\chi_\alpha(c_1)\\...\\\sqrt{|c_k|}\chi_\alpha(c_k)
+\end{pmatrix}\in\mathbb{C}^k
+$$
+one can interpret the orthogonality condition literally: this implies that
+for any finite group \textbf{the number of irreps is at most (actually is exactly)
+the number of conjugacy classes.}
+
+\textbf{Theorem} \textit{If $G$ is Abelian and finite, all its irreps have
+dimension 1}\\
+\textbf{Proof} If $G$ is Abelian, then all conjugacy classes must contain a single
+element:
+$$g_1\sim g_2 \iff g_1 = g\cdot g_2\cdot g^{-1}=g\cdot g^{-1}\cdot g_2=g_2$$
+So $|c_i|=1$ and
+$$|G|=\sum_{i=1}^{k}|c_i| = k $$
+so the number of irreps is $|G|$, but, by the Burnside theorem
+$$|G|=\sum_{\alpha}^{}(\dim(V_\alpha))^2$$
+since $|G|=\text{ number of irreps }=\sum_{\alpha}^{}1$,
+$$\sum_{\alpha}^{}(\dim(V_\alpha))=\sum_{\alpha}^{}1\iff\dim(V_\alpha)=1,\,
+\forall\alpha$$\qed
+
+\textbf{Note} This also holds for infinite groups.
+
+\textbf{Example: $S_3$}
+
+By Burnside's theorem, the irreps of $S_3$ can have dimensions
+$$1,1,1,1,1,1\text{ or }1,1,2.$$
+In $S_3$ permutations are of three kinds:
+\begin{enumerate}
+    \item One permutation with no non-trivial cycles;
+    \item Three permutations that are cycles of length 2;
+    \item Two permutations that change every element.
+\end{enumerate}
+It can be proven that these correspond to the conjugacy classes, so there exist
+only $3$ irreps, which, by Burnside, have dimensions $1,1,2$.
+
+The characters of these $3$ representations are
+\begin{table}[h]
+    \centering
+    \begin{tabular}{c|c|c|c}
+            &$\chi(E)$&$\chi(1\to2)$&$\chi(1\to2\to3)$\\ \hline
+        $1$ &   1&1&1\\\hline
+        $1'$&   1&$a$&$b$\\\hline
+        $2$ &   1&$c$&$d$
+\end{tabular}
+\end{table}\newpage
+$1$ is the trivial $1-$dimension representation ($\forall g\in G, U(g)=1\in
+\mathbb{R}$), while $1'$ maps all elements to their parity (in the sense of
+permutations).
+
+Some properties of $a,b,c,d$ can be deduced from the character vectors:
+$$\vec{\chi}_1=\begin{pmatrix}
+1\\\sqrt{3}\\\sqrt{2}
+\end{pmatrix},\; \vec{\chi}_{1'}=\begin{pmatrix}
+1\\\sqrt{3}a\\\sqrt{2}b
+\end{pmatrix},\; \vec{\chi}_{2}=\begin{pmatrix}
+1\\\sqrt{3}c\\\sqrt{2}d
+\end{pmatrix}
+$$
+since they are orthogonal, it follows that
+$$
+\begin{dcases*}
+\vec{\chi}_1^\dagger\cdot\vec{\chi}_{1'} = 1+3a+2b=0\\
+\vec{\chi}_1^\dagger\cdot\vec{\chi}_2 = 2+3c+2d=0\\
+\vec{\chi}_{1'}^\dagger\cdot\vec{\chi}_2 = 1+3ac+2bd=0\\
+\vec{\chi}_1\cdot\vec{\chi}_1\equiv 6\\
+\vec{\chi}_{1'}\cdot\vec{\chi}_{1'} = 1+3a^2+2b^2 = 6\\
+\vec{\chi}_2\cdot\vec{\chi}_2 = 4+3c^2+2d^2 = 6
+\end{dcases*}
+$$
+Since the $1'$ representation maps the elements to their parity, $a=-1$ and $b=1$,
+so the system becomes
+$$\begin{dcases*}
+1-3+2=0\\
+2+3c+2d=0\\
+1-c+2d=0\\
+6=6\\
+4+c^2+2d^2=6
+\end{dcases*}\implies
+\begin{dcases*}
+3c+2d = -2\\
+-3c+2d = -2\\
+c^2+2d^2 = 2
+\end{dcases*}\implies\begin{dcases*}
+d = -1\\
+c = 0\\
+0^2+2(-1)^2 = 2
+\end{dcases*}
+$$
+\begin{table}[h]
+    \centering
+    \begin{tabular}{c|c|c|c}
+            &$\chi(E)$&$\chi(1\to2)$&$\chi(1\to2\to3)$\\ \hline
+        $1$ &   $1$&$1$&$1$\\\hline
+        $1'$&   $1$&$-1$&$1$\\\hline
+        $2$ &   $1$&$0$&$-1$
+\end{tabular}
+\end{table}\\
+
+Consider now a representation of $S_3$:
+$$U(e) = \begin{pmatrix}
+    1&0&0\\0&1&0\\0&0&1
+\end{pmatrix},\,U(1\to2)=\begin{pmatrix}
+    0&1&0\\
+    1&0&0\\
+    0&0&1
+\end{pmatrix},\,U(1\to3)=\begin{pmatrix}
+    0&0&1\\
+    0&1&0\\
+    1&0&0
+\end{pmatrix},\,U(2\to3)=\begin{pmatrix}
+    1&0&0\\
+    0&0&1\\
+    0&1&0
+\end{pmatrix}
+$$
+$$U(1\to2\to3) = \begin{pmatrix}
+    0&0&1\\
+    1&0&0\\
+    0&1&0
+\end{pmatrix},\,U(1\to3\to2) = \begin{pmatrix}
+    0&1&0\\
+    0&0&1\\
+    1&0&0
+\end{pmatrix}
+$$
+Since all these matrices are unitary and the representation is reducible, then
+it is completely reducible. The character vector of $U$ is
+$$\vec{\chi}_U=\begin{pmatrix}
+1\cdot 3\\\sqrt{3}\cdot1\\0
+\end{pmatrix}
+$$
+For the previous results,
+\begin{gather*}
+n_1 = \frac{1}{6}\sum_{i=1}^{3}|c_i|\chi_1^*(c_i)\chi_U(c_i)=
+\frac{1}{6}\vec{\chi}_1^\dagger\cdot\vec{\chi}_U = [...]=1\\
+n_{1'}= \frac{1}{6}\vec{\chi}_{1'}^\dagger\cdot\vec{\chi}_U = [...]=0\\
+n_2 = \frac{1}{6}\vec{\chi}_2^\dagger\cdot\vec{\chi}_U = [...] = 1
+\end{gather*}
+So this means that the representation is reducible to
+$$U = 1\oplus2$$\\
+
+\textbf{Def.} A \textit{left-regular representation} of a finite group
+$G$ is a representation which acts on $G$ as a left translation. More
+precisely, consider the vector space $V=\mathbb{C}^{|G|}$ with base
+$\left\{e_g\right\}_{g\in G}$: the left translation is defined as
+\begin{align*}
+    L:&G\to\text{Perm}(G)\\
+      &g\to L_g\text{ s.t. }L_g(h)=g\cdot h
+\end{align*}
+and the regular representation is
+\begin{align*}
+&D(g):V\to V\\
+&e_h\to D(g)e_h=e_{g\cdot h}\\
+&D\left(g\right)v = D(g)\left(\sum_{h\in G}^{}v^he_h\right):=\sum_{h\in G}
+v^hD(g)e_h = \sum_{h\in G}^{}v^h e_{g\cdot h}
+\end{align*}
+In matrix form the element corresponding to $e_h,e_{h'}$ is
+$$D(g)_{h,h'}=\begin{cases}
+    1&\text{if }h=g\cdot h'\\
+    0&\text{otherwise}
+\end{cases}
+$$
+this means that for $g=e$, the matrix is the identity of $V$; on the other hand,
+if $g\neq e$, the diagonal is always $0$, which means all $D(g\neq e)$ are 
+\textit{traceless}:
+$$\forall g\in G,\, \chi(g)=|G|\delta_{ge}.$$\\
+
+\textbf{Def.} A \textit{right-regular representation} of a finite group $G$ is a
+representation which acts on $G$ as a right translation:
+\begin{align}
+&R:G\to\text{Perm}(G)\\
+& g\to R_g\text{ s.t. } R_g(h)=h\cdot g^{-1}
+\end{align}
+and the representation is similarly defined.
+
+\section{Tensors}
+\textbf{Def.} Given a vector space $V$ of dimension $n$ over the complex field,
+the \textit{dual vector space} $V^*$ is
+$$V^*:=\left\{f:V\to\mathbb{C}\text{ s.t. $f$ is linear}\right\}$$
+$V^*$ is a vector space with $\dim(V^*)=\dim(V)$.
+
+Given a basis $\left\{e_i\right\}\subset V$, a natural choice of basis for 
+$V^*$ is the \textit{dual basis}
+$$\left\{e^{*i}\right\}\text{, s.t. }e^{*i}(e_j)=\delta\indices{^i_j}$$
+
+If $V$ is equipped with a scalar product $\langle{\cdot},{\cdot}\rangle$ and the
+basis is orthonormal, this dual basis is precisely
+$$e^{*i}:=\langle e_i,\cdot\rangle\to e^{*i}(e_j):=\langle e_i,e_j\rangle =
+\delta\indices{^i_j}$$
+which is actually where the notations $e^{i*}=\bra{e_i}$ and $e_j=\ket{e_j}$
+come from.

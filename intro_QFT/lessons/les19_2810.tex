@@ -1,0 +1,98 @@
+
+\lesson{28/10}
+\subsubsection{Propagator as a Green function}
+In general, \textbf{the propagator of a free theory is a Green function of
+operator generating the equation of motion of the theory}.
+
+The expression explicitely derived is the propagator of a \textit{scalar field},
+so $\Delta_F$ should be a Green function for the Klein-Gordon operator, i.e.
+$$(\Box+m^2)\Delta_F(x-y) = -\delta^4(x-y)$$
+this is true, since the $\Box$ acts only on the exponential inside the integral
+as
+$$\pd_\mu\pd^\mu e^{-ip(x-y)} = -p^2e^{-ip(x-y)}$$
+so
+$$(\Box+m^2)\Delta_F = (-p^2+m^2)\Delta_F = -\delta^4(x-y)\footnote{
+non chiaro, prova a farlo esplicitamente come lo aveva fatto Tateo}$$
+\textbf{Note} There are more Green functions for eack operator, depending on
+the way the integral is regularized, namely on the choice of deformation
+of the contour integral: only one of these choices respects causality and it
+is the one prescribed by Feynman, passing below the $p^0=-\omega_p$ and above
+the $p^0=\omega_p$ singularities, which is equivalent to the choice of adding
+$i\varepsilon$ to the denominator, with $\varepsilon>0$, since this
+moves the singularities by $\pm i\frac{\varepsilon}{2\omega_p}$ respectively.\\
+This integration over $p^0$, computed with the residues in the poles according
+to the sign of $z^0=x^0-y^0$, yields
+$$i\Delta_F = \vartheta(z^0)\int \frac{\dd^3p}{(2\pi)^32\omega_p}e^{-ipz}+
+\vartheta(-z^0)\int \frac{\dd^3p}{(2\pi^32\omega_p)}e^{ipz}$$
+which is the expression found earlier by using the F.Ts of the fields and imposing
+time ordering.
+\subsection{The propagator and Causality}
+From Special Relativity, it is known that if two events are separated by a
+\textit{space-like interval}
+$$(x-y)^2<0$$
+there exist a Lorentz Transformation that switches the sign of $x^0-y^0$:
+the theory should not permit a measurement of the field at a point $x$ to
+influence a measurement at any point $y$ separated by a space-like interval
+from $x$, this means that
+$$\left[\phi(x),\phi(y)\right]=0,\;\text{if }(x-y)^2<0$$
+Expanding the commutator yields
+$$\left[\phi(x),\phi(y)\right] = \int \frac{\dd^3k\dd^3k'}{(2\pi)^22\sqrt{\omega_k
+\omega_{k'}}}\left[a_ke^{-ikx}+a^\dagger_ke^{ikx},a_{k'}e^{-ik'y}+a^\dagger_{k'}
+e^{ik'y}\right]$$
+Using the $a_k$'s commutation relations and simplifying the resulting $\delta^3$'s
+yields
+$$\left[\phi(x),\phi(y)\right]=\int \frac{\dd^3k}{(2\pi)^32\omega_k}\left(
+    e^{-ik(x-y)}-e^{ik(x-y)}\right) = D(x-y)-D(y-x)$$
+where $D(x-y)$ was earlier defined with the propagator.
+
+To show that this is zero for space-like intervals, one might consider a frame of
+reference in which $x^0-y^0=0$ and $|\mathbf{x-y}| = r$: this yields
+$$\lim\limits_{r\to\infty}D(x-y)\sim e^{-mr}$$
+that is not zero, so the key to the solution is that \textit{there exist a
+continuous Lorentz transformation} that transforms $x-y \to y-x$ and so the
+two functions are exactly the same, cancelling each other out.\\
+
+For time-like intervals, i.e.
+$$(x-y)^2>0,$$
+there always exist a transformation so that the 3-vectors are equal, so the limit
+is
+$$\lim\limits_{t\to\infty}D(x-y)\sim e^{-imt}$$
+which does not even go to zero; moreover, to invert $x-y$ as a time-like interval
+a time-reversal transformation is needed, which is not permitted in the theory,
+making it impossible.
+\subsection{The Dirac Field Propagator}
+The Dirac propagator is in the same form as the scalar, with the caveats
+$\phi^\dagger\to\bar\psi$ and $\bar\psi\psi = -\psi\bar\psi$:
+$$iS_F(x-y)_{ab} = \vartheta(x^-y^0)\bra{0}\psi_a(x)\bar\psi_b(y)\ket{0} - 
+\vartheta(y^0-x^0)\bra{0}\bar\psi_b(y)\psi_a(x)\ket{0}$$
+\textbf{Note} $\psi$ is a column spinor, while $\bar\psi\propto\psi^\dagger$ is
+a row spinor, so $S_F$ is \textbf{a matrix}, like $\psi\bar\psi$.
+
+Like before, replacing the F.Ts of the fields yields only one non-zero addend:
+$$\bra{0}\psi(x)\bar\psi(y)\ket{0} =
+\int \frac{\dd^3p\dd^3p'}{(2\pi)^32\sqrt{E_pE_{p'}}}\sum_{r,s}^{} u_r(p')\bar 
+u_s(p)e^{-ipx+ipy}\bra{0}a_r(p')a_s^\dagger(p)\ket{0}
+$$
+and the other term turns out to be
+$$\bra{0}\bar\psi(y)\psi(x)\ket{0} = \int \frac{\dd^3p\dd^3p'}{(2\pi)^32\sqrt{E_p
+E_{p'}}}\sum_{r,s}^{}v_r(p')\bar v_s(p)e^{-ip'y+ipx}\bra{0}b_r(p')b_s^\dagger(p)
+\ket{0}$$
+\textbf{Note} In the integrals the terms $\bra{0}aa^\dagger\ket{0}$ and the similar
+with $b$ are fermionic and anti-fermionic contributions.
+\\Recalling the anticommutation relations of $a,b$ and the spin sums
+$$\sum_{s}^{}u_s(p)\bar u_s(p) = \left(\slashed{p}+m\right)$$
+$$\sum_{s}^{}v_s(p)\bar v_s(p) = \left(\slashed{p}-m\right)$$
+the final result is
+$$S_F(x-y) = \int \frac{\dd^3p}{(2\pi)^32E_p}\left[(\slashed{p}+m)e^{-ip(x-y)}
+\vartheta(x^0-y^0) - (\slashed{p}-m)e^{ip(x-y)}\vartheta(y^0-x^0)\right]$$
+\textbf{Note} it can\footnote{
+I think it has something to do with the relation between the Dirac equation and
+the Klein-Gordon equation, see the section "Klein-Gordon strikes back"
+} be proven that
+$$S_F(x-y) = (i\slashed{\pd}+m)\Delta_F(x-y)=
+\lim\limits_{\varepsilon\to0}\int \frac{\dd^4p}{(2\pi)^4}e^{-ip(x-y)}
+\frac{\slashed{p}+m}{p^2-m^2+i\varepsilon}.$$
+
+
+
+

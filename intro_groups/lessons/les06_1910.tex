@@ -1,0 +1,47 @@
+
+\lesson{19/10}
+\textbf{Note} Translations are always transitive, i.e. there is only
+one orbit which consists of the entire group, since
+$$g\cdot x=y\implies g = y\cdot x^{-1}$$
+or, equivalently,
+$$\forall x,y\in G,\,\exists g\in G\text{ s.t. }L_g(x)=y$$
+\textbf{Proof} Conjugation is a left action.\\
+Consider $L_{g\cdot g'}$:
+$$L_{g\cdot g'}(x) = (g\cdot g')x(g\cdot g')^{-1} = 
+g\cdot(g'\cdot x \cdot (g')^{-1})\cdot g^{-1} = L_g(L_{g'}(x)) = L_g\circ L_{g'}
+(x)\qed$$
+
+Conjugation is transitive if $G$ is Abelian, but not in general.
+
+\textbf{Def.} Given $g\in G$, the translation action $L$ and a proper
+subgroup $H\subset G$, the set
+$$gH := \left\{g'\in G\text{ s.t. }\exists h\in H\text{ s.t. }g'=L_g(h)=g\cdot h
+\right\}$$
+is called a \textit{left coset of} $H$.
+
+If $H$ is a proper subgroup, there exist more than one left coset. The set of
+all left cosets is called the \textit{quotient space}:
+$$G/H = \left\{gH,\,\forall g\in G\right\}$$
+\textbf{Note} This terminology is akin to that of equivalence relations, because
+the equivalence relation "$g$ is in relation to $g'$ if, for some $h\in H$,
+$g'=g\cdot h$" forms equivalence classes $gH$ (with representative $g$) on $G$,
+which are disjoint and cover all of $G$.
+
+\textbf{Proposition} \textit{The elements of $gH$ are in one-to-one correspondence
+with those of $H$, thus $|H|=|gH|$}.\\
+\textbf{Proof} Consider $g\in G$ and the function
+\begin{align*}
+    f_g:&H\to gH\\
+        &h\to g\cdot h:
+\end{align*}
+$f_g$ is injective, since
+$$f_g(h_1)=f_g(h_2) \implies g\cdot h_1 = g\cdot h_2 \iff h_1 = h_2$$
+and surjective (by definition of $gH$): so $f_g$ is a one-to-one correspondence.
+\qed
+
+\textbf{Lagrange theorem} \textit{The order $|H|$ of any proper subgroup
+$H\subset G$ must be a divisor of $|G|$}.\\
+\textbf{Proof} Since $gH$ are equivalence classes of $G$, they are disjoint, so
+$$|G| = \sum_{g}^{}|gH|:$$
+for the previous proposition, $\forall g,g'\in G,\,|gH|=|H|=|g'H|$ and so
+$$|G|=n|gH| = n|H|,\;\text{with }n\in\mathbb{N}_0 \qed$$

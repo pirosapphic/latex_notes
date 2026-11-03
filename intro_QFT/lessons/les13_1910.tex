@@ -1,0 +1,79 @@
+
+\lesson{19/10}
+\subsubsection{Recap of Covariants}
+\begin{itemize}
+    \item $\bar\psi\psi$ is a scalar;
+    \item $\bar\psi\gamma_5\psi$, since $\gamma_5$ anticommutes with
+        $\gamma^\mu$, it commutes with $S$ and it is a scalar, but it changes
+        sign under parity (${\gamma^0,\gamma_5}=0$), so this is a
+        \textit{pseudo}scalar;
+    \item $\bar\psi\gamma^\mu\psi$ is a Lorentz vector: it is the Noether current
+        associated to the phase invariance;
+    \item $\bar\psi\gamma^\mu\gamma_5\psi$ is a Lorentz pseudovector: it is the
+        Noether current associated to the chiral phase invariance;
+    \item $\bar\psi\sigma^{\mu\nu}\psi$ is a twice-covariant antisymmetric
+        Lorentz tensor.
+\end{itemize}
+The 5 quantities between $\bar\psi$ and $\psi$, which are
+$$\mathbb{I},\;\gamma_5,\;\gamma^\mu,\;\gamma^\mu\gamma_5,\;\sigma^{\mu\nu}$$
+are collectively denoted as $\Gamma^a$.
+
+\subsubsection{More on Noether currents}
+Consider the continuity equation for $J^\mu$:
+$$\pd_\mu J^\mu = \pd_\mu\bar\psi\gamma^\mu\psi + \bar\psi\gamma^\mu\pd_\mu\psi
+$$
+substituting from the two Dirac equations yields that the continuity equation
+is always identically satisfied.
+
+Consider now the continuity equation for $J^\mu_5:$
+$$\pd_\mu J^\mu_5 = \pd_\mu\bar\psi\gamma^\mu\gamma^5\psi + \bar\psi
+    \gamma^\mu\gamma_5\pd_\mu\psi$$
+now to substitute from the equations of motion a minus sign pops out of the
+anticommutation of $\gamma^\mu$, $\gamma_5$ and the continuity equation holds
+\textbf{if and only if} the particle is massless.
+
+\subsection{Chirality and Chiral projectors}
+The chiral projectors are the operators
+$$P_L = \frac{1}{2}(\mathbb{I}-\gamma_5),\; P_R=\frac{1}{2}(\mathbb{I}+\gamma_5)$$
+and their effect is
+$$P_L\psi = -\begin{pmatrix}
+\psi_L\\0
+\end{pmatrix},\;P_R \psi= \begin{pmatrix}
+0\\\psi_R
+\end{pmatrix}.
+$$
+\textbf{Def.} The chirality of a spinor is its eigenvalue under $\gamma_5$.
+\subsection{Massless Dirac equation}
+Since the chiral phase transformation is a symmetry if and only if $m=0$,
+the massless Dirac equation must be considered.
+
+Consider first the Dirac equation in matrix form
+$$
+\begin{pmatrix}
+    -m\mathbb{I}&i(\pd_0+\sigma^i\pd_i)\\
+    i(\pd_0-\sigma^i\pd_i)&-m\mathbb{I}
+\end{pmatrix}\begin{pmatrix}
+\psi_L\\\psi_R
+\end{pmatrix}
+=0
+$$
+and this can be expressed as 2 coupled equations
+$$\begin{dcases*}
+i\left(\pd_0 + \sigma^i\pd_i\right)\psi_R = m\psi_L\\
+i\left(\pd_0 - \sigma^i\pd_i\right)\psi_L = m\psi_R
+\end{dcases*}:
+$$
+the coupling constant is the mass, so the Dirac equation is reduced
+to two uncoupled equations for the left and right spinors \textit{if and only if}
+the particle is massless.
+
+This means that massive fermions oscillate between left and right states, while
+massless fermions remain in their \textit{chirality}.
+
+Recalling that, for massless particles, $E  =|\mathbf{p}| = \pd_0$
+and $p_i = \pd_i$, the equations are
+in the form
+$$\frac{\mathbf{\sigma \cdot p}}{|\mathbf{p}|}\psi_R = \psi_R$$
+$$\frac{\mathbf{\sigma\cdot p}}{|\mathbf{p}|}\psi_L =- \psi_L:$$
+the left and right spinors are eigenstates of the helicity operator
+with eigenvalues $\pm1$.

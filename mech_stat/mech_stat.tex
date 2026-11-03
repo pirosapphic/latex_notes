@@ -47,6 +47,13 @@
 \counterwithin{equation}{section}
 \setcounter{tocdepth}{2}
 
+\DeclareMathOperator*{\sumint}{%
+\mathchoice%
+  {\ooalign{$\displaystyle\sum$\cr\hidewidth$\displaystyle\int$\hidewidth\cr}}
+  {\ooalign{\raisebox{.14\height}{\scalebox{.7}{$\textstyle\sum$}}\cr\hidewidth$\textstyle\int$\hidewidth\cr}}
+  {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\int$\cr}}
+  {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\int$\cr}}
+}
 
 %Defining Chapter, a section bigger than \section
 \newcounter{Chapcounter}
@@ -111,4 +118,8 @@ notes by Paolo Rocchietti March\footnote{paolo.rocchiettimarc@edu.unito.it} \\
 \input{./lessons/les05_0710.tex}
 \input{./lessons/les06_1310.tex}
 \input{./lessons/les07_1410.tex}
+\input{./lessons/les08_2010.tex}
+\input{./lessons/les09_2710.tex}
+\input{./lessons/les10_2810.tex}
+\input{./lessons/les11_0311.tex}
 \end{document}

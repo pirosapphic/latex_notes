@@ -1,0 +1,153 @@
+
+\lesson{20/10}
+So massless particles do not have $2s+1$ degrees of freedom, but only
+the $2$ given by helicity, which in this massless case coincides with chirality.
+
+The value of helicity is \textit{not a Lorentz invariant}, since it depends
+on the momentum $\mathbf{p}$.
+
+\subsection{The spin operator}
+Combining, in the Weyl basis
+$$\gamma_5\sigma^{\mu\nu} = \frac{i}{2}\varepsilon^{\mu\nu\rho\sigma}
+\sigma_{\sigma\rho}$$
+and, recalling the Pauli-Lubanski vector, it is true that
+$$W^\mu = \frac{1}{2}\varepsilon^{\mu\nu\rho\sigma}P_\nu M_{\rho\sigma}=
+-\frac{i}{2}\gamma_5\sigma^{\mu\nu}P_\nu.$$
+In the rest frame of the particle, the 4-vectors have value
+\begin{gather*}
+P^\nu = (m,\mathbf{0}),\; W^\mu = (0, -mS^i)
+\end{gather*}
+and the spin operator is defined to be
+$$\Sigma^i = \frac{-2}{m}W^i=\begin{pmatrix}
+    \sigma^i&\mathbb{O}\\
+    \mathbb{O}&\sigma^i
+\end{pmatrix}
+$$
+With this definition, helicity is
+$$h = \frac{\Sigma_iP^i}{|\mathbf{P}|} = \sigma_i\hat P^i$$
+and, \textbf{for massless particles only}, chirality is
+$$\gamma_5 = \frac{\Sigma_iP^i}{|\mathbf{P}|}$$
+
+\subsection{Solution to the Dirac Equation}
+Before solving the equation, it is necessary to introduce the
+\textbf{Dirac representation} of the spinor, in which $\gamma^0$ and
+$\gamma_5$ have different forms:
+$$\gamma^0 = \begin{pmatrix}
+    \mathbb{I}&\mathbb{O}\\
+    \mathbb{O}&-\mathbb{I}
+\end{pmatrix},\; \gamma_5=\begin{pmatrix}
+    \mathbb{O}&\mathbb{I}\\
+    \mathbb{I}&\mathbb{O}
+\end{pmatrix}.
+$$
+And the spinor is interpreted as having the first two components representing
+\textit{positive energy solutions, particles} and the last two representing
+\textit{negative energy solutions, antiparticles}.
+
+Consider now the Dirac equation
+$$i\gamma^\mu\pd_\mu\psi(x^\mu) = m\psi(x^\mu)$$
+this is clearly a plane wave equation, with solutions in the form
+$$\begin{dcases*}
+    \psi_1(x^\mu) = u_s(P^i) e^{-iP_\mu x^\mu}\\
+    \psi_2(x^\mu) = v_s(P^i) e^{iP_\mu x^\mu}
+\end{dcases*}
+$$
+where $u_s,v_s$ are 4-component spinors that depend only on the $3-$momentum, since
+the 0-component is fixed by the dispersion relation
+$$E^2 = P_iP^i+m^2$$
+which will become important later.
+
+The $\psi_1$ solution is an inbound plane wave with positive energy,
+representing a \textbf{particle}, while the other is an outbound
+plane wave with negative energy, representing an \textbf{antiparticle}.
+
+The general solution is
+$$\psi(x^\mu) = Au_s(P^i)e^{-iP_\mu x^\mu}+ Bv_s(P^i)e^{iP_\mu x^\mu}$$
+substituting $\psi_1$ and $\psi_2$ respectively into the equation yields
+$$(i\gamma^\mu P_\mu -m)u_s(P^i) = 0 \to (i\slashed{P}-m)u_s(P^i)=0$$
+$$(i\gamma^\mu P_\mu +m)v_s(P^i) = 0 \to (i\slashed{P}+m)v_s(P^i)=0$$
+Rewriting these equations in the rest frame of the particle, 
+$\slashed{P} = \gamma^0P_0 = \gamma^0m$
+\begin{gather*}
+m(\gamma^0-\mathbb{I})u_s = 0
+\iff m\begin{pmatrix}
+    \mathbb{O}&\mathbb{O}\\
+    \mathbb{O}&-2\mathbb{I}
+\end{pmatrix}\begin{pmatrix}
+u\\\tilde u
+\end{pmatrix} = 0\\
+m(\gamma^0+\mathbb{I})v_s = 0
+\iff m\begin{pmatrix}
+    \mathbb{O}&\mathbb{O}\\
+    \mathbb{O}&2\mathbb{I}
+\end{pmatrix}\begin{pmatrix}
+v\\\tilde v
+\end{pmatrix} = 0\\
+\end{gather*}
+The first equation yields the fact that $\tilde u(0)$ is the $\begin{pmatrix}0\\0
+\end{pmatrix}$ vector, and that $u(0)$ is free: so it is chosen to be either
+$\begin{pmatrix}1\\0\end{pmatrix}$ or$\begin{pmatrix}0\\1\end{pmatrix}$;
+the other equation tells a similar tale, so the $u,v$ are
+$$
+u_1(0) = \begin{pmatrix}1\\0\\0\\0\end{pmatrix},\;
+u_2(0) = \begin{pmatrix}0\\1\\0\\0\end{pmatrix},\;
+v_1(0) = \begin{pmatrix}0\\0\\1\\0\end{pmatrix},\;
+v_2(0) = \begin{pmatrix}0\\0\\0\\1\end{pmatrix}.
+$$
+Defining
+$$\chi_1 = \begin{pmatrix}1\\0\end{pmatrix},\;
+\chi_2 = \begin{pmatrix}0\\1\end{pmatrix}$$
+they can be expressed as
+$$u_s(0)=\begin{pmatrix}\chi_s\\\mathbf{0}\end{pmatrix},\;
+v_s(0)=\begin{pmatrix}\mathbf{0}\\\varphi_s\end{pmatrix}.$$
+The normalization is $\bar u u =2m$.
+
+To find the general solution from the rest frame solution, one can perform a
+boost to a generic reference frame and get the general solution\footnote{see prof.
+Boglione handwritten notes for the explicit calculations.}, but it can also
+be found by using the properties of the Clifford Algebra.
+
+Recalling the properties of the Clifford algebra,
+$$(\slashed{P}-m)(\slashed{P}+m)=(P_\nu P_\mu\gamma^\mu\gamma^\nu - m^2) = 
+(P_\mu P_\nu\frac{1}{2}\underbrace{\left\{\gamma^\mu,\gamma^\nu\right\}}_{
+=2g^{\mu\nu}}-m^2)=(P_\mu P^\mu-m^2)=0,$$
+so this operator applied to one of the spinors yields again $0$:
+\begin{gather*}
+(\slashed{P}-m)\underbrace{(\slashed{P}+m)u_s(0)}_{:=u_s(P^i)}=0\to
+u_s(P^i)=(\slashed{P}+m)u_s(0)\\
+(\slashed{P}+m)\underbrace{(-\slashed{P}+m)v_s(0)}_{:=v_s(P^i)}=0\to
+v_s(P^i)=(-\slashed{P}+m)v_s(0).
+\end{gather*}
+Expressing the parentheses explicitely:
+\begin{gather*}
+u_s(P^i)=(\slashed{P}+m)u_s(0) = \begin{pmatrix}
+    (E+m)\mathbb{I}&\sigma_i P^i\\
+    -\sigma_iP^i& -(E-m)\mathbb{I}
+\end{pmatrix}\begin{pmatrix}\chi_s\\0\end{pmatrix}=
+(E+m)\begin{pmatrix}
+\chi_s \\
+\frac{-\sigma_iP^i}{E+m}\chi_s
+\end{pmatrix}\\
+    v_s(P^i) = (E+m)\begin{pmatrix}
+    \frac{-\sigma_iP^i}{(E+m)}\\\varphi_s
+    \end{pmatrix}. 
+\end{gather*}
+The orthonormalization relations are
+\begin{gather*}
+\bar u_s(P^i) u_r(P^i) = 2m\delta_{sr},\\
+u^\dagger_s(P^i)u_r(P^i) = 2E\delta_{sr},\\
+\bar v_s(P^i)v_r(P^i) = -2m\delta_{sr},\\
+v^\dagger_s(P^i)v_r(P^i) = 2E\delta_{sr}.
+\end{gather*}
+and the spin sums are
+\begin{gather*}
+    \sum_{s=1}^{2}u_s\bar u_s =\slashed{P}+m,\;
+    \sum_{s=1}^{2}v_s\bar v_s =\slashed{P}-m.
+\end{gather*}
+The energy projectors (useful for something) are
+\begin{gather*}
+    \left[\Lambda_+(P^i)\right]_{\alpha\beta} =
+    \sum_{2=1}^{2} \frac{u^s_\alpha\bar u^s_\beta}{2m}
+\end{gather*}
+and act like [... anche lambda- vedi foto]
+

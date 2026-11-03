@@ -1,0 +1,114 @@
+
+\lesson{27/10}
+Since the off-diagonal elements represent transition apmlitudes, 
+at equilibrium the matrix should be symmetric, i.e.
+$$\rho_{\alpha\beta}=\rho_{\beta\alpha}.$$
+
+The deistic matrix $\rho$ has the same role as $\rho(p,q)$ in the classical
+pictures and obeys the equation
+$$i\hbar\pdv[]{\rho}{t} = \left[H,\rho\right]\to \rho(t)=e^{-\frac{i}{\hbar}Ht}
+\rho(0)e^{\frac{i}{\hbar}Ht}$$
+Again, at equilibrium
+$$\pdv[]{\rho}{t}=o\iff\left[H,\rho\right]=0$$
+which means that $\rho$ is a function only of operators that commute with $H$:
+the assumption taken is 
+$$\rho = \rho(H)$$
+and at most of the number operator $\hat N$ if the system is open.
+
+At equilibrium a convenient base is that of the stationary states of $H$
+$$[\rho,H]=0\to \rho = \sum_{n}^{}\rho_n\ket{n}\bra{n}$$
+
+Recall that the Von Neumann Entropy is defined as
+$$S=-\Tr(\rho\ln(\rho)) = -\sum_{i}^{}\lambda_i\ln\lambda_i$$
+which measures the information stored in a state: $S=0$ for pure states,
+$S>0$ for mixed states.
+\section{Gibbs Statistical Ensembles}
+Recalling that in classical SM
+$$O_\text{obs}=\sum_{\nu}^{}P(\nu)O(\nu)=\langle O\rangle$$
+where $\nu$ is the set of microstates of the system compatible with the
+chosen macrostate. The goal of this part is to
+\begin{itemize}
+    \item Determine the general form of $P(\nu)$ for isolated, closed... systems.
+    \item Express TD quantities in terms of $P(\nu)$.
+\end{itemize}
+\subsection{Microcanonical Ensemble}
+It describes \textbf{isolated systems at fixed} $\mathbf{V,N,E}$: note that
+there can be uncertainty on the value of $E$, but under the condition
+$$\frac{\Delta E}{E}<<1.$$
+At equilibrium, $P(\nu) = f(E)$ is constant, because $E(\nu)$ is, so recalling
+$$\sum_{\nu=1}^{\Omega} P(\nu) = P\sum_{\nu=1}^{\Omega}=1 \iff
+P\equiv\frac{1}{\Omega}$$
+where $\Omega$ is the total number of microstates defined by E,V,N: this can be
+interpreted as the fact that the system explored all microstate in the nonzero time
+of the macroscopic measurement; this is called \textit{ergodicity}.
+
+Although it is realized for almost all macroscopic systems, it is problematic
+to establish rigorously [qualcosa su KAM theorem] and is surprisingly difficult to
+achieve. $P(\nu)=\frac{1}{\Omega}$ is admissible if and only if the return time
+of the system (i.e. the time for the system to return arbitrarily close to its
+initial position) is comparable to the measurement time: the problem is that
+the return time is typically very large. [qualcosa] the Kac Lemma
+$$\tau_\text{ret} \propto\tau e^{\alpha N}$$
+if $P(\nu)\propto e^{-\alpha N}$. [small things]\\
+
+To find the TD quantities' expressions, $S(E,V,N)$ is needed:
+consider a system subdivided into 2 isolated parts $1,2$; then the subdivision
+becomes so that they can exchange only heat: the total energy is the same, but the
+equilibrium variables vary. The number of microstates are
+$$\Omega_1(E_1,V_1,N_1),\; \Omega_2(E_2,V_2,N_2)\to\Omega(E)=\Omega_1\Omega_2$$
+Before (?) the second equilibrium, the situation is
+$$\Omega(E) = \int \dd E_1 \Omega_1(E_1)\Omega_2(E-E_1)$$
+then it reaches a situation in which the number of microstates is maximum,
+with energies $E_1=\bar E_1,\;E_2=\bar E_2$.
+
+$\Omega_1$ at equilibrium must be sharply peaked at the value $\bar E_1$, which
+maximises the integrand:
+$$0=\pdv[]{}{E_1} \left(\Omega_1(E_1)\Omega_2(E-E_1)\right) =
+\pdv[]{\Omega_1}{E_1}(E_1)\Omega_2(E-E_1) - \Omega_1(E_1)\pdv[]{\Omega_2}{E_2}$$
+$$\frac{1}{\Omega_1(E_1)}\pdv[]{\Omega_1}{E_1} = \frac{1}{\Omega_2(E_2)}
+\pdv[]{\Omega_2}{E_2}$$
+$$\pdv[]{\ln\Omega_1}{E_1} = \pdv[]{\ln\Omega_2}{E_2}$$
+since the TD equilibrium condition is $T_1 = T_2$, which means
+$$\frac{1}{T_1} = \frac{1}{T_2} \iff \eval{\pdv[]{S}{E_1}}_{V_1,N_1} =
+\eval{\pdv[]{S}{E_2}}_{V_2,N_2}$$ 
+comparing the two expressions yields
+$$S_i\propto\ln\Omega_i \to S = k\ln\Omega$$
+where $k$ can be experimentally proven to be a universal constant, the Boltzmann
+constant
+$$k = \frac{R}{N_A} = 1.38\cdot10^{-23}\text{ JK}^{-1}.$$
+Since this arose from a confront of derivatives, a constant offset could have
+been added, but $\Omega=1\to S=0$ is convenient, since Nernst's principle
+prescribes that at $T=0$ the entropy must go to 0.
+
+\textbf{Note} This form of $S$ preserves the fact that it is an extensive
+quantity.
+
+The general expression for entropy will be
+$$S = -k\sum_{\nu}^{}P(\nu)\ln P(\nu)$$
+\subsection{Example: Classical ideal gas}
+The Hamiltonian is the free $N$ particle Hamiltonian
+$$H = \frac{1}{2m}\sum_{i=1}^{N}p_i^2$$
+and the microcanonical ensemble is a region of the phase space such as
+$$E\leq H\leq E+\Delta E,\;\frac{\Delta E}{E}<<1$$
+the possible values of the momenta live in a shell of width $\Delta E$ around
+the hypersurface
+$$\sum_{i=1}^{N}p^2_i = 2mE:=R^2(E)$$
+which is a $(3N-1)$-sphere, so the volume of this region is, at first order, the
+area of this sphere multiplied by its width:
+$$V\approx \Sigma_{3N+1}(R(E))\cdot(R(E+\Delta E) - R(E))$$
+\textbf{Note} The surface of a unit $D$-sphere.
+
+Consider the integral
+$$I_D = \int \dd^Dx e^{-(\mathbf{x})^2}=\left(\int \dd x e^{-x^2}\right)^D=
+(\pi)^{D/2}$$
+this can also be computed in (hyper-)spherical coordinates
+$$I_D = \int \dd\Omega\int \dd r r^{D-1}e^{-r^2} $$
+the integral over the hyper-solid angle $\Omega$ is the area of the
+$(D-1)$-sphere! So
+$$I_D = \Sigma_{D-1}\int_0^\infty \dd r r^{D-1}e^{-r^2}$$
+letting $t=r^2\to \dd t = 2r\dd r$ yields
+$$I_D = \Sigma_{D-1}\frac{1}{2}\int \dd t t^{\flatfrac{D}{2}-1}e^{-t} =
+\Sigma_{D-1}\frac{\Gamma(\flatfrac{D}{2})}{2}$$
+so
+$$\Sigma_{D-1} = \frac{2\pi^{\flatfrac{D}{2}}}{\Gamma(\flatfrac{D}{2})}$$
+

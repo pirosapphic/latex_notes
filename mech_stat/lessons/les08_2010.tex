@@ -1,0 +1,162 @@
+
+\lesson{20/10}
+\section{Boltzmann H-theorem}
+[smth about sufficient and necessary condition]
+$$\mathbb{H}(t)=\int \dd^3 v f(\mathbf{p},t)\ln(f)$$
+since $f$ is taken to be homogeneous in space, it does not depend on $\mathbf{q}$.
+
+Its derivative is
+$$\dv[]{\mathbb{H}}{t} = \int \dd^3v \pdv[]{f}{t}\left(\ln(f)+1\right)$$
+so
+$$\pdv[]{f}{t} = 0 \implies \dv[]{\mathbb{H}}{t}=0.$$
+Is it true that
+$$\dv[]{\mathbb{H}}{t}=0\overset{?}\iff f(1')f(2')-f(1)f(2)=0$$
+when $f$ satisfies the Boltzmann equation?
+
+Consider the derivative of $\mathbb{H}$ just derived
+$$\dv[]{\mathbb{H}}{t} = \int \dd ^3v \pdv[]{f(1)}{t}\left(1+\ln(f(1))\right)=
+\int \frac{\dd^3p_1}{m} \left(\pdv[]{f_1}{t}\right)_\text{coll}\left(1+\ln(f_1)
+\right)
+$$
+Applying Boltzmann equation yields
+$$\dv[]{\mathbb{H}}{t} = \int \dd^3p_1\frac{1}{m}\dd^3p_2\dd^3p_1'\dd^3p_2'
+\delta^4(P_f-P_i) |T_{fi}|^2\left(f(1')f(2')-f(1)f(2)\right)\left(1+\ln(f(1))
+\right)$$
+since $T_{fi}$ is symmetric under exchange of 1 and 2, one can symmetrize this
+expression in
+$$\dv[]{\mathbb{H}}{t} = \frac{1}{2m}\int \dd^3p_1\dd^3p_2\dd^3p_1'
+\dd^3p_2' \delta^4(P_f-P_i) |T_{fi}|^2\left(f(1')f(2')-f(1)f(2)\right)
+\left(2+\ln(f(1)+\ln(f(2)))\right)$$
+but $T_{fi}$ is also invariant under the exchange $(1,2)\to(1',2')$ and so holds
+$$\dv[]{\mathbb{H}}{t} = \frac{1}{2m}\int \dd^3p_1\dd^3p_2\dd^3p_1'\dd^3p_2'
+\delta^4(P_f-P_i) |T_{fi}|^2\left(f(1)f(2)-f(1')f(2')\right)\left(2+\ln(f(1')+
+\ln(f(2')))\right)$$
+The average between these two equations can be taken to be
+$$\dv[]{\mathbb{H}}{t} = \frac{1}{4m}\int \dd ^3p_1...\delta^4(P_f-P_i)
+|T_{fi}|^2\left(f(1')f(2')-f(1)f(2)\right)(\ln(f(1)f(2))-\ln(f(1')f(2')))
+$$
+it can be shown that the last product is strictly negative:
+$$h(x,y) = (y-x)(\ln x-\ln y)\text{, with  }x,y\geq0$$
+$$h(x,y)=(y-x)\ln\frac{x}{y} = y\ln\frac{x}{y}\left(1-\frac{x}{y}\right)$$
+so if $\frac{x}{y}\geq0$, then the ln is positive, while the difference is
+negative and vice versa if $\frac{x}{y}\leq0$, so $h(x,y)<0$.
+
+The statement of the Boltzmann $H-$theorem is then
+$$\dv[]{\mathbb{H}}{t}\leq0$$
+with
+$$\dv[]{\mathbb{H}}{t}=0 \iff f(1')f(2')-f(1)f(2).$$
+With some assumptions [e.g. molecular chaos, last lecture i think]
+$$\pdv[]{f}{t}=0\iff f(1')f(2')-f(1)f(2)=0$$
+
+\section{Maxwell-Boltzmann Distribution}
+At equilibrium
+$$f(\mathbf{p_1})f(\mathbf{p_2}) =f(\mathbf{p_1'})f(\mathbf{p_2'})$$
+when energy and momentum are conserved, i.e.
+$$\begin{dcases*}
+\mathbf{p_1}+\mathbf{p_2}=\mathbf{p_1'}+\mathbf{p_2'}\\
+|\mathbf{p_1}|^2+|\mathbf{p_2}|^2 = |\mathbf{p_1'}|^2+|\mathbf{p_2'}|^2
+\end{dcases*}
+$$
+The ln of the equilibrium condition yields
+$$\ln f(\mathbf{p_1})+\ln f(\mathbf{p_2})=
+\ln f(\mathbf{p_1'})+\ln f(\mathbf{p_2'})$$
+these conditions, as functional relations, imply that the ln is in the form
+$$\ln f(\mathbf{p}) = a + \mathbf{b}\cdot\mathbf{p}-c|p|^2$$
+the $b$ dependency can be taken out by considering a frame in which
+$\langle p\rangle=0$ (check it! Complete the Gaussian Integral.), so the function
+is in the form
+$$f(\mathbf{p}) = A e^{-c|\mathbf{p}|^2}.$$
+Its normalization must be
+$$\int \dd ^3p f(\mathbf{p}) = \frac{N}{V};$$
+in addition to this, the expression $E=\frac{3}{2}NkT$ has to be interpreted
+as
+$$\langle \frac{|\mathbf{p}|^2}{2m}\rangle=\frac{3}{2}kT$$.
+Using spherical coordinates, since $f(\mathbf{p})=f(p)$, yields
+\begin{gather*}
+\frac{N}{V} = 4\pi\int_0^\infty \dd p p^2 A e^{-cp^2}\\
+\frac{3}{2}kT\frac{N}{V} = 4\pi\int_0^\infty \dd p p^2 \frac{p^2}{2m}
+Ae^{-cp^2}
+\end{gather*}
+Using the general formula
+$$\int_0^\infty \dd x x^{2k} e^{-cx^2} = \frac{1}{2}\frac{\Gamma\left(k+\frac{1}{2}
+\right)}{c^{k+\flatfrac{1}{2}}}$$
+yields
+\begin{gather*}
+\frac{N}{V}=4\pi A\frac{\sqrt{\pi}}{4c^{\flatfrac{3}{2}}}\\
+\frac{3kTN}{2V} = \frac{4\pi A}{2m}\frac{3\sqrt{\pi}}{8c^{\flatfrac{5}{2}}}
+\end{gather*}
+Taking the quotient of the expressions yields
+$$\frac{1}{2mc}=kT\iff c = \frac{1}{2mkT}$$
+and also
+$$A = \frac{N}{V} \left(\frac{1}{2\pi mkT}\right)^{\frac{3}{2}}$$
+
+So the Maxwell Boltzmann distribution is
+$$f_{MB}(p) = \frac{N}{V}\left(\frac{1}{2\pi mkT}\right)^\frac{3}{2}\exp\left[
+-\frac{p^2}{2m}\frac{1}{kT}\right]$$
+
+\subsection{About the H-theorem}
+There exist $\mathbb{H}$ so that its derivative is non-positive.
+\begin{itemize}
+    \item Is $\mathbb{H}\propto-S$? The expression of $\mathbb{H}$ is similar
+        to Gibbs' approach to the entropy
+    \item ...other things [time reversal etc.]
+\end{itemize}
+If at time $t$ molecular chaos holds out of equilibrium, i.e.
+$\dv[]{\mathbb{H}}{t}<0$, at time $t-\varepsilon$ this derivative is positive!
+[did not understand...]
+
+\section{Going Quantum}
+In general, classical systems are just approximations of quantum systems: the
+state of the system is in general a vector in an Hilbert space
+$$\ket{\psi}\in\mathcal{H}$$
+and can be expressed in a convenient basis, e.g. position basis
+$$\ket{\psi(t)} = \int \dd q \ket{q}\underbrace{\bra{q}\ket{\psi(t)}}_
+{:=\psi(q,t)}.$$
+Time evolution is dictated by Schrödinger's equation
+$$i\hbar\pdv[]{}{t}\ket{\psi(t)} = \hat H \ket{\psi(t)}$$
+in which time-reversibility is always a problem.
+
+Consider the evolution of a \textit{pure} state, defined by the eigenvalues
+$\left\{n\right\}$ of a complete set of observables, including the Hamiltonian:
+for a time independent Hamiltonian it holds
+$$\hat H\ket{n(t)}=E_n\ket{n(t)}$$
+with
+$$\ket{n(t)} = e^{-\frac{i}{\hbar}E_nt}$$
+and the generic pure state can be expressed in terms of these stationary states
+$$\ket{\psi(t)}=\sumint c_ne^{-\frac{i}{\hbar}E_nt}\ket{n}$$ 
+The expectation value of an observable $\hat A$ is
+$$\langle \hat A\rangle_\psi = \bra{\psi(t)}\hat A\ket{\psi(t)} = 
+\sum_{n}^{}|c_n|^2\bra{n}\hat A\ket{n} + \sum_{m\neq n}^{} c_nc_m^*
+e^{\frac{i}{\hbar}\left(E_m-E_n\right)t}\bra{m}\hat A\ket{n}$$
+From this expression it seems like isolated quantum \textit{do not}
+thermalize, but there has been recent progress, called Eigenvalue
+Thermalization Hypothesis: for \textit{some} observables with some
+randomness in the interactions, it has been proven that this happens.
+
+\subsection{Density matrix}
+The initial state cannot be completely known, real systems are not isolated,
+but quasi-isolated at best and every interaction modifies the energy levels.
+
+To solve the first problem, the \textbf{density matrix} is used, using the
+classical probabilities $0\leq p_k\leq 1$ of the system being in the state
+$\ket{\psi_k}$ (which is not guaranteed to be an ONC basis): 
+$$\hat \rho = \sum_{k}^{}p_k\ket{\psi_k}\bra{\psi_k}$$
+the value of the observables is
+$$\langle \hat A \rangle = \sum_{k}^{}p_k\bra{\psi_k}\hat A\ket{\psi_k} = 
+\Tr(\hat \rho\hat A)$$
+Consider an ONC basis $\left\{\ket{\alpha}\right\}$:
+$$\langle \hat A\rangle= \sum_{k,\alpha}^{}p_k\bra{\psi_k}\ket{\alpha}
+\bra{\alpha}\hat A\ket{\psi_k} = \sum_{k,\alpha}^{}\bra{\alpha}\left(
+ \hat A p_k\ket{\psi_k}\bra{\psi_k}\right)\ket{\alpha}=\Tr(\hat\rho\hat A)$$
+\subsubsection{Properties}
+\begin{itemize}
+\item $\Tr(\hat\rho) = 1$;
+\item In any basis, the elements on the diagonal of $\rho$ are
+    $$\rho_{\alpha\alpha}=\bra{\alpha}\hat\rho\ket{\alpha} = \sum_{k}^{}p_k
+    |\bra{\alpha}\ket{\psi_k}|^2 \in \left[0,1\right];$$
+\item Considering the basis that diagonalizes $\rho$ yields the fact that
+    $$\Tr(\rho^2)\leq1;$$
+\item A pure state is represented by the density matrix
+    $$\rho = \ket{\psi}\bra{\psi}\iff \rho^2=\rho\implies\Tr(\rho^2)=1.$$
+\end{itemize}
+

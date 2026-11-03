@@ -1,4 +1,4 @@
-\lesson{08/10}
+\lesson{07/10}
 \subsection{Braid Groups}
 Consider a set of $n$ parallel, vertical strings: some operations can be done
 to them, like undoing a passover of a string over another (Reidemeister move of the
@@ -197,3 +197,29 @@ to the equivalence relation defined above.
 \textbf{Example} Consider $X = \mathbb{R}^2$, $G = (\mathbb{R}^2,+)$ and $L$ as
 translations on the plane: the left action is transitive, since every point $x\in
 \mathbb{R}^2$ can be "reached" from any other point with a translation.
+
+\textbf{Def.} The \textit{isotropy group} (or little group) of $x\in X$ is
+the subset of $G$ whose left actions leave $x$ invariant
+$$I_x:=\left\{g\in G\text{ s.t. }L_g(x)=x\right\}$$
+\textbf{Note} $I_x$ is automatically a \textit{subgroup} of $G$: let
+$g,g'\in I_x\subseteq G$, so
+$$L_{g}(x)=L_{g'}(x)=x$$
+but this also means that
+$$L_{g\cdot g'} = L_g(L_{g'}(x)) = L_g(x)=x \implies g\cdot g'\in I_x$$
+Furthermore it follows from the definition of left action that
+$$L_e(x)=E(x)=x\implies e\in I_x$$
+and finally
+$$E(x) = (L_g)^{-1}(L_g(x)) = L_{g^-1}(x) = x\implies g^{-1}\in I_x$$
+\textbf{Def.} If $x$ is so that
+$$I_x = G$$
+$x$ is called \textit{a fixed point under the action L}.\\
+\textbf{Example} Consider the action of $SO(2)$ on $\mathbb{R}^2$: the origin
+$(0,0)$ is a fixed point, because it is invariant under \textit{all} rotations.
+\subsubsection{Special cases}
+If $X=G$, there are two special left actions that are always defined:
+\begin{itemize}
+    \item Translation: the homomorphism $L: G \to \text{Perm}(G)$ so that
+        $L_g(x)=g\cdot x$;
+    \item Conjugation: the homomorphism $L:G\to\text{Perm}(G)$ so that
+        $L_g(x)=g\cdot x\cdot g^{-1}$
+\end{itemize}

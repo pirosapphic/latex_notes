@@ -1,0 +1,139 @@
+
+\lesson{22/10}
+The momentum operator can be derived in a similar fashion to the Hamiltonian:
+$$\hat P^i = \int \dd^3x \hat T\indices{^i_0} = \int \dd ^3x\hat\pi\pd^i\hat\phi$$
+substituting in the F.Ts of the two fields and using the commutation relations;
+using the normal ordering this yields
+$$:\hat P^i: = \int \dd^3k k^i\hat a^\dagger_k \hat a_k$$
+which is similar in form to $\hat H$, since $\omega_k=k^0$.
+\subsection{Fock Space}
+The space of the states on which the operators are defined is 
+a "reordered" Hilbert Space:
+$$\mathcal{H}_\text{Fock} = \mathcal{H}_1\oplus\mathcal{H}_2\oplus...$$
+where $\mathcal{H}_1$ is the Hilbert subspace in which the basis is made
+by all the stated with $1$ particle and
+$$\mathcal{H}_i = \underbrace{\mathcal{H}_1\otimes\mathcal{H}_1\otimes...}_
+{i \text{ times}}.$$
+The $\mathcal{H}_0$ space is trivial, as it contains only the vacuum state
+$\ket{0}$.\\
+
+The creation and annihilation operators add or remove particles from the state:
+\begin{gather*}
+\hat a(\mathbf{k})\ket{0}=0\\
+\hat a^\dagger(\mathbf{k})\ket{0} := \ket{\mathbf{k}}\in\mathcal{H}_1\\
+\ket{\mathbf{k_1,k_2,...k_n}} = \hat a^\dagger(\mathbf{k_1});
+\hat a^\dagger(\mathbf{k_2})...\hat a^\dagger(\mathbf{k_n})\ket{0},
+\end{gather*}
+which represents a state with $n$ particles of momentum $\mathbf{k_i}$: if these
+momenta are equal, the shorthand notation is
+$$\ket{n(\mathbf{k})}=\frac{(\hat a^\dagger(\mathbf{k}))}{\sqrt{n!}}\ket{0}.$$
+The number operator is defined as
+$$\hat n(\mathbf{k}) = \hat a^\dagger(\mathbf{k})\hat a(\mathbf{k})$$
+and its eigenstates are $\ket{n(\mathbf{k})}$:
+$$\hat n(\mathbf{k})\ket{n(\mathbf{k})}=n\ket{n(\mathbf{k})}.$$
+
+The orthogonality condition
+$$\bra{\mathbf{k}}\ket{\mathbf{k'}}=\delta^3(\mathbf{k-k'})$$
+is not Lorentz invariant, so the normalization is set to be
+$$\int \dd^3k\frac{1}{(2\pi)^32\omega_k}\ket{k}\bra{k}=\mathbb{I}$$
+where $\ket{k}$ is the state with 4-momentum $k$ and differs
+from $\ket{\mathbf{k}}$ only by a normalization
+$$\ket{k} = (2\pi)^{\frac{3}{2}}\sqrt{2\omega_k}\ket{\mathbf{k}}.$$
+
+How does the field operator act on the vacuum?
+$$\hat\phi\ket{0} = \int \dd^3k\mathcal{N}\left[\hat a_k\ket{0}e^{-ikx}
+    +\hat a_k^\dagger\ket{0}e^{ikx}
+\right] = \int \dd^3k \mathcal{N} e^{ikx}\ket{\mathbf{k}}$$
+this can be interpreted as the field exciting the vacuum creating
+a particle for each and every oscillating mode (given by $\mathbf{k}$)
+
+Attaching a $\bra{k'}$ on the left yields a transition
+amplitude between $\mathbf{k}$ and $\mathbf{k'}$ 
+$$\bra{k'}\hat\phi(x^\mu)\ket{0} = \int \dd^3k \frac{\sqrt{2\omega_{k'}}}
+{\sqrt{2\omega_k}}e^{ikx}\delta^3(\mathbf{k-k'}) = e^{ik'x}$$
+
+\textbf{Note} With this formalization, the Bose-Einstein Statistic for scalar
+particles comes for free: consider the creation of two particles with different
+momenta
+$$a^\dagger(k')a^\dagger(k)\ket{0} = a^\dagger(k)a^\dagger(k')\ket{0}\neq0,$$
+since $\left[a^\dagger(k),a^\dagger(k')\right] = 0$. The exchange in the
+order of creation of the particles is irrelevant (this will not be the case
+for the Dirac Field). Moreover the commutation relation does not forbid the
+successive creation of $n$ particles with the same momentum $k^i$:
+$$\forall n,\; (a^\dagger(k))^n\ket{0}\neq0$$
+effectively resembling the Bose-Einstein statistic.
+\subsection{Canonical Quantization of the charged scalar field}
+The Lagrangian of the charged scalar field is
+$$\mathcal{L}=\pd_\mu\phi^\dagger\pd^\mu\phi - m^2\phi\phi^\dagger;$$
+the conjugated fields are two:
+\begin{gather*}
+    \pi_\phi= \pdv[]{\mathcal{L}}{\pd_0\phi} = {\dot \phi}^\dagger\\
+    \pi_{\phi^\dagger}= \pdv{\mathcal{L}}{\pd_0\phi^\dagger} ={\dot \phi}
+\end{gather*}
+The Hamiltonian density is defined as
+$$\mathcal{H}=\pi_\phi\dot\phi + \pi_{\phi^\dagger}\dot\phi^\dagger -\mathcal{L}=
+\dot\phi^\dagger\dot\phi - \pd_i\phi^\dagger\pd^i\phi + m^2\phi^\dagger\phi:$$
+now the fields are promoted to operators, with commutation relations
+$$\left[\phi(t,x),\pi_\phi(t,y)\right]=\left[\phi^\dagger(t,x),\pi_{\phi^\dagger}
+\right]=i\delta^3(\mathbf{x-y})$$
+and all the other are zero.
+
+The Fourier transforms of the two fields are
+\begin{gather*}
+    \phi(x^\mu) = \int \frac{\dd^3k}{(2\pi)^{\frac{3}{2}}\sqrt{2\omega_k}}
+    \left[a_ke^{-ikx}+b^\dagger_k e^{ikx}\right]\\
+    \phi^\dagger(x^\mu) = \int \frac{\dd^3k}{(2\pi)^{\frac{3}{2}}\sqrt{2\omega_k}}
+    \left[a^\dagger_ke^{ikx}+b_k e^{-ikx}\right]\\
+\end{gather*}
+\textbf{Note} There are two sets of operators because the charged scalar field
+is composed of two different real scalar fields.
+
+And so, $a$ are associated to particles, while $b$ to antiparticles.
+
+The canonical commutation relations yield
+$$\left[a_k,a^\dagger_{k'}\right] = \left[b_k,b^\dagger_{k'}\right]=\delta^3(
+\mathbf{k-k'})$$
+and all others are zero: this is the algebraic structure of two decoupled
+harmonic oscillators.
+
+With a big ugly calculation, the normal ordered Hamiltonian turns out to be
+$$:H: = \int \dd ^3k\omega_k\left(a_k^\dagger a_k+b^\dagger_k b_k\right)=
+\int \dd ^3x \omega_k\left(n^a(\mathbf{k})+n^b(\mathbf{k})\right).$$
+\subsubsection{Noether currents and charges}
+Recall that the charged scalar field Lagrangian is invariant under the
+transformation
+$$\phi\to\phi'=e^{i\alpha}\phi:$$
+the Noether current associated to this symmetry is an operator and it is
+$$J^\mu = \phi^\dagger\pd_\mu\phi - \pd_\mu\phi^\dagger \phi$$
+and the conserved charge is
+$$Q = \int \dd^3x J^0 = \int \dd^3x (\phi^\dagger\dot\phi-\dot\phi^\dagger\phi)$$
+replacing the fields' F.Ts in this expression yields
+$$Q=\int \dd^3k \left(a^\dagger_ka_k - b^\dagger_kb_k\right) = 
+\int \dd^3k \left(n^a(\mathbf{k})-n^b(\mathbf{k})\right).$$
+This can be interpreted as the \textit{total charge} of the system, with the "a"
+particles have positive charge, while the "b" particles have negative charge:
+the conserved quantity is then the total (Abelian) charge and this conservation
+means that creating an "a" particle implies creating a "b" particle.
+\subsection{Canonical Quantization of the Dirac Field}
+The Lagrangian for the spinorial field is
+$$\mathcal{L}=\bar\psi(i\gamma^\mu\pd_\mu-m)\psi$$
+The conjugated fields are
+\begin{gather*}
+\pi_\psi = \pdv[]{\mathcal{L}}{\dot\psi}=i\psi^\dagger,\qquad
+\pi_{\bar\psi} = \pdv[]{\mathcal{L}}{\dot{\bar\psi}}=0
+\end{gather*}
+and so the Hamiltonian density is
+$$\mathcal{H} = \pi_\psi\dot\psi + \pi_{\bar\psi}\dot{\bar\psi} -\mathcal{L}=
+\bar\psi(-i\gamma^i\pd_i+m)\psi$$
+using the Dirac equation to express $i\gamma^i\pd_i = m-i\gamma^0\pd_0$ yields
+$$\mathcal{H} = i\psi^\dagger\dot\psi.$$
+Now the commutation relations need to be set between $\psi,\bar\psi$ and their
+conjugated fields: since these are fermionic fields, anticommutators are expected
+(since a theory with commutators does not conserve energy):
+$$
+\left\{\psi_s(t,x),\pi_{\psi,r}(t,y)\right\}=i\delta^3(\mathbf{x-y})\delta_{rs}\to
+\left\{\psi_s(t,x),\psi_r^\dagger(t,y)\right\}=\delta^3(\mathbf{x-y})\delta_{rs},
+\;\text{with }r,s=1,2.
+$$
+\textbf{Note} Since the fields are spinors, these anticommutation relations also
+depend on the spin of the field.

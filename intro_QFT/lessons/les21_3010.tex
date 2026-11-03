@@ -1,0 +1,175 @@
+
+\lesson{30/10}
+[...time evolution operator and interacting field, sec 8.3.1 notes]
+In the interacting picture \textbf{the states evolve in time according to the
+interaction Hamiltonian, while operators evolve according to the free Hamiltonian
+.} Time dependency has a \textit{reference time} $t_0$, in which the regular QM
+Heisenberg's picture coincide with the interaction picture
+(i.e. before the perturbation starts).
+
+The field in the interaction picture is given by
+$$\phi_I(t,\mathbf{x}):= e^{iH_0(t-t_0)}\phi(t_0,\mathbf{x})e^{-iH_0(t-t_0)}$$
+and all other operators are similarly defined, like the interaction Hamiltonian
+$$H_I:=e^{iH_0(t-t_0)}H_\text{int}e^{-iH_0(t-t_0)}$$
+where $H_\text{int}$ is built with the fields $\phi(t_0,\mathbf{x})$.
+
+Inverting the relation between $\phi,\phi_I$ yields
+$$\phi(t,\mathbf{x}):= e^{-iH_0(t-t_0)}\phi_I(t_0,\mathbf{x})e^{iH_0(t-t_0)}.$$
+\textbf{Note} The interacting field $\phi_I$ is a \textit{free field}, because
+it is the time evolution of a free field with a free Hamiltonian: it can be
+interpreted as the evolution of the initial condition $\phi(t_0,\mathbf{x})$ with
+the interacting Hamiltonian switched off.
+
+The full field $\phi(t,\mathbf{x})$ is defined as
+$$\phi(t,\mathbf{x})=e^{iH(t-t_0)}\phi(t_0,\mathbf{x})e^{-iH(t-t_0)}\footnote{
+non sono sicuro, se H(t) posso usare la forma exp????}$$
+inserting the expression of $\phi(t_0)$ in terms of $\phi_I(t)$ yields
+$$\phi(t,\mathbf{x})=\underbrace{e^{iH(t-t_0)}e^{-iH_0(t-t_0)}}_{
+:=U_I^\dagger(t,t_0)} \phi_I(t,\mathbf{x}) \underbrace{e^{iH_0(t-t_0)}
+e^{-iH(t-t_0)}}_{:=U_I(t,t_0)}
+$$
+where $U_I$ is the \textbf{time evolution operator in the interacting picture}.
+
+The derivative of $U_I$ is
+$$i\pdv[]{}{t}U_I = e^{iH_0(t-t_0)}(H-H_0)e^{-iH(t-t_0)}$$
+recalling $H-H_0=H_\text{int}$ and inserting
+$\mathbb{I}=e^{=iH_0(t-t_0)}e^{iH_0(t-t_0)}$ yields
+$$i\pdv[]{}{t}U_I(t,t_0) = \underbrace{e^{iH_0(t-t_0)}H_\text{int}
+e^{-iH_0(t-t_0)}}_{H_I(t)}\underbrace{e^{iH_0(t-t_0)}e^{-iH(t-t_0)}}_
+{U_I(t,t_0)}$$
+So finally
+$$i\pdv[]{}{t}U_I(t,t_0) = H_I(t)U_I(t,t_0)$$
+This differential equation is not trivial to solve as in QM, since $H$ is a
+time dependent operator and causality may become an issue, since
+$$[H_I(t_1),H_I(t_2)]=0$$
+\textbf{does not hold} $\mathbf{\forall t_1,t_2}$, so the time ordering operator
+is here needed.
+
+The QM form of the solution is still correct:
+$$U_I(t,t_0) = T\exp\left[-i\int_{t_0}^t \dd t' H_I(t')\right]=
+\mathbb{I} + (-i)\int_{t_0}^t \dd t' H_I(t') + \frac{(-i)^2}{2!}\int_{t_0}^t
+\dd t_1\int_{t_0}^{t}\dd t_2 T\left[H_I(t_1)H_I(t_2)\right]+...
+$$
+but a problem arises with $\pdv[]{}{t}U_I(t,t_0)$, since the double (and higher
+order) products' derivatives have problems with commutators:
+$$\pdv[]{}{t}\left(\int_{t_0}^t \dd t_1 H_I(t_1) \int_{t_0}^t \dd t_2 H_I(t_2)
+\right)=H_I(t)\int_{t_0}^t \dd t'' H_I(t'') + \int_{t_0}^t \dd t'H_I(t')$$
+to reorder the second term the commutator between $H_I(t)$ and $H_I(t')$ must be
+null. To guarantee this, the \textit{time ordering operator} is put at the
+start of the series expansion\\
+\textbf{!!!RIVEDI RIFAI ETC!!! PROVLEMA CON 2! ed estremi e T}\\
+where $t_0<t_2<t_1<t$ is guaranteed by $T$.\\
+\COMMENT{\textbf{Note} The factor $\flatfrac{1}{2!}$ comes from the fact that the double
+integral's original form is
+$$(-i)^2\int_{t_0}^t \dd t_1\int_{t_0}^{t_1} \dd t_2 H_I(t_1)H_I(t_2)$$
+and so the price to pay for having the same extrema in $t_1$ and $t_2$ is a factor
+$\flatfrac{1}{2}$, which can be generalized for the $n-$th term to
+$\flatfrac{1}{n!}$.}
+
+Two useful properties of the time evolution operator are
+$$U_I(t_1,t_2)U_I(t_2,t_3)=U_I(t_1,t_3),\,\forall t_1\geq t_2\geq t_3$$
+$$U_I(t_1,t_3)U_I^\dagger(t_2,t_3) = U_I(t_1,t_2),\,\forall t_1\geq t_2\geq t_3$$
+\subsection{Ground and vacuum}
+%You shall seal the blinding light that plagues their dreams
+The vacuum state is so that
+$$H_0\ket{0}=0$$
+while the ground state of an interacting theory
+$$H\ket{\Omega}=E_0\ket{\Omega}$$
+with, in general, $E_0\neq 0$.
+
+Consider the complete set of eigenstates of the full Hamiltonian
+$$\ket{n}\to\sum_{n}^{}\ket{n}\bra{n}=\mathbb{I}$$
+and evolve the vacuum state up to a time $T>0$
+$$e^{-iHT}\ket{0} = e^{-iHT}\sum_{n}^{}\ket{n}\bra{n}\ket{0}=
+\sum_{n}^{}e^{-iE_nT}\ket{n}\bra{n}\ket{0}
+$$
+since $\ket{\Omega}=\ket{n=0}$ and the interaction is small,
+there is an overlap of $\ket{0}$ and $\ket{\Omega}$:
+$$e^{-iHT}\ket{0} = e^{-iE_0T}\ket{\Omega}\bra{\Omega}\ket{0} + \sum_{n\neq0}^{}
+e^{-iE_nT}\ket{n}\bra{n}\ket{0}.$$
+In the limit $T\to\infty$, the first term is dominant, since $E_0\leq E_n$. The
+formal way to do this is to "tilt" the limit of $T\to\infty$ to
+$$T\to(\infty(1-i\varepsilon))$$
+And so taking the limit, neglecting $n>0$ terms and inverting the last relation
+$$\ket{\Omega} = \lim\limits_{T\to\infty(1-i\varepsilon)}\left(e^{-iE_0T}\bra{\Omega}
+\ket{0}\right)^{-1}e^{-iHT}\ket{0}$$
+Since $T$ goes to $\infty$, adding a constant to it does not change anything:
+$$T\to T+t_0 = T-(-t_0)$$
+So
+$$\ket{\Omega} = \lim\limits_{T\to\infty(1-i\varepsilon)}\left(e^{-iE_0(T-(-t_0)}
+\bra{\Omega}\ket{0}\right)^{-1}e^{-iH(T-(-t_0))}\ket{0}$$
+substituting now
+$$\ket{0}=e^{iH_0(t_0-(-T))}\ket{0}$$
+yields
+$$\ket{\Omega}=\lim\limits_{T\to\infty(1-i\varepsilon)}\left(e^{-iE_0(T-(-t_0)}
+\bra{\Omega}\ket{0}\right)^{-1}e^{-iH(T-(-t_0))}e^{iH_0(t_0-(-T))}\ket{0}$$
+so finally
+$$\boxed{
+\ket{\Omega}=\lim\limits_{T\to\infty(1-i\varepsilon)}\left(e^{-iE_0(t_0-(-T)}
+\bra{\Omega}\ket{0}\right)^{-1}U_I(t_0,-T)\ket{0}}$$
+which means that the ground state $\ket{\Omega}$ can be found by evolving the
+vacuum state.
+$$\boxed{
+\bra{\Omega} = \lim\limits_{T\to\infty(1-i\varepsilon)}\bra{0}U_I(T,t_0)
+\left(e^{-iE_0(T-t_0)}
+\bra{\Omega}\ket{0}\right)^{-1}
+}$$\\
+
+\subsection{Gell-Mann-Low Formula}
+So now the full propagator formula can be derived from its definition
+[FORMATTAZIONE]
+
+\begin{align*}
+\bra{\Omega}\phi(x)\phi(y)\ket{\Omega}=\lim\limits_{T\to\infty(1-i\varepsilon)}
+\left(e^{-iE_0(T-t_0)}\bra{\Omega}\ket{0}\right)^{-1}&
+\bra{0}U_I(T,t_0) U_I^\dagger(x^0,t_0)\phi_I(x)U_I(x^0,t_0)U^\dagger_I(y^0,t_0)
+\phi_I(y)\\&
+U_I(y^0,t_0)U_I(t_0,-T)\ket{0}\left(e^{-iE_0(t_0-(-T)}
+\bra{\Omega}\ket{0}\right)^{-1}
+\end{align*}
+by the properties of the time evolution operator, some products collapse and
+the constants can be simplified by noting
+$$1=\bra{\Omega}\ket{\Omega} = \left(\left|\bra{0}\ket{\Omega}\right|^2e^{-iE_02T
+}\right)^{-1}\bra{0}U_I(T,t_0)U_I(t_0,-T)\ket{0}$$
+from which
+$$\left(\left|\bra{\Omega}\ket{0}\right|^2e^{-iE_02T}\right)^{-1}=\frac{1}{
+\bra{0}U_I(T,-T)\ket{0}}.$$
+The final expression, also called the \textit{reduction formula}, is
+$$\boxed{\bra{\Omega}T\phi(x)\phi(y)\ket{\Omega} = 
+\lim\limits_{T\to\infty(1-i\varepsilon)}\frac{\bra{0}T\left\{\phi_I(x)\phi_I(y)
+\exp\left[-i\int_{-T}^T \dd t H_I(t)\right]\right\}\ket{0}}
+{\bra{0}T\left\{\exp\left[-i\int_{-T}^T \dd t H_I(t)\right]\right\}\ket{0}}}
+$$
+This formula has an elegant expression in terms of the $S$-matrix
+$$S:=\lim\limits_{T\to\infty(1-i\varepsilon)} T\left\{\exp\left[-i\int_{-T}^T \dd t
+H_I(t)\right]\right\}$$
+which is
+$$\boxed{\bra{\Omega}T\phi(x)\phi(y)\ket{\Omega} = \frac{\bra{0}T\{\phi_I(x)
+\phi_I(y)S\}\ket{0}}{\bra{0}S\ket{0}}}$$
+\subsection{Wick's Theorem}
+This theorem is very important, because it relates \textit{time ordering}
+with \textit{normal ordering} (which is easier to compute on the vacuum state).
+
+The first step is to define two separate parts of a scalar field
+$$\phi(x)=\phi^+(x)+\phi^-(x)$$
+where
+$$\phi^-(x)\propto \int\dd^3k a_k,\;\phi^+(x)\propto\int \dd^3ka^\dagger_k.$$
+So the product
+$$\phi(x)\phi(y) = \phi^+(x)\phi^+(y) + \underbrace{\phi^-(x)\phi^+(y)}_\text{not
+ordered}+\phi^+(x)\phi^-(y)+\phi^-(x)\phi^-(y)$$
+is almost normal ordered
+$$N(\phi(x)\phi(y))=\phi^+(x)\phi^+(y) + \phi^+(y)\phi^-(x)
++\phi^+(x)\phi^-(y)+\phi^-(x)\phi^-(y)$$
+Supposing $x^0>y^0$, the difference between the time ordered and normal ordered
+product is
+$$T\left\{\phi(x)\phi(y)\right\}-N\left\{\phi(x)\phi(y)\right\} = [...]=\left[
+\phi^-(x),\phi^+(y)\right]$$
+and vice versa if $y^0>x^0$: the notation for this is the \textbf{contraction}
+of the two fields
+$$T\left\{\phi(x)\phi(y)\right\}-N\left\{\phi(x)\phi(y)\right\}:=
+\overline{\phi(x)\phi(y)}:=
+\begin{dcases*}
+    \left[\phi^-(x),\phi^+(y)\right]\,\text{if } x^0>y^0\\
+    \left[\phi^-(y),\phi^+(x)\right]\,\text{if } y^0>x^0
+\end{dcases*}
+$$

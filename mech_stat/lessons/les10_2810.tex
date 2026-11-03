@@ -1,0 +1,161 @@
+
+\lesson{28/10}
+The width of the hyper-spherical surface can also be expressed as
+$$\pdv[]{R}{E}\Delta E$$
+so the volume in the momentum space is
+$$V_p = \Sigma_{3N-1}R^{3N-1}(E)\pdv[]{R}{E}\Delta E.$$
+The volume in the coordinates' space is
+$$V_q = V^N$$
+where $V$ is the physical volume of the system. Recalling $R = \sqrt{2mE}$, the
+total volume in the phase space is
+$$V = V^N\cdot V_p=[...]$$
+To get a number of microstates out of this volume, a measure must be defined,
+i.e. a "unit volume", that can has to have the dimension of an action to the
+power of $3N$, one can use Planck's constant 
+$$h^{3N}$$
+and the number of microstates becomes
+$$\Omega(E,V,N) = \frac{V(E,V,N)}{h^{3N}}:$$
+this is problematic, as the entropy derived from this expression is \textbf{not
+extensive}, so a factor of $N!$ must be \textit{forcibly introduced} in the
+denominator; this is \textbf{not justified} in a classical statistical theory,
+as is the choice of $h$, but these assumptions make sense in a quantum framework:
+the $N!$ is due to \textit{indistinguishability} of the particles and the
+$h^{3N}$ is due to the fact that $\Delta q\Delta p \sim h$, so this is a sensible
+choice.
+$$\Omega(E,V,N) = \frac{V(E,V,N)}{h^{3N}N!} =
+\left(\frac{2\pi m V^{\frac{2}{3}}E}{h^2}\right)^{\frac{3N}{2}}\frac{1}{N!
+\Gamma\left(\frac{3N}{2}\right)}\frac{\Delta E}{E}.$$
+Now Boltzmann's formula can be used to derive the entropy
+$$S(E,V,N) = k\ln\Omega(E,V,N):$$
+recalling Stirling's approximation
+\begin{gather*}
+\ln N! = N\ln N - N+...\\
+\ln \Gamma(M) = M\ln M - M +...
+\end{gather*}
+that holds in the TD limit ($N,V,E\to\infty$), one gets
+$$S = k\left\{\ln\left(\frac{2\pi m V^{\frac{2}{3}}E}{h^2}\right)^{\frac{3N}{2}}
+-\ln N! -\ln\Gamma\left(\frac{3N}{2}\right) + \ln \frac{\Delta E}{E }
+\right\}$$
+The last term is independent of $N$, so it can be discarded in the TD limit.
+Some algebra shows that
+$$S(E,V,N) = kN\ln\left[\frac{V}{N}\left(\frac{4\pi mE}{3h^2N}\right)^\frac{3}{2}
+\right]+\frac{5}{2}kN$$
+this is the Sakur-Tetrode entropy.
+
+The $N!$ factor produces the $\frac{1}{N}$ factor inside the $\ln$: without it,
+since the volume grows as $N$, the entropy would grow as $S\sim N\ln N$, which is
+not the case in the physical world.
+
+In the microcanonical ensemble, the thermal equation of state is
+$$\frac{1}{T} = \eval{\pdv[]{S}{E}}_{V,N} = kN \pdv[]{\ln E^\frac{3}{2}}{E}
+\implies E=\frac{3}{2}kNT$$
+since in thermodynamics
+$$E = \frac{3}{2}nRT$$
+Boltzmann's constant has value
+$$k = \frac{R}{N_A}.$$
+\textbf{Note} There is no reason to fix the value of $k$ a priori, so every
+confront with TD must yield this value of $k$ for it to be a universal constant.
+
+The mechanical equation of state is
+$$\frac{p}{T}=\eval{\pdv[]{S}{V}}_{E,N} = kN\ln \frac{V}{N}\sim \frac{kN}{V}
+\implies pV = kNT$$
+which is the ideal gas equation of state.
+
+As an exercise, derive the chemical equation of state
+$$\frac{\mu}{T} = \eval{\pdv{S}{N}}_{V,E}.$$
+
+Using the last two results
+$$pV = \frac{2}{3}E$$
+where the $\frac{2}{3}$ come from the fact that in the expression of $\Omega$ the
+only adimensional combination of $m,V,E,h$ is the one provided.
+\subsection{Example: Quantum Mechanics}
+Since the microcanonical ensemble is used, all equilibrium microstates are
+equiprobable.
+
+A set of stationary states $\left\{\ket{n}\right\}$ with $n=1,2...\Omega$ and
+with eigenvalues $E_n\in\left(E,E+\Delta E\right)$.
+
+As discussed before, the density matrix at equilibrium must be diagonal in the
+eigenstates' basis
+$$\rho_{mn} = \frac{1}{\Omega}\delta_{mn}\to \rho = \frac{1}{\Omega}
+\sum_{n=1}^{\Omega}\ket{n}\bra{n}$$ 
+
+The corresponding Von Neumann's entropy
+$$S = -\Tr(\rho\ln\rho) = -\sum_{n}^{}\lambda_n\ln\lambda_n = 
+-\sum_{n=1}^{\Omega}\frac{1}{\Omega}\ln\frac{1}{\Omega} = \ln\Omega $$
+The postulate is that the TD entropy is proportional to Von Neumann's:
+$$S_B = kS_\text{VN}\to S = k\ln\Omega$$
+
+\textbf{Note} Since the eigenvalues are constant, for the microcanonical ensemble
+the density matrix is diagonal in \textit{all bases}, but this is not generally
+true for other ensembles.
+
+In a QM context, the ensemble is an incoherent superposition of states, with
+random phases [altre cose]
+$$\rho = \frac{1}{\Omega} \sum_{\alpha}^{}\ket{\alpha}\bra{\alpha},\;\ket{\alpha}
+=\sum_{n}^{} c_{\alpha,n}\ket{n} = \sum_{n}^{}|c_{\alpha,n}|
+e^{i\vartheta_{\alpha,n}}$$
+the randomness of the phases means
+$$\langle e^{i\vartheta_{\alpha,m}}e^{i\vartheta_{\alpha,n}}\rangle =0$$
+uniting these three relations with the fact that
+$$\left|c_{\alpha,n}\right|=\text{const.}$$
+shows that this last condition ensures
+$$\rho_{mn} = 0,\;\text{if }m\neq n$$.
+
+The explicit quantum example is the \textit{Einstein Solid}: the thermal capacity
+$c_v$ is classically constant (Dulong-Petit), while experiments show that this is
+not true for low temperatures.
+
+To solve this, quantum mechanics is needed and
+Einstein proposed a simple quantum model: the atoms of a solid live in a 3D
+lattice in fixed positions, about which they \textbf{oscillate}, so a solid stores
+energy in these oscillations; Einstein considered a simplified model, in which
+only one frequency is permitted, to be treated quantum mechanically: so the
+situation is that of $3N$ decoupled quantum harmonic oscillators with only
+one permitted frequency.
+
+Each stationary state (each corresponding to one oscillator) is defined by a
+quantum number $n_a$, with $a=1,2...3N$, so the generic state of the system is
+$$\ket{n} = \ket{n_1}\otimes\ket{n_2}\otimes...\ket{n_{3N}}$$
+The total energy of the system is the sum of the oscillators' energy
+$$E = \sum_{a=1}^{3N}E_{n_a} = \hbar\omega \left(\underbrace{\sum_{a=1}^{N}n_a}_
+{:=n}+\frac{3N}{2}\right).$$
+Consider the microcanonical ensemble, i.e. the set of states with energy
+$E=\hbar\omega\left(n+\frac{3N}{2}\right)$ and with $\Delta E=0$, since the
+discrete spectrum allows it. Now, finding the number of microstates $\Omega$
+is a \textit{combinatorics} problem, since all the combinations of
+$\left\{n_a\right\}$ so that $n=\sum_{a}^{}n_a$ must be counted, i.e. the
+possible positions of the quanta of energy in the $3N$ oscillators.
+
+This is simply a distribution problem: how many ways are there to distribute $n$
+identical objects in $3N$ groups?
+$$\Omega(n,N) =
+\binom{n+3N-1}{n}
+$$
+from this the process is the same as before:
+$$S = k\ln\Omega$$
+then Stirling's approximation, with the caveat $3N-1\sim3N$, yields
+$$S = k \left\{(n+3N)\ln(n+3N)-n\ln N -3N\ln3N\right\}.$$
+Then
+$$\frac{1}{T} = \pdv[]{S}{E} = \pdv[]{n}{E}\pdv[]{S}{n} = \frac{k}{\hbar\omega}
+\left(\ln(n+3N)+1 -\ln(n)-1\right)=\frac{k}{\hbar\omega} \ln\frac{n+3N}{n}.
+$$
+Defining
+$$\beta = \frac{1}{kT}\to \beta\hbar\omega = \ln\frac{n+3N}{n}$$
+so
+$$\frac{n+3N}{n}=e^{\beta\hbar\omega} \to n = \frac{3N}{1-e^{\beta\hbar\omega}}$$
+since $n(E)$ and $\beta(T)$,
+$$E(T,N) = \hbar\omega3N\left(\frac{1}{e^{\beta\hbar\omega}-1} + \frac{1}{2}
+\right)$$
+The quantum effects vanish if $kT>>\hbar\omega$, indeed
+$$E\sim\hbar\omega3N\left(\frac{1}{\beta\hbar\omega}+\frac{1}{2}\right)\sim
+\hbar\omega3N\frac{1}{\beta\hbar\omega} = 3NkT$$
+and Dulong-Petit's law appears:
+$$c_v = \pdv[]{E}{T} = 3Nk.$$
+However, in a quantum regime, i.e. $kT<<\hbar\omega$, so
+$$E\sim\hbar\omega3N\left(e^{-\beta\hbar\omega}+\frac{1}{2}\right) = 
+\hbar\omega\frac{3}{2}N + \hbar\omega3Ne^{-\beta\hbar\omega}$$
+and
+$$c_v = \pdv[]{E}{T} \sim 3N\frac{(\hbar\omega)^2}{kT^2}e^{-\frac{\hbar\omega}
+{kT}}$$
+which is better than a constant, but not in really good accord with the data.

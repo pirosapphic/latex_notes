@@ -1,0 +1,88 @@
+
+\lesson{03/11}
+\textbf{Proof of Wick's theorem (by induction)}\\
+The base case is with two fields and it is easily proven by brute force.
+
+Supposing the theorem holds for $n$ fields, consider the time-ordered product
+of $n+1$ fields: without losing generality, consider $x^0_{n+1}<x_i^0$, then
+$$T\left\{\phi(x_1)...\phi(x_{n+1})\right\}=T\left\{\phi(x_1)...\phi(x_n)
+\right\}\phi(x_{n+1})$$
+from the hypothesis, Wick's theorem can be used
+$$T\left\{\phi(x_1)...\phi(x_{n+1})\right\} =\left( N\left\{\phi(x_1)...\phi(x_n)
+\right\} + \sum_{}^{}\text{all contractions}\right)\phi(x_{n+1}).$$
+Consider now
+$$N\left\{\phi(x_1)...\phi(x_n)\right\}\left(\phi(x_{n+1})^++\phi(x_{n+1})^-
+\right).$$
+Noting that the normal-ordered product can be written as
+$$N\left\{\phi(x_1)...\phi(x_n)\right\} = \sum_{A,B}\prod_{i\in A}\phi^+(x_i)
+\prod_{j\in B}\phi^-(x_j)$$
+(where $A,B$ are partitions of the set of indexes) yields
+\begin{gather*}
+N\left\{\phi(x_1)...\phi(x_n)\right\}\phi(x_{n+1}) = 
+\sum_{A,B}\prod_{i\in A}\phi^+(x_i)\prod_{j\in B}\phi^-(x_j)\left(\phi^+(x_{n+1})
++\phi^-(x_{n+1})\right).
+\end{gather*}
+The $\phi^-(x_{n+1})$ is not problematic, since it is already normal ordered, but
+in order to express this normal-ordered product in terms of $N\left\{\phi(x_1)...
+\phi(x_{n+1})\right\}$, the $\phi^+(x_{n+1})$ needs to go through all the
+$\phi^-(x_j)$'s yielding commutators:
+\begin{gather*}
+N\left\{\phi(x_1)...\phi(x_n)\right\}\phi(x_{n+1}) = 
+N\left\{\phi(x_1)...\phi(x_{n+1})\right\} + \sum_{A,B}^{}\prod_{i\in A}\phi^+(x_i)
+\phi^+(x_{n+1})\prod_{j\in B}\phi^-(x_j) +\\+\sum_{A,B}\prod_{k\in B}\phi^+(x_i)
+\prod_{j\neq k \in B} \phi^-(x_j)\overline{\phi(x_k)\phi(x_{n+1})}
+\end{gather*}
+So the contractions sum with the others and the normal-ordered product now
+includes $\phi(x_{n+1})$ \qed
+
+\textbf{Example: four fields}\\
+Denoting $\phi_i = \phi(x_i)$, consider
+$$T\left\{\phi_1\phi_2\phi_3\phi_4\right\} = N\left\{
+    \overline{\phi_1\phi_2}\phi_3\phi_4 + \overline{\phi_2\phi_3}\phi_1\phi_4 +
+    \overline{\phi_3\phi_4}\phi_1\phi_2 + \overline{\phi_1\phi_4}\phi_2\phi_3+
+    \overline{\phi_1\phi_2}\;\overline{\phi_3\phi_4}+
+    \overline{\phi_1\phi_4}\;\overline{\phi_2\phi_3}+
+    \overline{\phi_1\phi_3}\;\overline{\phi_2\phi_4}
+\right\}$$
+When taking the vacuum expectation value the first 4 terms vanish because of $N$:
+$$\bra{0}T\left\{\phi_1\phi_2\phi_3\phi_4\right\}\ket{0}=
+i\Delta_F(x_1-x_2)i\Delta_F(x_3-x_4)+
+i\Delta_F(x_1-x_4)i\Delta_F(x_2-x_3)+
+i\Delta_F(x_1-x_3)i\Delta_F(x_2-x_4)
+$$
+\textbf{Note} The proof for Dirac fields is similar, save a $(-1)^p$ sign, given
+by the fact that $p$ anticommutation relations need to be used.
+\subsection{The S-matrix}
+This is the greatest success of Quantum Field Theory: the predictive part
+of the Standard Model has passed with flying colours every test yet devised;
+the core of the predictions is the $S$-matrix.
+
+As said before, the $S$-matrix is defined as
+$$\lim\limits_{T\to\infty}U_I(T,-T)=\lim\limits_{T\to\infty}
+T\left\{\exp\left[-i\int_{-T}^{T} \dd t H_I(t) \right]\right\}
+:=S$$
+Since the exponential is just notation for its series, the $S$-matrix can also
+be written as
+$$S = T\left\{\mathbb{I} -i\int \dd^4x \mathcal{H}_I(x^\mu) + \frac{(-i)^2}
+{2!}\int\dd^4y\int_{}^{} \dd^4w \mathcal{H}_I(y^\mu)\mathcal{H}_I(w^\mu) 
+\right\}$$
+where $\mathcal{H}_I$ is the interacting picture Hamiltonian density.\\
+The reason behind the $T\to\pm\infty$ is to study \textbf{scattering processes}
+by considering the particles as non-interacting in the initial and final state:
+e.g. the initial state may be
+$$a^\dagger(\mathbf{k})a^\dagger(\mathbf{k'})\ket{0}$$
+which is a state with $2$ scalar \textit{free} particles (as $T\to-\infty$) of
+momenta $\mathbf{k,k'}$, while the final state may be
+$$\bra{0}a(\mathbf{k'})a(\mathbf{k})$$
+which are again \textit{free} particles (as $T\to\infty$): the probability
+amplitude of this happening is
+$$A=\bra{\text{final}}S\ket{\text{initial}}:$$
+the convenient thing is that the $S$-matrix can be computed perturbatively using
+the exponential series.\\
+\textbf{Note} The order of the series is the \textit{number of vertices} in a
+\textbf{Feynman Diagram}.
+\subsection{The $\phi^4$ self-interaction}
+The simplest interaction Hamiltonian density is
+$$\mathcal{H}_I = \frac{\Lambda}{4!}\phi^4(x)$$
+where $\Lambda$ is a parameter.
+

@@ -1,33 +1,46 @@
 \babel@toc {english}{}\relax 
-\contentsline {section}{\underline {\textbf {Lesson 1, 23/09}}}{3}{section*.1}%
-\contentsline {section}{\large \underline {Thermodynamics}}{3}{section*.1}%
-\contentsline {section}{\underline {\textbf {Lesson 2, 29/09}}}{3}{section*.1}%
-\contentsline {section}{\numberline {1}Internal Energy as a TD potential}{3}{section.1}%
-\contentsline {section}{\numberline {2}Legendre Transform}{3}{section.2}%
-\contentsline {section}{\numberline {3}Response Functions}{4}{section.3}%
-\contentsline {section}{\numberline {4}Mechanical response functions}{5}{section.4}%
-\contentsline {section}{\numberline {5}Maxwell Relations}{5}{section.5}%
-\contentsline {section}{\numberline {6}Stability of equilibrium state}{6}{section.6}%
-\contentsline {section}{\underline {\textbf {Lesson 3, 30/09}}}{6}{section.6}%
-\contentsline {section}{\numberline {7}Equilibrium in external field}{7}{section.7}%
-\contentsline {section}{\numberline {8}Second order equilibrium}{7}{section.8}%
-\contentsline {section}{\numberline {9}Multi-component systems}{9}{section.9}%
-\contentsline {section}{\numberline {10}Phase transitions}{9}{section.10}%
-\contentsline {subsection}{\numberline {10.1}First order transitions}{10}{subsection.10.1}%
-\contentsline {section}{\underline {\textbf {Lesson 4, 09/10}}}{10}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Continuous transitions}{12}{subsection.10.2}%
-\contentsline {section}{\numberline {11}Maxwell construction}{13}{section.11}%
-\contentsline {section}{\underline {\textbf {Lesson 5, 07/10}}}{13}{section.11}%
-\contentsline {section}{\numberline {12}Coexistence of many phases}{14}{section.12}%
-\contentsline {section}{\numberline {13}Gibbs rule}{14}{section.13}%
-\contentsline {section}{\large \underline {Statistical Mechanics}}{15}{section.13}%
-\contentsline {section}{\numberline {14}Statistical approach to TD}{15}{section.14}%
-\contentsline {section}{\numberline {15}Observables}{15}{section.15}%
-\contentsline {section}{\underline {\textbf {Lesson 6, 13/10}}}{16}{section.15}%
-\contentsline {section}{\numberline {16}Description of TD systems through independent subsystems}{16}{section.16}%
-\contentsline {subsection}{\numberline {16.1}Additive observables}{17}{subsection.16.1}%
-\contentsline {subsection}{\numberline {16.2}Explicit formula for $\rho $}{17}{subsection.16.2}%
-\contentsline {section}{\numberline {17}The Time reversal problem}{17}{section.17}%
-\contentsline {subsection}{\numberline {17.1}Reduced Observables}{17}{subsection.17.1}%
-\contentsline {section}{\underline {\textbf {Lesson 7, 14/10}}}{20}{subsection.17.1}%
-\contentsline {subsection}{\numberline {17.2}Time scales in BBGKY}{20}{subsection.17.2}%
+\contentsline {section}{\underline {\textbf {Lesson 1, 23/09}}}{4}{section*.1}%
+\contentsline {section}{\large \underline {Thermodynamics}}{4}{section*.1}%
+\contentsline {section}{\underline {\textbf {Lesson 2, 29/09}}}{4}{section*.1}%
+\contentsline {section}{\numberline {1}Internal Energy as a TD potential}{4}{section.1}%
+\contentsline {section}{\numberline {2}Legendre Transform}{4}{section.2}%
+\contentsline {section}{\numberline {3}Response Functions}{5}{section.3}%
+\contentsline {section}{\numberline {4}Mechanical response functions}{6}{section.4}%
+\contentsline {section}{\numberline {5}Maxwell Relations}{6}{section.5}%
+\contentsline {section}{\numberline {6}Stability of equilibrium state}{7}{section.6}%
+\contentsline {section}{\underline {\textbf {Lesson 3, 30/09}}}{7}{section.6}%
+\contentsline {section}{\numberline {7}Equilibrium in external field}{8}{section.7}%
+\contentsline {section}{\numberline {8}Second order equilibrium}{8}{section.8}%
+\contentsline {section}{\numberline {9}Multi-component systems}{10}{section.9}%
+\contentsline {section}{\numberline {10}Phase transitions}{10}{section.10}%
+\contentsline {subsection}{\numberline {10.1}First order transitions}{11}{subsection.10.1}%
+\contentsline {section}{\underline {\textbf {Lesson 4, 09/10}}}{11}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Continuous transitions}{13}{subsection.10.2}%
+\contentsline {section}{\numberline {11}Maxwell construction}{14}{section.11}%
+\contentsline {section}{\underline {\textbf {Lesson 5, 07/10}}}{14}{section.11}%
+\contentsline {section}{\numberline {12}Coexistence of many phases}{15}{section.12}%
+\contentsline {section}{\numberline {13}Gibbs rule}{15}{section.13}%
+\contentsline {section}{\large \underline {Statistical Mechanics}}{16}{section.13}%
+\contentsline {section}{\numberline {14}Statistical approach to TD}{16}{section.14}%
+\contentsline {section}{\numberline {15}Observables}{16}{section.15}%
+\contentsline {section}{\underline {\textbf {Lesson 6, 13/10}}}{17}{section.15}%
+\contentsline {section}{\numberline {16}Description of TD systems through independent subsystems}{17}{section.16}%
+\contentsline {subsection}{\numberline {16.1}Additive observables}{18}{subsection.16.1}%
+\contentsline {subsection}{\numberline {16.2}Explicit formula for $\rho $}{18}{subsection.16.2}%
+\contentsline {section}{\numberline {17}The Time reversal problem}{18}{section.17}%
+\contentsline {subsection}{\numberline {17.1}Reduced Observables}{18}{subsection.17.1}%
+\contentsline {section}{\underline {\textbf {Lesson 7, 14/10}}}{21}{subsection.17.1}%
+\contentsline {subsection}{\numberline {17.2}Time scales in BBGKY}{21}{subsection.17.2}%
+\contentsline {section}{\underline {\textbf {Lesson 8, 20/10}}}{21}{subsection.17.2}%
+\contentsline {section}{\numberline {18}Boltzmann H-theorem}{21}{section.18}%
+\contentsline {section}{\numberline {19}Maxwell-Boltzmann Distribution}{22}{section.19}%
+\contentsline {subsection}{\numberline {19.1}About the H-theorem}{23}{subsection.19.1}%
+\contentsline {section}{\numberline {20}Going Quantum}{24}{section.20}%
+\contentsline {subsection}{\numberline {20.1}Density matrix}{24}{subsection.20.1}%
+\contentsline {subsubsection}{\numberline {20.1.1}Properties}{25}{subsubsection.20.1.1}%
+\contentsline {section}{\underline {\textbf {Lesson 9, 27/10}}}{25}{subsubsection.20.1.1}%
+\contentsline {section}{\numberline {21}Gibbs Statistical Ensembles}{25}{section.21}%
+\contentsline {subsection}{\numberline {21.1}Microcanonical Ensemble}{26}{subsection.21.1}%
+\contentsline {subsection}{\numberline {21.2}Example: Classical ideal gas}{27}{subsection.21.2}%
+\contentsline {section}{\underline {\textbf {Lesson 10, 28/10}}}{27}{subsection.21.2}%
+\contentsline {subsection}{\numberline {21.3}Example: Quantum Mechanics}{29}{subsection.21.3}%

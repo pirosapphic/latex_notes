@@ -1,0 +1,93 @@
+
+\lesson{28/10}
+\section{in medias res}
+Last theorem stated that a reducible unitary representation of a group
+is completely reducible.
+
+\textbf{Theorem} \textit{Let $G$ be a finite group, $D$ a finite-dimensional
+representation of $G$: there always exist a scalar product over $V$ such that
+$D$ is unitary with respect to it.}\\
+\textbf{Proof} Consider $v,w\in V$ and a basis $\left\{e_i\right\}$ for $V$
+$$\ket{v}= \sum_{i=1}^{n}v_i\ket{e_i},\;\ket{w}= \sum_{i=1}^{n}w_i\ket{e_i}:$$
+a scalar product between $v,w$ is
+$$\bra{v}\ket{w} = \sum_{i=1}^{n}(v^i)^*w^i.$$
+Consider the scalar product $\bra{\bra{v}}\ket{\ket{w}}$ defined as follows
+$$\bra{\bra{v}}\ket{\ket{w}}:= \frac{1}{|G|}\sum_{g'\in G}
+\bra{D(g')v}\ket{D(g')w}:$$
+consider now
+$$\bra{\bra{D(g)v}}\ket{\ket{D(g)w}} = 
+\bra{\bra{v}}\ket{\ket{D^\dagger(g)D(g)w}}$$
+by the properties of the scalar product. Using the definition of the second
+scalar product yields
+$$
+\bra{\bra{D(g)v}}\ket{\ket{D(g)w}}=\frac{1}{|G|}\sum_{g'\in G} =
+\bra{D(g')D(g)v}\ket{D(g')D(g)w}=
+\frac{1}{|G|}\sum_{g'\in G} \bra{D(g'\cdot g)v}\ket{D(g'\cdot g)w}$$
+since $g$ is fixed and arbitrary, letting $g\cdot g' = g''$ and summing over
+it does not change anything, so
+$$\bra{\bra{D(g)v}}\ket{\ket{D(g)w}}=\frac{1}{|G|}\sum_{g''\in G}\bra{D(g'')v}
+\ket{D(g'')w} = \bra{\bra{v}}\ket{\ket{w}}$$
+so $D$ is unitary with respect to this scalar product.\qed
+
+\textbf{Maschke's theorem} \textit{Every finite dimensional reducible 
+representation of a finite group is completely reducible.}\\
+\textbf{Proof} Obvious combining the last two theorems.
+
+\textbf{Schur's Lemma} \textit{Given two irreducible representations of
+$D_1,D_2$ of a group $G$ and an intertwiner $A$, either $A$ is an isomorphism
+or $A=\mathbb{O}$}.\\
+\textbf{Proof} Consider $v\in\ker(A)$:
+$$AD_1(g)v = D_2(g)Av$$
+since $Av=0$ by definition of kernel,
+$$AD_1(g)v=0 \iff D_1(g)v\in\ker(A)$$
+since $v$ is a generic vector and $g$ is a generic element of $G$, $\ker(A)$ is
+a submodule of $D_1$ ($\forall w\in
+\ker(A),\forall g\in G D_1(g)w \in\ker(A)$). But $D_1$ is irreducible, so it
+admits only $V_1$ or $\left\{0\right\}\subset V_1$ as submodules, so there are
+only two possibilities for $\ker(A)$:
+\begin{itemize}
+    \item $\ker(A) = V_1$, which means that $A$ is the 0-map, $A=\mathbb{O}$;
+    \item $\ker(A) = \left\{0\right\}$, so $A$ is injective.
+\end{itemize}
+Considering now the case in which $A$ is injective, let $w\in\Im(A)$, then
+$\exists u\in V_1$ so that $Au=w$, so
+$$D_2(g)w = D_2(g)Au=AD_1(g)u:$$
+this means that $\exists z =D_1(g)u\in V_1$ so that $D_2(g)w = Az$, thus
+$$\forall g\in G,\forall w\in V_2,\, D_2(g)w\in\Im(A)$$
+so $\Im(A)$ is a submodule of the irreducible representation of $D_2$ and,
+as before, there are only two cases:
+\begin{itemize}
+    \item $\Im(A)=V_2$, which means that A is surjective \textbf{and} injective;
+    \item $\Im(A)=\left\{0\right\}$, which means that $A$ is the 0-map
+        $\mathbb{O}$.\qed
+\end{itemize}
+So $A$ must either be the $0$-map or an isomorphism between $V_1$ and $V_2$.\qed
+
+\textbf{Corollary} \textit{Given an irrep (irreducible representation) $D$, the
+only operators that commute with $D(g),\,\forall g\in G$ are proportional
+to the identity.}\\
+\textbf{Proof (sketch)}\\
+It is clear that $\forall\mu\in\mathbb{C}$
+$$\mu\mathbb{I}D(g) = D(g)\mu\mathbb{I};$$
+if $AD(g)=D(g)A$, then it is also true that
+$$(A-\mu\mathbb{I})D(g) = D(g)(A-\mu\mathbb{I})$$
+so by the Lemma either $A=\mu\mathbb{I}$ or $(A-\mu\mathbb{I})$ is an isomorphism:
+the latter condition is not guaranteed to be satisfied $\forall\mu$, since
+$\det(A-\mu\mathbb{I})=0$ is a polynomial equation in $\mu$ of degree
+$\dim(A)$, that must admit at least one solution for the fundamental theorem of
+Algebra.\\
+So $A=\mu\mathbb{I}$ for some $\mu\in\mathbb{C}$.\qed
+
+\textbf{Fundamental orthogonality theorem} \textit{Consider a group $G$ and two
+irreps $U_\alpha,U_\beta$ that are not isomorphic\footnote{Which means that
+$U_\alpha(g)$ and $U_\beta(g)$ should be so that $\nexists A$ s.t. $\forall
+g\in G,\,AU_\alpha(g)A^{-1}=U_\beta(g)$} and act respectively on
+$V_\alpha,V_\beta$: the following equality holds}
+$$\sum_{g\in G}^{}\left(\bra{w}\ket{U_\alpha(g)v}\right)^*\bra{u}\ket{U_\beta(g)
+t} = \frac{|G|}{\dim(V_\alpha)}\delta_{\alpha\beta}(\bra{w}\ket{t})^*\bra{v}
+\ket{w}$$
+
+\textbf{Burnside theorem} \textit{Given a finite group $G$ and the set of
+inequivalent irreps $\left\{U_\alpha\right\}$ acting on $V_\alpha$, the order
+of the group is}
+$$|G|=\sum_{\alpha}^{}(\dim(V_\alpha))^2$$
