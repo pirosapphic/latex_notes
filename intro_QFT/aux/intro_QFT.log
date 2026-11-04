@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (TeX Live 2026/Arch Linux)  (format=lualatex 2026.10.21)  3 NOV 2026 12:19
+This is LuaHBTeX, Version 1.24.0 (TeX Live 2026/Arch Linux)  (format=lualatex 2026.10.21)  4 NOV 2026 12:30
  restricted system commands enabled.
 **intro_QFT.tex
 (./intro_QFT.tex
@@ -1749,7 +1749,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2.
 
-<./F_prop.png, id=642, 1267.73625pt x 432.61626pt>
+<./F_prop.png, id=646, 1267.73625pt x 432.61626pt>
 File: ./F_prop.png Graphic file (type png)
 <use ./F_prop.png>
 Package luatex.def Info: ./F_prop.png  used on input line 23.
@@ -1858,7 +1858,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.64003pt}.
 
 [49]
-<./prop.png, id=671, 981.6675pt x 291.0875pt>
+<./prop.png, id=675, 981.6675pt x 291.0875pt>
 File: ./prop.png Graphic file (type png)
 <use ./prop.png>
 Package luatex.def Info: ./prop.png  used on input line 57.
@@ -2020,7 +2020,35 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 84.
 
-)
+) (./lessons/les24_0411.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--2
+
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@@underline' on input line 2.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 2.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 2.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 2.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 22.64003pt, for example:
@@ -2028,24 +2056,40 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-10.64003pt}.
 
-[56] (./aux/intro_QFT.aux)
+[56]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.64003pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.64003pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-10.64003pt}.
+
+[57])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.64003pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.64003pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-10.64003pt}.
+
+[58] (./aux/intro_QFT.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `intro_QFT.out' has not changed.
-(rerunfilecheck)             Checksum: F3C440227189D9F6B24C7E04145E4A7F;14455.
+(rerunfilecheck)             Checksum: 80FC337D2A774CE290D00DB386804676;14591.
 )
 
 Here is how much of LuaTeX's memory you used:
- 31345 strings out of 476076
+ 31371 strings out of 476076
  125016,1373583 words of node,token memory allocated
- 3346 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 13 glue, 4 kern, 4 sub_mlist, 1 glyph, 906 attribute, 65 glue_spec, 454 attribute_list, 2 write nodes
-   avail lists: 1:8,2:893,3:410,4:274,5:525,6:125,7:6225,8:107,9:1061,10:8,11:436
- 52662 multiletter control sequences out of 65536+600000
+ 3412 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 13 glue, 4 kern, 4 sub_mlist, 1 glyph, 928 attribute, 65 glue_spec, 465 attribute_list, 2 write nodes
+   avail lists: 1:8,2:877,3:410,4:274,5:528,6:125,7:6422,8:107,9:1061,10:8,11:436
+ 52669 multiletter control sequences out of 65536+600000
  125 fonts using 8269311 bytes
- 98i,22n,104p,565b,528s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,22n,104p,565b,530s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 warning  (pdf backend): unreferenced destination with name 'Hfootnote.11'
 
@@ -2069,10 +2113,10 @@ warning  (pdf backend): unreferenced destination with name 'Hfootnote.2'
 
 warning  (pdf backend): unreferenced destination with name 'Hfootnote.1'
 </usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman9-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman6-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on intro_QFT.pdf (56 pages, 541556 bytes).
+Output written on intro_QFT.pdf (58 pages, 554838 bytes).
 
-PDF statistics: 822 PDF objects out of 1000 (max. 8388607)
- 714 compressed objects within 8 object streams
- 141 named destinations out of 1000 (max. 1048576)
- 680 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 845 PDF objects out of 1000 (max. 8388607)
+ 735 compressed objects within 8 object streams
+ 154 named destinations out of 1000 (max. 1048576)
+ 688 words of extra memory for PDF output out of 10000 (max. 100000000)
 

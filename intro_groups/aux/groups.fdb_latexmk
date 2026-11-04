@@ -1,5 +1,5 @@
 # Fdb version 4
-["lualatex"] 1793640914.66696 "groups.tex" "groups.pdf" "groups" 1793640917.64802 0
+["lualatex"] 1793813913.25574 "groups.tex" "groups.pdf" "groups" 1793813915.24363 0
   "/etc/texmf/tex/generic/config/language.dat" 1788356983.60566 2850 b86a6c5c7bf423c3902454d7e037ed0f ""
   "/home/paolo/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc" 1785064381.88596 128397 dc8cded2bbafe8195c86cdaea92e40b2 ""
   "/home/paolo/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-italic.luc" 1785084000.01982 136299 81dfec24bbf14622db1629e3fd551117 ""
@@ -214,10 +214,10 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1792593924 5385490 8673be925240dc2054d816ce847ba982 ""
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1792593917 5660320 6eb139e4aa32812856570795124dba69 ""
   "Reidemeister.png" 1791647825.68066 5559 51017103040b1c5757fe7df89b124946 ""
-  "aux/groups.aux" 1793640917.19905 4764 44d384d194364c0fb063247a466fdd57 "lualatex"
-  "aux/groups.out" 1793640917.20105 4456 c65ae4d3d7c8df4ce34ad34ef8e31ddf "lualatex"
-  "aux/groups.toc" 1793640917.20205 2770 d3bbe199894407fabf2c5c105222b151 "lualatex"
-  "groups.tex" 1793631228.8061 3492 baa192948dbb59c8448823fc5a7398cf ""
+  "aux/groups.aux" 1793813914.947 4892 54ac587f1d66ec7b25da3d1a525d7441 "lualatex"
+  "aux/groups.out" 1793813914.948 4587 92df87090afe74651c33da7b54844cb7 "lualatex"
+  "aux/groups.toc" 1793813914.949 2855 b26cca8a926c6ff7a54cddb1f1a2a6a2 "lualatex"
+  "groups.tex" 1793803871.39669 3525 feadfacbd3021436c57c74df16d876c4 ""
   "lessons/les01_2309.tex" 1791632797.85446 128 a37c449df35dae05b412a997558e251d ""
   "lessons/les02_2809.tex" 1791632846.80946 7343 ce20d87667a1b27de6dc169ebb7422be ""
   "lessons/les03_3009.tex" 1792166157.10105 9775 99aa906829bb12ab7223bda78a67b3fb ""
@@ -227,7 +227,8 @@
   "lessons/les07_2110.tex" 1793201988.93423 16 3d23c3835f9687f8537f39975f0b0f90 ""
   "lessons/les08_2610.tex" 1793202045.35523 17 e4e50523e1ab7ad2864333175a887fc2 ""
   "lessons/les09_2810.tex" 1793209144.655 4527 b214235138f8979bf11bb77980f966dc ""
-  "lessons/les10_0211.tex" 1793640914.34305 8177 0c09a06377dd9de8daa43cfbc5295b3e ""
+  "lessons/les10_0211.tex" 1793641032.60006 8177 0c09a06377dd9de8daa43cfbc5295b3e ""
+  "lessons/les11_0411.tex" 1793813911.548 5379 a575f446c9bfd4975ccbfd0bce0406f4 ""
   "sigma_1.png" 1791647861.22766 6567 6645ead0a49728921c7c72bb7a72844b ""
   (generated)
   "aux/groups.aux"

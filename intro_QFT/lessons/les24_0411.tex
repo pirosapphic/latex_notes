@@ -1,0 +1,120 @@
+
+\lesson{04/11}
+This interaction will be plugged into the $S$-matrix expression:
+$$S = T\left\{\mathbb{I} -i\int \dd^4x \mathcal{H}_I(x^\mu) + \frac{(-i)^2}
+{2!}\int\dd^4y\int_{}^{} \dd^4w \mathcal{H}_I(y^\mu)\mathcal{H}_I(w^\mu) 
++...\right\},$$
+the integrals are over all space-time, but, \textit{under the hypothesis that
+the interaction is short-ranged in space and in time}, the integrand is
+non-zero in a finite region of space-time; this also means that for the
+double or triple integrals the dominion over which the integrand is non-zero
+becomes progressively smaller: this \textbf{guarantees the convergence of the
+Dyson series}.
+
+After finding the expression for $S$, the transition amplitude between the
+asymptotical states needs to be computed:
+$$A=\bra{q}S\ket{p}$$
+in this case the initial state is a particle with momentum $p$ and the final
+with $q$.
+
+The first example is the scattering of a single particle, so the initial state
+is $a_p^\dagger\ket{0}$ and the final state is $\bra{0}a_q$ (with a normalization
+due to the choice of the 4-momenta over the 3-momenta):
+$$A = (2\pi)^32(E_pE_q)^{\frac{1}{2}}\bra{0}a_q S a_p^\dagger\ket{0}.$$
+The $0$-th order of $S$ is simply $\mathbb{I}$:
+$$A = (2\pi)^32(E_pE_q)^{\frac{1}{2}}\bra{0}a_q\mathbb{I}a_p^\dagger\ket{0} =
+\bra{q}\ket{p} = (2\pi)^32(E_pE_q)^{\frac{1}{2}}\delta^3(\mathbf{p-q}) =
+(2\pi)^3 2E_p$$
+so nothing happens at perturbative order $0$. The corresponding Feynman diagram
+is a single straight line.
+
+The first order of $S$ is not trivial:
+\begin{gather*}
+A = -i(2\pi)^32(E_pE_q)^{\frac{1}{2}}\bra{0}a_q T\left\{\int_{}^{}\dd^4x
+\frac{\Lambda}{4!}\phi^4(x^\mu)\right\}a_p^\dagger\ket{0}=\\=
+-i\frac{\Lambda}{4!}(2\pi)^32(E_pE_q)^{\frac{1}{2}}\int_{}^{} \dd^4x
+\bra{0}a_q\phi(x)\phi(x)\phi(x)\phi(x)a^\dagger_q\ket{0}
+\end{gather*}
+where the time ordering is automatically satisfied, since the field is
+evaluated $4$ times at the same point in space-time.
+
+There are $6$ fields ($4$ $\phi$'s and $2$ $a$'s), so Wick's theorem
+prescribes to take all possible contractions between them: the first way to
+do so is to contract the two $a$'s and two couples of $\phi$ (minding the fact
+that there are $3$ ways to contract them), the second is to contract each $a$
+with a $\phi$ and two $\phi$'s between them (minding again the combinatorics,
+there are $12$ ways to do so).
+\begin{itemize}
+    \item The first kind of contractions yield 3 terms in the form
+        $$\bra{0}aa^\dagger\ket{0}\overline{\phi(x)\phi(x)}\;\overline{\phi(x)
+        \phi(x)} \propto \delta^3(\mathbf{q-p})i\Delta_F^2(0),$$
+        each consisting of a line and of a ``double'' loop:
+        they represent, respectively, the case of a non-interacting particle and
+        \textbf{the vacuum creating and reabsorbing a particle and an
+        antiparticle} and they will simplify with the denominator in the
+        Gell-Mann-Low formula. The diagrams in this first class are called
+        \textit{disconnected}.\\
+        \textbf{Note} the double loop integral is delicate, since
+        $$\overline{\phi(x)\phi(x)}\;\overline{\phi(x)\phi(x)} =
+        \int \frac{\dd^4k\dd^4k'}{(2\pi)^8}\frac{i}{k^2-m^2+i\varepsilon}
+        \frac{i}{k'^2-m^2+i\varepsilon}$$
+        will be integrated over $\dd^4x$, which yields the infinite volume
+        of spacetime.
+    \item The second kind of contractions yield 12 terms in the form
+        $$\overline{\phi(x)a^\dagger_p}\;\overline{\phi(x)\phi(x)}\;
+        \overline{a_q\phi(x)}$$
+        each consisting, respectively, of a line \textit{coming from infinity to
+        the interaction point $x$}, a loop and a line \textit{exiting from
+        the interaction point $x$ to infinity}. These loops are the
+        self-interaction, which has the effect of modifying the mass of the
+        particle by moving the poles in the propagators (this is renormalization,
+        it will be treated in the Advanced QFT course).
+        $$\overline{\phi(x)a^\dagger_p} =\mathcal{N}\int_{}^{} \dd^3k
+        \bra{0}(a_ke^{-ikx}+a^\dagger_ke^{ikx})a^\dagger_p\ket{0} = [...]
+        = \frac{e^{-ipx}}{(2\pi)^{\frac{3}{2}}2E_p}$$
+        and similarly
+        $$\overline{a_q\phi(x)} = \frac{e^{iqx}}{(2\pi)^\frac{3}{2}2E_q}.$$
+        The loop integral is a bit more delicate for the same reasons as the
+        double loop.
+\end{itemize}
+
+The amplitude up to first order is in the form $A = A^{(0)}+A^{(1)}$. The
+$A^{(1)}$ term is composed of the two parts discussed earlier, denoted as
+$A^{(1)}_a$ and $A^{(1)}_b$:
+$$A_a^{(1)} = (2\pi)^32E_p\delta^3(\mathbf{p-q}) \left(-\frac{i\Lambda}{8}\right)
+\int_{}^{} \frac{\dd^4k\dd^4k'}{(2\pi)^8}\frac{i}{k^2-m^2+i\varepsilon}
+\frac{i}{k'^2-m^2+i\varepsilon}\int_{}^{} \dd^4x$$
+$$A_b^{(1)} = \left(-\frac{i\Lambda}{2}\right)\int_{}^{} \frac{\dd^4k}{2\pi^4}
+\frac{i}{k^2-m^2+i\varepsilon}\underbrace{\int_{}^{} \dd^4x e^{i(q-p)x}}_{=
+(2\pi)^4\delta^4(q-p)}=
+\left(-\frac{i\Lambda}{2}\right)\int_{}^{}
+\dd^4k\frac{i}{k^2-m^2+i\varepsilon}\delta^4(q-p).$$
+\subsubsection{Feynman Rules for self interaction}
+All these explicit calculations are \textit{very difficult} (since this is
+the \textbf{simplest} interaction possible!), but there are rules by Feynman
+to simplify the matter of calculating the amplitude.
+These are related to spacetime representation.
+\begin{enumerate}
+    \item Each vertex of interaction corresponds to a factor $-i\Lambda$ (in
+        general, $-i$[coupling constant]);
+    \item Each internal line between $x,y$ is a propagator and corresponds to
+        a factor $i\Delta_F(x-y)$;
+    \item Each external line (i.e. a line with one vertex) is associated to a
+        plane wave, a factor $e^{\pm ipx}$ ($+$ for outgoing and $-$ for
+        incoming; for antiparticles it is the opposite);
+    \item Integrate the position of the vertices over all space-time;
+    \item Divide by the symmetry factor (the combinatorics from before).
+\end{enumerate}
+There are correspondent rules in momentum space, which are \textbf{the ones
+actually used}, since they are more convenient.
+\begin{enumerate}
+    \item Each vertex of interaction corresponds to a factor $-i\Lambda$ (in
+        general, $-i$[coupling constant]);
+    \item Each internal line is a propagator and corresponds to
+        a factor $i\tilde{\Delta}_F(k) = \frac{i}{k^2-m^2+i\varepsilon}$, denoted
+        only by $k$;
+    \item Each external line (i.e. a line with one vertex) is associated to a
+        factor $1$;
+    \item Integrate over all loop momenta;
+    \item Use a normalization (...?)
+\end{enumerate}

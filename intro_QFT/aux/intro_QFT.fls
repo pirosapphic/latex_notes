@@ -500,6 +500,7 @@ INPUT ./prop.png
 INPUT ./lessons/les21_3010.tex
 INPUT ./lessons/les22_0211.tex
 INPUT ./lessons/les23_0311.tex
+INPUT ./lessons/les24_0411.tex
 INPUT ./aux/intro_QFT.aux
 INPUT ./aux/intro_QFT.out
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb

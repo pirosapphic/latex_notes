@@ -1,5 +1,5 @@
 # Fdb version 4
-["lualatex"] 1793704760.62337 "intro_QFT.tex" "intro_QFT.pdf" "intro_QFT" 1793704765.45821 0
+["lualatex"] 1793791828.80899 "intro_QFT.tex" "intro_QFT.pdf" "intro_QFT" 1793791832.53806 0
   "/etc/texmf/tex/generic/config/language.dat" 1788356983.60566 2850 b86a6c5c7bf423c3902454d7e037ed0f ""
   "/home/paolo/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc" 1785064381.88596 128397 dc8cded2bbafe8195c86cdaea92e40b2 ""
   "/home/paolo/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-italic.luc" 1785084000.01982 136299 81dfec24bbf14622db1629e3fd551117 ""
@@ -410,10 +410,10 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1792593924 5385490 8673be925240dc2054d816ce847ba982 ""
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1792593917 5660320 6eb139e4aa32812856570795124dba69 ""
   "F_prop.png" 1793096282.362 30153 2ccc8d7582d964db3c272336e72d4561 ""
-  "aux/intro_QFT.aux" 1793704764.88931 12713 6b15071a9dc20daa56b8dd9a7803cb39 "lualatex"
-  "aux/intro_QFT.out" 1793704764.89131 14455 f3c440227189d9f6b24c7e04145e4a7f "lualatex"
-  "aux/intro_QFT.toc" 1793704764.89231 8451 626c6d9fe1babf090d10b7695d4142a0 "lualatex"
-  "intro_QFT.tex" 1793702687.27041 4056 c996000c3b6b60f05d87ce2f4c8772eb ""
+  "aux/intro_QFT.aux" 1793791832.03839 12997 6a6afb5d05200e8f292573b6e2cecc23 "lualatex"
+  "aux/intro_QFT.out" 1793791832.04039 14591 80fc337d2a774ce290d00db386804676 "lualatex"
+  "aux/intro_QFT.toc" 1793791832.04039 8651 84eed5221c83589b4f9cc721d89ee242 "lualatex"
+  "intro_QFT.tex" 1793785915.83212 4089 ae65c4d87044364ed89fe22dbd0e28f1 ""
   "lessons/les01_2309.tex" 1791631963.09844 48 2ae5ae467891c9f6255986ae29f45faa ""
   "lessons/les02_2409.tex" 1792166103.26805 5733 5da12c2c2f190d5d799dfd0c3f294990 ""
   "lessons/les03_2809.tex" 1791632072.89544 4702 9b33bb48fcde5e3d1eb290a926711cb7 ""
@@ -437,6 +437,7 @@
   "lessons/les21_3010.tex" 1793629451.46653 8388 623662a69dde6f76ea673e2a8b9292d4 ""
   "lessons/les22_0211.tex" 1793699920.04253 1078 e6ed29e0b014f0391f10bbaa22dea358 ""
   "lessons/les23_0311.tex" 1793704759.35631 4338 ad792540878658f83c77b291e519913c ""
+  "lessons/les24_0411.tex" 1793791828.32239 6526 5aaf934b3fe56e3f61443fb36310a316 ""
   "prop.png" 1793266081.85588 19325 fabfb8f1c07b4b3440000efcdb8ca3bd ""
   (generated)
   "aux/intro_QFT.aux"

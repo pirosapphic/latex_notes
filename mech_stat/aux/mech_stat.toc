@@ -44,3 +44,11 @@
 \contentsline {subsection}{\numberline {21.2}Example: Classical ideal gas}{27}{subsection.21.2}%
 \contentsline {section}{\underline {\textbf {Lesson 10, 28/10}}}{27}{subsection.21.2}%
 \contentsline {subsection}{\numberline {21.3}Example: Quantum Mechanics}{29}{subsection.21.3}%
+\contentsline {section}{\underline {\textbf {Lesson 11, 03/11}}}{31}{subsection.21.3}%
+\contentsline {section}{\underline {\textbf {Lesson 12, 04/11}}}{31}{subsection.21.3}%
+\contentsline {section}{\numberline {22}Gibbs' Entropy functional}{31}{section.22}%
+\contentsline {subsection}{\numberline {22.1}Microcanonical ensemble}{31}{subsection.22.1}%
+\contentsline {subsection}{\numberline {22.2}Canonical ensemble}{32}{subsection.22.2}%
+\contentsline {subsection}{\numberline {22.3}Relation between microcanonical and canonical ensembles}{33}{subsection.22.3}%
+\contentsline {section}{\numberline {23}Canonical Treatment of non-interacting systems}{34}{section.23}%
+\contentsline {subsection}{\numberline {23.1}The ideal classical gas (canonical ensemble)}{35}{subsection.23.1}%

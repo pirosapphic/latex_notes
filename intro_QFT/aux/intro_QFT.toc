@@ -92,3 +92,5 @@
 \contentsline {section}{\underline {\textbf {Lesson 23, 03/11}}}{55}{subsection.22.5}%
 \contentsline {subsection}{\numberline {22.6}The S-matrix}{56}{subsection.22.6}%
 \contentsline {subsection}{\numberline {22.7}The $\phi ^4$ self-interaction}{56}{subsection.22.7}%
+\contentsline {section}{\underline {\textbf {Lesson 24, 04/11}}}{56}{subsection.22.7}%
+\contentsline {subsubsection}{\numberline {22.7.1}Feynman Rules for self interaction}{58}{subsubsection.22.7.1}%

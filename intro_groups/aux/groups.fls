@@ -244,6 +244,7 @@ INPUT ./lessons/les07_2110.tex
 INPUT ./lessons/les08_2610.tex
 INPUT ./lessons/les09_2810.tex
 INPUT ./lessons/les10_0211.tex
+INPUT ./lessons/les11_0411.tex
 INPUT ./aux/groups.aux
 INPUT ./aux/groups.out
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb

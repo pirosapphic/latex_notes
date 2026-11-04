@@ -1,0 +1,154 @@
+
+\lesson{04/11}
+\section{Gibbs' Entropy functional}
+[buh]
+
+$$S[p(\nu)] = -k\sum_{\nu}^{}P(\nu)\ln P(\nu)$$
+So the functional is extensive
+$$S[P_{AB}(\nu_A,\nu_B)] = S_A+S_B$$
+\subsection{Microcanonical ensemble}
+The only constraint is
+$$\sum_{\nu}^{}P(\nu) = 1,$$
+for the probabilistic interpretation. As always, the maximization of entropy
+will be constrained with \textit{Lagrange multipliers}.
+
+Define
+$$\tilde S [P]=\underbrace{-k\sum_{\nu}^{}P(\nu)\ln P(\nu)}_{=S[P]}+\alpha_0
+\left(\sum_{\nu}^{}P(\nu) -1\right)$$
+and extremize it with arbitrary variations:
+$$\delta\tilde S[P] = 0 = -k\sum_{\nu}^{}\ln P(\nu)\delta P(\nu) - k
+\sum_{\nu}^{}P(\nu)\frac{\delta P(\nu)}{P(\nu)} + \alpha_0 \sum_{\nu}^{}\delta
+P(\nu) = -k\sum_{\nu}^{}\left(-k\ln P(\nu) + (\alpha_0-k)\right)\delta P(\nu)
+\footnote{occhio ai segni}$$
+Since the variation of $P$ is arbitrary, this is null if and only if
+$$k\ln P(\nu) = (\alpha_0-k) \iff P(\nu) = \exp\left[\frac{\alpha_0-k}{k}
+\right]:$$
+since this is constant with respect to $\nu$, the \textit{microstates are
+equiprobable} (as found before); imposing the constraint
+$$\sum_{\nu}^{}P(\nu) = P\sum_{\nu}^{}1 = \Omega e^{\alpha_0/k - 1}=1
+\iff \frac{1}{\Omega} = e^{\alpha_0/k-1}$$
+\subsection{Canonical ensemble}
+Here the constraints are
+$$\sum_{\nu}^{}P(\nu) = 1,\; \langle E\rangle_P = \sum_{\nu}^{}E(\nu)P(\nu) = E$$
+Now the functional to maximise is
+$$\tilde S[P] = -k\sum_{\nu}^{}P(\nu)\ln P(\nu) +\alpha_0\left(\sum_{\nu}^{}P(\nu)
+-1\right) + \alpha_E\left(\sum_{\nu}^{}P(\nu)E(\nu)-E\right)$$
+so
+$$0=\delta\tilde S[P] = -k\sum_{\nu}^{}\ln P(\nu)\delta P(\nu) - k\sum_{\nu}^{}
+P(\nu)\frac{\delta P(\nu)}{P(\nu)} + \alpha_0\sum_{\nu}^{}\delta P(\nu) + 
+\alpha_E\sum_{\nu}^{}E(\nu)\delta P(\nu)
+$$
+writing it as a single sum\footnote{OCCHIO al segno di $\alpha_E$}
+$$0 = \sum_{\nu}^{}\left[-k\ln P(\nu) +(\alpha_0-k)+\alpha_E E(\nu)\right]\delta
+P(\nu),\,\forall \delta P(\nu)$$
+So finally
+$$\ln P(\nu) = \frac{\alpha_0}{k}-1 + \frac{\alpha_E}{k}E(\nu)\iff
+P(\nu) = \exp\left[\frac{\alpha_0}{k}-1 + \frac{\alpha_E}{k}E(\nu)\right].
+$$
+Now the normalization constraint
+$$1=\sum_{\nu}^{}P(\nu)=e^{\frac{\alpha_0}{k}-1}\sum_{\nu}^{}
+e^{\flatfrac{\alpha_E}{k}E(\nu)}\iff Z := e^{\flatfrac{\alpha_0}{k}-1} = 
+\sum_{\nu}^{}e^{\alpha_E/kE(\nu)}
+$$
+$Z$ will be called the \textit{partition function}.
+
+With this notation, the entropy functional becomes
+$$S[P(\nu)] = \sum_{\nu}^{}P(\nu)\left(\frac{\alpha_E}{k}E(\nu)-k\ln Z\right) = 
+\alpha_E \langle E \rangle_P + k\ln Z
+$$
+
+The second constraint imposes
+$$E=\sum_{\nu}^{}E(\nu)P(\nu)$$
+since $E$ is the TD energy, the thermal equation of state must hold
+$$\frac{1}{T} = \pdv[]{S}{\langle E\rangle} = -\alpha_E$$
+
+So the microstate probability is
+$$P(\nu) = \frac{1}{Z}e^{-\frac{1}{kT}E(\nu)} = \frac{1}{Z}e^{-\beta E(\nu)}$$
+where
+$$Z = \sum_{\nu}^{}e^{-\beta E(\nu)}.$$
+Where are the TD potentials? Starting from the entropy
+$$S = \frac{\langle E\rangle}{T}+\ln Z\iff\langle E\rangle -TS = -kT\ln Z$$
+Since $E-TS:=F$, the Helmholtz potential, then
+$$F = -kT\ln Z \iff Z = e^{-\beta F}$$
+\subsection{Relation between microcanonical and canonical ensembles}
+The key quantity in the canonical ensemble is the partition function
+$$Z(T,V,N) = \sum_{\nu}^{}e^{-\beta E(\nu)}:$$
+since the contributions of the various microstates are independent, the sum
+can be reorganized: let $\Omega (E_e,V,N)$ be the \textit{number of microstates
+of energy $E_e$}
+$$Z = \sum_{e}^{}\sum_{\nu_e=1}^{\Omega(E_e)}e^{-\beta E_e} = \sum_{e}^{}
+\Omega(E_e,V,N)e^{-\beta E_e}
+$$
+the $\Omega$ term is the key quantity of microcanonical ensembles and its weighted
+sum over different energies is the partition function.
+
+The continuous spectrum equivalent switches $\Omega$ with a density of states
+$g(E)\dd E$ and the sum with an integral
+$$Z(\beta) = \int_{0}^{\infty} \dd E g(E)e^{-\beta E}$$
+The probability density $P(\nu)$ becomes
+$$P(E)\dd E=\frac{1}{Z}e^{-\beta E} g(E)\dd E $$
+\textbf{Note} $Z$ and $g(E)$ are \textit{not} independent and convey the same
+information: they are related by a \textbf{Laplace transform}.
+
+The Laplace anti-transform yields
+$$g(E) = \frac{1}{2\pi i}\int_{\gamma}^{} \dd \beta Z(\beta) e^{\beta E}$$
+where $\gamma$ is a contour in the complex space of $\beta$, parallel to the
+imaginary axis and in the analyticity domain of $Z(\beta)$.
+
+Since this transform relates the density of states via $g(E)$ with the
+temperature via $Z(\frac{1}{kT})$, it is plausible that this expression,
+in the TD limit, becomes the Legendre transform between $S$ and $T$:
+since $S=k\ln\Omega$,
+$$g(E)\to \eval{\Omega(E)}_{\Delta E=\dd E} = e^{S(E)/k} = g(E)\Delta E\implies
+g(E)=\frac{e^{S(E)/k}}{\Delta E}$$
+and
+$$Z\to e^{-\beta F}$$
+imply
+$$e^{-\frac{F}{kT}} = \frac{1}{\Delta E}\int_{0}^{\infty} \dd E e^{\frac{S}{k}-
+\frac{E}{kT}}$$
+Since in the TD limit $S$ is large (it is extensive), this integral can be
+computed using the \textbf{saddle-point technique}: the exponent
+$$f(E) = \frac{1}{k}\left(S(E)-\frac{E}{T}\right) \to
+0 = \pdv[]{f}{E} = \frac{1}{k}\left(\pdv[]{S}{E}-\frac{1}{T}\right)\iff
+E\text{ is s.t. }\frac{1}{T} = \pdv[]{S}{E}$$
+so the integrand is extremised around the TD energy $\langle E\rangle$!
+The integral is therefore
+$$e^{-\frac{F}{kT}} = e^{-f(\langle E\rangle)}\left[\frac{1}{\Delta E}
+\sqrt{\frac{2\pi}{f''(\langle E\rangle)}} + ...\right]$$
+Since $E$ is extensive $E\sim N$, so
+$$f(E) \sim N \to f''\sim \frac{N}{N^2} = \frac{1}{N}$$
+and so
+$$\exp\left[-f(\langle E\rangle) - \frac{1}{2}\ln\left(\frac{\Delta E^2 2\pi}
+{f''(\langle E\rangle)}\right)\right]\sim\exp\left[-f(\langle E\rangle)\right]$$
+Finally
+$$e^{-\frac{F}{kT}} = e^{-f(\langle E\rangle)} \iff -\frac{F}{T} = S-
+\frac{\langle E\rangle}{T}\iff \boxed{F = \langle E\rangle-TS}$$
+which is the TD Legendre transform.
+
+Moreover, since the integrand is similar to $P(E)$, the TD energy is also
+\textit{the most probable value of energy}.
+\section{Canonical Treatment of non-interacting systems}
+Suppose to have a system composed of $N$ distinguishable, non-interacting
+components: each microstate of the system $\nu$ is a collection of $N$ microstates
+$\left\{\nu_1,...\nu_N\right\}$ and its energy is simply
+$$E_\nu = \sum_{i=1}^{N}E_{\nu_i}$$
+and the partition function is
+$$Z = \sum_{\nu}^{}e^{-\beta E_\nu} = \sum_{\nu_1}...\sum_{\nu_N}^{}
+e^{-\beta E_{\nu_1}}...e^{-\beta E_{\nu_N}}:= Z_1...Z_N$$
+where $Z_i$ is formally defined as the partition function for the $i$-th 
+component.
+
+Similarly, the expression of the Helmholtz energy is
+$$[...\text{cancellata lavangna...} F=-kT\ln Z]$$
+
+If the particles are indistinguishable, there is some ''over-counting``, so the
+expression need be symmetrized and multiplied approximately by $\frac{1}{N!}$.
+\subsection{The ideal classical gas (canonical ensemble)}
+All the gas particles are identical, so $Z_i=Z_j$
+$$Z = \frac{1}{N!}\prod_{i=1}^{N}Z_i = \frac{1}{N!}Z_1^{N}$$
+Since $Z_1$ is for a single particle, it is easy to compute, since it is an
+integral over its phase space
+$$Z_1 = \int_{}^{} \frac{\dd ^3p\dd^3q}{h^3} e^{-\beta H(q,p)}=
+\int_{}^{} \dd^3q\int_{}^{} \frac{\dd^3p}{h^3} e^{-\beta\frac{\mathbf{p}^2}{2m}}=
+\frac{V}{h^3}(2\pi mkT)^{\frac{3}{2}}
+$$

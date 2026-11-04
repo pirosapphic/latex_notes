@@ -1,0 +1,135 @@
+
+\lesson{04/11}
+\textbf{Def.} Given a vector space $V$, its dual $V^*$ and their
+bases $\left\{e_i\right\}\subset V,\;\left\{e^{*i}\right\}\subset V^*$, the
+product between $f\in V^*$ and $v\in V$ is
+$$\langle f,v\rangle := f(v)$$
+and it is an inner product.
+
+\textbf{Def.} Given $V,W$ vector spaces and a linear function $f:V\to W$, the
+\textit{pullback of $f$}, denoted as $f^*$, is the linear map
+\begin{align*}
+    f^*:W^*&\to V^*\\
+    g&\to f^*(g):=g\circ f 
+\end{align*}
+Since $g\in W^*$, $g:W\in\mathbb{C}$ is linear and so $f^*=g\circ f:V\in
+\mathbb{C}$ is a linear map, so it is an element of $V^*$.
+
+\textbf{Def.} A \textit{tensor} of type $(p,q)$ over the vector space $V$ is a
+function
+$$T:\underbrace{V^*\times V^*...V^*}_{p \text{ times}}\times \underbrace{V\times
+V...V}_{q \text{ times}}\to\mathbb{C}$$
+which is \textit{linear in all its arguments}.
+
+\textbf{Note} From the fact that $(V^*)^*=V$ follows that $(1,0)$ tensors are
+vectors, while $(0,1)$ tensors are dual vectors.
+
+The components of a tensors are expressed in terms of the basis and dual basis
+of $V,V^*$:
+$$T = T\indices{^{i_1...i_p}_{j_1...j_q}}e_{i_1}...e_{i_p}e^{j_1*}...e^{j_q*}$$
+where the sum over all the $p+q$ indices is omitted for Einstein's notation.
+
+\textbf{Def.} Given a $(p,q)$ tensor $R$ and a $(l,m)$ tensor $S$, the \textit{
+tensor product} of $R$ and $S$, denoted as
+$$T=:R\otimes S$$
+is a tensor of type $(p+l,q+m)$ such that
+$$S(f_1,...f_{p+l},v^1,...v^{q+m}) = R(f_1...f_p,v^1,...v^q)
+S(f_{p+1}...,f_{p+l}, v^{q+1},...v^{q+m})$$
+
+This is a bilinear, associative but not commutative operation.
+
+\textbf{Def.} Given a $(p,q)$ tensor, its \textit{contraction of indices} is a
+$(p-1,q-1)$ tensor, denoted as
+$$T_{c(i,j)}$$
+where $i$ is a contravariant index and $j$ is a covariant index: it is defined so
+that
+$$T_{c(i,j)}(f_1,...,...f_{p-1},v^1,...v^{q-1}):=
+\sum_{k=1}^{\dim V}T(
+\underbrace{f_1,...f_{i-1},e^{*k},f_i,...f_{p-1}}_{p \text{ arguments}},
+\underbrace{v^1,...v^{j-1},e_k,...v^{q-1}}_{q \text{ arguments}})$$
+\textbf{Note} In coordinates this is
+$$ (T_{c(i,j)})\indices{^{\alpha_1,...\alpha_{p-1}}_{
+\beta_1,...\beta_{q-1}}}
+= T\indices{^{\alpha_1,...\alpha_{i-1},k,\alpha_i,...
+\alpha_{p-1}}_{\beta_1,...,\beta_{j-1},k,\beta_{j},...\beta_{q-1}}}$$
+where the sum over $k$ is omitted.
+
+\textbf{Def.} Given two vector spaces $V,W$ of dimensions $\dim(V)=n,\,\dim(W)=m$,
+and with bases
+$$\left\{e_i\right\}\subset V,\,\left\{e'_j\right\}\subset W$$
+the \textit{tensor product of} $V$, $W$ is
+$$V\otimes W = \left\{\Lambda\indices{^i^j}e_i\otimes e_j',\text{ with }
+\Lambda^{ij}\in\mathbb{C}\right\}$$
+and has dimension $\dim(V\otimes W) = \dim(V)\dim(W)$.\\
+\textbf{Note} Not all elements of a product space can be expressed as a tensor
+product of vectors, i.e. \textbf{the existence of} $v,w$ so that
+$$\lambda_1v_1\otimes w_1 + \lambda_2v_2\otimes w_2 = v\otimes w$$
+is \textbf{not} guaranteed.\\
+This fact is at the base of the quantum mechanical
+concept of \textit{entanglement}\footnote{
+See the Bachelor's degree course "Quantum Mechanics II".},
+for example a spinor state
+$\ket{\Psi}\in\mathbb{C}^2\otimes\mathbb{C}^2$ such as
+$$\ket{\Psi} = \frac{1}{\sqrt{2}}\left(\ket{1}\otimes\ket{0}+\ket{0}\otimes\ket{1}
+\right)$$
+cannot be written as a linear combination in the form
+$$\ket{\Psi}\neq \left(\alpha\ket{0}+\beta\ket{1}\right)\otimes(\gamma\ket{0}+
+\delta\ket{1})$$
+
+The concept of tensor product can also be generalized to be between dual
+spaces, between a vector and a dual space, and even between tensor product spaces
+with a similar definition: for example
+$$V\otimes W^* = \left\{\Lambda\indices{^i_j}e_i\otimes e'^{j*}\right\}$$
+$$V\otimes V^*\otimes V = \left\{\Lambda\indices{^i_j^k}e_i\otimes e^{*j}\otimes
+e_k\right\}$$
+
+\textbf{Note} Consider a change of basis over the vector space $V$
+$$e_k' = R^l_ke_l$$
+and its dual base $e^{*m}$ so that
+$$e^{*m}(e_l)=\delta^m_l:$$
+by requiring
+$$e'^{*n}(e'_k) = \delta^n_k$$
+it is clear that
+$$e'^{*n} = (R^{-1})^n_me^{*m}$$
+This also means that any vector does not change under change of basis:
+$$v = v^ie_i = v^j \delta_j^i e_i = \underbrace{v^j (R^{-1})_j^l}_{=v'^l}
+\underbrace{R^i_l e_i}_{=e'_l}:=v'^le'_l$$
+
+\textbf{Def.} Given two linear operators
+$$A:V_1\to V_2,\; B:W_1\to W_2$$
+their \textit{tensor product} is the linear map
+\begin{align*}
+A\otimes B: V_1\otimes W_1&\to V_2\otimes W_2 \\
+\Lambda^{ij}e_i\otimes e'_j&\to
+(A\otimes B)(\Lambda^{ij}e_i\otimes e'_j)=\Lambda^{ij}A(e_i)\otimes B(e'_j)
+\end{align*}
+\textbf{Note} Consider $A\in \text{Mat}(n\times n),\, B\in\text{Mat}(m\times m)$:
+their tensor product is a $nm\times nm$ matrix defined as
+$$\begin{pmatrix}
+    a_{11}&...&a_{1n}\\
+    ...&...&...\\
+    a_{n1}&...&a_{nn}
+\end{pmatrix} \otimes
+\begin{pmatrix}
+    b_{11}&...&b_{1m}\\
+    ...&...&...\\
+    b_{n1}&...&b_{mm}
+\end{pmatrix}=\begin{pmatrix}
+    a_{11}B&...B&a_{1n}B\\
+    ...B&...B&...B\\
+    a_{n1}B&...B&a_{nn}B
+\end{pmatrix}
+$$
+this particular case of the tensor product of linear maps is called the
+\textit{Kronecker product} and is general to rectangular matrices.\\
+\textbf{Note} The trace is well behaved with respect to this operation, namely
+$$\Tr(A\otimes B) = \Tr(A)\Tr(B).$$\\
+
+Consider now the automorphism
+$$
+L: V\otimes W\to V\otimes W
+$$
+that can be represented as
+$$L = L_{ijlk}(\ket{i}\otimes\ket{j})\otimes(\ket{l}\otimes\ket{k})$$
+[things about trace]
+
