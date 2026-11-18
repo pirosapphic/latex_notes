@@ -1,5 +1,5 @@
 # Fdb version 4
-["lualatex"] 1793784646.36934 "mech_stat.tex" "mech_stat.pdf" "mech_stat" 1793784648.50469 0
+["lualatex"] 1794994336.15349 "mech_stat.tex" "mech_stat.pdf" "mech_stat" 1794994342.16213 0
   "/etc/texmf/tex/generic/config/language.dat" 1788356983.60566 2850 b86a6c5c7bf423c3902454d7e037ed0f ""
   "/home/paolo/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc" 1785064381.88596 128397 dc8cded2bbafe8195c86cdaea92e40b2 ""
   "/home/paolo/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-italic.luc" 1785084000.01982 136299 81dfec24bbf14622db1629e3fd551117 ""
@@ -77,7 +77,9 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1775415801 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1775415801 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1775415801 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb" 1775415801 33993 9b89b85fd2d9df0482bd47194d1d3bf3 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1775415801 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1775415801 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1775415801 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb" 1775415801 30273 87a352d78b6810ae5cfdc68d2fb827b2 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1775415801 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
@@ -219,9 +221,9 @@
   "/usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload.lua" 1775415801 13566 16df94dd2de231b2bca0aaa0190941fe ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1792593924 5385490 8673be925240dc2054d816ce847ba982 ""
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1792593917 5660320 6eb139e4aa32812856570795124dba69 ""
-  "aux/mech_stat.aux" 1793784648.206 7220 7c76f01c482a6e74af24c1d1722488e7 "lualatex"
-  "aux/mech_stat.out" 1793784648.208 8747 5304155bd4c90bdc035736ea28587408 "lualatex"
-  "aux/mech_stat.toc" 1793784648.208 4610 4dd9caac3618727333b49f97953e27b5 "lualatex"
+  "aux/mech_stat.aux" 1794994341.41106 9161 a9fcebeeba99f50b11e4c8505dd82e46 "lualatex"
+  "aux/mech_stat.out" 1794994341.41406 11097 58ff96ee85eb0deb3d87433c95fd2ed4 "lualatex"
+  "aux/mech_stat.toc" 1794994341.41506 5928 19ad70e2ae49f3606d7600b6f13c1d37 "lualatex"
   "lessons/les01_2309.tex" 1791632583.88145 70 6784d805a6ee967d6079accaa48c453e ""
   "lessons/les02_2909.tex" 1791815379.16472 6697 8be5cab640a8f3d86b53a025691fc7da ""
   "lessons/les03_3009.tex" 1792166188.15105 7654 20f0f2f529e6c083eeb18b6f5e35f3c2 ""
@@ -234,7 +236,11 @@
   "lessons/les10_2810.tex" 1793179962.63127 7494 4d524cb014055f49fdb22d8c4dbffa05 ""
   "lessons/les11_0311.tex" 1793778355.34289 81 cccd2aa85fce112ade10ba9c89848d30 ""
   "lessons/les12_0411.tex" 1793784644.853 7178 9e98a0afe7002e6b1072e3557234579f ""
-  "mech_stat.tex" 1793778299.29089 3936 d5c91db1a769bb76e494d9b969904b08 ""
+  "lessons/les13_1011.tex" 1794383088.73369 5144 0b35e667e744f5f297281251fbe85788 ""
+  "lessons/les14_1111.tex" 1794389717.64664 5481 7f593841cd2d2876c05bb866fbcb9b84 ""
+  "lessons/les15_1711.tex" 1794907720.20704 7480 fbe82cc1c9864b8c3675e4e665ce7d3d ""
+  "lessons/les16_1811.tex" 1794994334.69906 9259 d31a925634df2e480caee6563a8a7a84 ""
+  "mech_stat.tex" 1794988252.91567 4118 8fa66f1ae90ee3b9c7d1d9e2851ca837 ""
   "triple_water.png" 1791355612.19126 118992 05e3c3855db553697565b41900c2f52c ""
   (generated)
   "aux/mech_stat.aux"

@@ -1,0 +1,249 @@
+
+\lesson{16/11}
+So the general strategy is to write down a Lagrangian, define its Feynman rules
+and use them to write down transition amplitudes.
+\chapter{Path Integrals for fermionic fields: Yukawa theory}
+The fields for fermions are \textit{Dirac Spinors} $\psi$ and for the canonical
+quantization the commutation relations were changed to anticommutators: how can
+this be done with path integrals?
+
+\section{Grassman Variables}
+Grassman numbers are \textit{anticommuting numbers},
+\[
+    \left\{\vartheta,\vartheta \right\}=0\iff \vartheta^2 = 0;
+\]
+They are also called G-numbers, opposed to C-numbers which are complex.
+
+Functions of Grassman variables are thus simple to expand in series: since
+$\vartheta^2=0$, $\vartheta^{n>2}=0$ and the series expansion is
+\[
+    f(\vartheta ) = c +\alpha \vartheta
+\]
+\textbf{Note} If $f$ is a G-number (C-number), $c$ is a G-number (C-number) and
+$\alpha $ is a C-number (G-number).
+
+Since $\dv[]{\vartheta }{\vartheta }=1$, the derivative operators anticommute
+\[
+    \left\{\dv[]{}{\vartheta },\dv[]{}{\vartheta }\right\}=0.
+\]
+A desirable property is that the integral over a G-variable is
+\textit{invariant under translation}
+\[
+    \int_{}^{} \dd \vartheta f(\vartheta +\eta ) = \int_{}^{} \dd \vartheta
+    f(\vartheta )
+\]
+This implies that
+\[
+    \int_{}^{} \dd \vartheta (c+\alpha \vartheta ) = \int_{}^{} \dd \vartheta 
+    (c+\alpha \vartheta )+\int_{}^{} \dd \vartheta \alpha \eta \iff
+    \int_{}^{} \dd \vartheta =0.
+\]
+The integration measure can be defined so that
+\[
+    \int_{}^{} \dd \vartheta \vartheta  = 1.
+\]
+Moreover, different G-variables anticommute
+\begin{gather*}
+    \left\{\vartheta_i,\vartheta_j\right\}=0\\
+    \left\{\dv[]{}{\vartheta _i},\dv[]{}{\vartheta _j}\right\}=0
+\end{gather*}
+so the Taylor expansion of the function of $n$ G-variables is
+\[
+    f(\vartheta_i) = c+ \sum_{i}^{}\alpha_i\vartheta _i + \sum_{ij}^{} \beta _{ij}
+    \vartheta _i\vartheta _j + \sum_{ijk}^{} ...+... +
+    \gamma \vartheta_1\vartheta_2...\vartheta_n
+\]
+since higher order terms are all null.
+
+\textbf{Note} The derivative and integral operators \textit{must act directly
+on the variable} and commute with G-variables, i.e.
+\[
+    \dv[]{}{\vartheta_1}\vartheta_2\vartheta_1 = -\vartheta_2\dv[]
+    {\vartheta _1}{\vartheta _1} = -\vartheta_2
+\]
+\[
+    \int_{}^{} \dd \vartheta_1\dd\vartheta_2 \vartheta_1\vartheta_2 = 
+    -\int_{}^{} \dd\vartheta_1\vartheta_1\int_{}^{} \dd \vartheta_2\vartheta_2 =-1
+\]
+\subsection{Gaussian integrals}
+Since the function $e^{-\vartheta_2}$ would be the constant $1$, consider
+\[
+    I=\int_{}^{} \dd \vartheta_1\vartheta_2 e^{-\vartheta^TM\vartheta}
+\]
+where
+\[
+    \vartheta = \begin{pmatrix*}
+    \vartheta_1\\\vartheta_2
+    \end{pmatrix*}
+\]
+For regular numbers, it can be shown that\footnote{See the section "Determinanti
+    funzionali" in the QM2 course in this repository}:
+\[
+    I_C = \int_{}^{} \dd^2x e^{-x^TMx} = \frac{\pi}{\sqrt{\det(M)}}
+\]
+Explicitely,
+\[
+    \vartheta^TM\vartheta = \vartheta_1(m_{11}\vartheta _1+m_{12}\vartheta_2)+
+    \vartheta_2(m_{21}\vartheta_1+m_{22}\vartheta_2)=(m_{12}-m_{21})\vartheta_1
+    \vartheta_2
+\]
+so the only part of $M$ that is important is the \textit{antisymmetric part}.
+If $M$ is antisymmetric then
+\[
+    \vartheta^TM\vartheta = 2m_{12}\vartheta_1\vartheta_2.
+\]
+Expanding the integral yields
+\[
+    I=\int_{}^{} \dd\vartheta_1\dd\vartheta_2 (1-\vartheta^TM\vartheta)=
+    -2m_{12}\int_{}^{} \dd\vartheta_1\dd\vartheta_2\vartheta_1\vartheta_2=2m_{12}=
+    2\sqrt{\det(M)}
+\]
+If the G-variables are odd, then the integral is null; for all even numbers
+$2n$ of G-variables, considering the \textit{antisymmetric part of} $M$ the
+general result is
+\[
+    I_{2n}=\int_{}^{} \dd\vartheta_1...\dd\vartheta_{2n} e^{-\vartheta^TM\vartheta} = 
+    \int_{}^{} \dd \vartheta_1...\dd\vartheta_{2n} \exp\left[ \sum_{\alpha=1}^{n}
+    \vartheta_\alpha^TM_\alpha \vartheta_\alpha\right]
+\]
+where\[
+    M_\alpha  = \begin{pmatrix}
+        0&\lambda_\alpha\\
+        -\lambda_\alpha&0
+    \end{pmatrix}
+\] 
+are the blocks of the Jordan form of $M$ and $\vartheta_\alpha =
+(\vartheta_\alpha\quad\vartheta_{\alpha+1})$ (credo).
+The integral can be factorized and expanded in
+\[
+    \text{[buchino]},
+\] yielding
+\[
+    I_{2n} =2^{2n}\sqrt{\det(M)}
+\]
+Consider now
+\[
+    I = \int_{}^{} \dd \vartheta_1\dd\vartheta_{2n}
+    \exp\left[ -\vartheta^TM\vartheta+\eta^T\vartheta+\vartheta^T\eta\right]
+\]
+the exponent can be rewritten as 
+\[
+    \vartheta'^TM\vartheta' - \eta^TM^{-1}\eta,\;\text{with }
+    \vartheta' = \vartheta-M^{-1}\eta
+\]
+using the translational invariance yields
+\[
+    I=2^n\sqrt{\det(M)}e^{\eta^TM^{-1}\eta }
+\]
+\section{Dirac Fields}
+The Dirac action is
+\[
+    S_0 = \int_{}^{} \dd^4x\bar\psi(i\slashed{\pd}-m)\psi 
+\]
+and the equations of motion are simply
+\begin{gather*}
+    (i\slashed{\pd}-m)\psi =0\\
+    i\slashed{\pd}\bar\psi +m\bar\psi =0
+\end{gather*}
+
+The partition function for this free theory is
+\[
+    Z_0=\int \mathcal{D}\psi\mathcal{D}\bar\psi  e^{iS_0}
+\]
+The goal is again to find Green's functions of the form
+\[
+    \int \mathcal{D}\psi\mathcal{D}\bar\psi e^{iS_0}\psi_1\psi_2...\bar\psi_1...
+    \bar\psi_n
+\]
+So again a source term, the spinor $\eta$, is used:
+\[
+    Z_0[\eta,\bar\eta]=\frac{1}{\mathcal{N}}\int\mathcal{D}\psi\mathcal{D}\bar\psi
+    \exp\left[ iS_0 + i \left\langle \bar\eta \psi\right\rangle +i\left\langle 
+    \bar\psi \eta\right\rangle  \right]
+\]
+where $\bar\eta =\eta^\dagger\gamma^0$. As before, this is useful since
+\[
+    -i\fdv[]{}{\bar\eta_\alpha(x)}Z_0[\eta,\bar\eta] =
+    \int \mathcal{D}\psi \mathcal{D}\bar\psi \psi_\alpha(x)\exp\left[ iS_0+i
+    \left\langle \bar\eta \psi \right\rangle +i\left\langle\bar\psi\eta
+\right\rangle \right]
+\]
+And similarly applying $i\fdv[]{}{\eta_\alpha(x) }$ brings down a
+$\bar\psi_\alpha(x)$, where $\alpha=0,1,2,3$ is the component of the spinor (which
+will be omitted from now on).
+
+So to compute
+\[
+    G=\int \mathcal{D}\psi\mathcal{D}\bar\psi \psi(x_1)\psi(x_2)\psi(x_3)e^{iS_0}
+\]
+one can use
+\[
+    (-i)^3\fdv[]{}{\bar\eta_3}\fdv[]{}{\bar\eta_2}\fdv[]{}{\bar\eta_1}
+    Z_0[\eta,\bar\eta]
+\]
+with the \textit{caveat} that
+$\pdv[]{}{\bar\eta_i}\psi_j = -\psi_j\pdv[]{}{\bar\eta_i}$, which yields a total
+of $3$ negative signs, so
+\[
+    (-i)^3\fdv[]{}{\bar\eta_3}\fdv[]{}{\bar\eta_2}\fdv[]{}{\bar\eta_1}
+    Z_0[\eta,\bar\eta]=-G
+\]
+Since the functional derivatives anticommute, to get $G$ one can also reverse the
+order of derivation. For $n$ $\psi$ fields the general formula is
+\[
+    \eval{G(1,2...n) = (-i)^n \frac{\delta^n}{\delta\bar\eta_1...
+    \delta\bar\eta_n}Z_0[\eta,\bar\eta]}_{\eta_i=0,\bar\eta_j=0}
+\]
+
+Now we use F.Ts on the exponent of $Z_0$:
+\begin{gather*}
+    \int_{}^{} \dd^4x \left[\bar\psi (\slashed{\pd}-m)\psi +\bar\eta \psi+\bar
+    \psi \eta \right]=\\
+    \int_{}^{} \dd^4x \frac{\dd^4k\dd^4k'}{(2\pi)^8}\left[
+    \bar{\tilde\psi}(k')(\slashed{k}-m)\tilde{\psi}(k)+\bar{\tilde\eta}(k')
+\tilde\psi(k)+\bar{\tilde\psi}(k')\tilde\eta(k)\right]e^{-i(k+k')x}
+\end{gather*}
+recognizing a $\delta^4(k'+k)$ yields
+\[
+    \int_{}^{} \frac{\dd^4k}{(2\pi)^4}\left[(\bar{\tilde\psi }(-k)+\bar{
+    \tilde\eta}(-k)(\slashed{k}-m)(-1))(\slashed{k}-m)(\tilde\psi(k)+(\slashed{k}-m)
+^{-1}\tilde\eta(k))-\bar{\tilde\eta }(-k)(\slashed{k}-m)\tilde\eta(k)\right]
+\]      
+This is the same form of the exponent of Gaussian integral of the G-numbers, with
+\[
+    M=\slashed{k}-m
+\]
+so one can change variable of integration (with Jacobian $\mathbb{I}$) and write
+\[
+    Z_0[\eta,\bar\eta] =\frac{1}{\mathcal{N}}\int
+    \mathcal{D}\psi\mathcal{D}\bar\psi \exp\left[ iS_0 -i\int_{}^{} \dd^4k
+    \bar{\tilde\eta }(-k)(\slashed{k}-m)\tilde\eta(k)
+    \right] 
+\]
+Since $\mathcal{N}=\int \mathcal{D}\psi\mathcal{D}\bar\psi e^{iS_0}$ they
+cancel out; antitransforming yields
+\[
+    Z_0[\eta,\bar\eta] = \exp\left[ -\int_{}^{} \dd^4x\dd^4y
+    \bar\eta_\alpha(x) S_{\alpha,\beta}(x-y)\eta_\beta(y)\right]
+\]
+where
+\[
+    S(x-y)=i\int_{}^{} \frac{\dd^4k}{(2\pi)^4}e^{-ik(x-y)}\frac{\slashed{k}-m}{
+    k^2-m^2+i\varepsilon }.
+\]
+So finally
+\[
+    Z_0[\eta,\bar\eta]=\exp\left[ -\left\langle \bar\eta(x)S_{xy}\eta(y)
+    \right\rangle_{xy}\right]
+\]
+And expectation values can be found like
+\[
+    \eval{\bra{0}T(\psi(x_2)\psi(x_2))\ket{0} = (-i)^2\fdv[]{}{\bar\eta_1}\fdv[]{}
+    {\bar\eta_2}Z_0[\eta,\bar\eta]}_{\bar\eta_i=0}=0\footnote{mostralo}
+\]
+This can also be done with different components of different spinors, like
+\[
+    \bra{0}T(\psi_\alpha(x)\bar\psi_\beta(y))\ket{0} = (-i)\fdv[]{}
+    {\bar\eta_\alpha(x)}\eval{i\fdv[]{}{\eta_\beta(y)} Z_0[\eta,\bar\eta]}_{
+    \eta,\bar\eta=0}=[\text{simple}]=S_{\alpha\beta}(x-y)
+\]

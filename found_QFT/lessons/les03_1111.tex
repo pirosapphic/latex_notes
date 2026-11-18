@@ -1,0 +1,193 @@
+
+\lesson{11/11}
+
+
+
+\[
+    Z_0[J] = \sum_{n=0}^{\infty} \frac{i^N}{N!}\langle 
+    G(1,2...N)J_1...J_N    \rangle_{1...N}
+\]
+And so the Green function, as seen before, is
+\[
+    G(1...N) = \eval{(-i)^N\frac{\delta^N}{\delta J_1...\delta J_N}Z_0[J]
+}_{J_i=0}\]
+\textbf{Explicit examples}\\
+\[
+    G_1(x_1)=\eval{-i\frac{\delta }{\delta J_1} Z_0[J] }_{J=0}= \eval{(-i)\left(-
+    \frac{1}{2}\right)\frac{\delta }{\delta J_1}\left(\langle J(x)\Delta (x-y)
+    J(y)\rangle_{xy}\right)Z_0[J]
+}_{J=0}\]
+the functional derivative acts on the exponent, yielding
+\[
+    G_1(x_1) = \eval{i \langle \underbrace{\frac{\delta J(x)}{\delta J(x_1)}}_{=
+    \delta^4(x-x_1)}\Delta (x-y)J(y)\rangle_{xy}Z_0[J]}_{J=0}=
+    \eval{i\langle \Delta (x_1-y)J(y)\rangle_yZ_0[J]}_{J=0}=0
+\]
+
+If there are two fields
+\begin{gather*}
+    G_2(x_1,x_2) = \eval{-\frac{\delta^2}{\delta J_1\delta J_2}}_{J=0}=
+    \eval{\frac{\delta }{\delta J_2}\left(\langle \Delta (x-y)J(y)\rangle_y Z_0[J]
+    \right)}_{J=0}=\\=
+    \eval{-\Delta (x_1-x_2 )Z_0[J] - \langle \Delta (x_1-y)J(y)\rangle_y\underbrace{
+    \frac{\delta }{\delta J_2}Z_0[J]}_\text{prev. res.}}_{J=0}=\\=
+    \eval{-\Delta (x_1-x_2 )Z_0[J] + \langle \Delta (x_1-y)J(y)\rangle_y
+    +\langle \Delta (x_2-w)J(w)\rangle_w Z_0[J]}_{J=0}=\\=-\Delta (x_1-x_2)
+\end{gather*}
+The $G_3$ propagator is again null, since an odd number of derivatives brings down
+$J$ terms that vanish when setting $J=0$ (much like the Gaussian integrals).
+
+For $4$ fields,
+\begin{gather*}
+    \eval{G_4 = \frac{\delta ^4}{\delta J_1\delta J_2\delta J_3}Z_0[J]}_{J=0}=
+    \eval{\frac{\delta ^3}{\delta J_1\delta J_2\delta J_3}\left(
+    \langle -\Delta (x_4-y)J(y)\rangle_y Z_0[J]
+    \right)}_{J=0}=\\
+    =\frac{\delta^2}{\delta J_1\delta J_2}\eval{\left(
+    \left(-\Delta_{4,3}+\langle \Delta_{4,y}J_y\rangle_y\langle \Delta_{3w}J(w)
+    \rangle_W\right)Z_0[J]\right)}_{J=0} = \\
+    =\eval{\frac{\delta }{\delta J_1}\left(\left(
+    \Delta_{43}\langle \Delta_{2y}J(y)\rangle_y + \Delta_{42}\langle \Delta_{3w}
+    J(w)\rangle_w + \langle \Delta_{4y}J(y)\rangle_y\Delta_{32}-
+    \langle\Delta_{4y}J(y)\rangle_y\langle \Delta_{3w}J(w)\rangle_w\langle 
+    \Delta_{2z}J(z)\rangle_z\right)Z_0[J]\right)}_{J=0}=\\
+    =\footnote{mi son perso...}
+    \Delta_{32}\Delta _{41}-\Delta _{32}\langle \Delta _{4y}J_y\rangle_y
+    \langle \Delta_{1w}J_w\rangle_w [... termini]
+\end{gather*}
+these are all possible derivatives of $4$-th order, by setting $J=0$, all the
+$\langle ...J\rangle_{i}\Delta_{kj}$ will vanish, so
+\[
+G_4 = \Delta_{43}\Delta_{21} + \Delta_{42}\Delta_{31}+\Delta_{41}\Delta_{32}
+\]
+A trick to take these derivatives is to only compute those that will result in
+terms independent of $J$!.
+
+The result is known! These are the contractions seen in IQFT!
+\[
+    G_4 = \bra{0}T\left\{\phi _1\phi _2\phi _3\phi _4\right\}\ket{0} = 
+    \bra{0} N\left\{\phi _1...\phi _4 + \text{contractions}\right\}\ket{0}=
+    \bra{0}\overline{\phi_1\phi _2}\,\overline{\phi_3\phi _4} + ...\ket{0}
+\]
+and the result is the same!! This means that Wick's theorem is built-in for the
+path integral formulation.
+
+Is there a formal way to exclude non-connected Feynman Diagrams?
+
+Consider
+\[
+    Z_0[J]= e^{-W_0[J]}
+\]
+where $W_0[J]$ is called the \textit{Free energy operator}; so
+\[
+    W_0[J] = \frac{1}{2}\int_{}^{} \dd ^4x\dd^4y J(x)\Delta(x-y)J(y)
+\]
+This generates \textbf{only connected Feynman diagrams}:
+\[
+W_0[J]=\sum_{N=0}^{\infty} \frac{1}{N!}\langle J_1...J_NG^C(1...N)\rangle_{1..N}
+\implies \eval{G^C(1...N)=\frac{\delta^N}{\delta J_1...\delta J_N}W_0[J]}_{J=0}
+\]
+for the free theory this is due to the fact that $W_0$ is quadratic in $J$ and
+all higher or lower order derivatives are null.
+
+\section{Interacting theories: introduction}
+The interacting action is
+\[
+    S=\int_{}^{} \dd ^4x\left(\frac{1}{2}\pd_\mu\phi \pd^\mu\phi -\frac{m^2}{2}
+    \phi^2 -V(\phi)\right) = S_0 - \int_{}^{} \dd ^4x V(\phi)
+\]
+The partition function for interacting theories is
+\begin{gather*}
+    Z[J]=\frac{\int \mathcal{D}\phi
+    \exp\left[iS+i\langle J\phi \rangle_x\right]}
+    {\int \mathcal{D}\phi e^{iS_0}} = 
+    \frac{\int \mathcal{D}\phi
+    \exp\left[ -i\int_{}^{} \dd^4x V(\phi) \right]
+    \exp\left[iS_0+i\langle J\phi \rangle_x\right]}
+    {\int \mathcal{D}\phi e^{iS_0}} = \\
+    =\mathcal{N} \int \mathcal{D}\phi e^{-i\langle V\rangle}e^{iS_0+i\langle 
+    \phi J\rangle}
+\end{gather*}
+considering
+\[
+    e^{-i\langle V\rangle }=\sum_{n}^{} c_n\phi^n 
+\]
+this becomes, much like the gaussian integrals,
+\begin{gather*}
+    Z[J]=\mathcal{N}\sum_{n}^{} c_n \int \mathcal{D}\phi \phi^ne^{iS_0+i\langle
+    \phi J\rangle } = \mathcal{N}\sum_{n}^{} c_n\int \mathcal{D}\phi \left(
+    -i\frac{\delta}{\delta J}\right)^ne^{iS_0+\langle \phi J\rangle }=\\
+    =\exp\left[ -i\langle V\left(-i\frac{\delta }{\delta J}\right)
+    \rangle_x\right]\underbrace{\frac{\int \mathcal{D}\phi \exp\left[ iS_0
+    +i\langle J\phi\rangle_x  \right]}{\int \mathcal{D}\phi e^{iS_0}}}_{:=Z_0[J]}=
+    \\=\exp\left[ -i\langle V\left(-i\frac{\delta }{\delta J}\right)
+    \rangle_x\right] Z_0[J]
+\end{gather*}
+How can this be computed? \textbf{Always with perturbation theory}, by
+setting 
+\[
+    V(\phi)\to\Lambda V(\phi),\,\Lambda <<1
+\]
+and hoping the physical predictions are independent of $\Lambda $. 
+
+Like in free theories, the free energy $W[J]$ is introduced: letting the
+exponential operator be $\delta $ the partition function is
+\begin{gather*}    
+    Z[J]=e^{-W[J]} = \delta e^{-W_0} =
+    e^{-W_0}e^{W_0}(1+\delta-1) e^{-W_0}
+\end{gather*}
+taking the $-\ln$ yields
+\begin{gather*}
+    W[J] = -\ln Z[J] = W_0-\ln\left(e^{W_0}(1+(\delta-1))e^{-W_0}\right)=
+    W_0-\ln\left(1+\underbrace{e^{W_0}(\delta -1)e^{-W_0}}_{:=A}\right)
+\end{gather*}
+Since $\Lambda <<1$,
+\[
+    \delta =e^{-i\Lambda \langle V\rangle } = 1+O(\Lambda)
+\]
+and $A$ is small, so the $\ln$ can be expanded in Taylor
+\[
+    W[J]=W_0 - A+\frac{A^2}{2}+\frac{A^3}{3}...
+\]
+since $A$ depends on $\delta $, it can be expanded in powers of $\Lambda $:
+\[
+    A=\alpha _1\Lambda +\alpha _2\Lambda ^2+...
+\]
+and the free energy turns out to be
+\begin{gather*}
+    W[J]=W_0 - \Lambda \alpha _1-\Lambda ^2\alpha _2-\Lambda ^3a_3+
+    \frac{1}{2}\left(\Lambda \alpha _1+\Lambda^2\alpha _2+\Lambda ^3\alpha _3
+    \right)^2+
+    \frac{1}{3}\left(\Lambda \alpha _1+\Lambda^2\alpha _2+\Lambda ^3\alpha _3
+    \right)^3+...
+\end{gather*}
+reordering and truncating at $\Lambda ^3 $ yields
+\[
+    W[J]=W_0[J]-\Lambda \alpha _1-\Lambda ^2\left(\alpha _2-\frac{\alpha _1^2}{2}
+    \right)-\Lambda ^3\left(\alpha _3 - \alpha _1\alpha _2+\frac{\alpha_1^3}{3}
+    \right) + O(\Lambda^4)
+\]
+How can these coefficients be computed? Recalling
+\[
+    A=e^{W_0}(1-\delta)e^{-W_0}
+\]
+the first term is\footnote{do the calculation yourself}
+\[
+    \alpha _1 = -ie^{W_0}\left\langle{V\left(-i\frac{\delta }{\delta J}\right)}
+    \right\rangle e^{-W_0}
+\]
+\section{$\phi^4$ interaction}
+
+\textbf{If} the potential is
+\[
+    V(\phi) = \frac{\Lambda }{4!}\phi ^4
+\]
+the operator $\delta$ has the form
+\[
+    \delta = e^{-i\Lambda/4! \left\langle \frac{\delta^4}{\delta J^4}
+    \right\rangle_x }=1-\frac{i\Lambda}{4!} \left\langle \frac{\delta^4}
+    {\delta J ^4}\right\rangle_x
+    -\frac{1}{2}\frac{\Lambda ^2}{(4!)^2}\left\langle \frac{\delta^4}
+    {\delta J ^4}\right\rangle_x\left\langle \frac{\delta^4}{\delta J ^4}
+    \right\rangle_y+O(\Lambda^3)
+\]

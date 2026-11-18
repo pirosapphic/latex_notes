@@ -1,0 +1,160 @@
+
+\lesson{16/11}
+[Weyl reflections]
+\textbf{Def.} A root system $\Phi $ is the set of roots, i.e. the weight vectors
+of the adjoint representation.\\
+Its properties are
+\begin{itemize}
+    \item They span $\mathbb{R}^m$, where $m=\rank(\mathfrak{g})$;
+    \item If $\alpha\in\Phi $, then $-\alpha \in\Phi $;
+    \item If $\alpha,\beta \in\Phi$, $s_\alpha(\beta)\in\Phi$ (Weyl reflection);
+    \item If $\alpha,\beta \in\Phi $, then $2\frac{\alpha\cdot\beta}{\alpha^2}\in
+        \mathbb{Z}$.
+\end{itemize}
+\textbf{Example} $SU(3)$\\
+The algebra of $SU(3)$ has $\vartheta =\frac{\pi}{3}$ and
+$\rank(\mathfrak{su}(3))=2$; two out of the 8 generators are Cartan generators, so
+in $\mathbb{R}^2$ this\footnote{what?} is represented as an \textbf{hexagon}.
+
+Only $2$ roots are needed to generate $\mathbb{R}^2$ and are called \textit{
+fundamental roots}.
+\subsubsection{An ordering of the weight vectors}
+Consider a representation $D$ of dimension $n$ with weight vectors
+\[
+    \mu = (\mu_1,...\mu_n):
+\]
+the ordering is defined as
+\[
+    \mu>\mu'\iff (\mu-\mu')_i >0,\;\text{with }i\text{ being the index of the 
+    first nonzero component}.
+\]
+A weight vector is \textit{positive} if its first nonzero entry is positive.
+
+In the case of $\mathfrak{su}(3)$, the vectors ``on the right'' of the hexagon
+are positive, while the others are negative; the ``largest'' weight vector is
+$(1,0)$, while the second largest is $\left(\frac{1}{2},\frac{\sqrt{3}}{2}\right)
+$.
+
+\textbf{Def.} A root is called \textit{simple} if it is positive and cannot be
+written as the sum of two positive roots.
+
+The number of simple roots is the same as the \textit{rank of the algebra}.
+
+For $\mathfrak{su}(3)$, the two simple roots are
+$\left(\frac{1}{2},\frac{\sqrt{3}}{2}\right)$ and
+$\left(\frac{1}{2},-\frac{\sqrt{3}}{2}\right)$.
+
+The difference of two simple roots $\alpha,\beta$ is never a root:
+\[
+    \alpha-\beta\not\in\Phi.
+\]
+It can be proven by contradiction, using $\alpha=(\alpha-\beta)+\beta$, that this
+is not a \textit{simple root} and neither a root, and similarly for $\beta-
+\alpha$. This means
+\[
+    E_{-\alpha}\ket{E_\beta}=0
+\]
+thus the number of times one can act with $E_\alpha^\dagger =E_{-\alpha}$ on
+$\ket{E_\beta}$ is zero, which\footnote{unsure this is the reason} means $q=0$ (
+in $\frac{\alpha\cdot \beta}{\alpha^2}=-\frac{1}{2}(p-q)$).
+Similarly
+\[
+    E_{-\beta}\ket{E_\alpha}=0
+\]
+means $q'=0$ in $\frac{\beta\cdot \alpha}{\beta^2}=-\frac{1}{2}(p'-q')$. Taking
+the product of these equations yields
+\[
+    \frac{(\alpha\cdot \beta)^2}{\beta^2\alpha^2}=\frac{pp'}{4}=\cos^2(
+    \vartheta_{\alpha\beta})
+\]
+and its ratio
+\[
+    \frac{\beta^2}{\alpha^2}=\frac{p}{p'}
+\]
+Since $\vartheta_{\alpha\beta}>\frac{\pi}{2}$(??) from the first follows that
+\[
+    \cos(\vartheta_{\alpha\beta})=-\frac{1}{2}\sqrt{pp'}
+\]
+
+All positive roots can be written as
+\[
+    \phi = \sum_{\alpha}^{} k_\alpha \alpha,\;k_\alpha\in\mathbb{N}
+\]
+where $\alpha$ are simple roots. The quantity
+\[
+    k=\sum_{\alpha}^{} k_\alpha\geq 1
+\] is called a [smth] index and its value is
+\begin{itemize}
+    \item $1$ only for simple roots;
+    \item $>1$ for positive but not simple roots;
+    \item $2$ if $\phi=\alpha+\beta$: since 
+        \[
+            2\frac{\alpha\cdot \beta}{\alpha^2}=-(p-q)=-p<0
+        \] it depends on the algebra;
+    \item Similarly for $3, >3$ up to $m=\rank(\mathfrak{g})$
+\end{itemize}
+
+\subsubsection{Cartan Matrix}
+\textbf{Def.} A \textit{coroot} $\alpha^V$ of the root $\alpha$ is
+\[
+    \alpha^V=\frac{2\alpha}{\alpha^2}
+\]
+The Cartan Matrix $A\in\text{mat}(m\times m)$ is
+\[
+    A_{\alpha,\beta}=(\alpha,\beta^V)
+\]
+\textbf{Properties}
+\begin{itemize}
+    \item By definition, $A_{\alpha,\alpha}=2\;\forall\alpha$ root;
+    \item For $\alpha\neq\beta$, $A_{\alpha\beta}\in\mathbb{Z}^{-}$ ($\neq0$) by
+        construction;
+    \item $\det(A)\neq0$;
+    \item If $A_{\alpha,\beta}=0$, then $A_{\beta,\alpha}=0$, by construction;
+    \item $\forall\alpha\neq\beta$, $A_{\alpha,\beta}\cdot A_{\beta,\alpha}\in
+        \left\{0,1,2,3\right\}$: this means that the value of the entries cannot
+        grow indefinitely; 
+\end{itemize}
+\subsection{Dynkin Diagram}
+\begin{itemize}
+    \item This is a diagram made with $m$ circles, each associated to one simple
+        root;
+    \item The circles can be connected with $A_{\alpha,\beta}\cdot
+        A_{\beta,\alpha}\in\left\{0,1,2,3\right\}$ lines;
+    \item If $A_{\alpha,\beta}\cdot A_{\beta,\alpha}=2,3$, the line
+        has to be denoted by drawing an arrow \textit{entering the smallest root};
+    \item Roots of the same length are coloured in the same way.
+\end{itemize}
+To each Cartan matrix correspond a Dynkin diagram e.g.
+\[
+    A=\begin{pmatrix}
+        2&-1\\
+        -1&2
+    \end{pmatrix} 
+\]
+represents $\mathfrak{su}(3)$ and the diagram is on wikipedia.
+\subsection{Classification of Dynkin diagrams}
+There are only $4$ infinite families of diagrams with $m$ nodes that satisfy the
+properties:
+\begin{itemize}
+    \item $A_m$ which are open, linear chains with single lines.
+        It corresponds to $\mathfrak{su}(m+1)$;
+    \item $B_m$ which are open, linear chains with a double line at
+        the end, with the smallest root on the right extremum. It corresponds to
+        $\mathfrak{so}(2m+1)$;
+    \item $C_m$ which are open, linear chains with a double line at
+        the end, with the smallest root on the second to last node.
+        It corresponds to $\mathfrak{sp}(2m)$;
+    \item $D_m$ which are open, linear chains with a ``triangle" at the right
+        extremum. It corresponds to $\mathfrak{so}(2m)$.
+\end{itemize}
+There are also $5$ exceptional cases.
+\begin{itemize}
+    \item $G_2$ is the only diagram with $3$ connections between two nodes;
+    \item $F_4$ is the $4$-nodes diagram with a double line in the middle;
+    \item $E_6,E_7,E_8$ present a linear chain with a single deviating node
+        at the third (from left) node.
+\end{itemize}
+These form the exceptional Lie Groups.
+
+\subsection{Example: $SU(3)$}
+

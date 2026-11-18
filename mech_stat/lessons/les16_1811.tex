@@ -1,0 +1,239 @@
+
+\lesson{18/11}
+\section{Phonon gas}
+[20 min, impostazione e diagonalizzazione di H]
+So they are $d\cdot N$ quantum harmonic oscillators, with coordinates $Q^\alpha$,
+which are linear combinations of the positions of the atoms and describe
+\textit{collective} motion; they have frequencies $\omega_\alpha$, which
+are the eigenvalues of the Hessian of the potential of the system (like stability
+in analytical mechanics).
+
+Assuming the knowledge of $\omega_\alpha$ (which can be determined on the basis
+of physical assumptions, like the Debye model), the system is a collection of
+$3N$ QHO, so the microstates $\nu$ are identified by $3N$ quantum numbers,
+$n_\alpha$
+\[
+    E_\nu = \sum_{\alpha}^{} \hbar \omega_\alpha\left(n_\alpha+\frac{1}{2}\right)
+\]
+Since the system is non-interacting, the partition function is factorizable
+\[
+    Z=\prod_{\alpha}^{} Z_{(\alpha)},\;\text{with } Z_{(\alpha)} = \frac{1}{
+    2\sinh\left(\frac{\beta\hbar\omega_\alpha}{2}\right)}
+\]
+as well as the free energy
+\[
+    F=\sum_{\alpha}^{} F_{(\alpha)},\;\text{with }F_{(\alpha)} = -\frac{1}{\beta}
+    \ln Z_{(\alpha)}.
+\]
+From these quantities, the TD quantities can be derived:
+\[
+    \left\langle E\right\rangle = \sum_{\alpha}^{} \left\langle E_{(\alpha)}
+    \right\rangle,\;\text{with }\left\langle E_{\alpha}\right\rangle = -\pdv[]{\ln
+    (Z_{(\alpha)})}{\beta} = \hbar\omega_\alpha\left(\frac{1}{e^{\beta
+    \hbar\omega_\alpha}-1}+\frac{1}{2}\right),
+\]
+but also
+\[
+    \left\langle E\right\rangle =\left\langle E_\nu\right\rangle = \sum_{\alpha}
+    \hbar \omega_\alpha\left(\left\langle n_\alpha\right\rangle +\frac{1}{2}
+    \right):
+\]
+the equality of these forms of $\left\langle E\right\rangle $ yields Planck's
+formula
+\[
+    \left\langle n_\alpha\right\rangle =\frac{1}{e^{\beta\hbar\omega_\alpha}-1}.
+\]
+Since in the TD limit $N\to\infty$, the energy levels become denser and denser, so
+all summations over $\alpha$ become integrals, like
+\[
+    \sum_{\alpha}^{} f(\omega_\alpha)\to\int_{}^{} \dd\omega g(\omega)f(\omega)
+\]
+where $g(\omega)$ is the \textit{density of frequencies $\omega_\alpha$ in the 
+interval} $\left[\omega,\omega+\dd\omega\right]$. Its normalization
+can be found using $f(\omega_\alpha)=1$:
+\[
+    \sum_{\alpha=1}^{3N} = 3N=\int_{}^{} \dd\omega g(\omega).
+\]
+So the TD quantities become
+\begin{gather*}
+    F = \frac{1}{\beta}\int_{}^{} \dd\omega g(\omega)\ln\left(2\sinh\frac{
+    \beta\hbar\omega}{2}\right)\\
+    \left\langle E\right\rangle =
+    \int_{}^{} \dd\omega g(\omega) \hbar\omega\left(\frac{1}{e^{\beta\hbar\omega}
+    -1}+\frac{1}{2}\right).
+\end{gather*}
+The different models of solids differ \textit{only in the choice of the density}
+$g(\omega)$.
+
+The Einstein model proposes a single collective frequency $\omega_E$, which
+imposes
+\[
+    g_E(\omega)=3N\delta(\omega-\omega_E),
+\]
+as seen before this model is good, but fails to predict the form of $c_V$ at low
+temperatures.
+\subsection{Debye solid}
+Debye assumes that the quanta of oscillation $\hbar\omega_\alpha$ are related
+to the \textit{stationary sound waves propagating through the solid}, which
+can be longitudinal (i.e. the direction of propagation is the direction of the
+oscillations), with a velocity $v_L$ and $1$ mode of oscillation (i.e. there is
+only one direction),
+or transverse, with velocity $v_T$ and $2$ modes. Each wave obeys the dispersion
+relation
+\[
+    \omega^2=v^2|k|^2
+\]
+so one can work with $\left\{k_\alpha\in\mathbb{R}^3\right\}$, which correspond
+to stationary waves between the boundaries of the solid.
+
+As seen before, for most TD quantities the boundary conditions' form is
+irrelevant, so to simplify matters \textit{periodic boundary conditions can be 
+assumed}: a cube $V=L^3$ is assumed, so the wave-numbers are
+\[
+    k=k(n)=\frac{2\pi}{L}n,\; n\in\mathbb{Z}^3.
+\]
+Sums over $\alpha$ become sums over $n$ and then integrals
+\[
+    \sum_{\alpha}^{} f(\omega_\alpha)\to\sum_{n}^{} f(\omega)\to
+    \left(\frac{L}{2\pi}\right)^3\int_{}^{} \dd^3k f(\omega)=
+    \frac{V}{2\pi^2}\int_{}^{} \dd |k|\,|k|^2f(\omega)=\frac{V}{2\pi^2v^3}
+    \int_{}^{} \dd\omega \omega^2f(\omega)
+\]
+since there are $3$ different modes, this becomes
+\[
+    \frac{V}{2\pi^2}\left(\frac{2}{v_T^3}+\frac{1}{v_L^3}\right)\int\dd \omega
+    \omega^2 f(\omega)
+\]
+so the density $g(\omega)$ is
+\[
+    g(\omega)=\frac{V}{2\pi^2}\left(\frac{2}{v_T^3}+\frac{1}{v_L^3}\right)
+    \omega^2.
+\]
+This is a problem: if all values of $\omega$ are possible, $g(\omega)$ is
+\textbf{not normalizable}, so \textit{there must exist a cut-off frequency},
+called ``Debye frequency'' $\omega_D$ so that
+\[
+    g(\omega)=\begin{dcases}
+        A\omega^2&\text{if}\,\omega\leq \omega_D\\
+        0&\text{if}\,\omega\geq \omega_D
+    \end{dcases}.
+\]
+The normalization of this density yields
+\[
+    g(\omega)=\begin{dcases}
+        \frac{9N}{\omega_D^3}\omega^2&\text{if}\,\omega\leq \omega_D\\
+        0&\text{if}\,\omega\geq \omega_D
+    \end{dcases}.
+\]
+\textbf{Note} The existence of a maximum $\omega_D$ is also deeply physical:
+since the atoms are a discreet lattice and have a finite distance $a$ between
+them, a collective oscillation of $\lambda<a$ does not make sense, so
+there exist a minimal $\lambda$, which implies a maximal $\omega$.
+
+\textbf{Note} To be precise, there exist two densities, one for the longitudinal
+mode and one for the transverse ones, which, in theory, can have different
+$\omega_D$'s and normalizations:
+\begin{gather*}
+    \omega_{D,L}^3 = v_L^3\frac{6\pi^2N}{V}\\
+    \omega_{D,T}^3 = v_T^3\frac{6\pi^2N}{V}
+\end{gather*}
+the minimal wavelength turns out to be
+\[
+    \lambda_\text{min} = v_L\frac{2\pi}{\omega_{D,L}}=
+    v_T\frac{2\pi}{\omega_{D,T}} = \left(\frac{4\pi V}{3N}\right)^{\frac{1}{3}}:
+\]
+this can be used as an estimate for the \textit{interatomic distance in the
+solid}.
+
+Using this model, TD quantities can be derived
+\begin{gather*}
+    F = \frac{1}{\beta}\int_{}^{} \dd\omega g(\omega)
+    \ln\left(2\sinh\frac{\beta\hbar\omega}{2}\right) = 
+    \frac{9N}{\beta\omega_D^3}\int_{0}^{\omega_D} \dd\omega \omega^2\ln
+    \left(2\sinh\left(\frac{\beta\hbar\omega}{2}\right)\right)\\
+    \left\langle E\right\rangle  =
+    \frac{9N}{\omega_D^3}\int_{0}^{\omega_D} \dd\omega \omega^2\hbar\omega
+    \left(\frac{1}{e^{\beta\hbar\omega}-1}+\frac{1}{2}\right).
+\end{gather*}
+
+The second integral is
+\begin{gather*}
+    \left\langle E\right\rangle = \frac{9N}{\omega^3_D}\hbar \frac{1}{2}
+    \frac{1}{4}\omega_D^4+\frac{9N}{\omega_D^3}\hbar\int_{0}^{\omega_D} \dd\omega
+    \frac{\omega^3}{e^{\beta\hbar\omega}-1}=\frac{9}{8}N\hbar\omega_D+
+    \frac{9N\hbar}{\omega_D^3}\left(\frac{kT}{\hbar}\right)^4
+    \int_{0}^{\flatfrac{\hbar \omega_D}{kT}} \dd x \frac{x^3}{e^x-1}
+\end{gather*}
+by calling $T_D = \frac{\hbar\omega_D}{k}$, the \textit{Debye function}
+can be defined as
+\[
+    D\left(\frac{T_D}{T}\right):=\int_{0}^{\frac{T_D}{T}} \dd x \frac{x^3}{e^x-1}
+\]
+and the mean energy is, finally,
+\[
+    \left\langle E\right\rangle = \frac{9N}{8}\hbar\omega_D + 9NkT\left(\frac{T}
+    {T_D}\right)^3 D\left(\frac{T_D}{T}\right)
+\]
+This expression has two regimes: if $T>>T_D$, the Debye function behaves like
+\[
+    D\left(\frac{T_D}{T}\right) \sim\int_{0}^{\frac{T_D}{T}} \dd x \frac{x^3}{
+    1+x+O(x^2)-1} \sim \int^{\frac{T_D}{T}}_{0} \dd x x^2 =
+    \frac{1}{3}\left(\frac{T_D}{T}\right)^3
+\]
+and so
+\[
+    \left\langle E\right\rangle \sim 3NkT
+\]
+which is the classical result.
+
+If $T<<T_D$, the Debye function is the constant
+\[
+    D = \int_{0}^{\infty} \dd x \frac{x^3}{e^x-1}
+\]
+and the energy goes like
+\[
+    \left\langle E\right\rangle \sim \frac{9N}{8}\hbar\omega_D +
+    9NKT\left(\frac{T}{T_D}\right)^3D
+\]
+that has a constant leading term, so the $c_V\to0$ as $T\to0$:
+\[
+    c_V = \pdv[]{\left\langle E\right\rangle }{T} \sim
+    36\frac{NKD}{T_D^3}T^3.
+\]
+The constant can be computed as
+\begin{gather*}
+    D = \int_{0}^{\infty} \dd x \frac{x^3}{e^x-1} = 
+    \int_{0}^{\infty} \dd x \frac{x^3e^{-x}}{1-e^{-x}}=
+    \sum_{n=0}^{\infty} \int_{0}^{\infty} \dd x x^3e^{-(n+1)x} \underset{m=n+1}=
+    \sum_{m=1}^{\infty} \int_{0}^{\infty} \dd x x^3e^{-mx} \underset{t=mx}=\\
+    =\sum_{m=1}^{\infty} \frac{1}{m^4}\int_{0}^{\infty} \dd t t^3 e^{-t}=
+    \zeta(4)\cdot \Gamma(4) = \frac{\pi^4}{90}\cdot 3! = \frac{\pi^4}{15}
+\end{gather*}
+\section{Systems of non-interacting identical components}
+Until now, all particles have been considered distinguishable, but at
+the quantum level this is \textbf{not the case}.
+
+Consider a system in which every component is a quantum system with \textit{
+non-degenerate} spectra $\left\{\varepsilon_a\right\}$, where $a=0,1...\text{\#
+of levels}$, so that
+\[
+    H\ket{a}=\varepsilon_a\ket{a},\;\text{for each component.}
+\]
+If the components are $N$ and non-interacting, the Hamiltonian of the system is
+\[
+    H = \sum_{i}^{} H_i:
+\]
+for distinguishable particles, the system could be described by the tensor
+product of eigenstates
+\[
+    \ket{\nu}=\ket{a_1}\otimes\ket{a_2}...\ket{a_N}
+\]
+and the energy would be
+\[
+    E_\nu = \varepsilon_{a_1}+...\varepsilon_{a_N}.
+\]
+The microstate could also be described by the \textit{set of occupation numbers},
+i.e. the number of components $n_a$ which are in the state $\ket{a}$:
+\[
+    E_\nu = \sum_{a}^{} n_a\varepsilon_a
+\]

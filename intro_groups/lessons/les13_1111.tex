@@ -1,0 +1,185 @@
+
+\lesson{11/11}
+\textbf{Note} For algebras of Hermitian matrices, the anticommutator
+is anti-hermitian:
+\[
+    \left(\left[X_a,X_b\right]\right)^\dagger =[...]=-\left[X_a,X_b\right]
+\]
+\subsection{Compact, simple Lie Groups}
+\textbf{Properties:}
+\begin{itemize}
+    \item All finite dimensional representations are \textit{equivalent} to
+        unitary representations;
+    \item All reducible unitary representations are \textit{completely reducible}.
+\end{itemize}
+
+For each group of this kind there are two important representations:
+\begin{enumerate}
+    \item The \textbf{defining representation} (e.g. the matrix definition of
+        $SU(n)$);
+    \item The \textbf{adjoint representation}: given an element of the \textit{
+        algebra} of the group $X_a$, its adjoint representation is
+        \[
+            \left[D^\text{adj}\left(X_a\right)\right]_{bc}= -if_{abc} 
+        \]
+        which means this representation has \textit{the same dimension as the
+        Lie Algebra}.
+\end{enumerate}
+\textbf{Example:} $\mathbf{SU(2)}$\\
+The generators of the algebra are the Pauli matrices, imposing
+\[
+    g=\mathbb{I}+itA+O(t^2)
+\]
+yields
+\[
+    J_i=\frac{1}{2}\sigma_i.
+\]
+The commutation relations are
+\[
+    \left[J_a,J_b\right]=i\varepsilon_{abc}J_c
+\]
+So the structure constants are $f_{abc}=i\varepsilon_{abc}$ and the
+adjoint representation of the basis of the algebra is then
+\[
+    J_1^\text{adj}=\begin{pmatrix}
+        0&0&0\\
+        0&0&-i\\
+        0&i&0
+    \end{pmatrix},\;J_2^\text{adj}=\begin{pmatrix}
+        0&0&i\\
+        0&0&0\\
+        -i&0&0
+    \end{pmatrix},\;J_3^\text{adj}=\begin{pmatrix}
+        0&-i&0\\
+        i&0&0\\
+        0&0&0
+    \end{pmatrix} 
+\]
+
+How can irreps be characterized?
+
+\subsubsection{Dynkin Index}
+Given a basis $\left\{X_a\right\}$ of the Lie algebra, define
+\[
+    M\in\text{mat}(\dim\mathfrak{g}\times \dim\mathfrak{g})\text{ s.t. }M_{ab}=
+    \tr(X_aX_b)
+\]
+$M$ is clearly symmetric, so it can be diagonalized
+\[
+    M_{ab} = \lambda_d\delta_{ab}
+\]
+the number $\lambda_d$ is the Dynkin index [??unclear??]\\
+something with $\otimes\oplus$.
+\subsubsection{Second-order Casimir operator}
+Consider the operator
+\[
+    \rho^{(2)} = \sum_{a=1}^{\dim\mathfrak{g}}X_aX_b
+\]
+$\forall b,\; \left[\rho,X_b\right]=0$, so the operator is proportional to the
+identity:
+\[
+    \rho^{(2)}=C_2(D)\mathbb{I} 
+\]
+The trace of this operator is simply
+\[
+    \Tr\rho^{\left(2\right)} = \sum_{a}\Tr(X_aX_a) =\dim\mathfrak{g}\cdot \lambda_d
+\]
+but also
+\[
+    \Tr\rho ^{(2)} = C_2(D)\dim(D)
+\]
+so
+\[
+    \lambda_D=\frac{\dim(D)C_2(D)}{\dim\mathfrak{g}}
+\]
+more things missing...
+\subsection{Roots and weights}
+Consider a Lie algebra $\mathfrak{g}$ of dimension $N$ and \textit{the set
+of its generators that commute with each other}
+\[
+    \left\{H_1,...,H_m\right\}\subset\mathfrak{g}
+\]
+with $1\leq m\leq N$: these generators are called \textit{Cartan generators} and
+$m$ is called the \textit{rank} of the Lie Algebra. These generators can be
+rescaled so that
+\[
+    \Tr(H_iH_j)=K_D\delta_{ij}
+\]
+where $k_D$ depends only on the representation $D$. Consider now the adjoint
+representation: its dimension is $N$ and its generators are $\left\{X_a\right\}$.
+Associate now to every generator $X_a$ a vector in the space the generators act on
+\[
+    X_a\to\ket{X_a}
+\]
+and construct the scalar product
+\[
+    \bra{X_a}\ket{X_b}:=\Tr(X_a^\dagger X_b).
+\]
+One can choose the vectors $\ket{X_a}$ so that
+\[
+    X_a\ket{X_b} = if_{abc}\ket{X_c}:=\ket{\left[X_a,X_b\right]}
+\]
+this notation is consistent, since mapping the combination of generators
+$if_{abc}X_c$ to a vector yields the same result.
+
+Doing the same for the Cartan generators $H_i$ on the same vector space yields
+\[
+    H_a\ket{H_b}=\ket{\left[H_a,H_b\right]}=0
+\]
+Consider the common eigenvector of all $H_i$:
+\[
+    H_i\ket{E_{\alpha}}=\alpha_i\ket{E_{\alpha}},\;\alpha \in\mathbb{R}^m 
+\]
+Expressing the eigenvector as a linear combination of $\ket{X_a}$ means to
+express $E_\alpha$ as a linear combination of $X_a$! This means
+\[
+    \left[H_i,E_{\alpha}\right]=\alpha_iE_\alpha 
+\]
+The eigenvalue equation holds for the adjoint representation, while this second 
+relation \textbf{holds in general}.\\
+The vectors $\ket{E_\alpha}$ are called \textit{roots} of the adjoint
+representation.
+
+Consider now a representation $D$: the eigenvectors of the Cartan generators in
+this rep. can be denoted as
+\[
+    \ket{\mu,D}\to H_i^{(D)}\ket{\mu,D}=\mu_i\ket{\mu,D}
+\]
+where $\mu\in\mathbb{R}^m$; consider now the quantity (always in $D$)
+\[
+    H_iE_\alpha\ket{\mu,D} = (H_iE_\alpha-E_\alpha H_i+E_\alpha H_i)\ket{\mu,D}=
+    \left[H_i,E_\alpha\right]\ket{\mu,D} + \mu_iE_\alpha\ket{\mu,D}
+\]
+The result of the commutator is independent of $D$, so
+\[
+    H_iE_\alpha\ket{\mu,D} = (\alpha_i+\mu_i)E_\alpha \ket{\mu,D}
+\]
+so applying $E^{(D)}_\alpha$ to an eigenvector of $H_i^{(D)}$ yields another
+eigenvector of $H_i$:
+\[
+    E_\alpha \ket{\mu,D} = N_{\alpha ,\mu}\ket{\alpha +\mu,D}
+\]
+What about the quantity
+\[
+    H_iE_\alpha \ket{E_{-\alpha }}
+\]
+in the adjoint representation?
+\[
+    H_iE_\alpha \ket{E_{-\alpha}}=\left[H_i,E_\alpha\right]\ket{E_{-\alpha }}+
+    E_{\alpha }H_i\ket{E_{-\alpha }} =  0
+\]
+So $E_\alpha \ket{E_{-\alpha}} = \sum_{i=1}^{m} \alpha _iH_i$. [???]
+
+In a generic representation $D$,
+\[
+    \bra{\mu,D}\left[E_\alpha,E_{-\alpha}\right]\ket{\mu,D}=\sum_{i}^{}\alpha_i
+    \bra{\mu,D}H_i\ket{\mu,D} = \alpha\cdot \mu
+\]
+{\large\textbf{[...other holes...guarda dal libro, manca un'ora di lezione qui]}
+}\\
+`
+The fundamental result is
+\[
+    \frac{a\cdot\mu}{\alpha^2}=\frac{M}{2}
+\]
+where $M=q-p\in\mathbb{Z}$ 

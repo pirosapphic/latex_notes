@@ -1,0 +1,26 @@
+
+\lesson{05/11}
+The symmetry factor calculation is \textbf{very prone to errors}: there are two
+basic rules
+\begin{itemize}
+    \item Every pair of vertices joined by $n$ lines has a multiplicity of $n!$;
+    \item Every loop has a multiplicity of $2$.
+\end{itemize}
+
+All of this can be generalized to an arbitrary number of in and out particles:
+e.g. for two the amplitude matrix element is
+$$A=\bra{q_1,q_2}S\ket{p_1,p_2}=(2\pi)^6(2E_{p_1}2E_{q_1}2E_{p_2}2E_{q_2})
+\bra{0}a_{q_1}a_{q_2} S a_{p_1}^\dagger a_{p_2}^\dagger\ket{0}
+$$
+In this case, even the $0$-th order is non-trivial, since there are two possible 
+Feynman diagrams ($q_i=p_i$ or $q_i=p_j$).
+
+In general the only diagrams that contribute to the propagator of the
+Gell-Mann-Low
+formula are \textit{connected and amputated diagrams}, i.e. diagrams with no
+"free" lines and stripped from loops in the external legs:
+$$\bra{\Omega}T\phi(x)\phi(y)\ket{\Omega} = \frac{\bra{0}T\phi_I(x)\phi_I(y)S
+    \ket{0}}{\bra{0}S\ket{0}}$$
+The denominator is given only by loop diagram with their multiplicity, while the
+numerator include all possible diagrams: the disconnected diagrams can be
+factored out of the numerator and cancel out. [see notes for details]

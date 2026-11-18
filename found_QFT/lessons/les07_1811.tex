@@ -1,0 +1,125 @@
+
+\lesson{18/11}
+% full free energy
+%\[
+%    W[J,\eta,\bar\eta] = \underbrace{-\frac{1}{2}\left\langle J_x\Delta_{xy}J_y
+%    \right\rangle_{xy} - \left\langle \bar\eta_xS_{xy}\eta_y\right\rangle_{xy}}_
+%    {=W_0}-g
+%    \left(
+%    \left\langle S_{xx}\Delta_{xy}J_y\right\rangle_{xy} +
+%    \left\langle\bar\eta_uS_{ux}S_{xy}\eta_y\Delta_{xw}J_w\right\rangle_{xywu}
+%    \right) 
+%\]
+Consider the Green function:
+\[
+    G^3_{\phi\psi\bar\psi}=\bra{0}T\left(\phi(x)\psi(z)\bar\psi(y)\right)\ket{0}=
+    \eval{\frac{\delta^3}{\delta J_x\delta\eta_y\delta
+    \bar\eta_z} W[J,\eta,\bar\eta]}_{J,\eta,\bar\eta=0}=
+    -g\left\langle \Delta_{wx}S_{wx}S_{yw}\right\rangle_w
+\]
+there are $4$ points, $3$ of which ``free" and $1$ integrated upon: 
+their connections are
+\begin{itemize}
+    \item $xw$ are connected by a scalar propagator;
+    \item $zw$ are connected by a fermionic propagator, a line \textit{with an
+        arrow going into w}.
+    \item $wy$ are connected by a fermionic propagator, a line \textit{with an
+        arrow going into y}.
+\end{itemize}
+The Feynman rules dictate that
+\begin{itemize}
+    \item A line $xy$ with an arrow towards $y$ (a fermion)
+        corresponds to a fermionic propagator
+        \[
+            S_{\alpha\beta}(y-x)
+        \]
+    \item A dashed line corresponds to a scalar propagator
+        \[
+            \Delta(x-y)
+        \]
+    \item A vertex $w$ made by a fermion (index $\lambda$), an anti-fermion
+        (index $\gamma$) and a scalar particle corresponds to the integral
+        \[
+            -ig\delta_{\gamma\lambda}\int\dd^4w 
+        \]
+    \item All must be divided by the symmetry factor.
+\end{itemize}
+
+
+Consider now
+\[
+    iG^{(1)}_\phi(x) = \eval{\fdv[]{}{J_x}W[J,\eta,\bar\eta]}_{J=0} =
+    -g\left\langle S_{\alpha\alpha}(y-y)\Delta(x-y)\right\rangle_y
+\]
+the diagram associated to this is the tadpole\footnote{although it had a funnier
+name...}.
+
+Consider
+\[
+    G^{(4)}_{\psi_\alpha\psi_\beta\phi\phi}(x,y,w,z)=\bra{0}\footnote{
+    note that this is the interacting vacuum}
+    T\left(\psi_\alpha(x)\bar\psi_\beta(y)\phi(w)\phi(z)\right)\ket{0}=
+    \eval{
+    \frac{\delta^4}{\delta\bar\eta_\alpha(x)\delta\eta_\beta(y)\delta J(w)
+    \delta J(z)}W[\eta,\bar\eta,J]
+    }_{\eta,\bar\eta,J=0}
+\]
+\textbf{Note} at order $g^0$ this is just the free propagator, at order $g$ there
+are no possible diagrams, since there will be a odd $\phi$ out.
+
+A possible second order diagram is RIVEDI INDICI FERMIONICI\\
+\begin{tikzpicture}
+    \centering
+\begin{feynman}
+  \vertex (v0) at (-3.5, 0.5) {$x,\alpha$};
+  \vertex[] (v1) at (-2, 0.5) {$u,\gamma$};
+  \vertex[] (v2) at (-2, -0.5) {$v,\delta$};
+  \vertex (v3) at (-0.5, -0.5) {$y,\beta$};
+  \vertex (v4) at (-0.5, 0.5) {$w$};
+  \vertex (v5) at (-3.5, -0.5) {$z$};
+  \diagram* {
+    (v0) -- [fermion] (v1),
+    (v1) -- [fermion] (v2),
+    (v2) -- [fermion] (v3),
+    (v1) -- [scalar] (v4),
+    (v5) -- [scalar] (v2)
+  };
+\end{feynman}
+\end{tikzpicture}
+
+Using Feynman's rules, this propagator is
+\[
+    G^{(4)}_{\psi_\alpha\bar\psi_\beta\phi\phi} = 
+    (-ig)^2\int_{}^{} \dd^4v\dd^4u \Delta_{wu}\Delta_{zw}\delta_{\gamma\alpha}
+    \delta_{\delta\beta}\left(
+        S_{\alpha\gamma}(u-x)S_{\gamma\delta}(v-u)S_{\beta\delta}(y-v)
+    \right)
+\]
+
+\textbf{Note} From the first order in $g$, Feynman rules can be deduced for any
+theory and it is not necessary to compute $W$ to higher orders of $g$.
+
+Plugging the F.Ts of the propagators into Green functions yields
+\textit{the F.T. of Green functions}: these can be constructed by a different
+set of Feynman rules 
+
+The Feynman rules in momentum space are
+\begin{itemize}
+    \item To each line corresponds a $4-$momentum $k$: a free line
+        yields a factor $1$, while a scalar propagator corresponds to a factor 
+        \[
+            \frac{i}{k^2-m^2+i\varepsilon}
+        \]
+    \item A fermionic propagator corresponds to
+        \[
+            i\frac{\slashed{k}+m}{k^2-m^2+i\varepsilon}
+        \]
+    \item An interaction point corresponds to
+        \[
+            -ig(2\pi)^4\delta_{\alpha\beta}\delta^4\left(\sum_{}^{}k_\text{in}
+            -\sum_{}^{}k_\text{out}\right)
+        \]
+        where the $k$'s are taken with their sign and $\alpha,\beta$ are the
+        spinor indices of the fermionic fields of the vertex.
+\end{itemize}
+

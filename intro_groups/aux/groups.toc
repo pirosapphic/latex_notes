@@ -34,3 +34,19 @@
 \contentsline {subsection}{\numberline {13.1}Characters}{22}{subsection.13.1}%
 \contentsline {section}{\numberline {14}Tensors}{26}{section.14}%
 \contentsline {section}{\underline {\textbf {Lesson 11, 04/11}}}{26}{section.14}%
+\contentsline {section}{\underline {\textbf {Lesson 12, 09/11}}}{28}{section.14}%
+\contentsline {section}{\numberline {15}Semisimple Lie Algebras and unitary representations}{28}{section.15}%
+\contentsline {subsection}{\numberline {15.1}Lie Groups, Algebras and manifolds}{28}{subsection.15.1}%
+\contentsline {subsection}{\numberline {15.2}Examples}{30}{subsection.15.2}%
+\contentsline {subsection}{\numberline {15.3}Exponential map}{32}{subsection.15.3}%
+\contentsline {section}{\underline {\textbf {Lesson 13, 11/11}}}{32}{subsection.15.3}%
+\contentsline {subsection}{\numberline {15.4}Compact, simple Lie Groups}{32}{subsection.15.4}%
+\contentsline {subsubsection}{\numberline {15.4.1}Dynkin Index}{33}{subsubsection.15.4.1}%
+\contentsline {subsubsection}{\numberline {15.4.2}Second-order Casimir operator}{33}{subsubsection.15.4.2}%
+\contentsline {subsection}{\numberline {15.5}Roots and weights}{34}{subsection.15.5}%
+\contentsline {section}{\underline {\textbf {Lesson 14, 16/11}}}{35}{subsection.15.5}%
+\contentsline {subsubsection}{\numberline {15.5.1}An ordering of the weight vectors}{35}{subsubsection.15.5.1}%
+\contentsline {subsubsection}{\numberline {15.5.2}Cartan Matrix}{36}{subsubsection.15.5.2}%
+\contentsline {subsection}{\numberline {15.6}Dynkin Diagram}{37}{subsection.15.6}%
+\contentsline {subsection}{\numberline {15.7}Classification of Dynkin diagrams}{37}{subsection.15.7}%
+\contentsline {subsection}{\numberline {15.8}Example: $SU(3)$}{37}{subsection.15.8}%

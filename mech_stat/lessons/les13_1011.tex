@@ -1,0 +1,108 @@
+
+\lesson{10/11}
+[qualcosina\\
+ending of the ideal classical gas]
+$$pV=NkT$$
+This solution is simple because the $Z$ factorizes (no interactions) apart from a
+$N!$ factor.
+
+For exercise, work out the entropy $S(T,V,N)\to S(E,V,N)$ and check it agrees with
+the Sakur-Tatrode microcanonical entropy.
+$$Z(\beta) = \frac{1}{N!}\left(\frac{V}{V_T}\right)^N=\frac{1}{N!}\left(
+\frac{V(2\pi m)^{\flatfrac{3}{2}}}{h^3}\right)^N
+\beta^{-\frac{3N}{2}}$$
+so from this, the integral is
+$$g(E) = \frac{1}{2\pi i}\int_{\gamma}^{} \dd\beta e^{\beta E}Z(\beta)=
+\mathcal{N}\frac{1}{2\pi i}\int_{\gamma}^{} \dd \beta e^{\beta E}\beta^{
+-\frac{3N}{2}} = \mathcal{N} I_N(E)
+$$
+To integrate this, Jordan's lemma must be used to close the contour $\gamma$:
+for $E<0$ this is trivially zero, but for $E>0$ the residues
+must be computed; for even $N$ the pole is in $\beta=0$, for odd $N$ the
+result is non-trivial, since there is a branch cut in $Re(\beta)\in\left(-\infty,0
+\right)$, due to the inverse square root.\\
+The first case is
+$$I_{N=2k}(E)=\frac{1}{2\pi i} = \text{Res}\eval{\left(e^\beta E\right)\beta^{-3k}
+}_{\beta=0}$$
+expanding in Laurent series yields the result
+$$I_{N}(E) = \frac{E^{\frac{3N}{2}-1}}{\Gamma\left(\frac{3N}{2}\right)}$$
+The other integral is non-trivial and yields the same result, so
+$$I_N(E) = \vartheta(E)\frac{E^{\frac{3N}{2}-1}}{\Gamma\left(\frac{3N}{2}
+\right)}$$
+and the density turns out to be
+$$g(E)=\frac{1}{N!}\left[\frac{V(2\pi mE)^{\flatfrac{3}{2}}}{h^3}\right]^N
+\frac{1}{\Gamma\left(\frac{3N}{2}\right)}\frac{1}{E}$$
+which is the same result found from the microcanonical ensemble!
+
+The probability of finding a microstate at energy $E$ is
+$$P(E) = g(E)e^{-\beta E}\propto e^{-\beta E +\frac{3N}{2}\ln E}$$
+which is maximal when the exponent is maximum:
+$$0=\pdv[]{}{E}\left(-\beta E + \frac{3N}{2}\ln E\right)=-\beta+\frac{3N}{2E}=0
+\iff E = \frac{3N}{2}\frac{1}{\beta} = \frac{3}{2}NkT
+$$
+which is also the mean value!!
+
+From the from of $p(E)$ it is clear that the entropic and thermodynamic terms
+``compete" and make the function peak at $\langle E\rangle$.
+\subsubsection{Relation to Maxwell-Boltzmann}
+[boh integrale in dd mu di rho etc, 5 minuti]
+\section{Equipartition of energy}
+Consider a system of $N$ \textit{distinguishable} particles with $6N$ canonical
+coordinates, indexed as
+$$\left(q^I,p_I\right)\text{, with }I=1,2...N\cdot d.$$
+In general,
+$$Z(\beta,V,N) = \int_{}^{} \underbrace{\frac{\dd^{dN}q\dd^{dN}p}{h^{dn}}}_{
+:=\dd\mu}e^{-\beta H(q,p)}=\int_{}^{} \dd \mu e^{-\beta H}$$
+the ``useful'' Hamiltonians are those which are quadratic in the $Nd$ momenta and
+in the $Nf_q$ positions, where $f_q\leq d$ is the number of \textit{non-cyclic}
+coordinates.
+
+\textbf{Example} For the ideal gas Hamiltonian, $d=3$ and $f_q=0$, since there
+is no position dependency in $H$.\\
+\textbf{Example} For a collection of $N$ $1-$dimensional harmonic oscillators,
+$d=1$ and $f_q = 1$, since
+$$H = \sum_{I}^{}\frac{p_i^2}{2m}+\frac{m}{2}\omega_i^2q_i^2$$
+
+This class of Hamiltonians is useful \textit{because it contains these two cases}:
+when the system is close to mechanical equilibrium, it resembles the harmonic
+Hamiltonian, through the theory of small oscillations (cfr MMMC bachelor's
+course).
+
+For these Hamiltonians, the Euler relation holds, since $H$ is an eigenfunction
+of the Euler operator:
+$$\underbrace{\left(\sum_{I}^{}q^I\pdv{}{q^I} + \sum_{I}^{}p_I\pdv{}{p_I}\right)
+}_\text{Euler operator}H=2H$$
+Taking the statistical average of this relation yields
+$$2\langle H\rangle =\left(\langle\sum_{I}q^I\pdv{H}{q^I}\rangle+
+\langle\sum_{I}^{}p_I\pdv{H}{p_I}\rangle\right)$$
+this average is taken with the M-B distribution: the momentum term is
+$$\langle p_I\pdv{H}{p_I}\rangle=
+\int_{}^{} \dd \mu \frac{1}{Z}\underbrace{\left(p_I\pdv{H}{p_I}\right)e^{-\beta H}
+}_{:=-\frac{1}{\beta}\pdv{}{p_I}e^{-\beta H}} = 
+\frac{1}{Z}\int_{}^{} \dd \mu -\frac{1}{\beta}p_I\pdv{}{p_I}e^{-\beta H}
+$$
+this can be integrated by parts and the boundary term is suppressed by a Gaussian
+factor:
+$$\langle p_I\pdv{H}{p_I}\rangle=
+-\frac{1}{\beta}\frac{1}{Z}(-)\int_{}^{} \dd\mu e^{-\beta H}=
+\frac{1}{Z}\frac{1}{\beta}Z = kT,\,\forall p_I$$
+The position term is similar, but 
+$$\pdv{H}{q^I}\neq0\text{ only for non-cyclical }q^I$$
+and the computation is the exact same, since the boundary condition for a confined
+system goes to zero $e^{-\beta H}\underset{q^I\to\infty}\longrightarrow 0$:
+$$\langle \pdv{H}{q^I}q^I\rangle = kT$$
+So in total
+$$2\langle H\rangle = \left[\sum_{I=1}^{Nf_q}kT + \sum_{I=1}^{Nd}kt
+\right] = kTN(d+f_q)$$
+and the final result, the \textbf{equipartition of energy}, is
+$$\boxed{\langle H\rangle = \frac{kT}{2}N(d+f_q)}$$
+
+\subsection{Virial theorem}
+A related result is the so called \textit{statistical Virial theorem}: consider
+$f_q=d$ and assume that only the kinetic term depends on $p_I$:
+$$\langle K\rangle = 2\langle \sum_{I}^{}\frac{p_I^2}{2m}\rangle =
+2\frac{kT}{2}Nd.\footnote{did not understand the 2.}$$
+The Hamilton equations tell that
+$$\pdv{H}{q^I}=-\dot p_I =-F_I$$
+The Virial of the system is defined as
+$$\mathcal{V} = \sum_{i=1}^{N}\mathbf{q_i\cdot F_i} = \sum_{I}^{}q_IF_I$$

@@ -1,0 +1,196 @@
+
+\lesson{17/11}
+\section{Free Quantum Particle}
+\subsection{Quantum particle in finite volume}
+Consider a particle of mass $m$ confined in a cube of volume $V=L^3$: the
+Hamiltonian is separable into $3$ 1-dimensional infinite square well's equations
+and the solutions are
+\[
+    u_n(x)=\sqrt{\frac{2}{L}}\sin\left(\frac{\pi n}{L}x\right) =
+    \sqrt{\frac{2}{L}}\sin\left(k_nx\right),\;\text{with }k_n=\frac{\pi n}{L}.
+\]
+The energy eigenvalues are
+\[
+    E_n=\frac{\hbar ^2}{2m}k_n^2 = \frac{\pi^2\hbar^2}{2mL^2}n^2=E_1n^2
+\]
+Since the eigenvalues are known, the path integral is overkill, so
+\[
+    Z_x=\sum_{n=1}^{\infty} e^{-\beta E_n} = e^{-\beta E_1}
+    \sum_{n=1}^{\infty} e^{-n^2}:
+\]
+the constant exponential's argument is
+\[
+    \beta E_1 = [...] = \frac{\pi}{4} \left(\frac{\lambda_T}{L}\right)^2,\;
+    \text{with }\lambda_T = \frac{h}{\sqrt{2\pi mkT}}.
+\]
+For this system, there are two limits:
+\begin{enumerate}
+    \item Low temperature
+        \[
+            E_1>>kT\implies \frac{\hbar^2\pi^2}{2mL^2}>>kT
+        \]
+        so $T\to 0$ if $L\to\infty$; the only contribution of $Z_x$ is the first
+        term, as the others are subleading
+        \[
+            Z_x = e^{-\beta E_1} + e^{-4\beta E_1}+...\sim e^{-\frac{\pi}{4}\left(
+            \frac{\lambda_T}{L}\right)^2}
+        \]
+    \item High temperature
+        \[
+            E_1<<kT \iff \frac{\hbar ^2}{2mL^2}<<kT\iff \lambda_T<<L
+        \]
+        To deal with this divergent series, the \textit{Poisson resummation} is
+        employed (see notes for full derivation): the sum is replaced by an
+        integral
+        \[
+            \sum_{n}^{} \to \int_{}^{} \dd n = \frac{L}{\pi}\int_{}^{} \dd k
+        \]
+        and the partition function turns out to be
+        \[
+            Z\sim \frac{1}{2}\int_{-\infty}^{\infty} \dd n e^{-\beta E_1n^2}
+            =\frac{1}{2}\sqrt{\frac{\pi}{\beta E_1}} = \frac{\lambda_T}{L}
+        \]
+\end{enumerate}
+Suppose now the boundary condition on the free particle to be periodic, i.e. 
+a particle constrained on a circle: 
+\[
+    \tilde u_n(x+L)=\tilde u_n(x) \iff \tilde u_n(x)=\frac{1}{\sqrt{L}}
+    e^{i\frac{2\pi x}{L}n}=\frac{1}{\sqrt{L}}e^{i\tilde k_n x},\; n\in\mathbb{Z}
+\]
+the eigenvalues are
+\[
+    \tilde E_n = \frac{\hbar ^2}{2n}\tilde k_n^2 = \tilde E_1 n^2.
+\]      
+The partition function is
+\[
+    \tilde Z=\sum_{n=-\infty}^{\infty} e^{-\beta\tilde E_1 n^2}
+\]
+with
+\[
+    \beta\tilde E_1 = 4\beta E_1 = \pi\left(\frac{\lambda_T}{L}\right)^2.
+\]
+The function defined by $\tilde Z$ is a famous function, called \textit{Jacobi
+$\vartheta_3$ constant}:
+\[
+    \tilde Z = \vartheta_3\left(i\left(\frac{\lambda_T}{L}\right)^2\right)
+\]
+Again the two limits are
+\begin{enumerate}
+    \item Low temperature
+        \[
+            \lambda_T>>L
+        \]
+    The leading terms are
+        \[
+            Z= 1+e^{-\beta\tilde E_1}+... \sim 1.
+        \]
+    this is a very different behaviour from before: this system stays almost
+    always in its ground state.
+    \item High temperature
+        \[
+            \lambda_T<<L
+        \]
+    As before, a \textit{Poisson resummation} is used:
+    \[
+        \tilde Z = \int_{-\infty}^{\infty} \dd n e^{-\beta\tilde E_1n^2}=
+        \frac{\lambda_T}{L}
+    \]
+    this result is the exact same! This is convenient, because in this limit both
+    boundary condition choices (i.e. the shape of the volume) yield the same
+    partition function.
+\end{enumerate}
+This result is general: \textit{in the TD limit, the observables derived from the
+free energy $F$ are independent of the choice of boundary condition or shape of
+volume.}\\
+This \textbf{is not true for all observables}, since in quantum systems
+the density matrix matters too: i.e. for position dependent observables, the
+matrix element $\bra{x'}\rho\ket{x}$ depends on the boundary conditions:
+\[
+    \rho(x,x') = \frac{1}{Z_x}\sum_{n=1}^{\infty} u^*_n(x')u_n(x)e^{-\beta E_n}=
+    \frac{1}{Z_x}\frac{2}{L}\sum_{n=1}^{\infty} \sin\left(\frac{n\pi}{L}x'\right)
+    \sin\left(\frac{n\pi}{L}x\right)e^{-\frac{\pi}{4}\left(\frac{\lambda_T}{L}
+    \right)^2n^2}
+\]
+again using Poisson resummation
+\begin{gather*}
+    \rho(x',x)=\frac{1}{Z_x}\frac{2}{\pi}\int_{0}^{\infty} \dd k \sin(kx)\sin(kx')
+    e^{-\frac{\lambda_T^2}{4\pi}k^2}=\frac{2}{\pi Z_x}\int_{}^{} \dd k
+    \frac{1}{2}\left(\cos\left(k(x'-x)\right)-\cos\left(k(x'+x)\right)\right)
+    e^{-Ak^2}=\\
+    =\frac{2}{Z_x\pi}\frac{1}{2}\int_{-\infty}^{\infty} \dd k
+    \frac{1}{2}\left(e^{ik(x'-x)}-e^{ik(x'+x)}\right)e^{-Ak^2}
+\end{gather*}
+These are two Gaussian integrals, the first is
+\begin{gather*}
+    I_1 = \frac{1}{Z_x}\frac{1}{2\pi}\int_{-\infty}^{\infty} \dd k
+    \exp\left[ -A^2+ik(x'-x) \right]= \frac{1}{Z_x}\frac{1}{2\pi}
+    \int_{-\infty}^{\infty} \dd k \exp\left[ A\left(k+\frac{i}{2A}(x'-x)\right)^2
+    +\frac{(x'-x)^2}{A^2}\right] =\\
+    =\frac{1}{Z_x}\frac{1}{2\pi}\sqrt{\frac{\pi}{A}}e^{-\frac{(x'-x)^2}{4A}}=
+    \frac{1}{Z_x} \frac{1}{\lambda_T} e^{-\frac{(x'-x)^2}{\lambda_T^2}\pi}
+\end{gather*}
+Since in the high temperature regime
+\[
+    Z_x\sim \frac{L}{\lambda_T}
+\]
+this is further simplified to
+\[
+    I_1\underset{T\to\infty}\sim\frac{1}{L}e^{-\frac{(x'-x)^2}{\lambda_T^2}\pi}
+\]
+The second integral is almost the same
+\[
+    I_2(x,x')=-I_1(x',-x)
+\]
+so the density matrix element is
+\[
+    \rho(x,x') \underset{T\to\infty}\sim\frac{1}{L}\left[
+    e^{-\pi\frac{(x'-x)^2}{\lambda_T^2}}-e^{-\pi\frac{(x'+x)^2}{\lambda_T^2}}
+\right]
+\]
+It is clear that this changes with the boundary conditions (see notes):
+for $x,x'$ not close to the boundary it goes down like a Gaussian [only first
+term survives], while
+\[
+    \rho(x,x) = \frac{1}{L}\left[1-e^{-\frac{4\pi x^2}{\lambda_T^2}}\right]
+\]
+is non-negligible only close to the boundary.
+
+Conversely, with the periodic boundary condition, the derivation is similar
+but the result is different:
+\begin{gather*}
+    \tilde\rho(x,x') = \frac{1}{Z_x}\sum_{n\in\mathbb{Z}}^{}u_n^*(x')u_n(x)e^{
+    -\beta E_1 n^2} = [\text{...Gaussian integral etc...}]\sim\\
+    \tilde\rho(x,x')\underset{T\to\infty}\sim \frac{1}{L}e^{-\pi\frac{(x'-x)^2}
+    {\lambda_T^2}}
+\end{gather*}
+
+All of this was done for the 1-D infinite square well: using the periodic boundary
+conditions, the eigenfunctions are the product of the $3$ 1-D eigenfunctions:
+\[
+    u_n(x) = \frac{1}{\sqrt{V}}e^{ik(n)\cdot x}
+\]
+where $k,n,x$ are vectors; their corresponding eigenfunctions are
+\[
+    E_n = \frac{\hbar^2}{2m}(k_x^2+k_y^2+k_z^2)=\frac{\hbar^2}{2m}|k|^2=
+    \frac{\hbar^2}{2m}
+    \left(\frac{2\pi}{L}\right)^2(n_x^2+n_y^2+n_z^2)= \frac{\hbar^2}{2m}\left(
+    \frac{2\pi}{L}\right)^2|n|^2.
+\]
+The partition function is factorized into three 1-D partition functions:
+\[
+    \tilde Z = Z_xZ_yZ_z = \sum_{n\in\mathbb{Z}^3}^{} \exp\left[
+    -\frac{\lambda_T^2}{4\pi}|n|^2 \right]
+\]
+Again the sum becomes an integral: since the argument depends only on the
+squared modulus of $n,k$, spherical coordinates can be used\footnote{
+magari fallo senza la $\Gamma$, con Feynman trick.}:
+\begin{gather*}
+    \tilde Z = \left(\frac{L}{2\pi}\right)^34\pi\int_0^\infty\dd |k| |k|^2
+    \exp\left[ -\frac{\lambda_T^2}{4\pi} |k|^2 \right] =
+    \frac{V}{4\pi^2}\int_{0}^{\infty} \frac{4\pi}{\lambda_T^2} \dd w \sqrt{w}
+    \sqrt{\frac{4\pi}{\lambda_T^2}}e^{-w}
+    \underset{T\to\infty} = \frac{V}{4\pi^2}\left(\frac{4\pi}{\lambda_T^2}\right)
+    ^{\frac{3}{2}}\frac{1}{2}\Gamma\left(\frac{1}{2}\right)= \frac{V}{
+    \lambda_T^3}.
+\end{gather*}
+

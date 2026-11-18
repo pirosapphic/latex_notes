@@ -1,0 +1,86 @@
+
+\lesson{12/11}
+[explicit computation of $\alpha_1$]\\
+
+\[
+    \alpha_1 = \frac{1}{4!} \left\langle 
+        3\Delta _{xx}\Delta_{xx}-6\Delta _{xx}\Delta_{xy}\Delta_{xz}J_yJ_z+
+        \Delta_{xy}\Delta_{xz}\Delta_{xw}\Delta_{xu}J_yJ_zJ_wJ_u
+    \right\rangle_{xyzwu}
+\]
+\textbf{Note} To compute $\alpha _2$ the trick is to put the definition of
+$\alpha _1$ inside 
+\[
+    \alpha_2 = \frac{1}{2(4!)^2}e^{W_0}\left\langle \left(\fdv[4]{}{J}\right)^2
+    \right\rangle_xe^{-W_0}=
+    \frac{1}{2(4!)^2}e^{W_0}\left\langle\fdv[4]{}{J}\right\rangle_xe^{-W_0}
+    \underbrace{e^{W_0}\left\langle \fdv[4]{}{J}\right\rangle_y e^{-W_0}}_{
+    :=\alpha_1}
+\]
+The only part of $\alpha _1$ that survives is the one dependent $4$ times on
+$J$
+\[
+    \alpha_2 = \frac{1}{2}\alpha_1^2 + \alpha_2^{(c)}
+\]
+where $\alpha ^{(c)}_2$ is the connected part of the coefficient, given by
+the ``mixed'' terms of Leibniz' rule: they are connected because the final
+result is non-factorizable.
+
+So the second order correction in $\Lambda $ of $W[J]$ is
+\[
+    \alpha_2-\frac{1}{2}\alpha_1^2 = \alpha_2^{(c)} 
+\]
+
+For $\alpha_3$ it is similar, one can make $\alpha_2$ reappear in the calculations
+and take the $\fdv[4]{}{J}$ only one time; the $\Lambda^3$ correction turns
+out to be connected as well!
+
+This result is general: $W[J]$ generates \textbf{only} connected Feynman diagrams:
+
+\[
+    \eval{G^C(1...N)=\frac{\delta^N}{\delta J_1...\delta J_N}W[J]}_{J=0}
+\]
+the $1$st order term is
+\[
+  G^C_1(x) = -\frac{\Lambda }{8}\left\langle \Delta_{xx}\Delta_{xx}\right\rangle_x
+\]
+and is the diagram in the form of an $8$.
+
+The second order is
+\[
+    \eval{G_2^{(c)}(1,2) = \frac{\delta^2}{\delta J_1\delta J_2}W[J]}_{J=0}=
+    \Delta_{12} + \frac{\Lambda }{2}\left\langle\Delta_{xx}\Delta_{x1}\Delta_{x2}
+    \right\rangle_x
+\]
+
+And the fourth
+\[
+    G_4^{(c)}(1,2,3,4) = -\frac{\Lambda }{4!}4!\left\langle \Delta_{x1}\Delta_{x2}
+    \Delta_{x3}\Delta_{x4}\right\rangle_x
+\]
+[Feynman rules again]
+\section{Multiple particles}
+Consider the scalar fields $\phi,\rho$, with masses $m,M$ and the Lagrangian
+\[
+    \mathcal{L} = \frac{1}{2}\pd_\mu\phi \pd^\mu\phi -\frac{m^2}{2}\phi ^2
+    -\frac{\Lambda }{4!}\phi ^4 + \frac{1}{2}\pd_\mu\rho \pd^\mu\rho -
+    \frac{M^2}{2}\rho ^2 - \frac{g}{2\cdot 2}\phi^2\rho^2
+\]
+The path integral partition function must now contain $2$ sources, $J,R$
+\[
+    Z[J,R] = \frac{\int \mathcal{D}\phi \mathcal{D}\rho \exp\left[ iS +i
+    \left\langle J\phi \right\rangle +i\left\langle R\rho \right\rangle \right]}
+    {\int \mathcal{D}\phi \mathcal{D}\rho e^{iS_0}}
+\]
+Now there are 2 kinds of scalar propagators, which connect points either with
+$\phi $ lines or $\rho $ lines:
+\[
+    \Delta^\rho_{xy}=\bra{0}T\left\{\rho(x)\rho (y)\right\}\ket{0},\;
+    \Delta^\phi_{xy}=\bra{0}T\left\{\phi (x)\phi (y)\right\}\ket{0}
+\]  
+And $2$ kinds of vertices, one is the $\phi^4$ of before and the other is mixed:
+with ``weight'' $g$ there exist vertices with $2$ $\phi$ lines and $2$ $\rho$
+lines.
+
+\textbf{Note} This complicates things, internal lines can be ambiguous and in that
+case all possibilities must be accounted for!

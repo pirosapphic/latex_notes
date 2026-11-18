@@ -1,0 +1,126 @@
+
+\lesson{09/11}
+NO MATERIALS PROVIDED by \textit{choice}, but textbooks (no-one in particular,
+but references will be provided).
+
+Two textbooks:
+\begin{itemize}
+    \item M. Srednicki, \textit{Quantum Field Theory}, Cambridge University Press
+        (lots of calculations, less physics);
+    \item Iliopoulos, Tomaras, \textit{Elementary Particle Physics}, Oxford
+        University Press (NO calculations, lots of physics).
+\end{itemize}
+In the previous course the classical field theory was quantized with the \textit{
+canonical quantization}, in this course Feynman's path (integral) will be taken,
+which is a convenient way of computing \textit{correlation functions} (like the
+Gell-Man-Low formula), skipping Wick's theorem.
+\section{Revision: the Feynman Path Integral Formulation of QM}
+This is a revision of some topics covered in the Bachelor's degree course\footnote
+{See MQ2 notes, in this same repository} Quantum Mechanics 2.
+In QM, the time evolution operator (for a time-independent $H$) is defined as
+$$U(t-t_0) = e^{-iH(t-t_0)}$$
+where $H=\frac{p^2}{2m}+V(q)$; $U$ has the fundamental property
+$$U(t_f-t_i) = U(t_f-t_n)U(t_n-t_{n-1})...U(t_1-t_i)$$
+with $t_i<t_1<t_2...<t_n<t_f$.\\
+Consider the states $\bra{q_i,t_i}$ and $\bra{q_f,t_f}$:
+$$\bra{q_f,t_f} U(t_f-t_i)\ket{q_i,t_i} = \bra{q_f,t_f}U(t_f-t_n)...U(t_1-t_i)
+\ket{q_i,t_i}$$
+inserting the identities
+$$\mathbb{I} = \int_{}^{} \dd q\ket{q}\bra{q}$$
+in between the $U$'s yields
+$$\int_{}^{} \dd q_n...\dd q_1 = \bra{q_f,t_f}U(t_f-t_n)\ket{q_n,t_n}
+\bra{q_n,t_n}...\ket{q_1,t_1}\bra{q_1,t_1}U(t_1-t_i)\ket{q_i,t_i}.$$
+Choose now the $t_k$'s so that $\frac{t_f-t_i}{n}=\tau$: all the $U$ become
+$$U(\tau)=e^{-iH\tau} = \exp\left[-i(T\tau+V\tau)\right] \underset{\text{BCH}}=
+e^{-iT\tau}e^{-iV\tau}e^{-i O(\tau^2)}$$
+in the limit $\tau\to 0 \iff n\to\infty$, the $O(\tau^2)$ are negligible, so
+$$\bra{q_{j+1},t_{j+1}}U(\tau)\ket{q_j,t_j}\underset{\tau\to0}\sim
+\bra{q_{j+1},t_{j+1}}e^{-i\frac{p^2}{2m}\tau}e^{-iV\tau}\ket{q_j,t_j}=
+\bra{q_{j+1},t_{j+1}}e^{-i\frac{p^2}{2m}}\ket{q_j,t_j}e^{-iV(q_j)\tau}
+$$
+because $\hat V\ket{q_j,t_j} = V(q_j)\ket{q_j,t_j}$.\\
+To compute the $T$ term, the completeness relation for the $p$ eigenstates
+must be inserted
+$$\int_{}^{} \dd p_j \bra{q_{j+1},t_{j+1}}e^{-i\frac{p^2\tau}{2m}}\ket{p_j}
+\bra{p_j}\ket{q_j,t_j}$$
+so, recalling the position-space representation of the $p$ eigenstates,
+$$\bra{q_{j+1},t_{j+1}}U(\tau)\ket{q_{j},t_j} = 
+\int_{}^{} \dd p_j \exp\left[-i\left(\frac{p_j^2}{2m}+V(q_j)\right)+
+ip_j(q_{j+1}-q_j)\right].$$
+So the full expression is
+$$\bra{q_i,t_i}U(t_f-t_i)\ket{q_f,t_f} =
+\prod_{j=1}^{n}\int_{}^{} \dd q_j\dd p_j \exp\left[-i\left(\sum_{j=1}^{n}
+\frac{p_j^2}{2m}+V(q_j)\right)\tau + ip_j\tau\frac{q_{j+1}-q_j}{\tau}\right]
+$$
+making this relation continuous yields
+
+$$\bra{q_i,t_i}U(t_f-t_i)\ket{q_f,t_f} = 
+\int \left(\prod_{j}^{}\dd q_j\dd p_j\right)\exp\left[-i
+\int_{t_i}^{t_f} \dd t \left(\frac{p^2}{2m}+V(q)\right) - p\dot q \right]
+$$
+completing the square in the exponent and adding $\hbar$ yields
+$$\bra{q_i,t_i}U(t_f-t_i)\ket{q_f,t_f} = \int \mathcal{D}q \exp\left[
+\frac{i}{\hbar} \int_{t_i}^{t_f} \dd t
+\underbrace{\left(\frac{m}{2}\dot q^2 -V(q)\right)}_{:=\mathcal{L}}\right]$$
+The kind of integral in the exponent are difficult to compute directly with
+$\hbar\to0$: one can use the \textit{saddle point technique}.
+
+Suppose to find the transition amplitude of $q(\tilde t)$ (position operator!)
+$$\bra{q_f,t_f}q(\tilde t)\ket{q_i,t_i} = \bra{q_f,t_f}U(t_i-\tilde t)q(t)U(
+\tilde t-t_f)\ket{q_i,t_i}:$$
+the aforementioned process can be here used by evaluating $\hat q\ket{q_k,t_k} = 
+q(t_k)\ket{q_k,t_k}$ (with $t_k$ close to $\tilde t$) and yields
+$$\bra{q_f,t_f}q(\tilde t)\ket{q_i,t_i}=\int_{}^{} \mathcal{D}q e^{
+\frac{i}{\hbar}S}q(\tilde t).$$
+And with a time ordered product?
+$$\bra{q_f,t_f}T\left(q(t_a)q(t_b)\right)\ket{q_i,t_i}$$
+without loss of generality, assume $t_a>t_b$:
+$$\bra{q_f,t_f}T\left(q(t_a)q(t_b)\right)\ket{q_i,t_i}$$
+now the process will be repeated with $t_k$ close to $t_a$ and $t_j$ close to
+$t_b$ and in the end
+$$\bra{q_f,t_f}T\left(q(t_a)q(t_b)\right)\ket{q_i,t_i}=\int \mathcal{D}q
+e^{\frac{i}{\hbar}S}q(t_a)q(t_b)$$
+On the other hand, if $t_b>t_a$, the result is the exact same! 
+
+$$\int \mathcal{D}q e^{iS} q(t_1)...q(t_n) = \bra{q_i,t_i} T\left\{q(t_1)...q(t_n)
+\right\}\ket{q_f,t_f}$$
+
+The measure of integration $\mathcal{D}q$ is not mathematically well defined, but
+it can be interpreted as the integration over all \textit{paths} that
+link the initial and final position.
+
+[smth like $\bra{a}...\ket{b} = \int...$]
+
+This can also be generalized to $t_i=-\infty$, $t_f=\infty$: consider the state
+$$\ket{q_i,t_i}=e^{-iHt_i}\ket{q_i}=\sum_{n}^{}e^{-iHt_i}\ket{n}\bra{n}\ket{q_i}$$
+Suppose $E_0=0$ (or change $H$ so that it is) and ``suppose $t$ is slightly
+imaginary'' and goes to $-\infty$ i.e $t\to -\infty(1+i\varepsilon)$: the
+$n\neq0$ states' contributions are negligible (because the exponential
+has a real part multiplied by $-\varepsilon $)
+and similarly for the $\ket{q_f}$ eigenstate: this means that only the vacuum
+state matters, i.e.
+$$\int \mathcal{D}q e^{iS} q(t_1)...q(t_n) = \bra{0}T\left\{q(t_1)...q(t_n)
+\right\}\ket{0},\; t_i,t_f\to\pm\infty$$
+\subsection{Gaussian Integrals}
+Suppose to evaluate the $n$-th statistical momentum of the Gaussian
+$$M_n=\int_{-\infty}^{\infty} \dd x e^{-Ax^2}x^n$$
+one can use the Euler $\Gamma$ function by letting $x^2=t$, or consider
+\[
+    I(t) = \int_{-\infty}^{\infty} \dd x e^{-Ax^2-tx},
+\]
+since it is clear that
+\[
+    M_n =\eval{(-1)^n \dv[n]{}{t}I(t)}_{t=0}:=\eval{\left(-\dv[]{}{t}\right)^n
+    I(t)}_{t=0}.
+\]
+This integral can be explicitely computed:
+\begin{gather*}
+    I(t) = \int_{-\infty}^{\infty} \dd x e^{-Ax^2-tx} = \int_{}^{} \dd x
+    \exp\left[-A\left(x^2+\frac{t}{A}x+\left(\frac{t}{2A}
+    \right)^2\right) + A\left(\frac{t}{2A}\right)^2\right] =\\= 
+    e^{A\left(\frac{t}{2A}\right)^2}\int_{-\infty}^{\infty} \dd xe^{\left(
+    x+\frac{t}{2A}\right)^2}= e^{A\left(\frac{t}{2A}\right)^2}\sqrt{\pi}
+\end{gather*}
+$I(t)$ is called the \textit{generator function of the n-th order momentum of
+the Gaussian}, since, by construction,
+$$I(t) = \sum_{n=0}^{\infty}M_n\frac{(-t)^n}{n!}.$$

@@ -1,0 +1,157 @@
+
+\lesson{11/11}
+Combining the two yields
+\[
+    \langle \mathcal{V}\rangle = - \sum_{I}^{} \langle q^I\pdv{H}{q^I}\rangle =
+    -Nd\frac{kT}{2} = -2 \langle K\rangle
+\]
+This is similar to Virial's theorem in \textit{classical mechanics},
+which uses \textit{time averages}
+\[
+    \langle \mathcal{V}\rangle_t = -2 \langle K\rangle_t
+\]
+\subsection{Nerst Theorem}
+\textit{The TD internal energy $E$ is a monotonous increasing function of $T$}.\\
+This is due to the stability condition
+\[
+c_{V,N} = \eval{\pdv[]{E}{T}}_{V,N} > 0
+\]
+This means that for $T\to0$ the energy is \textit{the lowest possible} and, by
+definition, the system is in its ground state.
+
+\textbf{Proof(?)} Suppose the ground (micro)state $\nu_0$ is non-degenerate, i.e.
+\[
+    T\to 0 \implies P(\nu) = \delta_{\nu_0,\nu}
+\]
+This means its entropy as $T\to 0$ is
+\[
+    S[P(\nu)] = -k\sum_{\nu}^{} P(\nu)\ln(P(\nu)) = -k\ln(\underbrace{P(\nu_0)}_{
+    =1}) = 0
+\]
+and so
+\[
+    c_{V,N} = T\pdv[]{S}{T}\underset{T\to0}\longrightarrow 0
+\]
+Suppose now the ground state has degeneracy $m$:
+\[
+    P(\nu_{0,i}) = \frac{1}{m},\text{ since they are equiprobable}
+\]
+And the entropy is
+\[
+    S = -k\sum_{\nu}^{} P(\nu)\ln(P(\nu)) = -k\sum_{i=1}^{m} \frac{1}{m} \ln\left(
+    \frac{1}{m}\right) = k\ln m
+\]
+so degeneracy contributes to a small, residual entropy, even at $T\to0$ 
+
+\section{The Einstein Solid: Canonical ensemble}
+This is a model for solids, composed of $3N$ decoupled harmonic oscillators
+with the \textit{same} frequency $\omega $. Since they are distinguishable and
+non-interacting, the partition function is factorizable
+\[
+    Z = (Z(1))^{3N}
+\]
+\textbf{Note} At a classical level, since $H$ is homogeneous of degree $2$, the
+equipartition theorem would imply $c_v=\text{const}$, a \textit{direct
+contradiction of Nerst theorem and of experimental evidence}:
+the energy of every oscillator would be
+\[
+    E_{(1)}=2\frac{kT}{2} = kT
+\]
+
+For these reasons, consider a \textit{quantum system} of $3N$ harmonic
+oscillators: for each of them, the energy eigenvalues and eigenstates are
+\[
+    H\ket{n} = \hbar \omega \left(n+\frac{1}{2}\right)\ket{n}
+\]
+At equilibrium, the density matrix of the system is diagonal
+\[
+    \rho_{mn} = \frac{1}{Z(1)}e^{-\beta E_n}\delta_{mn}
+\]
+and also
+\[
+    Z(1) = \tr(e^{\beta H}) = \sum_{n}^{} e^{-\beta E_n}=[...]=\frac{1}{2\sinh
+    \left(\frac{\beta \hbar \omega }{2}\right)}
+\]
+So the free energy of the system is
+\[
+    F = -\frac{1}{\beta}\ln(Z) = -\frac{3N}{\beta }\ln(Z(1)) = 3NkT\ln\left(
+    2\sinh\left(\frac{\beta \hbar \omega }{2}\right)\right) 
+\]
+and the energy is
+\[
+    \langle E\rangle =-\pdv{\ln(Z)}{\beta} = -3N\pdv{\ln(Z(1))}{\beta} = 
+    [...]=\frac{2\cosh\left(\frac{\beta \hbar \omega }{2}\right)}{
+        2\sinh\left(\frac{\beta \hbar \omega}{2}\right)}\frac{3N\hbar \omega}{2}=
+        [...]=3N\frac{\hbar \omega }{2}\left(1+\frac{2}{e^{\beta\hbar\omega }-1}
+        \right)
+\]
+The high temperature regime is a classical limit, since
+\[
+    \langle E\rangle \sim [...] \sim 3NkT
+\]
+And the low temperature limit yields
+\[
+    \langle E\rangle \sim 3N\hbar \omega\left( e^{-\beta \hbar \omega }+
+    \frac{1}{2}\right) 
+\]
+which checks out with Nerst theorem
+\[
+    c_{V,N}=\pdv{\langle E\rangle }{T}\underset{T\to0}\longrightarrow 0
+\]
+\section{Kernel and partition functions in QM}
+Consider a quantum system with $1$ degree of freedom $q$: the eigenstate of
+the position operator is $\ket{q}$ and its evolution at a generic time $t>0$
+is $\ket{q(t)}$; the \textit{QM Kernel} is
+\[
+    K(f,i) = \bra{q_f}e^{-\frac{i}{\hbar }(t_f-t_i)H}\ket{q_i}
+\]
+Consider now, formally, Wick's rotation
+\[
+    t\to -i\tau
+\]
+and the resulting \textit{euclidean} kernel
+\[
+    K_E(f,i) = \bra{q_f}e^{-\frac{1}{\hbar }(\tau_f-\tau_i)H}\ket{q_i}.
+\]
+Formally, let $\frac{\Delta \tau }{\hbar }=\beta =\frac{1}{kT}$, so
+\[
+    K_E(f,i) = \bra{q_f}e^{-\beta H}\ket{q_i} = \rho_{f,i}
+\]
+So the \textit{QM euclidean kernel is the matrix element of the density operator
+of the SM system}, with the identity $\Delta \tau =\hbar \beta $; so
+\[
+    \boxed{Z = \int_{}^{} \dd q K_E(q,\hbar \beta ,q,0) = \int_{}^{} \dd q \bra{q}
+    e^{-\beta H}\ket{q} = \tr\left(e^{-\beta H}\right)}
+\]
+Since the Kernel in QM is related to path integrals, the partition function can be
+related to them too, with the \textit{euclidean action} $S_E$ : consider an action
+$S[q(t)]$, then
+\[
+    K(i,f) = \int \mathcal{D}q e^{-\frac{i}{\hbar }S[q]} \underset{iS[q(t)]=
+    -S_E[q(\tau)]}\longrightarrow K_E(i,f) = \int \mathcal{D}q
+    e^{-\frac{1}{\hbar }S_E[q]}
+\]
+\textbf{Example}\\
+The euclidean action of the Harmonic oscillator is
+\[
+    S_E=\int_{\tau_i}^{\tau_f} \dd \tau \left\{\frac{m}{2}\dot q^2 + \frac{1}{2}
+    m\omega^2q^2\right\}
+\]
+and the path integral turns out to be really ugly (see QM2 notes)
+\[
+    K_E(i,f) = \sqrt{\frac{m\omega}{2\pi\hbar\sinh\left(\frac{\beta 
+    \hbar \omega }{2}\right)}}e^{-\frac{1}{\hbar}S_{E,cl}}
+\]
+and the partition
+function can be found using a Gaussian integral and it is
+\[
+    Z = \int_{}^{} \dd q K_E(q,\Delta \tau =\hbar \beta,q,0) =[...]
+    \frac{1}{2\sinh\left(\frac{\beta \hbar \omega }{2}\right)}
+\]
+This approach is useful to work in the position basis: the matrix element
+\[
+    \rho_{qq} = \frac{1}{Z}K_E(q,\beta \hbar ,q,0) =
+    \sqrt{\frac{m\omega}{\pi\hbar}\tanh\left(\frac{\beta \hbar \omega }{2}\right)}
+    e^{-\frac{1}{\hbar }S_{E,cl}}
+\]      
+is the probability to find a thermalized oscillator in position $q$

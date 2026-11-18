@@ -1,0 +1,145 @@
+\newpage
+\lesson{17/11}
+Consider now
+\[
+    A=\bra{0}T(\psi(x_1)\psi(x_2)\bar\psi(x_3)\bar\psi(x_4))\ket{0}
+\]
+one can use Wick's theorem, with the \textit{caveat} of putting the contracted
+fields next to one another (and gaining - signs):
+\[
+    A=-\overline{\psi_1\bar\psi_3}\,\overline{\psi_2\bar\psi_4} +
+    \overline{\psi_1\bar\psi_4}\,\overline{\psi_2\bar\psi_3}.
+\]
+With the Path Integral, this is
+\[
+    A = \eval{\frac{\delta^4}{\delta\bar\eta_1\delta\bar\eta_2\delta\eta_3
+    \delta\eta_4}Z_0[\eta,\bar\eta]}_{\eta_i,\bar\eta_j = 0}
+\]
+after verifying the sign is correct, one can use
+\[
+    Z_0[\eta,\bar\eta] = \exp\left[ -\left\langle \bar\eta(x)S(x-y)\eta(y)
+    \right\rangle_{xy}\right]
+\]
+to find the vacuum expectation value:
+    \begin{align*}
+        &A=\eval{\frac{\delta^4}{\delta\bar\eta_1\delta\bar\eta_2\delta\eta_3
+        \delta\eta_4}\left\{\exp\left[ -\left\langle \bar\eta(x)S(x-y)\eta(y)
+        \right\rangle_{xy}\right]\right\}}_{\eta,\bar\eta=0}=
+        \eval{\frac{\delta^3}{\delta\bar\eta_1\delta\bar\eta_2\delta\eta_3}
+        \left\langle \bar\eta(x)S_{xx_4}\right\rangle_x \exp\left[ ... \right]
+        }_{\eta,\bar\eta=0}=\\
+        &=\eval{\frac{\delta^2}{\delta\bar\eta_1\delta\bar\eta_2}
+        \left(-\left\langle \bar\eta(x)S_{xx_4}\right\rangle_x\left\langle
+        \bar\eta(y)S_{yx_3}\right\rangle_y\exp\left[ ... \right]\right)}_{
+        \eta,\bar\eta=0}=
+        \eval{\fdv[]{}{\bar\eta_1}\left(-S_{24}\left\langle \bar\eta(y)S_{yx_3}
+        \right\rangle_y+\left\langle \bar\eta(x)S_{xx_4}\right\rangle_xS_{23}
+        \right)}_{\eta,\bar\eta=0}=\\
+        & =-S_{24}S_{13}+S_{14}S_{23}
+    \end{align*}
+    which is the same as Wick's theorem. Once again, path integrals automatically
+    apply Wick's theorem to amplitudes' computations.
+    
+\section{Interacting fermionic theory: Yukawa}
+An interaction term like
+\[
+    \int_{}^{} \dd^4x a_\mu\pd^\mu\psi
+\]
+would break Lorentz invariance (why? maybe spinor transformations).\\
+Odd number of fields would go to zero and the simplest interaction term
+(Fermi theory) has problems with renormalization (that will be clear in the
+Advanced QFT course).
+
+Another field needs to be introduced, a scalar field $\phi$ of mass $M$:
+\[
+    S = \int_{}^{} \dd^4x \bar\psi(i\slashed{\pd}-m)\psi+\underbrace{
+    \frac{1}{2}\pd_\mu\phi\pd^\mu\phi - \frac{M^2}{2}\phi^2}_\text{pure scalar}-
+    \underbrace{g\phi\bar\psi\psi - \alpha(\bar\psi\psi)}_\text{interactions}
+\]
+where $g,\alpha$ are coupling constants and $m,M$ are \textit{bare} masses of the
+fields.
+
+Since $\left[\phi\right]=L^{-1}=M$ and $\left[\psi\right] = M^{\flatfrac{3}{2}}$,
+$\left[g\right]=1$ (which is good) and $\left[\alpha\right]=M^{-2}$: since
+$\alpha$ is dimensional, it must be multiplied by $E^2$ to become dimensionless,
+but this is counterproductive for perturbative approaches, since at higher
+energies $\alpha E^2$ grows; the term has to be discarded.
+\[
+    S = \int_{}^{} \dd^4x \bar\psi(i\slashed{\pd}-m)\psi+\underbrace{
+    \frac{1}{2}\pd_\mu\phi\pd^\mu\phi - \frac{M^2}{2}\phi^2}_\text{pure scalar}-
+    \underbrace{g\phi\bar\psi\psi}_\text{interaction}
+\]
+This can be written as
+\[
+    S = S_0 - g\int_{}^{} \dd^4x \phi\bar\psi\psi
+\]
+For the corresponding free theory, the propagator is
+\[
+    Z_0[\eta,\bar\eta,J] = \frac{1}{\mathcal{N}} \int \mathcal{D}\phi\mathcal{D}
+    \psi\mathcal{D}\bar\psi \exp\left[ iS_0 + i\left\langle J\phi\right\rangle
+    +i\left\langle\bar\eta\psi\right\rangle+i\left\langle\bar\psi\eta
+    \right\rangle \right]=\frac{1}{\mathcal{N}}
+    \exp\left[ \frac{-i}{2}\left\langle J(x)\Delta_{xy}J(y) \right\rangle_{xy}-
+    \left\langle \bar\eta(x)S_{xy}\eta(y)\right\rangle_{xy}\right]
+\]
+The interacting propagator uses $S$ instead of $S_0$ and for small $g$ it can be
+formally Taylor-expanded
+\[
+    Z[J,\eta,\bar\eta] = \sum_{n=0}^{\infty} \frac{(-ig)^n}{n!}\int \mathcal{D}\phi
+    \mathcal{D}\psi\mathcal{D}\bar\psi
+    (\left\langle\phi\bar\psi\psi\right\rangle_x)^n e^{iS_0+...}
+\]
+and the fields can be brought down by deriving it
+\[
+    \frac{\delta^3}{\delta J\delta\eta\delta\bar\eta}\int \mathcal{D}\phi
+    \mathcal{D}\psi\mathcal{D}\bar\psi\exp\left[ iS_0 + i\left\langle J\phi
+    \right\rangle+i\left\langle \bar\eta\psi\right\rangle +i\left\langle \bar\psi
+    \eta\right\rangle\right] 
+\]  
+this brings down $3$ $i$ factors and $2$ - signs and another $-$ comes from the
+anticommutation of $\psi\bar\psi = - \bar\psi\psi$, so to get the
+vacuum expectation value a $-i$ factor has to be multiplied to the derivative.
+
+So the full expression of the propagator becomes
+\[
+    Z[J,\eta,\bar\eta] = \exp\left[ -ig\left\langle \frac{-i\delta^3}{\delta J
+    \delta\eta\delta\bar\eta}\right\rangle_x\right]Z_0[J,\eta,\bar\eta]=
+    \left(1-g \left\langle \frac{\delta^3}{\delta J\delta\eta\delta\bar\eta}
+    \right\rangle_x+... \right)Z_0[J,\eta,\bar\eta].
+\]
+The free energy $W[J,\eta,\bar\eta]$ is $-\ln Z$: this can be treated
+exactly like the $\phi^4$ interaction and at first order it is
+\begin{gather*}
+    W[J,\eta,\bar\eta] = W_0[J,\eta,\bar\eta] - g e^{W_0}\left\langle 
+    \frac{\delta^3}{\delta J\delta\eta\delta\bar\eta}\right\rangle_xe^{-W_0}
+    +O(g^2)
+\end{gather*}
+the $O(g)$ term is
+\begin{gather*}
+    e^{W_0}\left\langle \frac{\delta^3}{\delta J\delta\eta\delta\bar\eta}
+    \right\rangle_xe^{-W_0}=e^{W_0}\left\langle \frac{\delta^2}{\delta J\delta\eta
+    }(-1)\left\langle S_{xy}\eta_y\right\rangle_y\right\rangle_xe^{-W_0}=\\=
+    e^{W_0}\left\langle \fdv[]{}{J}\left(S_{xx}-\left\langle S_{xy}\eta_y
+    \right\rangle_y \left\langle \bar\eta_yS_{yx}\right\rangle_y\right)
+    e^{-W_0}\right\rangle_x=
+    \left\langle \left(S_{xx}-\left\langle S_{xy}\eta_y\bar\eta_uS_{ux}
+    \right\rangle_{yu} \right) \Delta_{xw}J_w \right\rangle_{xw}
+\end{gather*}
+The full free energy is then
+\[
+    W[J,\eta,\bar\eta] = \underbrace{-\frac{1}{2}\left\langle J_x\Delta_{xy}J_y
+    \right\rangle_{xy} - \left\langle \bar\eta_xS_{xy}\eta_y\right\rangle_{xy}}_
+    {=W_0}-g
+    \left(
+    \left\langle S_{xx}\Delta_{xy}J_y\right\rangle_{xy} +
+    \left\langle\bar\eta_uS_{ux}S_{xy}\eta_y\Delta_{xw}J_w\right\rangle_{xywu}
+    \right) 
+\]
+Since $\eta$ are spinors, the indexes must be considered, since
+\[
+    \fdv[]{\eta_\alpha(x)}{\eta_\beta(y)}=\delta_{\alpha\beta}\delta^4(x-y)
+\]
+this is implemented in the last expression, since $\bar\eta$ are column vectors,
+$\eta$ are row vectors, $S$ are matrices and $\Delta,J$ are scalars.
+Note that the first $S_{xx}$ is a trace, i.e. has spinor indices $\alpha\alpha$,
+so it is a scalar.

@@ -1,0 +1,125 @@
+\documentclass[a4paper,11pt]{book}
+% Package to make citations superscrit with brackets
+\usepackage[super,square]{natbib}
+% Package to change margin size
+\usepackage{anysize}
+\marginsize{1.5cm}{1.5cm}{1cm}{1.5cm} %left/right/top/bottom
+% Package to make headers
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt}
+% Package for highlights
+\usepackage{soul}
+% Colors for the references links
+\usepackage[dvipsnames]{xcolor}
+% Package to link references
+\usepackage{hyperref}
+%\usepackage[draft]{graphicx}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{physics}
+\usepackage{tikz-feynman}
+\usepackage{simpler-wick}
+\usepackage{tensor}
+\usepackage{slashed}
+\usepackage{esint}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{enumitem}
+\usepackage{setspace} %to set line spacing, see TOC for an example
+\usepackage[english]{babel}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=CadetBlue,
+    filecolor=CadetBlue,      
+    urlcolor=CadetBlue,
+}
+% Package for lorem ipsum
+\usepackage{lipsum}
+% Package for multicolumn
+\usepackage{multicol}
+
+\usepackage{multicol,caption}
+% Package for removing paragraph identations
+\usepackage{parskip}
+\setlength\columnsep{18pt} 
+\setlocalecaption{english}{figure}{Fig.}
+\setlocalecaption{english}{table}{Tab.}
+\counterwithin{figure}{section} % comandi per numerazione interna di figure, tabelle ed equazioni
+\counterwithin{table}{section}
+\counterwithin{equation}{section}
+\setcounter{tocdepth}{2}
+\fancypagestyle{empty}{
+    \fancyhead[C]{
+	%TESTEMPTY
+    }
+    \fancyhead[R]{
+	%TESTEMPTY
+    }
+    \fancyhead[L]{
+	%TESTEMPTY
+    }
+    \fancyfoot[C]{
+	%TESTEMPTY
+    }
+    \renewcommand{\headrulewidth}{0.0pt}
+}
+\fancypagestyle{body}{
+    \pagenumbering{arabic}
+
+    \fancyhead[L]{\small{\textbf{Università degli studi di Torino} \\ a.y. 2026/2027}}
+    \fancyhead[R]{\small{\textbf{Foundations of QFT notes}\\ Prof. Angelantonj}}
+    \fancyfoot[C]{\small{\thepage}}
+}
+
+
+\newcounter{Lessoncounter}
+\newcommand\showmycounterL{\addtocounter{Lessoncounter}{1}\themycounter}
+\newcommand{\lesson}[1] 
+{ {          
+    \addtocounter{Lessoncounter}{1}
+    \Large \underline{\textbf{Lesson \arabic{Lessoncounter}, #1}}\newline
+
+} 
+    %\addcontentsline{toc}{section}{\underline{#1}}    
+\addcontentsline{toc}{section}{\underline{\textbf{Lesson \arabic{Lessoncounter}, #1}}}    
+}
+\newcommand\pd{\partial}
+\newcommand{\COMMENT}[1]{} %comment block
+% Source - https://tex.stackexchange.com/q/29179
+% Posted by PineApple
+% Retrieved 2026-11-12, License - CC BY-SA 3.0
+%\newcommand{\fdv}[3][]{\frac{\delta^{#1} #2}{\delta #3 ^{#1}}}
+
+
+ 
+\begin{document}
+\pagestyle{empty}
+\begin{center}
+\Large{\textbf{Foundations of Quantum Field Theory,\\ Lecture notes}}
+\vspace{0.4cm}
+\normalsize
+\\ Università degli Studi di Torino\\Academic Year 2026/2027 \\Prof. Angelantonj,
+notes by Paolo Rocchietti March\footnote{paolo.rocchiettimarc@edu.unito.it} \\
+
+\vspace{0.1cm}
+%\textit{Organization}
+\medskip
+\normalsize
+\end{center}
+\vspace{0.4cm}
+{\color{gray}\hrule}
+\tableofcontents
+\newpage
+\pagestyle{body}
+\input{./lessons/les01_0911.tex}
+\input{./lessons/les02_1011.tex}
+\input{./lessons/les03_1111.tex}
+\input{./lessons/les04_1211.tex}
+\input{./lessons/les05_1611.tex}
+\input{./lessons/les06_1711.tex}
+\input{./lessons/les07_1811.tex}
+\end{document}

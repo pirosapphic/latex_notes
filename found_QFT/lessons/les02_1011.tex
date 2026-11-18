@@ -1,0 +1,244 @@
+
+\lesson{10/11}
+The generator function is defined with a normalization:
+$$I(t) = \frac{\int_{-\infty}^{\infty} \dd x \exp\left[ -Ax^2-tx \right]}{
+\int_{-\infty}^{\infty} \dd x e^{-Ax^2}}$$
+and it can be expanded in Taylor Series as
+$$I(t)= \sum_{n=0}^{\infty}M_n(A)\frac{(-t)^n}{n!},\quad
+M_n=\eval{\left(-\pdv{}{t}\right)^n I(t)}_{t=0}$$
+and $M_n$ is the $n-$th statistical moment of the Gaussian distribution.
+
+Integrals like the numerator of $I(t)$ can be computed by completing the
+square:
+$$I(t) = \frac{\int_{-\infty}^{\infty} \dd x \exp\left[ -A(x+\flatfrac{t}{2A})^2
++\flatfrac{t^2}{4A}\right]}{\int_{-\infty}^{\infty} \dd x e^{-Ax^2}} = 
+e^{\flatfrac{t^2}{4A}}
+$$
+And from this follow the momenta of the Gaussian and the fact that the odd momenta
+are zero, since every odd derivative of $I(t)$ is proportional to $t$ and
+vanishes.
+
+\textbf{Example} $M_4$
+\[
+    M_4 = \eval{\pdv[4]{}{t}I(t)}_{t=0} = \eval{\pdv[2]{}{t}M_2(t)}_{t=0}=
+    [...] = \frac{3}{4A^2}
+\]
+
+Another kind of Gaussian integral is
+\[
+I=\int_{-\infty}^{\infty} \dd x \exp\left[ -Ax^2 +f(x) \right]
+\]
+the first step is to expand $e^{f(x)}=g(x)$ around $x=0$:
+\[
+    e^{f(x)} = \sum_{n=0}^{\infty}c_nx^n
+\]
+so
+\[
+    I=\sum_{n=0}^{\infty}c_n\int_{-\infty}^{\infty} \dd x e^{-Ax^2}x^n
+\]
+but the integral is now the (non-normalized) $n-$th Gaussian momentum:
+\[
+    I=\frac{1}{\sqrt{\pi}}\sum_{n=0}^{\infty}c_n \eval{\left(-\dv[]{}{t}\right)^n
+    \int_{-\infty}^{\infty} \dd x e^{-Ax^2-tx}}_{t=0}
+\]
+formally, the series is the Taylor expansion of $g\left(-\pdv[]{}{t}\right)$:
+\[
+    I = \frac{1}{\sqrt{\pi}}\eval{e^{f\left(-\pdv[]{}{t}\right)} I(t)}_{t=0}
+\]
+where
+\[
+    I(t) = e^{\frac{t^2}{4A}}.
+\]
+This expression is complicated, but it is useful in a perturbative framework,
+since if $f=\alpha f$ and $\alpha$ is a small, dimensionless parameter, the
+integral is approximated, ignoring normalizations, as
+\[
+I(t)=f\left(-\dv[]{}{t}\right)I(t) + \frac{\alpha^2}{2!} f^2\left(-\dv{}{t}
+\right)I(t)+O(\alpha^3)
+\]
+
+\chapter{Path Integral Quantization for QFT}
+\section{Introduction}
+This new quantization technique for QM computes the Green function of the
+Schrödinger operator as follows:
+\[
+    Z = \int \mathcal{D}q e^{iS},\;\text{with } S=\int_{}^{} \dd t \left(
+    \frac{m}{2}\dot q^2-V(q)\right)
+\]
+The equivalent expression for the scalar field uses
+\[
+    \mathcal{L} = \frac{1}{2}\pd_\mu\phi\pd^\mu\phi - \frac{1}{2}m^2\phi^2
+\]
+and so the expectation value of the time-ordered product of fields is
+\[
+    \bra{0}T\left\{\phi(x_1)...\phi(x_n)\right\}\ket{0} =
+    \int \mathcal{D}\phi e^{iS} \phi(x_1)...\phi(x_n)
+\]
+A convenient way to compute this kind of integral is to use this
+\[
+    Z[J]=\int \mathcal{D}\phi \exp\left[ iS + i\int_{}^{} \dd^4x J(x)\phi(x)
+    \right] 
+\]
+the integral at exponent is a \textit{source term}, since
+\[
+S+\int_{}^{} \dd^4x J(x)\phi(x) = \int\dd^4\left(\mathcal{L}_s+J(x)\phi(x)\right)
+\]
+and the corresponding Euler-Lagrange equation is
+\[
+\pd_\mu\left(\frac{\delta\mathcal{L}}{\delta\pd_\mu\phi}-
+\pdv{\mathcal{L}}{\phi}\right) = 0 \iff \Box\phi +m^2\phi -J = 0 \iff
+\boxed{\left(\Box+m^2\right)\phi = J}
+\]
+which is similar to a wave equation with a source.
+
+Another notation is
+\[
+    \langle A \rangle_{x,y,z...} := \int_{}^{} \dd^4x\dd^4y\dd^4z... A
+\]
+Since this $J$ term is just a computation trick, another concept is useful
+to use it: the functional derivative of a field with respect to itself is
+\[
+\frac{\delta}{\delta \phi(x)}\phi(y):=\delta^4(x-y)
+\]
+So
+\[\eval{-i\frac{\delta}{\delta J(y)} Z[J] }_{J=0}=\eval{ \int \mathcal{D}\phi -i
+\frac{\delta}{\delta J(y)}\left(e^{i\langle\phi J\rangle}\right)e^{iS}}_{J=0}=
+\eval{\int \mathcal{D}\phi \phi(y)e^{iS + i\langle\phi J\rangle}}_{J=0}=
+\int \mathcal{D}\phi\phi(y)e^{iS}
+\]
+So to bring down bigger powers of $\phi$ into the integrand, more derivatives
+are required, so
+\[
+\bra{0}T\left\{\phi(x_1)...\phi(x_n)\right\}\ket{0} = 
+\eval{\prod_{i=1}^{n} \left(-i\frac{\delta}{\delta J(x_i)}\right) Z[J]}_{J=0}
+\]
+So, in parallelism with the Gaussian integrals, $\mathbf{J(x)}$ \textbf{is the
+generating function} of the Green functions (i.e. the vacuum-expectation
+value of time ordered product of fields, i.e. Feynman propagators), since
+\[
+    Z[J]=\sum_{n=0}^{\infty}G_n(x_1,...x_n)\frac{1}{n!}\prod_{i=i}^{n}J(x_i)
+\]
+
+\section{Free theory}
+Consider the free action $S_0$:
+\[
+    Z_0[J] = \int \mathcal{D}\phi e^{iS_0+i\langle J\phi\rangle_x}
+\]
+the exponent is
+\[
+    S_0 + \langle J\phi\rangle = \int_{}^{} \dd^4x \left[\frac{1}{2}\pd_\mu\phi
+    \pd^\mu\phi - \frac{m^2}{2}\phi^2+J\phi\right]
+\]
+Here the square that must be completed is the $\phi^2$ term: the difficult thing
+are the differential operators, so consider the F.Ts of $\phi$ and $J$:
+\[
+    \phi(x)=\frac{1}{(2\pi)^4}\int_{}^{} \dd ^4k e^{ikx}\tilde\phi(k),\quad 
+    J(x)=\frac{1}{(2\pi)^4}\int_{}^{} \dd^4k e^{ikx}\tilde J(k)
+\]
+and plug them in
+\[
+S_0+\langle J\phi\rangle_x = \int_{}^{} \dd^4x\frac{\dd^4k\dd^4\tilde k}{
+(2\pi)^8}\left(-\frac{1}{2}k\tilde k\tilde\phi(k)\tilde \phi(\tilde k) -
+\frac{m^2}{2}\tilde\phi(k)\tilde\phi(\tilde k)+\frac{1}{2}\left(
+\tilde J(k)\tilde\phi(\tilde k) + \tilde J(\tilde k)\tilde \phi(k)\right)\right)
+e^{i(k+\tilde k)x}
+\]
+With the exponential and a $(2\pi)^4$ factor a $\delta^4(k+\tilde k)$ can be
+constructed:
+\[
+S_0+\langle J\phi\rangle_x = \frac{1}{2}\int_{}^{} \frac{\dd^4k}{(2\pi)^4}
+\left(
+\left(k^2-m^2\right)\tilde\phi(-k)\tilde\phi(k) +\tilde J(-k)\tilde\phi(k)+
+\tilde\phi(-k)\tilde J(k)
+\right)
+\]
+Adding 
+\[
+0 = (k^2-m^2)\frac{\tilde J(k)\tilde J(-k)}{(k^2-m^2)^2}-
+\frac{\tilde J(k)\tilde J(-k)}{k^2-m^2}
+\]
+``completes the square'', yielding
+\[
+S_0 + \langle J\phi\rangle_x = 
+\frac{1}{2}\int_{}^{} \frac{\dd^4k}{(2\pi)^4}
+\left\{
+\left[\tilde \phi(-k)+\tilde J(-k)\frac{1}{k^2-m^2}\right](k^2-m^2)
+\left[\tilde \phi(k)+\tilde J(k)\frac{1}{k^2-m^2}\right] - \tilde J(-k)\frac{1}{
+k^2-m^2}\tilde J(k)
+\right\}
+\]
+by defining
+\[
+\tilde \varphi(k) = \tilde \phi(k) + \tilde J(k)\frac{1}{k^2-m^2}
+\]
+the measure of the functional integral does not change and the exponent is
+\[
+S_0+\langle J\phi\rangle_x = 
+\frac{1}{2}\int_{}^{} \frac{\dd^4k}{(2\pi)^4}
+\left\{
+\tilde \varphi(-k)(k^2-m^2)\tilde\phi(k)-\tilde J(-k)\frac{1}{k^2-m^2}\tilde J(k)
+\right\}
+\]
+So the $Z_0$ is
+\[
+    Z_0[J] = \int \mathcal{D}\varphi \exp\left[ \frac{i}{2}
+    \int_{}^{} \frac{\dd^4k}{(2\pi)^4}\tilde \varphi(-k)(k^2-m^2)\tilde\varphi(k)
+\right]\exp\left[ -\frac{i}{2}\int_{}^{} \frac{\dd^4k}{(2\pi)^4}
+\tilde J(-k)\frac{1}{k^2-m^2}\tilde J(k) \right]
+\]
+antitransforming
+\[
+    \tilde\varphi(k)=\int_{}^{} \dd ^4x e^{-ikx}\varphi(x),\quad
+    \tilde J(k) = \int_{}^{} \dd ^4x e^{-ikx} J(x)
+\]
+Plugging these in and observing
+\[
+    k^2 e^{-ik(x-y)}=\pdv{}{x_\mu}\pdv{}{y^\mu}e^{-ik(x-y)}
+\]
+the $\varphi(x)(k^2-m^2)\varphi(y)$ term can be integrated by parts and yields
+the original action
+\[
+    \int_{}^{} \frac{\dd^4k}{(2\pi)^4}e^{-ik(x-y)}\int\dd^4x\int\dd^4y
+\left(\pd_\mu\varphi(x)\pd^\mu\varphi(y) - m^2\varphi(x)\varphi(y)\right)=
+S_0
+\]
+So, redefining $Z_0[J]$ \textit{without} this normalization
+\[
+    Z_0[J] = \frac{\int \mathcal{D}\phi e^{iS_0+i\langle J\phi\rangle_x}}{
+        \int \mathcal{D}\phi e^{iS_0}
+    }=
+    \exp\left\{ -\frac{i}{2}\int \dd^4x\int\dd^4y J(x)
+    \underbrace{\int\frac{\dd^4k}{(2\pi)^4}
+    \frac{e^{-ik(x-y)}}{k^2-m^2}}_{:=-i\Delta_F(x-y)}J(y)\right\}
+\]
+So finally
+\[
+\boxed{Z_0[J]=\exp\left[-\frac{1}{2}\langle J(x)\Delta(x-y)J(y)\rangle_{xy}
+\right]}
+\]
+\textbf{Note} These are not properly Gaussian integrals, since $e^{ix^2}$ does not
+converge, but this can be solved by giving a little imaginary part to the mass
+$m\to m-i\varepsilon$, which brings the $+i\varepsilon$ to the denominator of the
+propagator.
+
+Another way to solve this is by using a \textbf{Wick Rotation}
+\[
+t\to\tau:=\pm it
+\]
+which makes the Minkowski metric \textit{euclidean}: in this context using the
+mostly positive metric is better, since the resulting metric tensor is exactly
+the euclidean one and not its opposite. This can be used as follows (+,-,-,-)
+\[
+i\int\dd^4x\frac{1}{2}\left(\pd_\mu\phi\pd^\mu\phi - \frac{m^2}{2}\phi^2\right)=
+i(\mp i)\int_{}^{} \dd^4x_e\frac{1}{2}\left(-\pd_\mu\phi\pd_\nu\phi
+\delta^{\mu\nu}+m^2\phi^2\right) = \mp\int\dd^4x_e\frac{1}{2}\left(\pd_\mu\pd_\nu
+\delta^{\mu\nu}+m^2\phi^2\right)
+\]
+The sign suggests to choose the $+$ sign in Wick's rotation.
+\[
+\tau=it,\quad iS_0:=-S_e
+\]
+and the euclidean partition function is
+\[
+    Z_0^e[J]=\int \mathcal{D}\phi \exp\left[ -S_e -\langle J\phi\rangle_x \right]
+\]

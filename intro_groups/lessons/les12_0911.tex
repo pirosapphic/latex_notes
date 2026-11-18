@@ -1,0 +1,194 @@
+
+\lesson{09/11}
+[quantum Heisenberg spin chain]
+
+\section{Semisimple Lie Algebras and unitary representations}
+\subsection{Lie Groups, Algebras and manifolds}
+\textbf{Def.} A \textit{Lie Group} is a continuous group whose set is
+a \textit{smooth manifold}: the group multiplication must be a\textit{
+diffeomorphism} between the coordinates of the elements.
+
+All the continuous matrix groups mentioned before are Lie groups.
+
+\textbf{Def.} A Lie group is said to be \textit{compact} if the manifold is
+a compact manifold.
+
+Examples of compact Lie groups are $O(n),\,SO(n),\,SU(n),\,Sp(n),\,G_2,\,F_4,\,
+E_{6/7/8}$.
+
+\textbf{Def.} A \textit{Lie Algebra} is a vector space $V$ equipped with
+an internal binary operation called \textit{commutator} (or Lie bracket)
+$$\left[...,...\right]: V\times V\to V$$
+which satisfies
+\begin{enumerate}
+    \item Linearity in the first argument
+        $$\left[\lambda X+\mu Y, Z\right] = \lambda \left[X,Z\right]+\mu
+        \left[Y,Z\right],\;\forall X,Y,Z\in V;$$
+    \item Antisymmetry
+        $$\left[X,Y\right] = -\left[Y,X\right],\;\forall X,Y\in V;$$
+    \item Jacobi identity
+        $$\left[X,\left[Y,Z\right]\right] + \left[Z,\left[X,Y\right]\right] +
+        \left[Y,\left[Z,X\right]\right] = 0,\;\forall X,Y,Z\in V.$$
+\end{enumerate}
+
+If $\left[X,Y\right]=0,\;\forall X,Y\in V$, (which satisfies the properties
+above), $V$ is called an \textit{Abelian Lie Algebra}.
+
+\textbf{Def.} A \textit{Lie sub-algebra} is a vector subspace $W\subseteq V$
+closed with respect to the commutator, i.e.
+$$\forall X,Y\in W,\;\left[X,Y\right]\in W$$
+
+\textbf{Def.} An \textit{invariant} Lie sub-algebra, or \textit{ideal}, is a
+Lie sub-algebra $W$ which satisfies
+$$\forall X\in W,\;\forall Y\in V,\;\left[X,Y\right]\in W$$
+\textbf{Note} The two trivial subspaces of a Lie algebra $V$, $\left\{0\right\}$
+and $V$, are ideals and are called \textit{trivial} ideals.
+
+\textbf{Def.} A \textit{simple} Lie algebra is a Lie algebra which does not have
+any non-trivial ideals.
+
+\textbf{Def.} A \textit{semisimple} Lie algebra is a Lie algebra which does not
+admit any \textit{non-trivial Abelian ideals}.
+
+Of course
+$$\left\{\text{Lie Algebras}\right\}\supset\left\{\text{Semisimple L.A.}\right\}
+\supset\left\{\text{Simple L.A.}\right\}$$
+
+Consider the definition of vector in differential geometry:\\
+\textbf{Def} Given a manifold $M$, $p\in M$ and a curve
+$C:(a,b)\subset\mathbb{R}\to M$ so that $C(0\in(a,b))=p$, a
+\textit{tangent vector} in $p$, $v_p$, is
+$$v_p = \eval{\dv[]{x^\mu(t)}{t}}_{t=0}\pdv{}{x^\mu}$$
+where $x^\mu(t)$ are the coordinates of the point $C(t)\in M$.
+A vector is an operator that can be applied to functions $f:M\to\mathcal{R}$:
+$$v_p[f] = \eval{\dv{x^\mu}{t}}_{t=0}\pdv{f}{x^\mu} = \eval{\dv{f}{t}}_{t=0}.$$
+The result of $v_p[f]$ is the rate of change of the function $f$ at $p$ on the
+manifold in the direction of $v$.
+
+\textbf{Def.} The \textit{tangent} vector space at point $p$, $T_pM$, is
+the set of all\footnote{There is a more formal definition involving equivalence
+classes.} tangent vectors in $p$.
+
+\textbf{Note} The basis of this vector space is
+$$\left\{\pdv{}{x^\mu}\right\}$$
+
+Since $T_pM$ is a vector space, its dual space, called the \textit{cotangent
+vector space}, can be constructed and is denoted by
+$$(T_pM)^*=T^*_pM$$
+\textbf{Note} The dual basis of this space are the $1-$forms
+$$\left\{\dd x^\mu\right\}$$
+and, by definition
+$$\dd x^\nu \left(\pdv{}{x^\mu}\right) = \delta^\nu_\mu$$
+
+\textbf{Def.} Given $M,N$ manifolds and the diffeomorphisms
+$$f:M\to N,\quad g:N\to\mathbb{R},$$
+a vector $v\in T_pM$ can be applied to the function $f\circ g: M\to\mathbb{R}$:
+$$\left[f_*(v)\right](g):= v[g\circ f] $$
+$f_*:T_pM\to T_{f(p)}N$ is called the \textit{push forward} of $v$ through $f$.
+
+\textbf{Note} The components of the push forward are
+$$f_*^\nu(v) = v^\mu\pdv{f^\nu}{x^\mu}$$
+so
+$$f_*(v) = f_*^\nu(v)\pdv{}{y^\nu}= v^\mu\pdv{f^\nu}{x^\mu}\pdv{}{y^\nu}$$
+
+What does this have to do with Lie algebras? Consider the \textit{left
+action} of a Lie Group:
+$$L: G\to\left\{\text{diffeomorphism}:G\to G\right\}$$
+and, in particular, the \textit{left translation}:
+\begin{align*}
+    L:G&\to \text{diff}(G\to G)\\
+        a&\to L(a) = L_a
+\end{align*}
+so that
+\begin{align*}
+    L_a:G&\to G\\
+        g&\to a\cdot G
+\end{align*}
+\textbf{Def.} A \textit{left invariant vector field} is a vector field
+$V$ on $G$ so that
+$$\eval{(L_a)_* V}_g = \eval{V}_{a\cdot g}$$
+this means that doing a push-forward of all vectors tangent to points $g\in G$
+(composing the field $V$) through the translation $L_a$ is the same as evaluating
+the vector field at $a\cdot g$.
+
+\textbf{Def.} Given a Lie group $G$, the \textit{Lie algebra of the generators of
+$G$} is \textit{the set of left invariant vector fields, equipped with a
+commutator}. The dimension of this algebra is the same as the manifold's.
+\subsection{Examples}
+Consider the relation
+$$\ln(\det M) = \tr(\ln M )$$
+then
+$$\det (\mathbb{I}+A) = \exp\left[\tr(\ln(\mathbb{I}+A))\right]$$
+expanding the logarithm in series
+$$\det(\mathbb{I}+A) = \exp\left[\tr \left(A-\frac{A^2}{2}+O(A^3)\right)\right]$$
+and neglecting higher order terms yields
+$$\det(\mathbb{I}+A)\sim \exp(\tr(A))\sim 1+\tr(A)$$
+Consider now $GL(n,\mathbb{R})$: $\det(\mathbb{I})\neq 0$, but the ``neighbours"
+of the identity may have a null determinant, but this is not the case, since
+the group set must be a manifold and, since the determinant is a smooth function,
+there exist a neighbourhood of a nonnull-determinant matrix in which there are no
+null-determinant matrices.\\
+The corresponding algebra is
+$$gl(n,\mathbb{R}) = \text{mat}(n\times n)$$\\
+
+Consider then $SL(n,\mathbb{R})$, its algebra can be determined by using the curve
+$$c:(a,b)\to SL(n,\mathbb{R})$$
+with $c(0)=\mathbb{I}=e$: given a small matrix $A\in SL(n,\mathbb{R})$
+$$c(t) = c(0)+tA+O(t^2)$$
+so
+$$\eval{\dv{c}{t}}_{t=0}=A$$
+Since $\det(c(t))=1,\;\forall t\in(a,b)$,
+$$1=\det(c(t)) = \det\left(c(0)+tA +O(t^2)\right)\sim \det(\mathbb{I}+tA)\sim
+1+\tr(A)\iff \tr(A)=0$$
+so the algebra is
+$$sl(n,\mathbb{R})=\left\{\text{traceless }n\times n\text{ matrix}\right\}$$\\
+
+Now $SO(n)$:
+$$c(t) = c(0)+tA+O(t^2),\;\text{with }c(0)=\mathbb{I}$$
+since $SO(n)\subset SL(n,\mathbb{R})$\footnote{verifica}, $\tr(A)=0$ and moreover
+$$c(t)c(t)^T = \mathbb{I}$$
+which implies
+$$(\mathbb{I}+tA)(\mathbb{I}+tA)^T=\mathbb{I}\implies[...]A=-A^T$$
+so the algebra is
+$$so(n) = \left\{A\in\text{mat}(n\times n,\mathbb{R})\text{ s.t. }A=-A^T
+\right\}$$\\
+
+For $U(n)$ the argument is similar, with $T\to\dagger$, so
+$$u(n)=\left\{A\in\text{mat}(n\times n,\mathbb{C})\text{ s.t. }A=-A^\dagger
+\right\}$$
+in physics, it is more common to write
+$$c(t) = \mathbb{I}+itA$$
+which implies that the generators are \textbf{hermitian} as opposed to 
+anti-hermitian.
+$$u(n)=\left\{A\in\text{mat}(n\times n,\mathbb{C})\text{ s.t. }A=A^\dagger
+\right\}$$\\
+
+For $SU(n)$ physicists write
+$$c(t) = \mathbb{I} +itA +O(t^2)$$
+then $c(t)c(t)^\dagger = \mathbb{I}$ implies hermiticity and $\det(c(t))=1$
+implies $\tr(A)=0$, so
+$$su(n) = \left\{A\in\text{mat}(n\times n,\mathbb{C})\text{ s.t. }\tr(A)=0\land
+A=A^\dagger\right\}$$
+
+\subsection{Exponential map}
+This is a map that allows to construct a part of a Lie group\footnote{the
+connected submanifold which contains the identity element} from its Lie algebra:
+\begin{align*}
+    \exp:\mathfrak{g}&\to G\\
+                    X&\to\exp(X)
+\end{align*}
+\textbf{Note} The exponential map satisfies the \textbf{BCH formula}:
+$$\exp(X)\exp(Y) = \exp\left[X+Y+\frac{1}{2}\left[X,Y\right]+\frac{1}{12}\left(
+\left[X,\left[X,Y\right]\right] + \left[Y,\left[Y,X\right]\right]\right)+...\right]
+$$
+\textbf{Note} The exponential map is surjective (i.e. it constructs the whole
+Lie Group) when the Lie Group is compact and connected or if $G=GL(n,\mathbb{R})$.
+\\
+
+\textbf{Note} The commutator of a Lie algebra is completely determined by
+the structure constants: given a basis for the algebra $\left\{X_i\right\}$
+(i.e. the generators of the group), the structure constants are $f\indices{_a
+_b^c}$ so that
+$$\left[X_a,X_b\right]=f\indices{_a_b^c}X_c$$
+and are not completely arbitrary, since the properties of the commutator must
+be satisfied.
