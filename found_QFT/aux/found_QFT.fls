@@ -447,9 +447,12 @@ INPUT ./lessons/les04_1211.tex
 INPUT ./lessons/les05_1611.tex
 INPUT ./lessons/les06_1711.tex
 INPUT ./lessons/les07_1811.tex
+INPUT ./lessons/les08_1911.tex
 INPUT ./aux/found_QFT.aux
 INPUT ./aux/found_QFT.out
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb

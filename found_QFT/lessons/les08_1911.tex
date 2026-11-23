@@ -1,0 +1,164 @@
+
+\lesson{19/11}
+\section{Scattering amplitudes}
+The powerful part of QFTs is their predictions of scattering amplitudes
+\[
+    A=\bra{\text{out}}\ket{\text{in}}
+\]
+where ``out'' and ``in'' are the final and initial state of a system.
+
+These quantities are obviously interesting in \textit{interacting theories}:
+the interacting picture is more complicated than the free picture (as seen in
+the IQFT course).
+
+\subsection{Free theory}
+The scalar fields of free theory can be expanded as
+\[
+    \phi(x)=\int_{}^{} \frac{\dd^3p}{(2\pi)^3\sqrt{2E_p}}e^{i\mathbf{p\cdot x}}
+    \left(a(t,p)+a^\dagger(t,-p)\right):
+\]
+consider $t=0$
+\[
+    \ket{\text{f}}=\int_{}^{} \dd^3x f(0,\mathbf{x})\phi(0,\mathbf{x})\ket{0}=
+    \int_{}^{} \dd^3x f(0,\mathbf{x})\int\frac{\dd^3p}{(2\pi)^3\sqrt{2E_p}}e^{i
+    \mathbf{p\cdot x}}a^\dagger(0,-p)\ket{0}:=\int_{}^{} \frac{\dd^3p}{2E_p}
+    \tilde f(\mathbf{p})\ket{\mathbf{p}}
+\]
+where
+\begin{gather*}
+    \ket{\mathbf{p}}:=\sqrt{2E_p}a^\dagger(0,\mathbf{-p})\ket{0},\\
+    \tilde f(\mathbf{p})=\int_{}^{} \frac{\dd^3x}{(2\pi)^{\frac{3}{2}}}f(
+    \mathbf{x})e^{i\mathbf{p\cdot x}}.
+\end{gather*}
+$f$ and $\tilde f$ can be set to create a ``wave packet'' of Gaussian form:
+\[
+    \tilde f(0,\mathbf{p})=\sigma^{-\frac{3}{4}}e^{-\frac{(\mathbf{p-k})^2}{2
+    \sigma}}
+\]
+its anti-transform is
+\[
+    f(0,\mathbf{x})=\sigma^{\frac{3}{4}}e^{-\frac{x^2\sigma}{2}}e^{i\mathbf{k\cdot
+    x}}.
+\]
+To compute their time evolution the Schrödinger picture is used:
+\begin{gather*}
+    i\pdv[]{}{t}\ket{t,f} = H\ket{t,f}\\
+    \int_{}^{}\frac{\dd^3p}{2E_p}\pdv[]{\tilde f}{t}\ket{\mathbf{p}} =
+    \int\frac{\dd^3p}{2E_p}\tilde f(t,\mathbf{p})\underbrace{H\ket{p}}_{
+    =E_p\ket{\mathbf{p}}}\\
+    i\pdv[]{\tilde f}{t} = E_p\tilde f(t,\mathbf{p} )
+\end{gather*}
+Imposing the initial condition stated before yields
+\[
+    \tilde f(t,\mathbf{p})=\sigma^{-\frac{3}{4}}e^{-\frac{(\mathbf{p-k})^2}{2
+    \sigma}}e^{-iE_pt}
+\]
+The value of $E_p$ can be expanded around the value $p=k$, \textit{assuming}
+$\sigma$ \textit{to be small},
+\[
+    E_p = E_k + \underbrace{\eval{\pdv[]{E_p}{p_i}}_{p=k}}_{:=v_k}(p_i-k_i)+...
+\]
+Plugging this in the exponent
+\begin{gather*}
+    f(t,\mathbf{x}) = \frac{1}{\sigma^{\frac{3}{4}}}\int \frac{\dd^3q}{2E_k}
+    \exp\left[ -\frac{q^2}{2\sigma}-i\mathbf{v_k\cdot q}t - i\mathbf{q\cdot x}
+    \right] \exp\left[ -iE_kt - i\mathbf{k\cdot x} \right]+...=\\=
+    \frac{1}{\sigma^{\frac{3}{4}}} \int_{}^{} \frac{\dd^3q}{2E_k}
+    \exp\left[ -\frac{1}{2\sigma}\left(\mathbf{q} + i\sigma(\mathbf{v_k}t+
+    \mathbf{x})\right)^2 \right]+...
+\end{gather*}
+this is a simple Gaussian integral and yields\footnote{OCCHIO SEGNO DI X IN EXP}
+\[
+    f(t,\mathbf{x})=\sigma^{\frac{3}{4}}\frac{1}{2E_k}\exp\left[-\frac{\sigma}{2}
+    \left(\mathbf{v_k}t-\mathbf{x}\right)^2 - iE_kt-i\mathbf{k\cdot x}\right]
+\]
+so this Gaussian is \textit{centred around its classical trajectory $x=v_kt$}.
+
+For multi-particle states the form is similar:
+\[
+    \ket{f_1...f_n}=\int\prod_{i=1}^{n}\frac{\dd^3p_i}{2E_{p_i}}\tilde
+    f_i(0,\mathbf{p_i}) \ket{\mathbf{p_1...p_n}}.
+\]
+The anti-transform at $t=0$ is the same as before for each particle:
+\[
+    f_i(0,\mathbf{x_i})=\sigma^{\frac{3}{4}}e^{-\frac{x_i^2\sigma}{2}}
+    e^{i\mathbf{k_i\cdot x_i}}.
+\]
+And, unsurprisingly, also the time evolutions are the same
+\begin{gather*}
+    \tilde f_i(t,\mathbf{p_i})=\sigma^{-\frac{3}{4}}e^{-\frac{(\mathbf{p_i-k_i}
+    )^2}{2\sigma}}e^{-iE_{p_i}t}\\
+    f_i(t,\mathbf{x_i})=\sigma^{\frac{3}{4}}\frac{1}{2E_{k_i}}\exp\left[-\frac{
+    \sigma}{2}\left(\mathbf{v_{k_i}}t-\mathbf{x_i}\right)^2 -
+    iE_{k_i}t-i\mathbf{k_i\cdot x_i}\right]
+\end{gather*}
+
+\subsection{Interacting theory}
+The fundamental assumption is that there exist a vacuum state ``close'' to the
+free vacuum and that there exist a single particle state of momentum $\mathbf{p}$:
+\[
+    \ket{\mathbf{p}}\text{ with mass }m_p\sim m
+\]
+where $m$ is the bare mass (in AQFT it will be seen how $m$ and $m_p$ differ);
+it is reasonable to assume this is an eigenstate of $H$ and of the momentum.
+
+With this single particle state one can compute the quantities found before:
+\begin{gather*}
+    \ket{f} = \int_{}^{} \frac{\dd^3p}{2E_p}\tilde f(p)\ket{\mathbf{p}}\\
+    \ket{t,f} = \frac{}{}\frac{\dd^3p}{2E_p}\tilde f(t,p)\ket{\mathbf{p}},
+\end{gather*}
+where $E_p = \sqrt{p^2-m_p^2}$.
+To consider multiple particle states, one can assume that at $t=0$ they
+are all in $x=0$, \textbf{but in the ``far'' past and future they do not interact,
+therefore are free particle states}: this is the fundamental assumption
+to consider scattering processes.
+
+At $t=-\infty$ there is a state
+\[
+    \ket{\text{in}} = \int\prod_{i=1}^{n}\frac{\dd^3p_i}{2E_{p_i}}
+    \tilde f_i(t,p_i)\ket{p_1...p_n}_\text{in}
+\]
+and similarly at $t=+\infty$
+\[
+    \ket{\text{out}} = \int\prod_{i=1}^{n}\frac{\dd^3p_i}{2E_{p_i}}
+    \tilde f_i(t,p_i)\ket{p_1...p_n}_\text{out}.
+\]
+
+The free field
+\[
+    \phi(t,\mathbf{x}) = \int\dd^3p\left(g_p(t,x)a(p)+g^*_p(t,x)a^\dagger(p)
+    \right) 
+\]
+where $g_p(t,x)$ can be found from the F.T. of the field.
+
+It was shown in IQFT that
+\begin{gather*}
+    ia^\dagger (p)=\int_{}^{} \dd^3x g_p(t,x)\bar\pd_t\phi(t,x)\\
+    -ia (p)=\int_{}^{} \dd^3x g^*_p(t,x)\bar\pd_t\phi(t,x)
+\end{gather*}
+where the derivatives act on both sides
+\[
+    g\bar\pd f = g\pd f - \pd g f.
+\]
+Their time derivatives are
+\begin{gather*}
+    i\pd_t a^\dagger (p) = \int_{}^{} \dd^3x\left(g_p(t,x)\ddot \phi - \ddot
+    g_p(x,t)\phi\right) = \int_{}^{} \dd^3x \left(g_p(t,x)\ddot \phi - (
+    \laplacian -m^2)g_p(t,x)\phi\right)
+\end{gather*}
+because $g_p$ satisfies the $K-G$ equation; this can be integrated by parts twice
+to yield $(\Box +m^2) \phi=0$ in the free theory   
+\[
+    i\pd_ta^\dagger(p) = 0
+\]
+\subsection{LSZ reduction formula}
+So in general these operators evolve in time, since for interacting fields the
+$K-G$ equation is no longer homogeneous and the computed derivative does not
+go to 0.
+\begin{gather*}
+    \lim\limits_{T\to-\infty} a^{(\dagger)}(t,p) = \sqrt{Z}a_\text{in}^{(\dagger)}
+    (p)\\
+    \lim\limits_{T\to+\infty} a^{(\dagger)}(t,p) =\sqrt{Z}a_\text{out}^{(\dagger)}
+    (p)
+\end{gather*}
+[15 minuti]
