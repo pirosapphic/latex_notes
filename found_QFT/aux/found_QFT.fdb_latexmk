@@ -1,5 +1,5 @@
 # Fdb version 4
-["lualatex"] 1795079736.44659 "found_QFT.tex" "found_QFT.pdf" "found_QFT" 1795079741.88629 0
+["lualatex"] 1795444076.10231 "found_QFT.tex" "found_QFT.pdf" "found_QFT" 1795444078.50585 0
   "/etc/texmf/tex/generic/config/language.dat" 1788356983.60566 2850 b86a6c5c7bf423c3902454d7e037ed0f ""
   "/home/paolo/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc" 1785064381.88596 128397 dc8cded2bbafe8195c86cdaea92e40b2 ""
   "/home/paolo/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-italic.luc" 1785084000.01982 136299 81dfec24bbf14622db1629e3fd551117 ""
@@ -398,10 +398,10 @@
   "/usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload.lua" 1775415801 13566 16df94dd2de231b2bca0aaa0190941fe ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1792593924 5385490 8673be925240dc2054d816ce847ba982 ""
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1792593917 5660320 6eb139e4aa32812856570795124dba69 ""
-  "aux/found_QFT.aux" 1795079741.10365 3596 5e992d0ec751fa5104d5949b4ce91c71 "lualatex"
-  "aux/found_QFT.out" 1795079741.10565 4020 7b85c7bbe5eb6db7c4487c7f30978cd6 "lualatex"
-  "aux/found_QFT.toc" 1795079741.10665 2152 65f4891ffafa197497bb59ee71a7d06c "lualatex"
-  "found_QFT.tex" 1795074415.53435 3402 f42726fd04ec3eee0a675fd051ef3c0e ""
+  "aux/found_QFT.aux" 1795444078.16872 3831 6cc17b613c1117debba8a835c1513bb1 "lualatex"
+  "aux/found_QFT.out" 1795444078.16972 4251 bc0234cc731bb73ac40ec3f9b7db1e3a "lualatex"
+  "aux/found_QFT.toc" 1795444078.16972 2303 aef364e6acb04833f67200d4137d9566 "lualatex"
+  "found_QFT.tex" 1795437659.54687 3435 eb92b579d628bf4a0cd58da478b9da03 ""
   "lessons/les01_0911.tex" 1795008799.94487 6250 7fefd865c5e86844fb26087704deef09 ""
   "lessons/les02_1011.tex" 1795011212.18787 8563 b45d15f80989f7225beb3b5d571892e8 ""
   "lessons/les03_1111.tex" 1795023666.19225 7398 6526385052977ac582e54382a60bdca0 ""
@@ -409,7 +409,8 @@
   "lessons/les05_1611.tex" 1795074996.26838 8680 3d4e1f7fdce626dfa8f86b24494c68be ""
   "lessons/les06_1711.tex" 1795024880.759 6573 3456d63cd68b5a9721386e4fca27b323 ""
   "lessons/les07_1811.tex" 1795023850.04425 4316 229b2a91ca2bd248bb2284c94bdd7bd0 ""
-  "lessons/les08_1911.tex" 1795079735.12965 6200 e4a11d594e7e607996fefc80aa8bd582 ""
+  "lessons/les08_1911.tex" 1795441945.79677 6197 f8bf70d550e374eb555ff76aa608b995 ""
+  "lessons/les09_2311.tex" 1795444074.85872 7542 998465b106d778d27ea22ede1a03d92d ""
   (generated)
   "aux/found_QFT.aux"
   "aux/found_QFT.log"

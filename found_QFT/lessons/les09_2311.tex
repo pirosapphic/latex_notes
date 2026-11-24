@@ -1,0 +1,197 @@
+
+\lesson{23/11}
+So the quantities to be computed are probability amplitudes of the form
+\[
+    A=\phantom{x}_\text{out}\bra{q_1...q_m}\ket{p_1...p_n}_\text{in}
+\]
+where $p_i,q_j$ are momenta eigenstate.
+
+For non-free theories it was found that
+\[
+    ia^\dagger(t,\mathbf{p})=\int\dd^3x g_p\bar{\pd_t} \phi(t,\mathbf{x})
+\]
+\[
+    -ia(t,\mathbf{p})=\int\dd^3x g^*_p\bar{\pd_t} \phi(t,\mathbf{x})
+\]
+Their derivative was found to be
+\[
+    i\pd_ta^\dagger (t,\mathbf{p}) = \int_{}^{} \dd^3x g_p(\Box+m^2)\phi(t,
+    \mathbf{x})
+\]
+
+A strategy to compute the amplitudes uses
+\begin{gather*}
+    \lim\limits_{T\to-\infty} a^{(\dagger)}(t,p) = \sqrt{Z}a_\text{in}^{(\dagger)}
+    (p)\\
+    \lim\limits_{T\to+\infty} a^{(\dagger)}(t,p) =\sqrt{Z}a_\text{out}^{(\dagger)}
+    (p),
+\end{gather*}
+since
+\[
+    a_\text{in}^\dagger (\mathbf{p})\ket{0} = \sqrt{2E_p}\ket{p},
+\]
+the amplitude can be written as
+\[
+    \phantom{x}_\text{out}\bra{q_1...q_m}\frac{1}{\sqrt{2E_p}}a^\dagger_\text{in}
+    (p_1)\ket{p_2...p_n}_\text{in}
+\]
+adding $0=a_\text{out}^\dagger(p_1)-a_\text{out}^\dagger(p_1)$ yields
+\[
+    \frac{1}{\sqrt{2E_p}}\phantom{x}_\text{out}\bra{q_1...q_m}a_\text{in}^\dagger
+    -a_\text{out}^\dagger(p_1)\ket{p_2...p_n}_\text{in} +
+    \frac{1}{\sqrt{2E_p}}\phantom{x}_\text{out}\bra{q_1...q_m}a^\dagger_\text{out}
+    (p_1)\ket{p_2...p_n}_\text{in}.
+\]
+Assuming \textit{there is no forward scattering}, i.e. that no out particle has
+the same momentum as any in particle (which means no particle remains
+``untouched'' by the interaction), implies that the second addendum is zero (
+since the $a^\dagger $ commutes with all bra creation operators that
+create the out state and acts on the $\bra{0}$, yielding 0):
+\[
+    A = \frac{1}{\sqrt{2E_p}}\frac{-1}{\sqrt{Z}}\lim\limits_{T\to\infty}
+    \phantom{x}_\text{out}
+    \bra{q_1...q_m}
+    \left(a^\dagger(T,p_1)-a^\dagger(-T,p_1)\right)\ket{p_2...p_n}_\text{in}
+\]
+The difference of the operators can be written as the integral over time of their
+derivative
+\begin{gather*}
+    A = \frac{1}{\sqrt{2E_p}}\frac{-1}{\sqrt{Z}}\int_{-\infty}^{\infty} \dd t
+    \phantom{x}_
+    \text{out}\bra{q_1...q_m}\pd_ta^\dagger(t,p_1)\ket{p_2...p_n}_\text{in}=\\
+    =\frac{1}{\sqrt{2E_p}}\frac{i}{\sqrt{Z}}\int_{}^{} \dd^4x_1g_{p_1}(x_1)
+    (\Box_1+m^2)\phantom{x}_\text{out}\bra{q_1...q_m}\phi(x_1)\ket{p_2...p_n}_
+    \text{in}
+\end{gather*}
+This process can be iterated to express $A$ in terms of the vacuum expectation
+value of time ordered products of fields: one can 
+express
+\[
+    \ket{p_2...p_n}_\text{in} = a^\dagger_\text{in}(p_2)\ket{p_3...p_n}
+\]
+and add
+\[
+    0=\left(a^\dagger_\text{out}(p_2)-a^\dagger_\text{out}(p_2)\right)\phi(x_1)
+\]
+and repeat the same process as before:
+\[
+    -\frac{1}{\sqrt{Z}}\lim\limits_{t_2\to\infty}\bra{q_1...q_m}a^\dagger(
+    t_2,p_2)\phi(x_1)-a^\dagger(-t_2,p_2)\phi(x_1)\ket{p_3...p_n}\propto
+    \int_{-\infty}^{\infty} \dd t_2 \pd_{t_2}\bra{q_1...q_m}T(a^\dagger(t_2,p_2)
+    \phi(x_1)\ket{p_3...p_n}
+\]  
+and expressing $\pd_{t_2}a^\dagger(t_2,p_2)$ yields a term
+\[
+    \bra{q_1...q_m}T(\phi(x_2)\phi(x_1))\ket{p_3...p_n}.
+\]
+A similar strategy can be used to express $\bra{q_1...q_m}$ using $a$'s instead of
+$a^\dagger$'s: after removing the initial states
+\[
+    \bra{q_1...q_m}T(\phi(x_1)...\phi(x_n))\ket{0} = 
+    \bra{q_2...q_m}a_\text{out}(q_2)T(\phi_1...\phi_n) + T(...)(a_\text{in}(q_2)-
+    a_\text{in}(q_2))\ket{0}
+\]
+from here, one can take the total time derivative, integrated over all time.
+
+The final formula is
+\begin{gather*}
+A = \phantom{x}_\text{out}\bra{q_1..q_m}\ket{p_1..p_n}_\text{in}=\\=
+\frac{i^n(-i)^m}{Z^{\frac{1}{2}(n+m)}}\int \left(\prod_{i=1}^{n} \dd^4x_i
+\right)\left(\prod_{j=1}^{m}\dd^4y_j\right)\left(\prod_{i=1}^{n}\frac{g_{p_i}
+(x_i)}{\sqrt{2E_{p_i}}}\right)\left(\prod_{j=1}^{m}\frac{g^*_{q_j}
+(y_j)}{\sqrt{2E_{q_j}}}\right)(\Box_{x_1}+m^2)...(\Box_{x_n}+m^2)\\
+(\Box_{y_1}+m^2)...(\Box_{y_m}+m^2)\bra{\Omega}T(\phi(y_1)...\phi(y_m)\phi(x_1)
+...\phi(x_n))\ket{\Omega}.
+\end{gather*}
+The $g_p^{(*)}$ are plane waves and $x_i,y_j$ are integrated upon: these are
+nothing but \textit{Fourier Transforms}.
+
+The $\Box_{i}$'s become $-p_i^2$'s in momentum space:
+\[
+    A = \mathcal{N}\int\left(\prod_{i=1}^{n}\frac{\dd^4x_i}{(2\pi)^{\frac{3}{2}}}
+    e^{ip_ix_i}\right)\left(\prod_{j=1}^{m}\frac{\dd^4y_j}{(2\pi)^{\frac{3}{2}}}
+    e^{-iq_jy_j}\right)(-p_1^2+m^2)...(-q^2_m+m^2)\bra{\Omega}T(\phi_1...\phi_n...
+    \phi_m)\ket{\Omega}
+\]
+\textbf{Note}: the particles are on shell, so the $(-p^2_k+m^2)$ should be all
+zeroes, \textbf{but} the propagator has poles in the same points, so the
+integrand is \textit{the amputated propagator}, since the poles 
+associated to the external legs are simplified.
+
+So at the end, the probability amplitude is
+\textbf{the Fourier transform of the amputated propagator}:
+\[
+    A = \frac{i^n(-i)^m}{Z^{(n+m)/2}}\tilde{G}^\text{amp}(p_1...p_n;q_1...q_m)
+    (2\pi)^4\delta^4\left(\sum p_i+\sum_{}^{}q_j\right)
+\]
+
+In principle, particles can be different and have different masses: they yield
+different $Z$ factors, different mass terms  
+\[
+    A = \mathcal{N}\int\left(\prod_{i=1}^{n}\frac{\dd^4x_i}{(2\pi)^{\frac{3}{2}}}
+    e^{ip_ix_i}\right)\left(\prod_{j=1}^{m}\frac{\dd^4y_j}{(2\pi)^{\frac{3}{2}}}
+    e^{-iq_jy_j}\right)(-p_1^2+m_1^2)...(-q^2_m+m_m^2)\bra{\Omega}
+    T(\phi_1(x_1)...\phi_n(x_n)...\phi_m(y_m))\ket{\Omega}
+\]
+where
+\[
+    \mathcal{N} = \frac{i^n(-i)^m}{\prod_{ij}Z_i^mZ_j^n}
+\]
+and $\phi_1...\phi_n...\phi_m$ are the $n+m$ different fields associated to the
+$n+m$ different particles.
+\subsection{Examples}
+Let $\ket{in} = \ket{p_1,p_2}$ and $\ket{out} = \ket{q_1,q_2}$ in the
+$\phi^4$ theory: there are two particles in and two particles out, so
+the order is $\Lambda^2$ and there are 3 possible diagrams (since the
+hypotesis of no forward scattering implies only connected diagrams):\\
+\begin{tikzpicture}
+\begin{feynman}
+  \draw [scalar] (4, 0.5) arc [start angle=90, delta angle=180, radius=1];
+  \draw [scalar] (4, 0.5) arc [start angle=90, delta angle=-180, radius=1];
+  \vertex (v0) at (-2.5, 0.5) {};
+  \vertex[dot] (v1) at (-1.5, -0.5) {};
+  \vertex (v2) at (-2.5, -1.5) {};
+  \vertex[dot] (v3) at (0.5, -0.5) {};
+  \vertex (v4) at (1.5, 0.5) {};
+  \vertex (v5) at (1.5, -1.5) {};
+  \vertex (v6) at (2.5, 0.5) {};
+  \vertex (v7) at (5.5, 0.5) {};
+  \vertex (v8) at (2.5, -1.5) {};
+  \vertex (v9) at (5.5, -1.5) {};
+  \vertex[dot] (v10) at (4, 0.5) {};
+  \vertex[dot] (v11) at (4, -1.5) {};
+  \vertex (v12) at (6.5, 0.5) {};
+  \vertex[empty dot, minimum size=0.025mm] (v13) at (8.5, 0.5) {};
+  \vertex (v14) at (6.5, -1.5) {};
+  \vertex[empty dot, minimum size=0.1mm] (v15) at (8.5, -1.5) {};
+  \vertex[dot] (v16) at (7.5, 0.5) {};
+  \vertex[dot] (v17) at (7.5, -1.5) {};
+  \vertex (v18) at (10.5, -1.5) {};
+  \vertex (v19) at (10.5, 0.5) {};
+  \diagram* {
+    (v0) -- [scalar] (v1),
+    (v1) -- [scalar] (v2),
+    (v1) -- [scalar, bend right=45] (v3),
+    (v1) -- [scalar, bend left=45] (v3),
+    (v3) -- [scalar] (v4),
+    (v3) -- [scalar] (v5),
+    (v6) -- [scalar] (v7),
+    (v8) -- [scalar] (v9),
+    (v12) -- [scalar] (v13),
+    (v14) -- [scalar] (v15),
+    (v16) -- [scalar, bend right=45] (v17),
+    (v16) -- [scalar, bend left=45] (v17),
+    (v15) -- [scalar] (v19)
+  };
+  \begin{scope}[even odd rule]
+    \clip (-5, -4) rectangle (13, 3) (9.5, -0.5) circle (0.082cm);
+    \path (v13) edge [scalar] (v18);
+  \end{scope}
+\end{feynman}
+\end{tikzpicture}
+
+
+
+Using Feynman rules the propagator can be computed as the sum of $3$ propagators
+
+

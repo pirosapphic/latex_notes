@@ -23,4 +23,6 @@
 \contentsline {section}{\numberline {2.4}Scattering amplitudes}{20}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}Free theory}{20}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}Interacting theory}{21}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}LSZ reduction formula}{22}{subsection.2.4.3}%
+\contentsline {section}{\numberline {2.5}LSZ reduction formula}{22}{section.2.5}%
+\contentsline {section}{\underline {\textbf {Lesson 9, 23/11}}}{22}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Examples}{24}{subsection.2.5.1}%
